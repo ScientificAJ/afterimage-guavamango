@@ -1,0 +1,59 @@
+[project]
+name = "afterimage"
+version = "0.1.0"
+description = "Evidence-gated autonomous options research and paper execution"
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+  "cryptography>=45,<47",
+  "duckdb>=1.3,<2",
+  "fastapi>=0.116,<1",
+  "httpx>=0.28,<1",
+  "mcp>=1.12,<2",
+  "orjson>=3.10,<4",
+  "pydantic>=2.11,<3",
+  "pydantic-settings>=2.10,<3",
+  "pyarrow>=20,<24",
+  "pyyaml>=6,<7",
+  "sqlalchemy>=2.0,<3",
+  "sse-starlette>=2.4,<4",
+  "structlog>=25,<26",
+  "typer>=0.16,<1",
+  "uvicorn>=0.35,<1",
+]
+
+[dependency-groups]
+dev = [
+  "hypothesis>=6.135,<7",
+  "mypy>=1.16,<2",
+  "pytest>=8.4,<9",
+  "pytest-asyncio>=1.0,<2",
+  "ruff>=0.12,<1",
+]
+
+[project.scripts]
+afterimage = "afterimage.cli:app"
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/afterimage"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["pyarrow", "pyarrow.*"]
+ignore_missing_imports = true

@@ -1,0 +1,17 @@
+policy_version: promotion-v1
+minimum_n: 30
+minimum_n_eff: 30
+minimum_expected_value_r: 0.10
+minimum_lower_probability: 0.28
+minimum_positive_loo_fraction: 0.80
+maximum_drawdown_r: 8
+weights:
+  expected_value: 0.30
+  lower_bound: 0.25
+  drawdown: 0.20
+  stability: 0.15
+  coverage: 0.10
+candidates:
+  - opening_range_failure_v1@1.0.0
+  - momentum_continuation_v1@1.0.0
+  - volatility_dislocation_v1@1.0.0

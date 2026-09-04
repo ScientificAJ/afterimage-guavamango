@@ -1,0 +1,580 @@
+{
+  "audit_valid": true,
+  "payload": {
+    "agents": {
+      "options_witness": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "The defined-risk vertical passes the recorded liquidity screen.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "support"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "c1b6fa0d66eb73ef00bbd6f4bb52ddfdad108e013f6acb6e781eb56212f66dbb",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "997c1b0781cffe24e4ea1992ba659846b059009576d39678e7c48d3878b7f97e",
+        "role": "options_witness",
+        "status": "support",
+        "thesis": "The defined-risk vertical passes the recorded liquidity screen."
+      },
+      "prosecutor": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "Evidence must still survive reveal.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "warning"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "a74551cb717071cd43583c58b6cfd37d748a684af5ecdc34b78dd6b0fc18cb6f",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "4c6a545d3f1759c25a88ddd3459c9ad3caaa8921d55327ce601ddb75741bd60f",
+        "role": "prosecutor",
+        "status": "challenge",
+        "thesis": "Evidence must still survive reveal."
+      },
+      "regime_witness": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "The recorded regime packet is compatible.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "support"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "1ed5ac3c7ba1a7106bd56c3d07657f50b8d58d6c03fb1cec2eecee2007a0a5f1",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "86207369bde29dbf1fa0aaffcee43a580cbc138041a2129a22b629ade1f6ef79",
+        "role": "regime_witness",
+        "status": "support",
+        "thesis": "The recorded regime packet is compatible."
+      },
+      "strategist": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "The re-entry is a falsifiable failed-breakout claim.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "support"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "bae5ad3ab622c75ae5747beaca2491ce03b47c29e262a90e7f070ba7a9a3bfa8",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "4c7505c5d57ce68aa1d19b16bfbfb113b2dafd55f62d9ed481deabffe3e57bd3",
+        "role": "strategist",
+        "status": "support",
+        "thesis": "The re-entry is a falsifiable failed-breakout claim."
+      }
+    },
+    "audit": {
+      "failed_sequence": null,
+      "records": 7,
+      "valid": true
+    },
+    "candidate": {
+      "candidate_id": "c0adeb27-e3a8-47a3-aa0f-3e70280bba4f",
+      "direction": "bearish",
+      "features": {
+        "close_0955": 651.4,
+        "complete": true,
+        "lower_penetration": false,
+        "range_high": 652.0,
+        "range_low": 649.5,
+        "range_width": 2.5,
+        "realized_volatility": 0.16,
+        "reentered": true,
+        "relative_volume": 1.18,
+        "upper_penetration": true
+      },
+      "identity": {
+        "strategy_id": "opening_range_failure_v1",
+        "strategy_version": "1.0.0"
+      },
+      "permitted_structures": [
+        "put_debit_vertical"
+      ],
+      "signal_at": "2026-09-03T13:55:00Z",
+      "snapshot_id": "40e9c05cabd3981846a196a8bc051fc81fb6fe2359c3747a238169e6480287ab",
+      "symbol": "SPY"
+    },
+    "events": [
+      {
+        "created_at": "2026-09-04T04:28:35.663210Z",
+        "event_id": "f017b694-c46c-4c87-90ae-b4632f1ae97e",
+        "event_type": "precheck_passed",
+        "evidence_level": "L0",
+        "payload": {
+          "account": {
+            "account_id_hash": "7bbbcc79f09159b8cadda8fd75c2e274ff479882f69d1f18b6235bdb3d3d7c7e",
+            "cash": "100000",
+            "equity": "100000",
+            "options_approved_level": 3,
+            "options_buying_power": "100000",
+            "options_trading_level": 3,
+            "paper": true,
+            "status": "ACTIVE",
+            "timestamp": "2026-09-03T13:55:00Z",
+            "trading_blocked": false
+          },
+          "mode": "recorded-paper"
+        },
+        "sequence": 1,
+        "session_id": "4fce1269-0aa6-40d4-919d-b5802d77b197",
+        "state": "PRECHECKED",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T04:28:35.676952Z",
+        "event_id": "83df6f59-c62b-4725-9107-627339d547de",
+        "event_type": "observe",
+        "evidence_level": "L0",
+        "payload": {
+          "strategy": {
+            "strategy_id": "opening_range_failure_v1",
+            "strategy_version": "1.0.0"
+          },
+          "symbol": "SPY"
+        },
+        "sequence": 2,
+        "session_id": "4fce1269-0aa6-40d4-919d-b5802d77b197",
+        "state": "OBSERVING",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T04:28:35.687812Z",
+        "event_id": "e33c1fdc-7028-4484-bef5-203bbffedc10",
+        "event_type": "snapshot_frozen",
+        "evidence_level": "L1",
+        "payload": {
+          "snapshot_id": "40e9c05cabd3981846a196a8bc051fc81fb6fe2359c3747a238169e6480287ab"
+        },
+        "sequence": 3,
+        "session_id": "4fce1269-0aa6-40d4-919d-b5802d77b197",
+        "state": "SNAPSHOT_FROZEN",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T04:28:35.695209Z",
+        "event_id": "975d3650-e931-40ef-922a-2600053ac839",
+        "event_type": "candidate_created",
+        "evidence_level": "L1",
+        "payload": {
+          "candidate_id": "c0adeb27-e3a8-47a3-aa0f-3e70280bba4f",
+          "direction": "bearish",
+          "features": {
+            "close_0955": 651.4,
+            "complete": true,
+            "lower_penetration": false,
+            "range_high": 652.0,
+            "range_low": 649.5,
+            "range_width": 2.5,
+            "realized_volatility": 0.16,
+            "reentered": true,
+            "relative_volume": 1.18,
+            "upper_penetration": true
+          },
+          "identity": {
+            "strategy_id": "opening_range_failure_v1",
+            "strategy_version": "1.0.0"
+          },
+          "permitted_structures": [
+            "put_debit_vertical"
+          ],
+          "signal_at": "2026-09-03T13:55:00Z",
+          "snapshot_id": "40e9c05cabd3981846a196a8bc051fc81fb6fe2359c3747a238169e6480287ab",
+          "symbol": "SPY"
+        },
+        "sequence": 4,
+        "session_id": "4fce1269-0aa6-40d4-919d-b5802d77b197",
+        "state": "SIGNAL_CANDIDATE",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T04:28:35.715270Z",
+        "event_id": "5eaeeaa6-993a-4aec-ad92-df05d85bf287",
+        "event_type": "evidence_committed",
+        "evidence_level": "L3",
+        "payload": {
+          "commit_hash": "960d68e74f0c60133d6d7e9731281975f6f3c0b3c8f8dedbe83348560f81c7c9",
+          "outcomes_visible": false,
+          "twin_count": 40
+        },
+        "sequence": 5,
+        "session_id": "4fce1269-0aa6-40d4-919d-b5802d77b197",
+        "state": "EVIDENCE_COMMITTED",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T04:28:35.725811Z",
+        "event_id": "15c441be-7789-45b3-88eb-a8bf2589efb8",
+        "event_type": "evidence_revealed",
+        "evidence_level": "L3",
+        "payload": {
+          "commit_hash": "960d68e74f0c60133d6d7e9731281975f6f3c0b3c8f8dedbe83348560f81c7c9",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "0.05620140517641621929550870979",
+            "lower_confidence_bound": "0.1664837774862264934805722209",
+            "maximum_drawdown_r": "10",
+            "n": 40,
+            "n_eff": "39.44013410996951933166103482",
+            "placebo_edge_r": "0.05620140517641621929550870979",
+            "positive_loo_fraction": "0.7142857142857142857142857143",
+            "target_first_probability": "0.2640503512941040548238771775"
+          },
+          "reasons": [
+            "PROBABILITY_LOWER_BOUND",
+            "EXPECTED_VALUE",
+            "LEAVE_ONE_CLUSTER_OUT",
+            "MAXIMUM_DRAWDOWN"
+          ],
+          "reveal_hash": "3692a8cc3a42d01859571e6c5e687b4be2d215301de1ae8c5742a795760e4274",
+          "status": "REJECT"
+        },
+        "sequence": 6,
+        "session_id": "4fce1269-0aa6-40d4-919d-b5802d77b197",
+        "state": "EVIDENCE_REVEALED",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T04:28:35.731069Z",
+        "event_id": "d2988f98-9246-4554-b1eb-f6950d1b234b",
+        "event_type": "rejected",
+        "evidence_level": "L3",
+        "payload": {
+          "reasons": [
+            "PROBABILITY_LOWER_BOUND",
+            "EXPECTED_VALUE",
+            "LEAVE_ONE_CLUSTER_OUT",
+            "MAXIMUM_DRAWDOWN"
+          ]
+        },
+        "sequence": 7,
+        "session_id": "4fce1269-0aa6-40d4-919d-b5802d77b197",
+        "state": "REJECTED",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      }
+    ],
+    "evidence": {
+      "commit_hash": "960d68e74f0c60133d6d7e9731281975f6f3c0b3c8f8dedbe83348560f81c7c9",
+      "metrics": {
+        "confidence_method": "one-sided Wilson 0.95",
+        "coverage": "1",
+        "expected_value_r": "0.05620140517641621929550870979",
+        "lower_confidence_bound": "0.1664837774862264934805722209",
+        "maximum_drawdown_r": "10",
+        "n": 40,
+        "n_eff": "39.44013410996951933166103482",
+        "placebo_edge_r": "0.05620140517641621929550870979",
+        "positive_loo_fraction": "0.7142857142857142857142857143",
+        "target_first_probability": "0.2640503512941040548238771775"
+      },
+      "reasons": [
+        "PROBABILITY_LOWER_BOUND",
+        "EXPECTED_VALUE",
+        "LEAVE_ONE_CLUSTER_OUT",
+        "MAXIMUM_DRAWDOWN"
+      ],
+      "reveal_hash": "3692a8cc3a42d01859571e6c5e687b4be2d215301de1ae8c5742a795760e4274",
+      "status": "REJECT"
+    },
+    "mode": "recorded-demo",
+    "session_id": "4fce1269-0aa6-40d4-919d-b5802d77b197",
+    "snapshot": {
+      "cutoff": "2026-09-03T13:55:00Z",
+      "features": {
+        "close_0955": 651.4,
+        "complete": true,
+        "lower_penetration": false,
+        "range_high": 652.0,
+        "range_low": 649.5,
+        "range_width": 2.5,
+        "realized_volatility": 0.16,
+        "reentered": true,
+        "relative_volume": 1.18,
+        "upper_penetration": true
+      },
+      "identity": {
+        "strategy_id": "opening_range_failure_v1",
+        "strategy_version": "1.0.0"
+      },
+      "provenance": {
+        "builder": "OpeningRangeFailureStrategy",
+        "point_in_time": "true"
+      },
+      "records": [
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:30:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:30:00Z",
+          "values": {
+            "close": 650.5,
+            "high": 651.0,
+            "low": 649.5,
+            "open": 650.0,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:35:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:35:00Z",
+          "values": {
+            "close": 651.0,
+            "high": 651.5,
+            "low": 650.0,
+            "open": 650.5,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:40:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:40:00Z",
+          "values": {
+            "close": 651.6,
+            "high": 652.0,
+            "low": 650.8,
+            "open": 651.0,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:45:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:45:00Z",
+          "values": {
+            "close": 652.1,
+            "high": 652.4,
+            "low": 651.2,
+            "open": 651.6,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:50:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:50:00Z",
+          "values": {
+            "close": 651.8,
+            "high": 652.6,
+            "low": 651.5,
+            "open": 652.1,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:55:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:55:00Z",
+          "values": {
+            "close": 651.4,
+            "high": 652.55,
+            "low": 651.2,
+            "open": 651.8,
+            "volume": 1000000
+          }
+        }
+      ],
+      "snapshot_id": "40e9c05cabd3981846a196a8bc051fc81fb6fe2359c3747a238169e6480287ab"
+    },
+    "state": "REJECTED",
+    "tournament": {
+      "champion": null,
+      "champion_manifest_hash": null,
+      "entries": [
+        {
+          "failed_gates": [
+            "EXPECTED_VALUE",
+            "PROBABILITY_LOWER_BOUND",
+            "LEAVE_ONE_CLUSTER_OUT",
+            "MAXIMUM_DRAWDOWN"
+          ],
+          "identity": {
+            "strategy_id": "opening_range_failure_v1",
+            "strategy_version": "1.0.0"
+          },
+          "manifest_hash": "32029409e8b9769e29daa50b13a3542e4e0b3c58c8c888b5abfc126b4c6f5102",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "0.05620140517641621929550870979",
+            "lower_confidence_bound": "0.1664837774862264934805722209",
+            "maximum_drawdown_r": "10",
+            "n": 40,
+            "n_eff": "39.44013410996951933166103482",
+            "placebo_edge_r": "0.05620140517641621929550870979",
+            "positive_loo_fraction": "0.7142857142857142857142857143",
+            "target_first_probability": "0.2640503512941040548238771775"
+          },
+          "score": "0.2656242230673386320159385253",
+          "status": "REJECT"
+        },
+        {
+          "failed_gates": [
+            "EXPECTED_VALUE",
+            "PROBABILITY_LOWER_BOUND",
+            "LEAVE_ONE_CLUSTER_OUT",
+            "MAXIMUM_DRAWDOWN"
+          ],
+          "identity": {
+            "strategy_id": "momentum_continuation_v1",
+            "strategy_version": "1.0.0"
+          },
+          "manifest_hash": "ebcb46032f5a399cff9e25ba197a7c5007bebe2fb937312d5c777118960ce528",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "-0.08",
+            "lower_confidence_bound": "0.20",
+            "maximum_drawdown_r": "10",
+            "n": 40,
+            "n_eff": "39.44013410996951933166103482",
+            "placebo_edge_r": "0.05620140517641621929550870979",
+            "positive_loo_fraction": "0.7142857142857142857142857143",
+            "target_first_probability": "0.2640503512941040548238771775"
+          },
+          "score": "0.2331428571428571428571428571",
+          "status": "REJECT"
+        },
+        {
+          "failed_gates": [
+            "EXPECTED_VALUE",
+            "PROBABILITY_LOWER_BOUND",
+            "LEAVE_ONE_CLUSTER_OUT",
+            "MAXIMUM_DRAWDOWN"
+          ],
+          "identity": {
+            "strategy_id": "volatility_dislocation_v1",
+            "strategy_version": "1.0.0"
+          },
+          "manifest_hash": "da5c410db3c53bd88a94aa286523edf3ad5c4d5468f26757158fef3a5d5e3455",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "-0.18",
+            "lower_confidence_bound": "0.20",
+            "maximum_drawdown_r": "10",
+            "n": 40,
+            "n_eff": "39.44013410996951933166103482",
+            "placebo_edge_r": "0.05620140517641621929550870979",
+            "positive_loo_fraction": "0.7142857142857142857142857143",
+            "target_first_probability": "0.2640503512941040548238771775"
+          },
+          "score": "0.2031428571428571428571428571",
+          "status": "REJECT"
+        }
+      ],
+      "revealed_at": "2026-09-04T04:28:35.739020Z",
+      "tournament_hash": "3ee05b3c6e9dc738474fab6f3e9a14e8cbe885b130e5922586d6370e065ccbb5"
+    }
+  },
+  "sha256": "437e188b6832fb4fd88c96dfd486ebdd4ebbc6f6241a1b9ea7ab0e109ebc93e9"
+}

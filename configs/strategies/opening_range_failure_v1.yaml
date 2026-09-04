@@ -1,0 +1,9 @@
+strategy_id: opening_range_failure_v1
+strategy_version: 1.0.0
+symbols: [SPY, QQQ]
+opening_range: {start: "09:30", end: "09:45", bar_minutes: 5}
+penetration_fraction: 0.10
+signal_at: "09:55"
+contest_exit_at: "10:45"
+structures: [call_debit_vertical, put_debit_vertical]
+contract: {min_dte: 2, max_dte: 7, min_delta: 0.15, max_delta: 0.35}

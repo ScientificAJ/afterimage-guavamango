@@ -1,0 +1,15 @@
+policy_version: hackathon-v1
+paper_only: true
+maximum_modeled_loss: 500
+maximum_daily_loss: 1000
+maximum_high_water_drawdown_fraction: 0.02
+maximum_open_strategy_positions: 1
+minimum_structural_reward_risk: 3.0
+minimum_operational_reward_risk: 3.0
+maximum_quote_age_seconds: 2
+maximum_leg_timestamp_skew_seconds: 1
+maximum_relative_spread: 0.05
+minimum_open_interest: 100
+allow_averaging_down: false
+allow_martingale: false
+allow_kelly_sizing: false

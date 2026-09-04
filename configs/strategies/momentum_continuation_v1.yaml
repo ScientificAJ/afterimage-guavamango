@@ -1,0 +1,8 @@
+strategy_id: momentum_continuation_v1
+strategy_version: 1.0.0
+symbols: [SPY, QQQ]
+window_minutes: 30
+minimum_absolute_return: 0.002
+minimum_volume_ratio: 1.25
+maximum_hold_minutes: 75
+structures: [call_debit_vertical, put_debit_vertical]

@@ -1,0 +1,7 @@
+strategy_id: volatility_dislocation_v1
+strategy_version: 1.0.0
+symbols: [SPY, QQQ]
+minimum_forecast_to_implied_ratio: 1.20
+minimum_liquidity_score: 0.70
+maximum_hold_minutes: 90
+structures: [long_straddle]
