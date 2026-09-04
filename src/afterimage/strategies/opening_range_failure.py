@@ -59,6 +59,7 @@ class OpeningRangeFailureStrategy(BaseStrategy):
         direction = "bearish" if upper else "bullish"
         structure = "put_debit_vertical" if upper else "call_debit_vertical"
         return CandidateEvent(
+            candidate_id=self.candidate_id(snapshot),
             identity=self.identity,
             snapshot_id=snapshot.snapshot_id,
             symbol=snapshot.records[0].symbol if snapshot.records else "SPY",

@@ -1,10 +1,10 @@
 import { Panel, Badge, Metric } from "./ui";
 
-export function BrokerTruth({ events, state }: { events: Array<Record<string, any>>; state: string }) {
-  const close = events.find((event) => event.event_type === "closed")?.payload;
+export function BrokerTruth({ broker, dryRun, state, mode, marketData }: { broker?: Record<string, any>; dryRun?: Record<string, any>; state: string; mode: string; marketData?: Record<string, any> }) {
+  const connected = broker?.connected === true;
   return (
     <Panel eyebrow="06 / Reconciled lifecycle" title="Broker truth" mark="◎">
-      {close ? <><div className="row split"><Badge tone="verified">Autopsy complete</Badge><span className="mono">Recorded-paper replay</span></div><div className="broker-flow"><span>Submitted</span><i/><span>Working</span><i/><span>Filled</span><i/><span>Closed</span></div><div className="metrics two"><Metric label="Broker-like P&L" value={`$${close.broker_pnl}`} /><Metric label="Conservative P&L" value={`$${close.conservative_modeled_pnl}`} /></div></> : <div className="empty-state rejected"><span>{state.replaceAll("_", " ")}</span><p>No broker call occurred. Rejection is a successful safety outcome.</p></div>}
+      {connected ? <><div className="row split"><Badge tone="verified">Paper account connected</Badge><span className="mono">{String(broker?.transport ?? "Alpaca")}</span></div><div className="broker-flow"><span>Read account</span><i/><span>Read market</span><i/><span>Risk gate</span><i/><span>{dryRun ? "Dry-run valid" : "No order"}</span></div><div className="metrics four"><Metric label="Order sent" value={broker?.order_sent ? "YES" : "NO"}/><Metric label="Positions" value={String(broker?.positions ?? 0)}/><Metric label="Open orders" value={String(broker?.open_orders ?? 0)}/><Metric label="Bars / contracts" value={`${marketData?.bar_count ?? "—"} / ${marketData?.contract_count ?? "—"}`}/></div></> : <div className="empty-state"><span>{state.replaceAll("_", " ")}</span><p>{mode === "recorded-replay" ? "Recorded replay only. No broker API or broker P&L is claimed." : "The safety pipeline stopped before any order submission."}</p></div>}
     </Panel>
   );
 }

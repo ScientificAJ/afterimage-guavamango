@@ -1,0 +1,146 @@
+{
+  "attempts": [
+    {
+      "admission": {
+        "admitted": false,
+        "checks": {
+          "after_cost_target_to_stop_gte_3": true,
+          "expectancy_gte_0_25r": true,
+          "largest_win_lte_25pct_gross": true,
+          "max_drawdown_lte_6r": false,
+          "positive_at_1_5x_costs": true,
+          "positive_month_fraction_gte_60pct": true,
+          "positive_neighbor_fraction_gte_60pct": true,
+          "positive_two_underlyings": true,
+          "profit_factor_gte_2": false,
+          "sample_count_gte_30": true
+        },
+        "minimum_target_to_stop": "3.000015666272214939489575199"
+      },
+      "attempt_id": "event_flow_01_compression",
+      "decision": "REJECT",
+      "entry_hash": "57feb847beea01347f36cd1e19ff004e2da88135b856d88e05b44f8b04d1e215",
+      "family": "trend compression release",
+      "previous_hash": "GENESIS",
+      "result_hash": "32c5a05be92b00c23527ba9a21e331458b4a590e000a53926a3471fd03a772df",
+      "rolling_oos_metrics": {
+        "expectancy_r": "0.2886355813627960680878627436",
+        "hit_rate": "0.3287671232876712328767123288",
+        "largest_win_fraction": "0.04305157910232212960594251921",
+        "max_drawdown_r": "7.997604688876743790526727082",
+        "net_r": "21.07039743948411297041398028",
+        "positive_month_fraction": "0.8",
+        "positive_underlyings": 7,
+        "profit_factor": "1.430007029663042958646909282",
+        "sample_count": 73
+      }
+    },
+    {
+      "admission": {
+        "admitted": false,
+        "checks": {
+          "after_cost_target_to_stop_gte_3": true,
+          "expectancy_gte_0_25r": true,
+          "largest_win_lte_25pct_gross": true,
+          "max_drawdown_lte_6r": false,
+          "positive_at_1_5x_costs": true,
+          "positive_month_fraction_gte_60pct": true,
+          "positive_neighbor_fraction_gte_60pct": false,
+          "positive_two_underlyings": true,
+          "profit_factor_gte_2": true,
+          "sample_count_gte_30": true
+        },
+        "minimum_target_to_stop": "3.000352706941331271372525107"
+      },
+      "attempt_id": "event_flow_02_volume_breakout",
+      "decision": "REJECT",
+      "entry_hash": "82bedb8a51779336bb1505922dccf2c01af99eb40d616d059c8b81a17ef00bde",
+      "family": "volume-confirmed range breakout",
+      "previous_hash": "57feb847beea01347f36cd1e19ff004e2da88135b856d88e05b44f8b04d1e215",
+      "result_hash": "319cce4fdfee40111b17ef63432f76b4938285e7aaf276814fc437c745c3c588",
+      "rolling_oos_metrics": {
+        "expectancy_r": "0.6565272152328754373235953241",
+        "hit_rate": "0.40625",
+        "largest_win_fraction": "0.07708192801481052666966300515",
+        "max_drawdown_r": "7.00005454030701839550215621",
+        "net_r": "21.00887088745201399435505037",
+        "positive_month_fraction": "0.625",
+        "positive_underlyings": 8,
+        "profit_factor": "2.165919749964817692169201812",
+        "sample_count": 32
+      }
+    },
+    {
+      "admission": {
+        "admitted": false,
+        "checks": {
+          "after_cost_target_to_stop_gte_3": true,
+          "expectancy_gte_0_25r": false,
+          "largest_win_lte_25pct_gross": true,
+          "max_drawdown_lte_6r": false,
+          "positive_at_1_5x_costs": true,
+          "positive_month_fraction_gte_60pct": false,
+          "positive_neighbor_fraction_gte_60pct": true,
+          "positive_two_underlyings": true,
+          "profit_factor_gte_2": false,
+          "sample_count_gte_30": true
+        },
+        "minimum_target_to_stop": "3.000002227749870790507494151"
+      },
+      "attempt_id": "event_flow_03_shock_reversal",
+      "decision": "REJECT",
+      "entry_hash": "654d113babda892907fccb1da677ea33380bb95d08c40a1924482e8ebaf02987",
+      "family": "trend-aligned multi-day shock reversal",
+      "previous_hash": "82bedb8a51779336bb1505922dccf2c01af99eb40d616d059c8b81a17ef00bde",
+      "result_hash": "c9863f9db5bf7446409af8e034378b17176fffaf5574e4f81a09f38dc19b4873",
+      "rolling_oos_metrics": {
+        "expectancy_r": "0.1518227265183867953103044122",
+        "hit_rate": "0.4090909090909090909090909091",
+        "largest_win_fraction": "0.09432155449418851655609455461",
+        "max_drawdown_r": "6.117916054802345701361744853",
+        "net_r": "6.680199966809018993653394138",
+        "positive_month_fraction": "0.5238095238095238095238095238",
+        "positive_underlyings": 4,
+        "profit_factor": "1.265120084193871717840990058",
+        "sample_count": 44
+      }
+    },
+    {
+      "admission": {
+        "admitted": true,
+        "checks": {
+          "after_cost_target_to_stop_gte_3": true,
+          "expectancy_gte_0_25r": true,
+          "largest_win_lte_25pct_gross": true,
+          "max_drawdown_lte_6r": true,
+          "positive_at_1_5x_costs": true,
+          "positive_month_fraction_gte_60pct": true,
+          "positive_neighbor_fraction_gte_60pct": true,
+          "positive_two_underlyings": true,
+          "profit_factor_gte_2": true,
+          "sample_count_gte_30": true
+        },
+        "minimum_target_to_stop": "3.000013277233859032762997108"
+      },
+      "attempt_id": "event_flow_04_shadow_turnaround",
+      "decision": "ADMIT",
+      "entry_hash": "e46f75e0781912b485e8b1797a1873e5d7aa969e92288e37f1313f39fd1282fb",
+      "family": "stateful shadow-clock early-week ETF shock reversal",
+      "previous_hash": "654d113babda892907fccb1da677ea33380bb95d08c40a1924482e8ebaf02987",
+      "result_hash": "7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2",
+      "rolling_oos_metrics": {
+        "expectancy_r": "0.5058285073258596004268724454",
+        "hit_rate": "0.5684210526315789473684210526",
+        "largest_win_fraction": "0.03481773732220727741327918021",
+        "max_drawdown_r": "4.74577717452504776292080443",
+        "net_r": "48.05370819595666204055288231",
+        "positive_month_fraction": "0.7234042553191489361702127660",
+        "positive_underlyings": 8,
+        "profit_factor": "2.252990790803920449771526138",
+        "sample_count": 95
+      }
+    }
+  ],
+  "head_hash": "e46f75e0781912b485e8b1797a1873e5d7aa969e92288e37f1313f39fd1282fb",
+  "schema_version": "afterimage-event-flow-ledger-v1"
+}

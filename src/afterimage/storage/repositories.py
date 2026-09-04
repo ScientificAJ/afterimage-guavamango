@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 import json
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
+from decimal import Decimal
 from typing import Any
 
 from sqlalchemy import select
@@ -9,7 +10,7 @@ from sqlalchemy import select
 from afterimage.contracts.hashing import canonical_json, canonical_sha256
 
 from .db import Database
-from .models import ArtifactRow, BrokerOrderRow, SessionRow
+from .models import ArtifactRow, BrokerOrderRow, RiskStateRow, SessionRow
 
 
 class Repository:
@@ -128,6 +129,18 @@ class Repository:
             broker_id = str(order["id"])
             row = session.get(BrokerOrderRow, broker_id)
             if row is None:
+                row = session.scalar(
+                    select(BrokerOrderRow).where(
+                        BrokerOrderRow.client_order_id == str(order["client_order_id"])
+                    )
+                )
+                if row is not None and row.broker_order_id != broker_id:
+                    if not row.broker_order_id.startswith("pending:"):
+                        raise ValueError("BROKER_ORDER_IDENTITY_CONFLICT")
+                    session.delete(row)
+                    session.flush()
+                    row = None
+            if row is None:
                 row = BrokerOrderRow(
                     broker_order_id=broker_id,
                     client_order_id=str(order["client_order_id"]),
@@ -142,3 +155,42 @@ class Repository:
                 row.status = str(order.get("status", row.status))
                 row.payload_json = canonical_json(order).decode()
                 row.updated_at = now
+
+    def observe_account_equity(
+        self, account_id_hash: str, session_date: date, equity: Decimal
+    ) -> Decimal:
+        """Persist the intraday account high-water mark used by the drawdown gate."""
+        now = datetime.now(UTC)
+        with self.database.session() as session:
+            identity = {"account_id_hash": account_id_hash, "session_date": session_date}
+            row = session.get(RiskStateRow, identity)
+            if row is None:
+                row = RiskStateRow(
+                    account_id_hash=account_id_hash,
+                    session_date=session_date,
+                    high_water_equity=equity,
+                    updated_at=now,
+                )
+                session.add(row)
+            elif equity > row.high_water_equity:
+                row.high_water_equity = equity
+                row.updated_at = now
+            return Decimal(row.high_water_equity)
+
+    def active_session_ids(self) -> list[str]:
+        active = {
+            "SUBMITTING",
+            "WORKING",
+            "FILLED",
+            "EXITING",
+            "CLOSED",
+            "AMBIGUOUS",
+            "PARTIAL_OR_ANOMALOUS",
+        }
+        with self.database.session() as session:
+            rows = session.scalars(
+                select(SessionRow)
+                .where(SessionRow.state.in_(active))
+                .order_by(SessionRow.updated_at)
+            ).all()
+            return [row.id for row in rows]

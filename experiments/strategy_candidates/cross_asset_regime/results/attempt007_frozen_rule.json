@@ -1,0 +1,54 @@
+{
+  "schema_version": "afterimage-attempt007-frozen-rule-v1",
+  "frozen_at": "2026-09-04T17:45:00+05:30",
+  "hypothesis_source": {
+    "attempt_id": "qqq_regime_gap_v6",
+    "evidence": "predeclared 2024 neighbor sensitivity only",
+    "variant": "qqq_regime_b5_m10_c3_s15",
+    "sample_count": 23,
+    "net_pnl": "388.68",
+    "expectancy_r": "1.003183952980184311418324003",
+    "profit_factor": "3.102450370530643154649212960",
+    "max_drawdown_r": "4.000086287839179800164642374"
+  },
+  "fresh_outcome_validation": {
+    "start": "2023-01-03",
+    "end": "2023-12-29",
+    "outcomes_previously_evaluated": false,
+    "provenance_caveat": "2023-11-15 through 2023-12-29 bars existed only as warm-up inputs; no 2023 trade outcome or metric was computed"
+  },
+  "selected_variant": "qqq_regime_b5_m10_c3_s15",
+  "rule": {
+    "universe": [
+      "QQQ",
+      "IWM",
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLY"
+    ],
+    "instrument": "QQQ shares only",
+    "signal_at": "09:45 America/New_York",
+    "breadth_required": 5,
+    "minimum_mean_gap": "0.0010",
+    "sector_confirmations": 3,
+    "qqq_first_bar_confirmation": true,
+    "lagged_spy_regime": "prior completed SPY close versus prior 20-session SMA",
+    "excluded_cell": "risk_on_bullish only",
+    "maximum_notional": "10000",
+    "stop_fraction": "0.0015",
+    "after_cost_target_to_stop_floor": "3",
+    "hold_bars": 6,
+    "max_positions": 1,
+    "slippage_fraction": "0.0001",
+    "fee_per_share_per_side": "0.005",
+    "same_bar_precedence": "stop first"
+  },
+  "rule_hash": "87a27dc2687918a04b6b5a5aa8e474ea88aec6381c71280fb5c38dd3dcea6844",
+  "rule_hash_scope": "canonical JSON of all fields above except rule_hash, rule_hash_scope, and source_hashes",
+  "source_hashes": {
+    "qqq_regime_candidate.py": "ae60dc9837263192bd1b12f7a0399372dbd6e1c6ff815095e97ad573aa5c05e5",
+    "ATTEMPT_007_SPEC.md": "89676c9478da6284b95fd3678e5721579778ad27e72a87b86e1ea7374435cf4e"
+  }
+}

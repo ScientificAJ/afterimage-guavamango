@@ -7,7 +7,7 @@ const stages = [
   ["EVIDENCE_REVEALED", "Reveal"],
   ["RISK_APPROVED", "3R passport"],
   ["WARRANT_MINTED", "Warrant"],
-  ["AUTOPSY", "Broker truth"],
+  ["SHADOW_READY", "Broker dry-run"],
 ];
 
 export function ProofTimeline({ events, state }: { events: SessionEvent[]; state: string }) {
@@ -16,7 +16,7 @@ export function ProofTimeline({ events, state }: { events: SessionEvent[]; state
   return (
     <div className="proof-rail" aria-label="Proof pipeline">
       {stages.map(([key, title], index) => {
-        const done = reached.has(key) || state === key || (state === "AUTOPSY" && index < 6);
+        const done = reached.has(key) || state === key;
         return (
           <div className={`proof-step ${done ? "done" : ""}`} key={key}>
             <span className="proof-index">{done ? "✓" : String(index + 1).padStart(2, "0")}</span>

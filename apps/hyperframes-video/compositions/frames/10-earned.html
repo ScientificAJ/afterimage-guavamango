@@ -1,0 +1,340 @@
+<template>
+  <style>
+    @font-face { font-family: "DM Sans Variable"; src: url("assets/fonts/dm-sans-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/jetbrains-mono-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      container-type: size;
+      color: #11110f;
+    }
+
+    [class~="10-earned-bg"],
+    [class~="10-earned-visual"] {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    [class~="10-earned-bg"] {
+      background: #ffffff;
+    }
+
+    [class~="10-earned-sun"] {
+      position: absolute;
+      left: 20%;
+      top: -12%;
+      width: 64%;
+      height: 92%;
+      background: radial-gradient(circle at 50% 50%, rgba(243, 173, 0, 0.82) 0%, rgba(255, 214, 108, 0.48) 27%, rgba(255, 241, 194, 0.22) 51%, rgba(255, 255, 255, 0) 75%);
+    }
+
+    [class~="10-earned-ember"] {
+      position: absolute;
+      right: -7%;
+      top: -18%;
+      width: 46%;
+      height: 66%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 101, 95, 0.18) 0%, rgba(255, 101, 95, 0.07) 39%, rgba(255, 255, 255, 0) 74%);
+    }
+
+    [class~="10-earned-visual"] {
+      height: 900px;
+    }
+
+    [class~="10-earned-stage"] {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    [class~="10-earned-source-word"] {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 3;
+      margin: 0;
+      font-family: "Barlow Condensed";
+      font-size: 112px;
+      font-weight: 700;
+      line-height: 0.82;
+      letter-spacing: -0.025em;
+      white-space: nowrap;
+      transform-origin: 50% 50%;
+      will-change: transform, opacity;
+    }
+
+    [class~="10-earned-strategy"] {
+      color: #f3ad00;
+    }
+
+    [class~="10-earned-ai"] {
+      color: #2d55f5;
+    }
+
+    [class~="10-earned-risk"] {
+      color: #ff655f;
+    }
+
+    [class~="10-earned-alpaca"] {
+      color: #16873c;
+    }
+
+    [class~="10-earned-lines"] {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 1920px;
+      height: 900px;
+      pointer-events: none;
+    }
+
+    [class~="10-earned-line"] {
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: square;
+    }
+
+    [class~="10-earned-line-strategy"] {
+      stroke: #f3ad00;
+    }
+
+    [class~="10-earned-line-ai"] {
+      stroke: #2d55f5;
+    }
+
+    [class~="10-earned-line-risk"] {
+      stroke: #ff655f;
+    }
+
+    [class~="10-earned-line-alpaca"] {
+      stroke: #16873c;
+    }
+
+    [class~="10-earned-lockup"] {
+      position: absolute;
+      left: 240px;
+      top: 258px;
+      z-index: 6;
+      width: 1440px;
+      height: 500px;
+      text-align: center;
+      will-change: opacity;
+    }
+
+    [class~="10-earned-wordmark-mask"] {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    [class~="10-earned-wordmark"] {
+      font-family: "Barlow Condensed";
+      font-size: 188px;
+      font-weight: 700;
+      line-height: 0.82;
+      letter-spacing: -0.036em;
+      color: #11110f;
+      will-change: clip-path, opacity;
+    }
+
+    [class~="10-earned-guavamango"] {
+      margin-top: 48px;
+      font-family: "DM Sans Variable";
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #11110f;
+      will-change: transform, opacity;
+    }
+
+    [class~="10-earned-guava"] {
+      color: #ff655f;
+    }
+
+    [class~="10-earned-mango"] {
+      color: #f3ad00;
+    }
+
+    [class~="10-earned-claim"] {
+      margin-top: 64px;
+      font-family: "DM Sans Variable";
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #11110f;
+      will-change: clip-path, opacity;
+    }
+
+    [class~="10-earned-claim-line"] {
+      width: 900px;
+      height: 1px;
+      margin: 25px auto 0;
+      background: #11110f;
+      transform-origin: 0% 50%;
+      will-change: transform, opacity;
+    }
+
+    [class~="10-earned-index"] {
+      position: absolute;
+      right: 58px;
+      top: 846px;
+      z-index: 8;
+      font-family: "JetBrains Mono Variable";
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(17, 17, 15, 0.75);
+    }
+  </style>
+
+  <div data-hf-id="hf-b1qu" id="root" data-composition-id="10-earned" data-width="1920" data-height="1080" data-duration="10.34">
+    <div data-hf-id="hf-qv48" class="clip 10-earned-bg" data-start="0" data-duration="10" data-track-index="0">
+      <div data-hf-id="hf-4lfc" class="10-earned-sun"></div>
+      <div data-hf-id="hf-1kj3" class="10-earned-ember"></div>
+    </div>
+
+    <div data-hf-id="hf-8soa" class="clip 10-earned-visual" data-start="0" data-duration="10" data-track-index="1">
+      <div data-hf-id="hf-awtc" class="10-earned-stage">
+        <svg data-hf-id="hf-wi2s" class="10-earned-lines" viewBox="0 0 1920 900" xmlns="http://www.w3.org/2000/svg" aria-label="Four system roles converging into one mark">
+          <path data-hf-id="hf-8lpp" class="10-earned-line 10-earned-line-strategy" d="M350 215 C580 245 735 330 960 420" />
+          <path data-hf-id="hf-ppc8" class="10-earned-line 10-earned-line-ai" d="M1510 210 C1320 250 1140 330 960 420" />
+          <path data-hf-id="hf-mj7p" class="10-earned-line 10-earned-line-risk" d="M360 665 C600 620 770 500 960 420" />
+          <path data-hf-id="hf-nynr" class="10-earned-line 10-earned-line-alpaca" d="M1490 660 C1280 610 1135 505 960 420" />
+        </svg>
+
+        <div data-hf-id="hf-qtud" class="10-earned-source-word 10-earned-strategy" data-source-x="-610" data-source-y="-235" data-target-x="-210" data-target-y="-54">Strategy</div>
+        <div data-hf-id="hf-l982" class="10-earned-source-word 10-earned-ai" data-source-x="560" data-source-y="-240" data-target-x="190" data-target-y="-54">AI</div>
+        <div data-hf-id="hf-fjug" class="10-earned-source-word 10-earned-risk" data-source-x="-590" data-source-y="215" data-target-x="-170" data-target-y="46">Risk</div>
+        <div data-hf-id="hf-csqp" class="10-earned-source-word 10-earned-alpaca" data-source-x="520" data-source-y="210" data-target-x="160" data-target-y="46">Alpaca</div>
+
+        <div data-hf-id="hf-zhyk" class="10-earned-lockup">
+          <div data-hf-id="hf-l2me" class="10-earned-wordmark-mask">
+            <div data-hf-id="hf-p02y" class="10-earned-wordmark">AFTERIMAGE</div>
+          </div>
+          <div data-hf-id="hf-0jxm" class="10-earned-guavamango"><span data-hf-id="hf-qbi3" class="10-earned-guava">Guava</span><span data-hf-id="hf-l0dj" class="10-earned-mango">Mango</span></div>
+          <div data-hf-id="hf-haia" class="10-earned-claim">Permission must be earned</div>
+          <div data-hf-id="hf-hzvh" class="10-earned-claim-line"></div>
+        </div>
+
+        <div data-hf-id="hf-xm13" class="10-earned-index">10</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script>
+    (() => {
+      const root = document.querySelector('[data-composition-id="10-earned"]');
+      if (!root || !window.gsap) return;
+
+      const words = Array.from(root.querySelectorAll('[class~="10-earned-source-word"]'));
+      const paths = Array.from(root.querySelectorAll('[class~="10-earned-line"]'));
+      paths.forEach((path) => {
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = String(length);
+        path.style.strokeDashoffset = String(length);
+      });
+
+      const tl = gsap.timeline({ paused: true });
+
+      words.forEach((word, index) => {
+        const sourceX = Number(word.dataset.sourceX);
+        const sourceY = Number(word.dataset.sourceY);
+        tl.fromTo(
+          word,
+          {
+            xPercent: -50,
+            yPercent: -50,
+            x: sourceX,
+            y: sourceY,
+            scale: 0,
+            opacity: 0
+          },
+          {
+            xPercent: -50,
+            yPercent: -50,
+            x: sourceX,
+            y: sourceY,
+            scale: 1,
+            opacity: 1,
+            duration: 0.46,
+            ease: "power3.out"
+          },
+          0.06 + index * 0.68
+        );
+      });
+
+      paths.forEach((path, index) => {
+        tl.to(
+          path,
+          { strokeDashoffset: 0, duration: 0.78, ease: "power2.out" },
+          3.02 + index * 0.12
+        );
+      });
+
+      words.forEach((word, index) => {
+        tl.to(
+          word,
+          {
+            x: Number(word.dataset.targetX),
+            y: Number(word.dataset.targetY),
+            scale: 0.34,
+            opacity: 0.16,
+            duration: 1.22,
+            ease: "power3.inOut"
+          },
+          3.26 + index * 0.07
+        );
+      });
+
+      tl.fromTo(
+        root.querySelector('[class~="10-earned-wordmark"]'),
+        { opacity: 0, clipPath: "inset(0 100% 0 0)" },
+        { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.92, ease: "power3.out" },
+        4.54
+      );
+
+      tl.fromTo(
+        root.querySelector('[class~="10-earned-guavamango"]'),
+        { opacity: 0, y: 22 },
+        { opacity: 1, y: 0, duration: 0.56, ease: "power3.out" },
+        6.32
+      );
+      tl.fromTo(
+        root.querySelector('[class~="10-earned-claim"]'),
+        { opacity: 0, clipPath: "inset(0 100% 0 0)" },
+        { opacity: 1, clipPath: "inset(0 0% 0 0)", duration: 0.76, ease: "power2.out" },
+        7.02
+      );
+      tl.fromTo(
+        root.querySelector('[class~="10-earned-claim-line"]'),
+        { opacity: 0, scaleX: 0 },
+        { opacity: 1, scaleX: 1, duration: 0.72, ease: "power2.out" },
+        7.42
+      );
+      tl.fromTo(
+        root.querySelector('[class~="10-earned-index"]'),
+        { opacity: 0 },
+        { opacity: 1, duration: 0.35, ease: "power1.out" },
+        8.0
+      );
+
+      tl.to(
+        root.querySelector('[class~="10-earned-stage"]'),
+        { opacity: 0, duration: 0.22, ease: "power1.out" },
+        9.78
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["10-earned"] = tl;
+    })();
+  </script>
+</template>

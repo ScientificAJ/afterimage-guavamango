@@ -1,0 +1,7 @@
+# Attempt 017 — frozen low-noise consensus validation
+
+Attempt 014's predeclared development family produced the strongest robust development rule among attempts 008–016. `lv_v12_a125_h05` had 72 trades, +$4,200.75, +0.298R expectancy, PF 1.984, 3.10R drawdown, positive 2023/2024/2025 results, and +$4,113.88 at 1.5x costs. It did not pass the PF 2 floor and is not promoted; this revealed evidence is hypothesis generation for an exact frozen validation.
+
+Freeze `lv_v12_a125_h05` without changes: completed daily bars; SPY above its 50-session SMA and above its close ten sessions earlier; at least six of seven positive 20-session ETF returns; at least 2% dispersion; mean absolute SPY return over the last 19 daily changes no greater than 1.2%; select the strongest ETF long; enter next session; 1.25 ATR(14) stop; net target at least 3R; five-session timeout; stop-first; $10,000 cap; one bp slippage; $0.005/share/side; max one position.
+
+After the rule hash is recorded, acquire 2020-11 through 2022 Alpaca bars for warm-up and evaluate 2021-01-04 through 2022-12-30 exactly once as one fresh outcome block. Some Nov–Dec 2022 bars existed only as warm-up for attempt 007; no 2022 outcome metric was previously computed. Report 2021 and 2022 separately, the combined fresh block, 1.5x costs, +2 bp per-side slippage, one-session entry delay, symbol/month stability, concentration, and all gates. Do not tune after evaluation.

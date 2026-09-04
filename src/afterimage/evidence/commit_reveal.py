@@ -13,6 +13,11 @@ class CommitMismatch(RuntimeError):
     pass
 
 
+def commit_payload(manifest: EvidenceManifest) -> dict[str, Any]:
+    """Return only preregistered evidence inputs, excluding run-local metadata."""
+    return manifest.model_dump(mode="json", exclude={"manifest_id", "created_at", "commit_hash"})
+
+
 def build_manifest(
     query: EvidenceQuery,
     twins: Sequence[BlindTwin],
@@ -28,7 +33,7 @@ def build_manifest(
         dataset_hash=dataset_hash,
         created_at=datetime.now(UTC),
     )
-    commit_hash = canonical_sha256(draft.model_dump(mode="json", exclude={"commit_hash"}))
+    commit_hash = canonical_sha256(commit_payload(draft))
     return draft.model_copy(update={"commit_hash": commit_hash})
 
 
@@ -37,7 +42,7 @@ class CommitStore:
         self.repository = repository
 
     def persist(self, session_id: str, manifest: EvidenceManifest) -> str:
-        expected = canonical_sha256(manifest.model_dump(mode="json", exclude={"commit_hash"}))
+        expected = canonical_sha256(commit_payload(manifest))
         if expected != manifest.commit_hash:
             raise CommitMismatch("manifest changed before persistence")
         artifact_hash = self.repository.save_artifact(

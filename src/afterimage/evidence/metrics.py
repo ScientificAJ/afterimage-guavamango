@@ -107,8 +107,12 @@ def evaluate_evidence(
         if loo_values
         else Decimal(0)
     )
-    placebo_edge = expected_value
-    drawdown = _maximum_drawdown([outcome.return_r for _, outcome in paired])
+    placebo_expected_value = (
+        sum(twin.weight * outcome.placebo_return_r for twin, outcome in paired) / total_weight
+    )
+    placebo_edge = expected_value - placebo_expected_value
+    chronological = sorted(paired, key=lambda pair: (pair[1].session_date, pair[0].twin_id))
+    drawdown = _maximum_drawdown([outcome.return_r for _, outcome in chronological])
     coverage = Decimal(len(paired)) / Decimal(max(1, len(twins)))
     metrics = EvidenceMetrics(
         n=len(paired),
@@ -118,6 +122,7 @@ def evaluate_evidence(
         expected_value_r=expected_value,
         maximum_drawdown_r=drawdown,
         positive_loo_fraction=positive_loo,
+        placebo_expected_value_r=placebo_expected_value,
         placebo_edge_r=placebo_edge,
         coverage=coverage,
         confidence_method=f"one-sided Wilson {policy.confidence}",

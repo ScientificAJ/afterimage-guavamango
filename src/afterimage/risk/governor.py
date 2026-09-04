@@ -5,6 +5,7 @@ from decimal import Decimal
 
 from pydantic import BaseModel, ConfigDict
 
+from afterimage.config import RiskPolicy, load_runtime_config
 from afterimage.contracts.enums import DecisionStatus
 from afterimage.contracts.models import (
     AccountSnapshot,
@@ -13,39 +14,38 @@ from afterimage.contracts.models import (
     RiskDecision,
     RiskGate,
 )
+from afterimage.strategies.deployment import DeploymentDecision
 
-from .sizing import size_defined_risk_position
+from .sizing import size_defined_risk_position, size_equity_position
 
 
 class RiskContext(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     account: AccountSnapshot
-    evidence: EvidenceDecision
+    evidence: EvidenceDecision | DeploymentDecision
     payoff: PayoffPassport
     strategy_manifest_hash: str
     expected_account_id_hash: str
     quote_hash: str
-    maximum_quote_age_seconds: Decimal = Decimal(2)
     observed_quote_age_seconds: Decimal = Decimal(0)
-    maximum_leg_skew_seconds: Decimal = Decimal(1)
     observed_leg_skew_seconds: Decimal = Decimal(0)
     relative_spread: Decimal = Decimal(0)
-    maximum_relative_spread: Decimal = Decimal("0.05")
     open_strategy_positions: int = 0
     unknown_orders: int = 0
-    realized_daily_pnl: Decimal = Decimal(0)
-    worst_open_loss: Decimal = Decimal(0)
-    high_water_equity: Decimal = Decimal(100000)
-    entry_cutoff_passed: bool = False
+    realized_daily_pnl: Decimal
+    worst_open_loss: Decimal
+    high_water_equity: Decimal
+    entry_cutoff_passed: bool
     market_open: bool = True
-    minimum_ratio: Decimal = Decimal(3)
-    maximum_position_loss: Decimal = Decimal(500)
-    maximum_daily_loss: Decimal = Decimal(1000)
-    maximum_drawdown_fraction: Decimal = Decimal("0.02")
 
 
 class RiskGovernor:
-    policy_version = "hackathon-v1"
+    def __init__(self, policy: RiskPolicy | None = None) -> None:
+        self.policy = policy or load_runtime_config().risk
+
+    @property
+    def policy_version(self) -> str:
+        return self.policy.policy_version
 
     @staticmethod
     def _gate(name: str, passed: bool, observed: object, required: object, code: str) -> RiskGate:
@@ -59,9 +59,23 @@ class RiskGovernor:
 
     def evaluate(self, context: RiskContext) -> RiskDecision:
         account = context.account
-        quantity = size_defined_risk_position(
-            context.payoff.stressed_max_loss, account.equity, context.maximum_position_loss
-        )
+        if context.payoff.asset_class == "equity":
+            if context.payoff.entry_price is None:
+                quantity = 0
+            else:
+                quantity = size_equity_position(
+                    context.payoff.stressed_max_loss,
+                    context.payoff.entry_price,
+                    account.equity,
+                    self.policy.maximum_modeled_loss,
+                    self.policy.maximum_equity_notional,
+                )
+        else:
+            quantity = size_defined_risk_position(
+                context.payoff.stressed_max_loss,
+                account.equity,
+                self.policy.maximum_modeled_loss,
+            )
         daily_loss = -(context.realized_daily_pnl - abs(context.worst_open_loss))
         drawdown = (
             (context.high_water_equity - account.equity) / context.high_water_equity
@@ -93,9 +107,10 @@ class RiskGovernor:
             ),
             self._gate(
                 "options_level",
-                min(account.options_approved_level, account.options_trading_level) >= 3,
+                context.payoff.asset_class == "equity"
+                or min(account.options_approved_level, account.options_trading_level) >= 3,
                 min(account.options_approved_level, account.options_trading_level),
-                3,
+                "not-required-for-equity" if context.payoff.asset_class == "equity" else 3,
                 "OPTIONS_LEVEL",
             ),
             self._gate(
@@ -117,52 +132,67 @@ class RiskGovernor:
             ),
             self._gate(
                 "quote_age",
-                context.observed_quote_age_seconds <= context.maximum_quote_age_seconds,
+                context.observed_quote_age_seconds <= self.policy.maximum_quote_age_seconds,
                 context.observed_quote_age_seconds,
-                context.maximum_quote_age_seconds,
+                self.policy.maximum_quote_age_seconds,
                 "STALE_QUOTE",
             ),
             self._gate(
                 "leg_skew",
-                context.observed_leg_skew_seconds <= context.maximum_leg_skew_seconds,
+                context.observed_leg_skew_seconds <= self.policy.maximum_leg_timestamp_skew_seconds,
                 context.observed_leg_skew_seconds,
-                context.maximum_leg_skew_seconds,
+                self.policy.maximum_leg_timestamp_skew_seconds,
                 "LEG_TIMESTAMP_SKEW",
             ),
             self._gate(
                 "relative_spread",
-                context.relative_spread <= context.maximum_relative_spread,
+                context.relative_spread <= self.policy.maximum_relative_spread,
                 context.relative_spread,
-                context.maximum_relative_spread,
+                self.policy.maximum_relative_spread,
                 "WIDE_SPREAD",
             ),
             self._gate(
                 "structural_3r",
-                context.payoff.structural_ratio >= context.minimum_ratio,
+                context.payoff.structural_ratio >= self.policy.minimum_structural_reward_risk,
                 context.payoff.structural_ratio,
-                context.minimum_ratio,
+                self.policy.minimum_structural_reward_risk,
                 "STRUCTURAL_RATIO",
             ),
             self._gate(
                 "operational_3r",
-                context.payoff.operational_ratio >= context.minimum_ratio,
+                context.payoff.operational_ratio >= self.policy.minimum_operational_reward_risk,
                 context.payoff.operational_ratio,
-                context.minimum_ratio,
+                self.policy.minimum_operational_reward_risk,
                 "OPERATIONAL_RATIO",
             ),
             self._gate("quantity", quantity >= 1, quantity, ">=1", "LOSS_CAP_TOO_SMALL"),
             self._gate(
                 "position_loss",
-                context.payoff.stressed_max_loss * quantity <= context.maximum_position_loss,
+                context.payoff.stressed_max_loss * quantity <= self.policy.maximum_modeled_loss,
                 context.payoff.stressed_max_loss * quantity,
-                context.maximum_position_loss,
+                self.policy.maximum_modeled_loss,
                 "POSITION_LOSS",
             ),
             self._gate(
+                "equity_notional",
+                context.payoff.asset_class != "equity"
+                or (
+                    context.payoff.entry_price is not None
+                    and context.payoff.entry_price * quantity <= self.policy.maximum_equity_notional
+                ),
+                (
+                    context.payoff.entry_price * quantity
+                    if context.payoff.entry_price is not None
+                    else "missing"
+                ),
+                self.policy.maximum_equity_notional,
+                "EQUITY_NOTIONAL",
+            ),
+            self._gate(
                 "position_collision",
-                context.open_strategy_positions == 0,
+                context.open_strategy_positions <= self.policy.maximum_open_strategy_positions - 1,
                 context.open_strategy_positions,
-                0,
+                f"<{self.policy.maximum_open_strategy_positions}",
                 "POSITION_COLLISION",
             ),
             self._gate(
@@ -174,16 +204,16 @@ class RiskGovernor:
             ),
             self._gate(
                 "daily_loss",
-                daily_loss < context.maximum_daily_loss,
+                daily_loss < self.policy.maximum_daily_loss,
                 daily_loss,
-                context.maximum_daily_loss,
+                self.policy.maximum_daily_loss,
                 "DAILY_LOSS_HALT",
             ),
             self._gate(
                 "drawdown",
-                drawdown < context.maximum_drawdown_fraction,
+                drawdown < self.policy.maximum_high_water_drawdown_fraction,
                 drawdown,
-                context.maximum_drawdown_fraction,
+                self.policy.maximum_high_water_drawdown_fraction,
                 "DRAWDOWN_HALT",
             ),
         )

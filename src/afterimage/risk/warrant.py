@@ -8,7 +8,7 @@ from pathlib import Path
 
 from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.primitives import serialization
-from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey, Ed25519PublicKey
+from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 from sqlalchemy.exc import IntegrityError
 
 from afterimage.contracts.hashing import canonical_json, canonical_sha256
@@ -28,17 +28,26 @@ class WarrantAuthority:
         self.private_key = self._load_or_create()
 
     def _load_or_create(self) -> Ed25519PrivateKey:
-        if self.key_path.exists():
-            return serialization.load_pem_private_key(self.key_path.read_bytes(), password=None)  # type: ignore[return-value]
         self.key_path.parent.mkdir(parents=True, exist_ok=True)
+        os.chmod(self.key_path.parent, 0o700)
+        if self.key_path.exists():
+            if self.key_path.is_symlink():
+                raise WarrantError("signing key path must not be a symbolic link")
+            os.chmod(self.key_path, 0o600)
+            return serialization.load_pem_private_key(self.key_path.read_bytes(), password=None)  # type: ignore[return-value]
         key = Ed25519PrivateKey.generate()
         raw = key.private_bytes(
             encoding=serialization.Encoding.PEM,
             format=serialization.PrivateFormat.PKCS8,
             encryption_algorithm=serialization.NoEncryption(),
         )
-        self.key_path.write_bytes(raw)
-        os.chmod(self.key_path, 0o600)
+        descriptor = os.open(
+            self.key_path,
+            os.O_WRONLY | os.O_CREAT | os.O_EXCL,
+            0o600,
+        )
+        with os.fdopen(descriptor, "wb") as handle:
+            handle.write(raw)
         return key
 
     def _public_b64(self) -> str:
@@ -69,6 +78,15 @@ class WarrantAuthority:
     ) -> ExecutionWarrant:
         if decision.status.value != "PASS" or decision.quantity != intent.quantity:
             raise WarrantError("risk decision does not authorize intent")
+        if decision.decision_id != intent.risk_decision_id:
+            raise WarrantError("risk decision id is not bound to intent")
+        if decision.strategy_manifest_hash != intent.strategy_manifest_hash:
+            raise WarrantError("strategy hash is not bound to risk decision")
+        if decision.evidence_commit_hash != intent.evidence_commit_hash:
+            raise WarrantError("evidence hash is not bound to risk decision")
+        observed_quote_hash = canonical_sha256(intent.quote_material())
+        if decision.quote_hash != observed_quote_hash:
+            raise WarrantError("quote hash is not bound to risk decision")
         intent_hash = canonical_sha256(intent)
         risk_hash = canonical_sha256(decision)
         issued = datetime.now(UTC)
@@ -93,6 +111,8 @@ class WarrantAuthority:
             return False
         if canonical_sha256(warrant.intent) != warrant.intent_hash:
             return False
+        if warrant.public_key != self._public_b64():
+            return False
         material = self._material(
             warrant.intent_hash,
             warrant.risk_vector_hash,
@@ -101,7 +121,7 @@ class WarrantAuthority:
             warrant.nonce,
         )
         try:
-            public = Ed25519PublicKey.from_public_bytes(base64.b64decode(warrant.public_key))
+            public = self.private_key.public_key()
             public.verify(base64.b64decode(warrant.signature), canonical_json(material))
         except (InvalidSignature, ValueError):
             return False

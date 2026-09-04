@@ -50,3 +50,46 @@ def build_debit_vertical_passport(
         operational_ratio=target_profit / stop_loss,
         modeled_costs=modeled_costs,
     )
+
+
+def build_equity_bracket_passport(
+    symbol: str,
+    side: str,
+    entry_price: Decimal,
+    stop_price: Decimal,
+    target_price: Decimal,
+    modeled_round_trip_cost: Decimal,
+) -> PayoffPassport:
+    if side not in {"buy", "sell"}:
+        raise PayoffError("EQUITY_SIDE_INVALID")
+    if min(entry_price, stop_price, target_price) <= 0 or modeled_round_trip_cost < 0:
+        raise PayoffError("EQUITY_PRICE_INVALID")
+    if side == "buy":
+        raw_loss = entry_price - stop_price
+        raw_profit = target_price - entry_price
+    else:
+        raw_loss = stop_price - entry_price
+        raw_profit = entry_price - target_price
+    loss = raw_loss + modeled_round_trip_cost
+    profit = raw_profit - modeled_round_trip_cost
+    if loss <= 0 or profit <= 0:
+        raise PayoffError("NON_POSITIVE_PAYOFF")
+    ratio = profit / loss
+    return PayoffPassport(
+        structure="equity_bracket",
+        legs=(),
+        entry_net_debit=entry_price,
+        stressed_max_loss=loss,
+        stressed_max_profit=profit,
+        structural_ratio=ratio,
+        operational_target_profit=profit,
+        operational_stop_loss=loss,
+        operational_ratio=ratio,
+        modeled_costs=modeled_round_trip_cost,
+        asset_class="equity",
+        symbol=symbol.upper(),
+        side=side,
+        entry_price=entry_price,
+        stop_price=stop_price,
+        target_price=target_price,
+    )

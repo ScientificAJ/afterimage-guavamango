@@ -14,11 +14,36 @@ __pycache__/
 *.pem
 *.key
 .afterimage/
+.codex-build/
+.chart-data-*/
+.cache/
+.tools/
 node_modules/
 .next/
+tmp/
 coverage/
 playwright-report/
 test-results/
 evidence/paper/*
 !evidence/paper/.gitkeep
 evidence/submission/private/
+
+# Local submission-build and recorder state
+.ppt-build/
+output/
+apps/voice-studio/
+docs/reviews/
+
+# HyperFrames caches, raw narration, and local renders
+apps/hyperframes-video/.hyperframes/
+apps/hyperframes-video/.thumbnails/
+apps/hyperframes-video/.waveform-cache/
+apps/hyperframes-video/capture/
+apps/hyperframes-video/renders/
+apps/hyperframes-video/snapshots/
+apps/hyperframes-video/assets/voice/
+apps/hyperframes-video/assets/voiceover*.wav
+apps/hyperframes-video/assets/final-mix.wav
+
+# Downloaded research caches; publish compact evidence/results instead
+experiments/**/data/

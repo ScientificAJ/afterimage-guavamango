@@ -42,12 +42,13 @@ build-backend = "hatchling.build"
 packages = ["src/afterimage"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src"]
+pythonpath = ["src", ".", "tests"]
 asyncio_mode = "auto"
 
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+extend-exclude = ["experiments"]
 
 [tool.mypy]
 python_version = "3.11"

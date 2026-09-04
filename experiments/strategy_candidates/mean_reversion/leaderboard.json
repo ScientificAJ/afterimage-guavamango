@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "admission_floors": {
+    "after_cost_operational_target_stop": ">=3.0",
+    "rolling_or_pseudo_oos_profit_factor": ">=2.0",
+    "expectancy_r_per_trade": ">=0.25",
+    "closed_oos_trades": ">=30",
+    "max_drawdown_r": "<=6.0",
+    "breadth": "positive on >=2 liquid underlyings or >=3 regimes",
+    "temporal_stability": "positive in >=60% folds and months",
+    "cost_stress": "profitable at 1.5x modeled costs",
+    "neighbor_stability": ">=60% parameter neighbors positive",
+    "profit_concentration": "no single trade >25% gross profit"
+  },
+  "admitted_candidate": null,
+  "search_status": "exhausted_without_admissible_candidate",
+  "strongest_honest_result": "005_cross_index_underlying_comparison",
+  "attempts": [
+    {"rank": 7, "attempt_id": "001_failed_auction", "instrument": "SPY debit vertical", "classification": "rolling OOS", "sample_size": 17, "net_pnl": "-204.20", "expectancy_r": "-0.0490919136", "profit_factor": "0.2340585146", "max_drawdown": "213.00", "max_drawdown_r": null, "admitted": false},
+    {"rank": 8, "attempt_id": "002_cross_index_vwap_trend", "instrument": "SPY debit vertical", "classification": "nested rolling OOS", "sample_size": 18, "net_pnl": "-268.80", "expectancy_r": "-1.12905", "profit_factor": "0.1198428291", "max_drawdown": "279.60", "max_drawdown_r": null, "admitted": false},
+    {"rank": 9, "attempt_id": "003_multi_underlying_gap_expansion", "instrument": "SPY/QQQ/IWM debit verticals", "classification": "nested rolling OOS", "sample_size": 0, "net_pnl": "0", "expectancy_r": "0", "profit_factor": null, "max_drawdown": "0", "max_drawdown_r": "0", "admitted": false},
+    {"rank": 6, "attempt_id": "004_multi_day_cross_index_trend", "instrument": "SPY/QQQ/IWM debit verticals", "classification": "nested rolling OOS", "sample_size": 95, "net_pnl": "-1250.10", "expectancy_r": "-0.5310147368", "profit_factor": "0.6872091278", "max_drawdown": "2602.00", "max_drawdown_r": "83.1059", "admitted": false},
+    {"rank": 1, "attempt_id": "005_cross_index_underlying_comparison", "instrument": "SPY/QQQ/IWM shares", "classification": "pseudo-OOS execution comparison", "sample_size": 34, "net_pnl": "444.05", "expectancy_r": "0.1114235294", "profit_factor": "1.3085844933", "max_drawdown": "851.00", "max_drawdown_r": "7.7177", "stress_1_5x_net_pnl": "219.68", "stress_1_5x_profit_factor": "1.1425826886", "admitted": false},
+    {"rank": 2, "attempt_id": "006_multi_day_trend_direct_etf", "instrument": "SPY/QQQ/IWM shares", "classification": "pseudo-OOS execution comparison", "sample_size": 118, "net_pnl": "249.71", "expectancy_r": "0.0157483051", "profit_factor": "1.0271620247", "max_drawdown": "4118.23", "max_drawdown_r": "39.7601", "stress_1_5x_net_pnl": "230.70", "stress_1_5x_profit_factor": "1.0246169277", "admitted": false},
+    {"rank": 5, "attempt_id": "007_fresh_cross_index_pullback", "instrument": "SPY/QQQ/IWM shares", "classification": "fresh nested rolling OOS", "sample_size": 69, "net_pnl": "-2051.07", "expectancy_r": "-0.2823347826", "profit_factor": "0.5302218944", "max_drawdown": "2832.05", "max_drawdown_r": "26.7960", "admitted": false},
+    {"rank": 3, "attempt_id": "008_fresh_cross_index_relative_value", "instrument": "dollar-neutral ETF pair", "classification": "fresh nested rolling OOS", "sample_size": 26, "net_pnl": "-138.57", "expectancy_r": "-0.0532961538", "profit_factor": "0.8446785854", "max_drawdown": "420.18", "max_drawdown_r": "4.2018", "admitted": false},
+    {"rank": 4, "attempt_id": "009_fresh_cross_index_relative_momentum", "instrument": "dollar-neutral ETF pair", "classification": "fresh nested rolling OOS", "sample_size": 48, "net_pnl": "-1163.86", "expectancy_r": "-0.2424708333", "profit_factor": "0.4441026719", "max_drawdown": "1204.89", "max_drawdown_r": "12.0489", "admitted": false}
+  ]
+}

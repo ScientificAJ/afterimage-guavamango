@@ -1,0 +1,825 @@
+{
+  "bar_extreme_stress_oos": {
+    "statistics": {
+      "expectancy_r": "-0.3075806854926454244573312825",
+      "hit_rate": "0",
+      "max_drawdown": "1338.20",
+      "net_pnl": "-1338.20",
+      "sample_size": 17
+    },
+    "trades": [
+      {
+        "completed_at": "2025-02-18T17:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-02-18T17:25:00+00:00",
+        "entry_debit": "2.23",
+        "exit_at": "2025-02-18T17:40:00+00:00",
+        "exit_credit": "2.06",
+        "long_symbol": "SPY250221C00610000",
+        "net_pnl": "-19.60",
+        "return_r": "-0.08738296923762817654926437807",
+        "session": "2025-02-18",
+        "short_symbol": "SPY250221C00615000",
+        "signal_at": "2025-02-18T17:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-02-20T17:40:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-02-20T17:40:00+00:00",
+        "entry_debit": "1.61",
+        "exit_at": "2025-02-20T17:55:00+00:00",
+        "exit_credit": "1.41",
+        "long_symbol": "SPY250224P00609000",
+        "net_pnl": "-22.60",
+        "return_r": "-0.1392483056069008009858287123",
+        "session": "2025-02-20",
+        "short_symbol": "SPY250224P00604000",
+        "signal_at": "2025-02-20T17:35:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-02-27T17:40:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-02-27T17:40:00+00:00",
+        "entry_debit": "2.65",
+        "exit_at": "2025-02-27T18:00:00+00:00",
+        "exit_credit": "1.51",
+        "long_symbol": "SPY250303P00594000",
+        "net_pnl": "-116.60",
+        "return_r": "-0.4378520465640255351107773188",
+        "session": "2025-02-27",
+        "short_symbol": "SPY250303P00589000",
+        "signal_at": "2025-02-27T17:35:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-05T16:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-05T16:25:00+00:00",
+        "entry_debit": "2.77",
+        "exit_at": "2025-03-05T16:40:00+00:00",
+        "exit_credit": "1.95",
+        "long_symbol": "SPY250310C00575000",
+        "net_pnl": "-84.60",
+        "return_r": "-0.3039885016169601149838303989",
+        "session": "2025-03-05",
+        "short_symbol": "SPY250310C00580000",
+        "signal_at": "2025-03-05T16:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-06T19:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-06T19:25:00+00:00",
+        "entry_debit": "2.56",
+        "exit_at": "2025-03-06T19:40:00+00:00",
+        "exit_credit": "1.90",
+        "long_symbol": "SPY250310C00571000",
+        "net_pnl": "-68.60",
+        "return_r": "-0.2666148464827050136027982899",
+        "session": "2025-03-06",
+        "short_symbol": "SPY250310C00576000",
+        "signal_at": "2025-03-06T19:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-11T14:05:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-03-11T14:05:00+00:00",
+        "entry_debit": "3.25",
+        "exit_at": "2025-03-11T14:20:00+00:00",
+        "exit_credit": "1.30",
+        "long_symbol": "SPY250314P00557000",
+        "net_pnl": "-197.60",
+        "return_r": "-0.6055776892430278884462151394",
+        "session": "2025-03-11",
+        "short_symbol": "SPY250314P00552000",
+        "signal_at": "2025-03-11T14:00:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-12T17:40:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-03-12T17:40:00+00:00",
+        "entry_debit": "2.24",
+        "exit_at": "2025-03-12T17:55:00+00:00",
+        "exit_credit": "1.60",
+        "long_symbol": "SPY250317P00561000",
+        "net_pnl": "-66.60",
+        "return_r": "-0.2956058588548601864181091877",
+        "session": "2025-03-12",
+        "short_symbol": "SPY250317P00556000",
+        "signal_at": "2025-03-12T17:35:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-17T15:10:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-17T15:10:00+00:00",
+        "entry_debit": "2.63",
+        "exit_at": "2025-03-17T15:30:00+00:00",
+        "exit_credit": "1.90",
+        "long_symbol": "SPY250320C00564000",
+        "net_pnl": "-75.60",
+        "return_r": "-0.2860385925085130533484676504",
+        "session": "2025-03-17",
+        "short_symbol": "SPY250320C00569000",
+        "signal_at": "2025-03-17T15:05:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-18T14:05:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-18T14:05:00+00:00",
+        "entry_debit": "2.69",
+        "exit_at": "2025-03-18T14:20:00+00:00",
+        "exit_credit": "1.90",
+        "long_symbol": "SPY250321C00561000",
+        "net_pnl": "-81.60",
+        "return_r": "-0.3018867924528301886792452830",
+        "session": "2025-03-18",
+        "short_symbol": "SPY250321C00566000",
+        "signal_at": "2025-03-18T14:00:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-19T16:30:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-19T16:30:00+00:00",
+        "entry_debit": "2.11",
+        "exit_at": "2025-03-19T16:50:00+00:00",
+        "exit_credit": "1.95",
+        "long_symbol": "SPY250324C00566000",
+        "net_pnl": "-18.60",
+        "return_r": "-0.08761186999528968440885539331",
+        "session": "2025-03-19",
+        "short_symbol": "SPY250324C00571000",
+        "signal_at": "2025-03-19T16:25:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-25T15:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-25T15:25:00+00:00",
+        "entry_debit": "2.37",
+        "exit_at": "2025-03-25T15:40:00+00:00",
+        "exit_credit": "1.98",
+        "long_symbol": "SPY250328C00576000",
+        "net_pnl": "-41.60",
+        "return_r": "-0.1745698699118757868233319345",
+        "session": "2025-03-25",
+        "short_symbol": "SPY250328C00581000",
+        "signal_at": "2025-03-25T15:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-26T16:35:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-03-26T16:35:00+00:00",
+        "entry_debit": "2.05",
+        "exit_at": "2025-03-26T16:50:00+00:00",
+        "exit_credit": "1.53",
+        "long_symbol": "SPY250331P00571000",
+        "net_pnl": "-54.60",
+        "return_r": "-0.2646631119728550654386815317",
+        "session": "2025-03-26",
+        "short_symbol": "SPY250331P00566000",
+        "signal_at": "2025-03-26T16:30:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-31T15:10:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-03-31T15:10:00+00:00",
+        "entry_debit": "2.17",
+        "exit_at": "2025-03-31T15:25:00+00:00",
+        "exit_credit": "1.52",
+        "long_symbol": "SPY250403P00552000",
+        "net_pnl": "-67.60",
+        "return_r": "-0.3096655978011910215300045809",
+        "session": "2025-03-31",
+        "short_symbol": "SPY250403P00547000",
+        "signal_at": "2025-03-31T15:05:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-04-01T14:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-04-01T14:25:00+00:00",
+        "entry_debit": "2.94",
+        "exit_at": "2025-04-01T14:40:00+00:00",
+        "exit_credit": "1.83",
+        "long_symbol": "SPY250404C00555000",
+        "net_pnl": "-113.60",
+        "return_r": "-0.3846935320013545546901456146",
+        "session": "2025-04-01",
+        "short_symbol": "SPY250404C00560000",
+        "signal_at": "2025-04-01T14:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-04-07T15:20:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-04-07T15:40:00+00:00",
+        "entry_debit": "3.14",
+        "exit_at": "2025-04-07T16:35:00+00:00",
+        "exit_credit": "2.46",
+        "long_symbol": "SPY250410C00498000",
+        "net_pnl": "-70.60",
+        "return_r": "-0.2239137329527434189660640660",
+        "session": "2025-04-07",
+        "short_symbol": "SPY250410C00503000",
+        "signal_at": "2025-04-07T15:15:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-04-14T17:05:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-04-14T17:10:00+00:00",
+        "entry_debit": "2.13",
+        "exit_at": "2025-04-14T17:50:00+00:00",
+        "exit_credit": "0.84",
+        "long_symbol": "SPY250417P00536000",
+        "net_pnl": "-131.60",
+        "return_r": "-0.6140923938404106392907139524",
+        "session": "2025-04-14",
+        "short_symbol": "SPY250417P00531000",
+        "signal_at": "2025-04-14T17:00:00+00:00",
+        "variant": "lb12_z1.75_w40_v110_r100_h06"
+      },
+      {
+        "completed_at": "2025-04-17T18:00:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-04-17T18:00:00+00:00",
+        "entry_debit": "2.38",
+        "exit_at": "2025-04-17T18:30:00+00:00",
+        "exit_credit": "1.34",
+        "long_symbol": "SPY250421P00530000",
+        "net_pnl": "-106.60",
+        "return_r": "-0.4454659423318010865022983702",
+        "session": "2025-04-17",
+        "short_symbol": "SPY250421P00525000",
+        "signal_at": "2025-04-17T17:55:00+00:00",
+        "variant": "lb12_z1.75_w40_v110_r100_h06"
+      }
+    ]
+  },
+  "data": {
+    "end": "2025-05-01T00:00:00Z",
+    "option_cache_sha256": "cda1bc1cc37a532c1f53aa289779806cf9c1b53ea402611482737eaebdcbff09",
+    "option_source": "Alpaca 5-minute historical option trade bars",
+    "sessions": 80,
+    "start": "2025-01-02T09:00:00Z",
+    "stock_cache_sha256": "4a5a0466ede79790321b7a9ae838c31afb5a1475dc80403627e718dca32798ba",
+    "stock_regular_session_bars": 6240,
+    "stock_source": "Alpaca IEX 5-minute historical bars, raw adjustment"
+  },
+  "folds": [
+    {
+      "bar_extreme_stress_oos": {
+        "expectancy_r": "-0.2214944404695181708819568031",
+        "hit_rate": "0",
+        "max_drawdown": "158.80",
+        "net_pnl": "-158.80",
+        "sample_size": 3
+      },
+      "embargo": {
+        "end": "2025-02-12",
+        "sessions": 3,
+        "start": "2025-02-10"
+      },
+      "fold": 1,
+      "oos": {
+        "expectancy_r": "-0.01891801971952026424378260217",
+        "hit_rate": "0.3333333333333333333333333333",
+        "max_drawdown": "33.60",
+        "net_pnl": "-24.80",
+        "sample_size": 3
+      },
+      "selected_variant": "lb06_z1.50_w35_v100_r125_h03",
+      "test": {
+        "end": "2025-02-27",
+        "sessions": 10,
+        "start": "2025-02-13"
+      },
+      "train": {
+        "end": "2025-02-07",
+        "sessions": 25,
+        "start": "2025-01-02"
+      }
+    },
+    {
+      "bar_extreme_stress_oos": {
+        "expectancy_r": "-0.3067605930220265899839316203",
+        "hit_rate": "0",
+        "max_drawdown": "593.20",
+        "net_pnl": "-593.20",
+        "sample_size": 7
+      },
+      "embargo": {
+        "end": "2025-03-04",
+        "sessions": 3,
+        "start": "2025-02-28"
+      },
+      "fold": 2,
+      "oos": {
+        "expectancy_r": "-0.0570144113429109126099799280",
+        "hit_rate": "0.4285714285714285714285714286",
+        "max_drawdown": "106.20",
+        "net_pnl": "-106.20",
+        "sample_size": 7
+      },
+      "selected_variant": "lb06_z1.50_w35_v100_r125_h03",
+      "test": {
+        "end": "2025-03-19",
+        "sessions": 10,
+        "start": "2025-03-05"
+      },
+      "train": {
+        "end": "2025-02-27",
+        "sessions": 38,
+        "start": "2025-01-02"
+      }
+    },
+    {
+      "bar_extreme_stress_oos": {
+        "expectancy_r": "-0.2715011689280039694896455456",
+        "hit_rate": "0",
+        "max_drawdown": "348.00",
+        "net_pnl": "-348.00",
+        "sample_size": 5
+      },
+      "embargo": {
+        "end": "2025-03-24",
+        "sessions": 3,
+        "start": "2025-03-20"
+      },
+      "fold": 3,
+      "oos": {
+        "expectancy_r": "-0.03621992025131158410679758668",
+        "hit_rate": "0.4",
+        "max_drawdown": "62.80",
+        "net_pnl": "-36.00",
+        "sample_size": 5
+      },
+      "selected_variant": "lb06_z1.50_w35_v100_r125_h03",
+      "test": {
+        "end": "2025-04-07",
+        "sessions": 10,
+        "start": "2025-03-25"
+      },
+      "train": {
+        "end": "2025-03-19",
+        "sessions": 51,
+        "start": "2025-01-02"
+      }
+    },
+    {
+      "bar_extreme_stress_oos": {
+        "expectancy_r": "-0.5297791680861058628965061615",
+        "hit_rate": "0",
+        "max_drawdown": "238.20",
+        "net_pnl": "-238.20",
+        "sample_size": 2
+      },
+      "embargo": {
+        "end": "2025-04-10",
+        "sessions": 3,
+        "start": "2025-04-08"
+      },
+      "fold": 4,
+      "oos": {
+        "expectancy_r": "-0.09880399598761423875186020065",
+        "hit_rate": "0",
+        "max_drawdown": "37.20",
+        "net_pnl": "-37.20",
+        "sample_size": 2
+      },
+      "selected_variant": "lb12_z1.75_w40_v110_r100_h06",
+      "test": {
+        "end": "2025-04-25",
+        "sessions": 10,
+        "start": "2025-04-11"
+      },
+      "train": {
+        "end": "2025-04-07",
+        "sessions": 64,
+        "start": "2025-01-02"
+      }
+    }
+  ],
+  "method": {
+    "entry": "close of first synchronized option 5-minute bar after signal completion",
+    "entry_fill": "next-bar close on both legs plus $0.03 adverse slippage per leg",
+    "exit_fill": "configured future-bar close on both legs plus $0.03 adverse slippage per leg",
+    "fees": "$0.65 per contract per side ($2.60 round trip)",
+    "selection": "highest training-only expectancy/R, then net P&L, min 5 trades",
+    "signal": "first same-session z-score band excursion and wick rejection; signal known at bar end",
+    "signal_window_new_york": "10:00-14:30",
+    "stress_fill": "entry long high/short low and exit long low/short high, plus slippage and fees",
+    "walk_forward": "expanding train, 3-session embargo, 10-session chronological OOS"
+  },
+  "oos": {
+    "statistics": {
+      "expectancy_r": "-0.04909191363474844582581856689",
+      "hit_rate": "0.3529411764705882352941176471",
+      "max_drawdown": "213.00",
+      "net_pnl": "-204.20",
+      "sample_size": 17
+    },
+    "trades": [
+      {
+        "completed_at": "2025-02-18T17:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-02-18T17:30:00+00:00",
+        "entry_debit": "2.22",
+        "exit_at": "2025-02-18T17:45:00+00:00",
+        "exit_credit": "2.10",
+        "long_symbol": "SPY250221C00610000",
+        "net_pnl": "-14.60",
+        "return_r": "-0.06538289296909986565158978952",
+        "session": "2025-02-18",
+        "short_symbol": "SPY250221C00615000",
+        "signal_at": "2025-02-18T17:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-02-20T17:40:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-02-20T17:45:00+00:00",
+        "entry_debit": "1.32",
+        "exit_at": "2025-02-20T18:00:00+00:00",
+        "exit_credit": "1.58",
+        "long_symbol": "SPY250224P00609000",
+        "net_pnl": "23.40",
+        "return_r": "0.1755438859714928732183045761",
+        "session": "2025-02-20",
+        "short_symbol": "SPY250224P00604000",
+        "signal_at": "2025-02-20T17:35:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-02-27T17:40:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-02-27T17:45:00+00:00",
+        "entry_debit": "2.00",
+        "exit_at": "2025-02-27T18:05:00+00:00",
+        "exit_credit": "1.69",
+        "long_symbol": "SPY250303P00594000",
+        "net_pnl": "-33.60",
+        "return_r": "-0.1669150521609538002980625931",
+        "session": "2025-02-27",
+        "short_symbol": "SPY250303P00589000",
+        "signal_at": "2025-02-27T17:35:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-05T16:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-05T16:30:00+00:00",
+        "entry_debit": "2.69",
+        "exit_at": "2025-03-05T16:45:00+00:00",
+        "exit_credit": "2.07",
+        "long_symbol": "SPY250310C00575000",
+        "net_pnl": "-64.60",
+        "return_r": "-0.2389937106918238993710691824",
+        "session": "2025-03-05",
+        "short_symbol": "SPY250310C00580000",
+        "signal_at": "2025-03-05T16:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-06T19:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-06T19:30:00+00:00",
+        "entry_debit": "2.33",
+        "exit_at": "2025-03-06T19:45:00+00:00",
+        "exit_credit": "2.36",
+        "long_symbol": "SPY250310C00571000",
+        "net_pnl": "0.40",
+        "return_r": "0.001707212974818608621425522834",
+        "session": "2025-03-06",
+        "short_symbol": "SPY250310C00576000",
+        "signal_at": "2025-03-06T19:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-11T14:05:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-03-11T14:10:00+00:00",
+        "entry_debit": "1.91",
+        "exit_at": "2025-03-11T14:25:00+00:00",
+        "exit_credit": "2.04",
+        "long_symbol": "SPY250314P00557000",
+        "net_pnl": "10.40",
+        "return_r": "0.05408216328653146125845033801",
+        "session": "2025-03-11",
+        "short_symbol": "SPY250314P00552000",
+        "signal_at": "2025-03-11T14:00:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-12T17:40:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-03-12T17:45:00+00:00",
+        "entry_debit": "2.19",
+        "exit_at": "2025-03-12T18:00:00+00:00",
+        "exit_credit": "2.23",
+        "long_symbol": "SPY250317P00561000",
+        "net_pnl": "1.40",
+        "return_r": "0.006354970494779845665002269632",
+        "session": "2025-03-12",
+        "short_symbol": "SPY250317P00556000",
+        "signal_at": "2025-03-12T17:35:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-17T15:10:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-17T15:15:00+00:00",
+        "entry_debit": "2.42",
+        "exit_at": "2025-03-17T15:35:00+00:00",
+        "exit_credit": "2.20",
+        "long_symbol": "SPY250320C00564000",
+        "net_pnl": "-24.60",
+        "return_r": "-0.1011097410604192355117139334",
+        "session": "2025-03-17",
+        "short_symbol": "SPY250320C00569000",
+        "signal_at": "2025-03-17T15:05:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-18T14:05:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-18T14:10:00+00:00",
+        "entry_debit": "2.46",
+        "exit_at": "2025-03-18T14:25:00+00:00",
+        "exit_credit": "2.24",
+        "long_symbol": "SPY250321C00561000",
+        "net_pnl": "-24.60",
+        "return_r": "-0.09947432268499797816417306915",
+        "session": "2025-03-18",
+        "short_symbol": "SPY250321C00566000",
+        "signal_at": "2025-03-18T14:00:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-19T16:30:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-19T16:35:00+00:00",
+        "entry_debit": "2.11",
+        "exit_at": "2025-03-19T16:55:00+00:00",
+        "exit_credit": "2.09",
+        "long_symbol": "SPY250324C00566000",
+        "net_pnl": "-4.60",
+        "return_r": "-0.02166745171926519076778144136",
+        "session": "2025-03-19",
+        "short_symbol": "SPY250324C00571000",
+        "signal_at": "2025-03-19T16:25:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-25T15:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-03-25T15:30:00+00:00",
+        "entry_debit": "2.25",
+        "exit_at": "2025-03-25T15:45:00+00:00",
+        "exit_credit": "2.07",
+        "long_symbol": "SPY250328C00576000",
+        "net_pnl": "-20.60",
+        "return_r": "-0.09102960671674768007070260716",
+        "session": "2025-03-25",
+        "short_symbol": "SPY250328C00581000",
+        "signal_at": "2025-03-25T15:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-26T16:35:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-03-26T16:40:00+00:00",
+        "entry_debit": "2.03",
+        "exit_at": "2025-03-26T16:55:00+00:00",
+        "exit_credit": "1.86",
+        "long_symbol": "SPY250331P00571000",
+        "net_pnl": "-19.60",
+        "return_r": "-0.09593734703866862457170827215",
+        "session": "2025-03-26",
+        "short_symbol": "SPY250331P00566000",
+        "signal_at": "2025-03-26T16:30:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-03-31T15:10:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-03-31T15:15:00+00:00",
+        "entry_debit": "2.13",
+        "exit_at": "2025-03-31T15:30:00+00:00",
+        "exit_credit": "1.93",
+        "long_symbol": "SPY250403P00552000",
+        "net_pnl": "-22.60",
+        "return_r": "-0.1054596360242650489967335511",
+        "session": "2025-03-31",
+        "short_symbol": "SPY250403P00547000",
+        "signal_at": "2025-03-31T15:05:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-04-01T14:25:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-04-01T14:30:00+00:00",
+        "entry_debit": "2.69",
+        "exit_at": "2025-04-01T14:45:00+00:00",
+        "exit_credit": "2.81",
+        "long_symbol": "SPY250404C00555000",
+        "net_pnl": "9.40",
+        "return_r": "0.03477617462079171291157972623",
+        "session": "2025-04-01",
+        "short_symbol": "SPY250404C00560000",
+        "signal_at": "2025-04-01T14:20:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-04-07T15:20:00+00:00",
+        "direction": "bullish",
+        "entry_at": "2025-04-07T15:45:00+00:00",
+        "entry_debit": "2.26",
+        "exit_at": "2025-04-07T16:40:00+00:00",
+        "exit_credit": "2.46",
+        "long_symbol": "SPY250410C00498000",
+        "net_pnl": "17.40",
+        "return_r": "0.07655081390233172019357677079",
+        "session": "2025-04-07",
+        "short_symbol": "SPY250410C00503000",
+        "signal_at": "2025-04-07T15:15:00+00:00",
+        "variant": "lb06_z1.50_w35_v100_r125_h03"
+      },
+      {
+        "completed_at": "2025-04-14T17:05:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-04-14T17:15:00+00:00",
+        "entry_debit": "1.89",
+        "exit_at": "2025-04-14T17:55:00+00:00",
+        "exit_credit": "1.65",
+        "long_symbol": "SPY250417P00536000",
+        "net_pnl": "-26.60",
+        "return_r": "-0.1397792958486600105097214924",
+        "session": "2025-04-14",
+        "short_symbol": "SPY250417P00531000",
+        "signal_at": "2025-04-14T17:00:00+00:00",
+        "variant": "lb12_z1.75_w40_v110_r100_h06"
+      },
+      {
+        "completed_at": "2025-04-17T18:00:00+00:00",
+        "direction": "bearish",
+        "entry_at": "2025-04-17T18:05:00+00:00",
+        "entry_debit": "1.82",
+        "exit_at": "2025-04-17T18:35:00+00:00",
+        "exit_credit": "1.74",
+        "long_symbol": "SPY250421P00530000",
+        "net_pnl": "-10.60",
+        "return_r": "-0.05782869612656846699399890889",
+        "session": "2025-04-17",
+        "short_symbol": "SPY250421P00525000",
+        "signal_at": "2025-04-17T17:55:00+00:00",
+        "variant": "lb12_z1.75_w40_v110_r100_h06"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "strategy": "SPY intraday failed-auction mean reversion via 3+DTE $5 debit verticals",
+  "variants": {
+    "lb06_z1.50_w35_v100_r125_h03": {
+      "full_sample_diagnostic_not_selection_oos": {
+        "expectancy_r": "-0.01656470139965309206800500931",
+        "hit_rate": "0.38",
+        "max_drawdown": "369.60",
+        "net_pnl": "-264.00",
+        "sample_size": 50
+      },
+      "parameters": {
+        "earliest_signal_minute_from_open": 30,
+        "holding_bars": 3,
+        "latest_signal_minute_from_open": 300,
+        "lookback": 6,
+        "max_close_distance_z": "1.25",
+        "min_volume_ratio": "1.00",
+        "min_wick_fraction": "0.35",
+        "require_directional_body": true,
+        "z_threshold": "1.50"
+      },
+      "signals": 57,
+      "unscored_missing_or_illiquid": 7
+    },
+    "lb06_z1.75_w40_v110_r100_h06": {
+      "full_sample_diagnostic_not_selection_oos": {
+        "expectancy_r": "-0.03603715230576127872738557403",
+        "hit_rate": "0.3333333333333333333333333333",
+        "max_drawdown": "245.80",
+        "net_pnl": "-227.20",
+        "sample_size": 27
+      },
+      "parameters": {
+        "earliest_signal_minute_from_open": 30,
+        "holding_bars": 6,
+        "latest_signal_minute_from_open": 300,
+        "lookback": 6,
+        "max_close_distance_z": "1.00",
+        "min_volume_ratio": "1.10",
+        "min_wick_fraction": "0.40",
+        "require_directional_body": true,
+        "z_threshold": "1.75"
+      },
+      "signals": 31,
+      "unscored_missing_or_illiquid": 4
+    },
+    "lb12_z1.50_w35_v100_r125_h03": {
+      "full_sample_diagnostic_not_selection_oos": {
+        "expectancy_r": "-0.05750062738464661787287464662",
+        "hit_rate": "0.28125",
+        "max_drawdown": "443.40",
+        "net_pnl": "-410.20",
+        "sample_size": 32
+      },
+      "parameters": {
+        "earliest_signal_minute_from_open": 30,
+        "holding_bars": 3,
+        "latest_signal_minute_from_open": 300,
+        "lookback": 12,
+        "max_close_distance_z": "1.25",
+        "min_volume_ratio": "1.00",
+        "min_wick_fraction": "0.35",
+        "require_directional_body": true,
+        "z_threshold": "1.50"
+      },
+      "signals": 37,
+      "unscored_missing_or_illiquid": 5
+    },
+    "lb12_z1.75_w40_v110_r100_h06": {
+      "full_sample_diagnostic_not_selection_oos": {
+        "expectancy_r": "-0.0341754258410825436860218787",
+        "hit_rate": "0.3",
+        "max_drawdown": "105.80",
+        "net_pnl": "-82.00",
+        "sample_size": 10
+      },
+      "parameters": {
+        "earliest_signal_minute_from_open": 30,
+        "holding_bars": 6,
+        "latest_signal_minute_from_open": 300,
+        "lookback": 12,
+        "max_close_distance_z": "1.00",
+        "min_volume_ratio": "1.10",
+        "min_wick_fraction": "0.40",
+        "require_directional_body": true,
+        "z_threshold": "1.75"
+      },
+      "signals": 13,
+      "unscored_missing_or_illiquid": 3
+    },
+    "lb18_z1.75_w35_v100_r125_h06": {
+      "full_sample_diagnostic_not_selection_oos": {
+        "expectancy_r": "-0.04208771808150246705573410873",
+        "hit_rate": "0.3333333333333333333333333333",
+        "max_drawdown": "123.60",
+        "net_pnl": "-121.20",
+        "sample_size": 12
+      },
+      "parameters": {
+        "earliest_signal_minute_from_open": 30,
+        "holding_bars": 6,
+        "latest_signal_minute_from_open": 300,
+        "lookback": 18,
+        "max_close_distance_z": "1.25",
+        "min_volume_ratio": "1.00",
+        "min_wick_fraction": "0.35",
+        "require_directional_body": true,
+        "z_threshold": "1.75"
+      },
+      "signals": 15,
+      "unscored_missing_or_illiquid": 3
+    },
+    "lb18_z2.00_w45_v120_r100_h12": {
+      "full_sample_diagnostic_not_selection_oos": {
+        "expectancy_r": "-0.2345684822431033476911252276",
+        "hit_rate": "0",
+        "max_drawdown": "95.20",
+        "net_pnl": "-95.20",
+        "sample_size": 2
+      },
+      "parameters": {
+        "earliest_signal_minute_from_open": 30,
+        "holding_bars": 12,
+        "latest_signal_minute_from_open": 300,
+        "lookback": 18,
+        "max_close_distance_z": "1.00",
+        "min_volume_ratio": "1.20",
+        "min_wick_fraction": "0.45",
+        "require_directional_body": true,
+        "z_threshold": "2.00"
+      },
+      "signals": 2,
+      "unscored_missing_or_illiquid": 0
+    }
+  }
+}

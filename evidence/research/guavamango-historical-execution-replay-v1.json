@@ -1,0 +1,667 @@
+{
+  "broker_pnl_claim": false,
+  "cases": [
+    {
+      "agent_provenance": {
+        "live_inference": true,
+        "mode": "live-featherless",
+        "models": [
+          "zai-org/GLM-5.3",
+          "zai-org/GLM-5.3-Flash"
+        ],
+        "reports_hash": "eb460facde21daa03dcb5c5ad5c8607564b71e112e47574036c9f68441846bd7"
+      },
+      "agent_reports": {
+        "options_witness": {
+          "falsifiers": [
+            "A valid schema-conforming response is required."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "EVIDENCE_PATH_INVALID",
+              "evidence_keys": [],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "38e9ec70437bb6e2d96db47e3eaa11a3db3d6f9df749b50baeaa2855ec511d55",
+          "latency_ms": 15431,
+          "model_id": "zai-org/GLM-5.3-Flash",
+          "prompt_hash": "a8ea43e38534510453cd2f2e270feddee71cbad70bb8c51940347c07b7f787fc",
+          "prompt_version": "afterimage-decision-desk-v2.0.0",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "EVIDENCE_PATH_INVALID",
+          "response_hash": "f0f6a392f995e507713463c2fa3e3047851f910dd182d0fab87df87b4d133a0c",
+          "response_preimage": {
+            "reason": "EVIDENCE_PATH_INVALID"
+          },
+          "role": "options_witness",
+          "status": "abstain",
+          "thesis": "No model conclusion is admitted."
+        },
+        "prosecutor": {
+          "falsifiers": [
+            "A valid schema-conforming response is required."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "EVIDENCE_PATH_INVALID",
+              "evidence_keys": [],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "492d65633c28f95e47eaae7dfe318c20b2b59548ada3b0f051f4ea32ce791c10",
+          "latency_ms": 33774,
+          "model_id": "zai-org/GLM-5.3",
+          "prompt_hash": "f00d8c91b127e3f21ea93b815617b07e15a63d2e25d6c99ddbbec73b7c9141b2",
+          "prompt_version": "afterimage-decision-desk-v2.0.0",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "EVIDENCE_PATH_INVALID",
+          "response_hash": "f0f6a392f995e507713463c2fa3e3047851f910dd182d0fab87df87b4d133a0c",
+          "response_preimage": {
+            "reason": "EVIDENCE_PATH_INVALID"
+          },
+          "role": "prosecutor",
+          "status": "abstain",
+          "thesis": "No model conclusion is admitted."
+        },
+        "regime_witness": {
+          "falsifiers": [
+            "A valid schema-conforming response is required."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "EVIDENCE_PATH_INVALID",
+              "evidence_keys": [],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "e10248cce0ff7c72b6134131617ab2063d06d0fa7333dc92466db65b00642fea",
+          "latency_ms": 19504,
+          "model_id": "zai-org/GLM-5.3-Flash",
+          "prompt_hash": "09f3bacd453f09c124429d052370ae48bc41fb20dad58ce779d1e5be2d86e2ef",
+          "prompt_version": "afterimage-decision-desk-v2.0.0",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "EVIDENCE_PATH_INVALID",
+          "response_hash": "f0f6a392f995e507713463c2fa3e3047851f910dd182d0fab87df87b4d133a0c",
+          "response_preimage": {
+            "reason": "EVIDENCE_PATH_INVALID"
+          },
+          "role": "regime_witness",
+          "status": "abstain",
+          "thesis": "No model conclusion is admitted."
+        },
+        "strategist": {
+          "falsifiers": [
+            "A valid schema-conforming response is required."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "EVIDENCE_PATH_INVALID",
+              "evidence_keys": [],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "8ccbc23e98f33df0bcaea903da90cd4c238db8000db9c90093cdc5628f801acf",
+          "latency_ms": 25958,
+          "model_id": "zai-org/GLM-5.3",
+          "prompt_hash": "e9ec5aae7e15a108aa8d7114fa030aae8de7bda4f084492bdae8987a4a13758a",
+          "prompt_version": "afterimage-decision-desk-v2.0.0",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "EVIDENCE_PATH_INVALID",
+          "response_hash": "f0f6a392f995e507713463c2fa3e3047851f910dd182d0fab87df87b4d133a0c",
+          "response_preimage": {
+            "reason": "EVIDENCE_PATH_INVALID"
+          },
+          "role": "strategist",
+          "status": "abstain",
+          "thesis": "No model conclusion is admitted."
+        }
+      },
+      "alpaca_cli_dry_run": null,
+      "audit": {
+        "failed_sequence": null,
+        "records": 5,
+        "valid": true
+      },
+      "broker_pnl_claim": false,
+      "candidate": null,
+      "causal_signal_cutoff": "2022-01-26T21:00:00+00:00",
+      "deployment_evidence": null,
+      "future_bars_revealed_after_decision": [
+        {
+          "c": 167.61,
+          "h": 169.06,
+          "l": 167.35,
+          "n": 1945,
+          "o": 168.075,
+          "t": "2022-01-27T05:00:00+00:00",
+          "v": 161998,
+          "vw": 167.796747
+        },
+        {
+          "c": 167.06,
+          "h": 167.46,
+          "l": 166.39,
+          "n": 1363,
+          "o": 166.8,
+          "t": "2022-01-28T05:00:00+00:00",
+          "v": 111393,
+          "vw": 166.826966
+        },
+        {
+          "c": 168.09,
+          "h": 168.11,
+          "l": 167.525,
+          "n": 671,
+          "o": 167.89,
+          "t": "2022-01-31T05:00:00+00:00",
+          "v": 58067,
+          "vw": 167.857027
+        },
+        {
+          "c": 168.21,
+          "h": 168.84,
+          "l": 168.03,
+          "n": 821,
+          "o": 168.55,
+          "t": "2022-02-01T05:00:00+00:00",
+          "v": 71938,
+          "vw": 168.329232
+        },
+        {
+          "c": 168.79,
+          "h": 169.1,
+          "l": 168.17,
+          "n": 788,
+          "o": 168.55,
+          "t": "2022-02-02T05:00:00+00:00",
+          "v": 61098,
+          "vw": 168.796047
+        }
+      ],
+      "future_data_visible_during_decision": false,
+      "label": "HISTORICAL EXECUTION REPLAY",
+      "modeled_historical_outcome": null,
+      "order_submission_performed": false,
+      "payoff": null,
+      "published_research_trade": {
+        "direction": 1,
+        "entry_at": "2022-01-27T14:30:00+00:00",
+        "entry_fill": "168.0918075",
+        "exit_at": "2022-01-28T14:30:00+00:00",
+        "exit_fill": "166.563342",
+        "family": "trend-aligned shock reversal",
+        "modeled_fees": "0.59",
+        "modeled_slippage": "1.97",
+        "net_pnl": "-90.77",
+        "outcome": "stop",
+        "raw_entry": "168.075",
+        "raw_exit": "166.58",
+        "return_r": "-1.000005899561079816660150066",
+        "risk_dollars": "90.7694645",
+        "shares": 59,
+        "signal_at": "2022-01-26T21:00:00+00:00",
+        "stop_price": "166.58",
+        "symbol": "GLD",
+        "target_price": "172.74",
+        "target_to_stop": "3.003589290757576299241029454",
+        "variant": "shadow_mtw_l2_z0.6_c0.25_s1_h5"
+      },
+      "risk": null,
+      "signal_date": "2022-01-26",
+      "source": {
+        "causal_record_count": 3036,
+        "data_content_hash": "9d770f80007093c046e4ce1b8e48d6bb61f05b8526745b341dd6f914b0cfcc0a",
+        "feed": "iex",
+        "name": "authenticated Alpaca CLI 0.0.14 historical stock bars",
+        "research_result_hash": "7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2"
+      },
+      "state": "REJECTED",
+      "strategy": {
+        "display_name": "GuavaMango",
+        "strategy_id": "shadow_clock_shock_reversal_v1",
+        "strategy_version": "1.0.0"
+      },
+      "warrant_receipt": null
+    },
+    {
+      "agent_provenance": {
+        "live_inference": true,
+        "mode": "live-featherless",
+        "models": [
+          "zai-org/GLM-5.3",
+          "zai-org/GLM-5.3-Flash"
+        ],
+        "reports_hash": "954aeb50c6181d6b4a629c9bf6c0ca4c4be3ddf87e960ef992ebd783b0de3619"
+      },
+      "agent_reports": {
+        "options_witness": {
+          "falsifiers": [
+            "A valid schema-conforming response is required."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "EVIDENCE_PATH_INVALID",
+              "evidence_keys": [],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "5636e84fe0d132a9dbaa6bc0c58a44f4993adad87af526fe4e657bf0c7fff95f",
+          "latency_ms": 16210,
+          "model_id": "zai-org/GLM-5.3-Flash",
+          "prompt_hash": "a8ea43e38534510453cd2f2e270feddee71cbad70bb8c51940347c07b7f787fc",
+          "prompt_version": "afterimage-decision-desk-v2.0.0",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "EVIDENCE_PATH_INVALID",
+          "response_hash": "f0f6a392f995e507713463c2fa3e3047851f910dd182d0fab87df87b4d133a0c",
+          "response_preimage": {
+            "reason": "EVIDENCE_PATH_INVALID"
+          },
+          "role": "options_witness",
+          "status": "abstain",
+          "thesis": "No model conclusion is admitted."
+        },
+        "prosecutor": {
+          "falsifiers": [
+            "Per-symbol shock data for the 11-symbol universe showing XLP is not the most negative normalized two-day shock at the 2022-04-18 cutoff would invalidate the selection.",
+            "Evidence that the actual fill price used the 2022-04-19T13:35:00Z quote rather than the next-session daily open plus 1bp slippage would establish look-ahead leakage.",
+            "A shadow-clock state showing a blocking virtual position or a skipped-signal consumption that blocks this entry would contradict features.shadow_blocked=false.",
+            "Recomputation of the deployment metrics against research_result_hash 7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2 failing any required gate (e.g., sample_count < 30 or profit_factor < 2) would invalidate the admitted evidence.",
+            "A signal weekday or calendar violation (e.g., signal actually generated on a Thursday/Friday or during a blocked session) would contradict features.calendar_allowed and the allowed_signal_weekdays contract."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "Signal features satisfy every strategy-contract trigger threshold: countertrend_shock_atr 0.7552295949497918 >= minimum_shock_atr 0.6; close_location 0.23711340206185566 <= maximum_close_location 0.25; trend=1 with sma50 75.425 > sma100 75.2624; stop_distance_fraction 0.010913840027764079 within [0.001, 0.03]; signal date 2022-04-18 is a Monday, an allowed signal weekday; shadow_blocked=false, shadow_signal_started=true, blocking_signal_weekday empty, calendar_allowed=true.",
+              "evidence_keys": [
+                "source_packets.market.snapshot.features.countertrend_shock_atr",
+                "source_packets.market.snapshot.features.close_location",
+                "source_packets.market.snapshot.features.trend",
+                "source_packets.market.snapshot.features.sma50",
+                "source_packets.market.snapshot.features.sma100",
+                "source_packets.market.snapshot.features.stop_distance_fraction",
+                "source_packets.market.snapshot.features.shadow_blocked",
+                "source_packets.market.snapshot.features.calendar_allowed",
+                "source_packets.evidence_protocol.strategy_contract.signal.minimum_shock_atr",
+                "source_packets.evidence_protocol.strategy_contract.signal.maximum_close_location",
+                "source_packets.evidence_protocol.strategy_contract.signal.allowed_signal_weekdays",
+                "source_packets.evidence_protocol.strategy_contract.risk.minimum_stop_fraction",
+                "source_packets.evidence_protocol.strategy_contract.risk.maximum_stop_fraction"
+              ],
+              "severity": "support"
+            },
+            {
+              "basis": "observation",
+              "claim": "All ten required deployment gates are admitted true with sample_count 95, profit_factor 2.253, expectancy 0.5058R, max_drawdown 4.746R (<= 6R), positive_month_fraction 0.723, positive_underlyings 8, stress_profit_factor 2.222, neighbor_positive_fraction 1, and minimum_target_to_stop 3.0000133 >= 3.",
+              "evidence_keys": [
+                "source_packets.evidence_protocol.deployment_evidence.admitted",
+                "source_packets.evidence_protocol.deployment_evidence.required_gates",
+                "source_packets.evidence_protocol.deployment_evidence.metrics.sample_count",
+                "source_packets.evidence_protocol.deployment_evidence.metrics.profit_factor",
+                "source_packets.evidence_protocol.deployment_evidence.metrics.expectancy_r",
+                "source_packets.evidence_protocol.deployment_evidence.metrics.max_drawdown_r",
+                "source_packets.evidence_protocol.deployment_evidence.metrics.positive_month_fraction",
+                "source_packets.evidence_protocol.deployment_evidence.metrics.positive_underlyings",
+                "source_packets.evidence_protocol.deployment_evidence.metrics.stress_profit_factor",
+                "source_packets.evidence_protocol.deployment_evidence.metrics.neighbor_positive_fraction",
+                "source_packets.evidence_protocol.deployment_evidence.metrics.minimum_target_to_stop"
+              ],
+              "severity": "support"
+            },
+            {
+              "basis": "inference",
+              "claim": "No look-ahead leakage is evidenced in the execution basis: the market snapshot declares provenance.point_in_time=true, the regime clock declares historical_replay=true with causal_signal_cutoff 2022-04-18T20:00:00+00:00 matching candidate.signal_at, and the execution pricing basis is next-session Alpaca daily open plus declared 1bp entry slippage rather than the later 13:35 quote; the latestQuote timestamp 2022-04-19T13:35:00+00:00 is informational and is not the declared fill basis.",
+              "evidence_keys": [
+                "source_packets.market.snapshot.provenance.point_in_time",
+                "source_packets.regime.clock.causal_signal_cutoff",
+                "source_packets.regime.clock.historical_replay",
+                "source_packets.execution.latest_stock_snapshot.pricing_basis",
+                "source_packets.execution.latest_stock_snapshot.latestQuote.t",
+                "candidate.signal_at"
+              ],
+              "severity": "support"
+            },
+            {
+              "basis": "observation",
+              "claim": "All three prior reports (strategist, regime_witness, options_witness) abstained with reason EVIDENCE_PATH_INVALID and empty evidence_keys, so no independent witness analysis corroborates this candidate; support rests solely on this raw-packet audit.",
+              "evidence_keys": [
+                "reports[0].status",
+                "reports[0].reason_code",
+                "reports[1].status",
+                "reports[1].reason_code",
+                "reports[2].status",
+                "reports[2].reason_code"
+              ],
+              "severity": "warning"
+            },
+            {
+              "basis": "inference",
+              "claim": "The cross-section selection of XLP as most_negative_normalized_shock cannot be independently recomputed from the packet: only aggregate features (symbol_count 11, universe_complete true, missing_symbols empty) and a records hash are supplied, not per-symbol shock values, so selection correctness is an inference from declared snapshot features rather than a directly verifiable observation.",
+              "evidence_keys": [
+                "source_packets.market.snapshot.features.symbol_count",
+                "source_packets.market.snapshot.features.universe_complete",
+                "source_packets.market.snapshot.features.missing_symbols",
+                "source_packets.market.snapshot.record_count",
+                "source_packets.market.snapshot.records_sha256",
+                "source_packets.evidence_protocol.strategy_contract.signal.cross_section"
+              ],
+              "severity": "warning"
+            },
+            {
+              "basis": "observation",
+              "claim": "Deployment evidence limitations explicitly acknowledge that the 2022-2026 evidence is iteratively reused pseudo-OOS rather than a sealed future period, that Alpaca IEX daily bars are not consolidated SIP, and that results are a backtest, so regime dependence and overfitting risk are disclosed but not eliminated by the packet.",
+              "evidence_keys": [
+                "source_packets.evidence_protocol.deployment_evidence.limitations"
+              ],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "3b823a47f9ff777c42c0bc16698584699143f034d961e852f558bfaa0628379f",
+          "latency_ms": 30254,
+          "model_id": "zai-org/GLM-5.3",
+          "prompt_hash": "f00d8c91b127e3f21ea93b815617b07e15a63d2e25d6c99ddbbec73b7c9141b2",
+          "prompt_version": "afterimage-decision-desk-v2.0.0",
+          "provider_created_at": 1788526344,
+          "provider_request_id": "503c696f-9e04-463a-a8f3-2d7f79321403",
+          "provider_system_fingerprint": "fp1-nst-nes",
+          "reason_code": "CONTRACT_TRIGGERS_SATISFIED_ALL_GATES_PASS_POINT_IN_TIME_SAFE_PRIOR_ABSTENTIONS_LEAVE_SUPPORT_UNCORROBORATED",
+          "response_hash": "a760161c105c430ee794501cb8c5d34a54180fe0fd401f38c57f2672868bd51a",
+          "response_preimage": {
+            "falsifiers": [
+              "Per-symbol shock data for the 11-symbol universe showing XLP is not the most negative normalized two-day shock at the 2022-04-18 cutoff would invalidate the selection.",
+              "Evidence that the actual fill price used the 2022-04-19T13:35:00Z quote rather than the next-session daily open plus 1bp slippage would establish look-ahead leakage.",
+              "A shadow-clock state showing a blocking virtual position or a skipped-signal consumption that blocks this entry would contradict features.shadow_blocked=false.",
+              "Recomputation of the deployment metrics against research_result_hash 7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2 failing any required gate (e.g., sample_count < 30 or profit_factor < 2) would invalidate the admitted evidence.",
+              "A signal weekday or calendar violation (e.g., signal actually generated on a Thursday/Friday or during a blocked session) would contradict features.calendar_allowed and the allowed_signal_weekdays contract."
+            ],
+            "findings": [
+              {
+                "basis": "observation",
+                "claim": "Signal features satisfy every strategy-contract trigger threshold: countertrend_shock_atr 0.7552295949497918 >= minimum_shock_atr 0.6; close_location 0.23711340206185566 <= maximum_close_location 0.25; trend=1 with sma50 75.425 > sma100 75.2624; stop_distance_fraction 0.010913840027764079 within [0.001, 0.03]; signal date 2022-04-18 is a Monday, an allowed signal weekday; shadow_blocked=false, shadow_signal_started=true, blocking_signal_weekday empty, calendar_allowed=true.",
+                "evidence_keys": [
+                  "source_packets.market.snapshot.features.countertrend_shock_atr",
+                  "source_packets.market.snapshot.features.close_location",
+                  "source_packets.market.snapshot.features.trend",
+                  "source_packets.market.snapshot.features.sma50",
+                  "source_packets.market.snapshot.features.sma100",
+                  "source_packets.market.snapshot.features.stop_distance_fraction",
+                  "source_packets.market.snapshot.features.shadow_blocked",
+                  "source_packets.market.snapshot.features.calendar_allowed",
+                  "source_packets.evidence_protocol.strategy_contract.signal.minimum_shock_atr",
+                  "source_packets.evidence_protocol.strategy_contract.signal.maximum_close_location",
+                  "source_packets.evidence_protocol.strategy_contract.signal.allowed_signal_weekdays",
+                  "source_packets.evidence_protocol.strategy_contract.risk.minimum_stop_fraction",
+                  "source_packets.evidence_protocol.strategy_contract.risk.maximum_stop_fraction"
+                ],
+                "severity": "support"
+              },
+              {
+                "basis": "observation",
+                "claim": "All ten required deployment gates are admitted true with sample_count 95, profit_factor 2.253, expectancy 0.5058R, max_drawdown 4.746R (<= 6R), positive_month_fraction 0.723, positive_underlyings 8, stress_profit_factor 2.222, neighbor_positive_fraction 1, and minimum_target_to_stop 3.0000133 >= 3.",
+                "evidence_keys": [
+                  "source_packets.evidence_protocol.deployment_evidence.admitted",
+                  "source_packets.evidence_protocol.deployment_evidence.required_gates",
+                  "source_packets.evidence_protocol.deployment_evidence.metrics.sample_count",
+                  "source_packets.evidence_protocol.deployment_evidence.metrics.profit_factor",
+                  "source_packets.evidence_protocol.deployment_evidence.metrics.expectancy_r",
+                  "source_packets.evidence_protocol.deployment_evidence.metrics.max_drawdown_r",
+                  "source_packets.evidence_protocol.deployment_evidence.metrics.positive_month_fraction",
+                  "source_packets.evidence_protocol.deployment_evidence.metrics.positive_underlyings",
+                  "source_packets.evidence_protocol.deployment_evidence.metrics.stress_profit_factor",
+                  "source_packets.evidence_protocol.deployment_evidence.metrics.neighbor_positive_fraction",
+                  "source_packets.evidence_protocol.deployment_evidence.metrics.minimum_target_to_stop"
+                ],
+                "severity": "support"
+              },
+              {
+                "basis": "inference",
+                "claim": "No look-ahead leakage is evidenced in the execution basis: the market snapshot declares provenance.point_in_time=true, the regime clock declares historical_replay=true with causal_signal_cutoff 2022-04-18T20:00:00+00:00 matching candidate.signal_at, and the execution pricing basis is next-session Alpaca daily open plus declared 1bp entry slippage rather than the later 13:35 quote; the latestQuote timestamp 2022-04-19T13:35:00+00:00 is informational and is not the declared fill basis.",
+                "evidence_keys": [
+                  "source_packets.market.snapshot.provenance.point_in_time",
+                  "source_packets.regime.clock.causal_signal_cutoff",
+                  "source_packets.regime.clock.historical_replay",
+                  "source_packets.execution.latest_stock_snapshot.pricing_basis",
+                  "source_packets.execution.latest_stock_snapshot.latestQuote.t",
+                  "candidate.signal_at"
+                ],
+                "severity": "support"
+              },
+              {
+                "basis": "observation",
+                "claim": "All three prior reports (strategist, regime_witness, options_witness) abstained with reason EVIDENCE_PATH_INVALID and empty evidence_keys, so no independent witness analysis corroborates this candidate; support rests solely on this raw-packet audit.",
+                "evidence_keys": [
+                  "reports[0].status",
+                  "reports[0].reason_code",
+                  "reports[1].status",
+                  "reports[1].reason_code",
+                  "reports[2].status",
+                  "reports[2].reason_code"
+                ],
+                "severity": "warning"
+              },
+              {
+                "basis": "inference",
+                "claim": "The cross-section selection of XLP as most_negative_normalized_shock cannot be independently recomputed from the packet: only aggregate features (symbol_count 11, universe_complete true, missing_symbols empty) and a records hash are supplied, not per-symbol shock values, so selection correctness is an inference from declared snapshot features rather than a directly verifiable observation.",
+                "evidence_keys": [
+                  "source_packets.market.snapshot.features.symbol_count",
+                  "source_packets.market.snapshot.features.universe_complete",
+                  "source_packets.market.snapshot.features.missing_symbols",
+                  "source_packets.market.snapshot.record_count",
+                  "source_packets.market.snapshot.records_sha256",
+                  "source_packets.evidence_protocol.strategy_contract.signal.cross_section"
+                ],
+                "severity": "warning"
+              },
+              {
+                "basis": "observation",
+                "claim": "Deployment evidence limitations explicitly acknowledge that the 2022-2026 evidence is iteratively reused pseudo-OOS rather than a sealed future period, that Alpaca IEX daily bars are not consolidated SIP, and that results are a backtest, so regime dependence and overfitting risk are disclosed but not eliminated by the packet.",
+                "evidence_keys": [
+                  "source_packets.evidence_protocol.deployment_evidence.limitations"
+                ],
+                "severity": "warning"
+              }
+            ],
+            "reason_code": "CONTRACT_TRIGGERS_SATISFIED_ALL_GATES_PASS_POINT_IN_TIME_SAFE_PRIOR_ABSTENTIONS_LEAVE_SUPPORT_UNCORROBORATED",
+            "status": "support",
+            "thesis": "The bullish XLP equity-bracket candidate is internally consistent with the frozen point-in-time evidence: every strategy-contract trigger condition is met by declared snapshot features, all ten deployment gates pass with adequate sample depth, and the execution pricing basis is next-session open with declared slippage, so no packet-grounded fatal contradiction exists; support is qualified by the absence of any corroborating witness report (all three prior reports abstained on EVIDENCE_PATH_INVALID) and by acknowledged pseudo-OOS reuse limitations."
+          },
+          "role": "prosecutor",
+          "status": "support",
+          "thesis": "The bullish XLP equity-bracket candidate is internally consistent with the frozen point-in-time evidence: every strategy-contract trigger condition is met by declared snapshot features, all ten deployment gates pass with adequate sample depth, and the execution pricing basis is next-session open with declared slippage, so no packet-grounded fatal contradiction exists; support is qualified by the absence of any corroborating witness report (all three prior reports abstained on EVIDENCE_PATH_INVALID) and by acknowledged pseudo-OOS reuse limitations."
+        },
+        "regime_witness": {
+          "falsifiers": [
+            "A valid schema-conforming response is required."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "EVIDENCE_PATH_INVALID",
+              "evidence_keys": [],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "90d8687045fb605a38166521d546f7b42f6c46f33e7f520581c9c202fb9423f6",
+          "latency_ms": 14764,
+          "model_id": "zai-org/GLM-5.3-Flash",
+          "prompt_hash": "09f3bacd453f09c124429d052370ae48bc41fb20dad58ce779d1e5be2d86e2ef",
+          "prompt_version": "afterimage-decision-desk-v2.0.0",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "EVIDENCE_PATH_INVALID",
+          "response_hash": "f0f6a392f995e507713463c2fa3e3047851f910dd182d0fab87df87b4d133a0c",
+          "response_preimage": {
+            "reason": "EVIDENCE_PATH_INVALID"
+          },
+          "role": "regime_witness",
+          "status": "abstain",
+          "thesis": "No model conclusion is admitted."
+        },
+        "strategist": {
+          "falsifiers": [
+            "A valid schema-conforming response is required."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "EVIDENCE_PATH_INVALID",
+              "evidence_keys": [],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "4a6f51b5470f86c0ae24bb8097fbf96a5d517af66bdd776b9ba463ed91dabfaa",
+          "latency_ms": 29480,
+          "model_id": "zai-org/GLM-5.3",
+          "prompt_hash": "e9ec5aae7e15a108aa8d7114fa030aae8de7bda4f084492bdae8987a4a13758a",
+          "prompt_version": "afterimage-decision-desk-v2.0.0",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "EVIDENCE_PATH_INVALID",
+          "response_hash": "f0f6a392f995e507713463c2fa3e3047851f910dd182d0fab87df87b4d133a0c",
+          "response_preimage": {
+            "reason": "EVIDENCE_PATH_INVALID"
+          },
+          "role": "strategist",
+          "status": "abstain",
+          "thesis": "No model conclusion is admitted."
+        }
+      },
+      "alpaca_cli_dry_run": null,
+      "audit": {
+        "failed_sequence": null,
+        "records": 5,
+        "valid": true
+      },
+      "broker_pnl_claim": false,
+      "candidate": null,
+      "causal_signal_cutoff": "2022-04-18T20:00:00+00:00",
+      "deployment_evidence": null,
+      "future_bars_revealed_after_decision": [
+        {
+          "c": 79.38,
+          "h": 79.49,
+          "l": 78.16,
+          "n": 2481,
+          "o": 78.29,
+          "t": "2022-04-19T04:00:00+00:00",
+          "v": 313225,
+          "vw": 79.173585
+        },
+        {
+          "c": 80.54,
+          "h": 80.75,
+          "l": 79.77,
+          "n": 3751,
+          "o": 79.77,
+          "t": "2022-04-20T04:00:00+00:00",
+          "v": 404180,
+          "vw": 80.489818
+        },
+        {
+          "c": 80.49,
+          "h": 81.33,
+          "l": 80.445,
+          "n": 2653,
+          "o": 80.71,
+          "t": "2022-04-21T04:00:00+00:00",
+          "v": 335737,
+          "vw": 80.846079
+        },
+        {
+          "c": 79.26,
+          "h": 80.79,
+          "l": 79.17,
+          "n": 2388,
+          "o": 80.66,
+          "t": "2022-04-22T04:00:00+00:00",
+          "v": 307172,
+          "vw": 79.809456
+        },
+        {
+          "c": 79.61,
+          "h": 79.815,
+          "l": 78.185,
+          "n": 4790,
+          "o": 79.45,
+          "t": "2022-04-25T04:00:00+00:00",
+          "v": 545825,
+          "vw": 78.983032
+        }
+      ],
+      "future_data_visible_during_decision": false,
+      "label": "HISTORICAL EXECUTION REPLAY",
+      "modeled_historical_outcome": null,
+      "order_submission_performed": false,
+      "payoff": null,
+      "published_research_trade": {
+        "direction": 1,
+        "entry_at": "2022-04-19T13:30:00+00:00",
+        "entry_fill": "78.297829",
+        "exit_at": "2022-04-21T13:30:00+00:00",
+        "exit_fill": "80.941905",
+        "family": "trend-aligned shock reversal",
+        "modeled_fees": "1.27",
+        "modeled_slippage": "2.02",
+        "net_pnl": "334.53",
+        "outcome": "target",
+        "raw_entry": "78.29",
+        "raw_exit": "80.95",
+        "return_r": "3.008423613095625810700827807",
+        "risk_dollars": "111.197771",
+        "shares": 127,
+        "signal_at": "2022-04-18T20:00:00+00:00",
+        "stop_price": "77.44",
+        "symbol": "XLP",
+        "target_price": "80.95",
+        "target_to_stop": "3.008402497564452078810104926",
+        "variant": "shadow_mtw_l2_z0.6_c0.25_s1_h5"
+      },
+      "risk": null,
+      "signal_date": "2022-04-18",
+      "source": {
+        "causal_record_count": 3036,
+        "data_content_hash": "9d770f80007093c046e4ce1b8e48d6bb61f05b8526745b341dd6f914b0cfcc0a",
+        "feed": "iex",
+        "name": "authenticated Alpaca CLI 0.0.14 historical stock bars",
+        "research_result_hash": "7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2"
+      },
+      "state": "REJECTED",
+      "strategy": {
+        "display_name": "GuavaMango",
+        "strategy_id": "shadow_clock_shock_reversal_v1",
+        "strategy_version": "1.0.0"
+      },
+      "warrant_receipt": null
+    }
+  ],
+  "coverage_summary": {
+    "full_path_cases": 0,
+    "modeled_net_pnl_dollars": "0",
+    "requested_cases": 2,
+    "stop_outcomes": 0,
+    "target_outcomes": 0
+  },
+  "label": "HISTORICAL EXECUTION REPLAY \u2014 NOT BROKER P&L",
+  "order_submission_performed": false,
+  "purpose": "Exercise the production strategy, live AI jury, deterministic risk, signed warrant, and official Alpaca CLI dry-run on causal historical packets before revealing outcomes.",
+  "receipt_sha256": "75d4d642b9e64c7a76b0535ed09767b2c6380a065363e24620cc31a99a1e5a37",
+  "schema": "afterimage-guavamango-historical-execution-replay-v1",
+  "selection_disclosure": "One known winner and one known loser are deliberately selected for path coverage; they are not an unbiased performance sample. Use the admitted 95-trade result for aggregate research metrics."
+}

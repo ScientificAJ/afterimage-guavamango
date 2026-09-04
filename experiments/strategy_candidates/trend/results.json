@@ -1,0 +1,3486 @@
+{
+  "alpaca_read_only_preflight": {
+    "cash": "100000",
+    "equity": "100000",
+    "execution": "disabled",
+    "open_orders": 0,
+    "options_approved_level": 3,
+    "options_buying_power": "100000",
+    "options_trading_level": 3,
+    "paper": true,
+    "positions": 0,
+    "status": "ACTIVE",
+    "transport": "alpaca-cli/0.0.14"
+  },
+  "candidate_decision": {
+    "failed_gates": [
+      "training_proxy_expectancy_positive",
+      "oos_option_sample_at_least_10"
+    ],
+    "gates": {
+      "median_walk_forward_expectancy_positive": true,
+      "oos_option_coverage_at_least_80pct": true,
+      "oos_option_expectancy_positive": true,
+      "oos_option_sample_at_least_10": false,
+      "three_nonempty_walk_forward_folds": true,
+      "training_proxy_expectancy_positive": false,
+      "training_proxy_sample_at_least_20": true,
+      "two_positive_walk_forward_folds": true
+    },
+    "status": "no_candidate"
+  },
+  "holdout_protocol": {
+    "note": "The runner is reproducible, but this research pass did not revise parameters after observing OOS.",
+    "oos_reused_for_iteration": false,
+    "parameters_frozen_before_oos": true,
+    "selection_uses_holdout": false
+  },
+  "oos": {
+    "expectancy_r": 0.865037,
+    "flats": 0,
+    "hit_rate": 1.0,
+    "losses": 0,
+    "max_drawdown_dollars": 0.0,
+    "median_r": 0.865037,
+    "net_pnl_dollars": 432.52,
+    "sample_count": 1,
+    "session_count": 46,
+    "signals": [
+      {
+        "direction": "bullish",
+        "entry_at": "2026-08-03T14:05:00Z",
+        "entry_price": 753.41,
+        "features": {
+          "drive_return": 0.0054970713418458494,
+          "efficiency": 0.8803418803418908,
+          "relative_volume": 1.880785077225768,
+          "session_vwap": 751.6873151905472
+        },
+        "session_date": "2026-08-03",
+        "signal_at": "2026-08-03T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 753.61
+      }
+    ],
+    "trades": [
+      {
+        "direction": "bullish",
+        "entry_at": "2026-08-03T14:05:00Z",
+        "entry_price": 753.41,
+        "exit_at": "2026-08-03T15:05:00Z",
+        "exit_price": 755.19,
+        "exit_reason": "time",
+        "net_pnl_dollars": 432.5182835375374,
+        "return_r": 0.8650365670750748,
+        "session_date": "2026-08-03",
+        "signal_at": "2026-08-03T14:00:00Z"
+      }
+    ],
+    "wins": 1
+  },
+  "oos_option_validation": {
+    "contract_limitation": "inactive contract metadata queried after expiration; not a point-in-time chain snapshot",
+    "coverage_rate": 1.0,
+    "excluded_signals": 0,
+    "exclusions": [],
+    "expectancy_r": 0.939163,
+    "fee_reserve_per_contract_side": 0.65,
+    "flats": 0,
+    "hit_rate": 1.0,
+    "losses": 0,
+    "max_drawdown_dollars": 0.0,
+    "net_pnl_dollars": 49.4,
+    "pricing_basis": "next synchronized 5-minute closes; no quote reconstruction",
+    "requested_signals": 1,
+    "results": [
+      {
+        "direction": "bullish",
+        "entry_at": "2026-08-03T14:05:00Z",
+        "entry_debit": 2.0,
+        "exit_at": "2026-08-03T15:05:00Z",
+        "exit_credit": 2.52,
+        "exit_reason": "time",
+        "expiration_date": "2026-08-05",
+        "long_symbol": "SPY260805C00754000",
+        "net_pnl_dollars": 49.4,
+        "return_r": 0.9391634980988585,
+        "risk_dollars": 52.6,
+        "session_date": "2026-08-03",
+        "short_symbol": "SPY260805C00760000",
+        "signal_at": "2026-08-03T14:00:00Z",
+        "signal_price": 753.61,
+        "synchronized_bars": 13
+      }
+    ],
+    "sample_count": 1,
+    "slippage_per_leg_per_fill": 0.02,
+    "source": "Alpaca historical option trade bars via official CLI",
+    "validated_signals": 1,
+    "wins": 1
+  },
+  "results_sha256": "f811dfb19d47cdc6703145a1e531fb6883d308721fa83ee78fce0ffa89fc757f",
+  "schema_version": "afterimage-trend-candidate-v1",
+  "selection": {
+    "parameters": {
+      "breakout_buffer": 0.0,
+      "drive_threshold": 0.0045,
+      "efficiency_threshold": 0.7,
+      "family": "opening_drive_vwap",
+      "hold_minutes": 60,
+      "rel_volume_threshold": 1.0,
+      "signal_minutes": 30,
+      "stop_fraction": 0.0025,
+      "target_fraction": 0.005
+    },
+    "selected_variant_id": "opening_drive_vwap-62dcb6d54f",
+    "selection_data": "training_walk_forward_only",
+    "training_session_count": 367,
+    "walk_forward_fold_count": 3
+  },
+  "source_dataset": {
+    "embargo_sessions": 5,
+    "embedded_dataset_hash": "2439c1579d9f3fc4f0286d6eed5e1acf2787799a32658423a8a28c828b986534",
+    "feed": "iex",
+    "holdout_range": [
+      "2026-07-01",
+      "2026-09-03"
+    ],
+    "path": ".afterimage/research/spy-real-v1.json",
+    "provider": "alpaca-market-data-api",
+    "sha256": "9b21ff12ee88a19aa73f19f003836645d87c1dd61b4e6e1207ad3b5e5d1144f7",
+    "timeframe": "5Min",
+    "training_range": [
+      "2025-01-02",
+      "2026-06-23"
+    ]
+  },
+  "training": {
+    "expectancy_r": -0.073575,
+    "flats": 0,
+    "hit_rate": 0.47619,
+    "losses": 11,
+    "max_drawdown_dollars": 2080.52,
+    "median_r": -0.003024,
+    "net_pnl_dollars": -772.53,
+    "sample_count": 21,
+    "signals": [
+      {
+        "direction": "bullish",
+        "entry_at": "2025-01-27T15:05:00Z",
+        "entry_price": 597.59,
+        "features": {
+          "drive_return": 0.006371675464846405,
+          "efficiency": 0.7137476459510362,
+          "relative_volume": 2.1265600541523884,
+          "session_vwap": 597.3493099546856
+        },
+        "session_date": "2025-01-27",
+        "signal_at": "2025-01-27T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 598.61
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-02-24T15:05:00Z",
+        "entry_price": 597.32,
+        "features": {
+          "drive_return": -0.005406842022208758,
+          "efficiency": 0.9130434782608834,
+          "relative_volume": 1.5942864302718958,
+          "session_vwap": 600.8018178588691
+        },
+        "session_date": "2025-02-24",
+        "signal_at": "2025-02-24T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 598.76
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-02-27T15:05:00Z",
+        "entry_price": 591.85,
+        "features": {
+          "drive_return": -0.007304650851092331,
+          "efficiency": 0.8449612403100482,
+          "relative_volume": 1.7273733450277744,
+          "session_vwap": 595.3299558709153
+        },
+        "session_date": "2025-02-27",
+        "signal_at": "2025-02-27T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 592.52
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-03-04T15:05:00Z",
+        "entry_price": 575.64,
+        "features": {
+          "drive_return": -0.006900001725000382,
+          "efficiency": 0.8097165991902745,
+          "relative_volume": 3.213775620330016,
+          "session_vwap": 578.6265534158018
+        },
+        "session_date": "2025-03-04",
+        "signal_at": "2025-03-04T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 575.71
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-03-12T14:05:00Z",
+        "entry_price": 559.07,
+        "features": {
+          "drive_return": -0.004909372276276858,
+          "efficiency": 0.9200000000000698,
+          "relative_volume": 1.4171655253497994,
+          "session_vwap": 561.0219392414156
+        },
+        "session_date": "2025-03-12",
+        "signal_at": "2025-03-12T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 559.43
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-04-30T14:05:00Z",
+        "entry_price": 542.97,
+        "features": {
+          "drive_return": -0.010282541595894257,
+          "efficiency": 0.8218978102189747,
+          "relative_volume": 1.3441008968396926,
+          "session_vwap": 543.8293961080257
+        },
+        "session_date": "2025-04-30",
+        "signal_at": "2025-04-30T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 541.9
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-05-19T14:05:00Z",
+        "entry_price": 591.96,
+        "features": {
+          "drive_return": 0.005287766726175258,
+          "efficiency": 1.0,
+          "relative_volume": 1.2145964744635203,
+          "session_vwap": 589.9256693171117
+        },
+        "session_date": "2025-05-19",
+        "signal_at": "2025-05-19T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 591.26
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-06-05T14:05:00Z",
+        "entry_price": 594.5,
+        "features": {
+          "drive_return": -0.005638657430646177,
+          "efficiency": 0.8531645569620412,
+          "relative_volume": 1.1736221572774732,
+          "session_vwap": 595.4844895906367
+        },
+        "session_date": "2025-06-05",
+        "signal_at": "2025-06-05T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 594.29
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-08-01T14:05:00Z",
+        "entry_price": 621.04,
+        "features": {
+          "drive_return": -0.00777545383424072,
+          "efficiency": 0.9240986717267393,
+          "relative_volume": 2.641551404534436,
+          "session_vwap": 622.8517747000014
+        },
+        "session_date": "2025-08-01",
+        "signal_at": "2025-08-01T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 621.46
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-08-04T14:05:00Z",
+        "entry_price": 629.03,
+        "features": {
+          "drive_return": 0.005273924439046063,
+          "efficiency": 1.0,
+          "relative_volume": 1.5957127239887827,
+          "session_vwap": 627.6780252403715
+        },
+        "session_date": "2025-08-04",
+        "signal_at": "2025-08-04T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 629.02
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-08-20T14:05:00Z",
+        "entry_price": 635.605,
+        "features": {
+          "drive_return": -0.0063185223416067915,
+          "efficiency": 1.0,
+          "relative_volume": 2.3840541656682253,
+          "session_vwap": 637.143834768228
+        },
+        "session_date": "2025-08-20",
+        "signal_at": "2025-08-20T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 635.35
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-11-19T15:05:00Z",
+        "entry_price": 666.12,
+        "features": {
+          "drive_return": 0.007400345046762791,
+          "efficiency": 1.0,
+          "relative_volume": 1.1159847647131098,
+          "session_vwap": 663.0805350968415
+        },
+        "session_date": "2025-11-19",
+        "signal_at": "2025-11-19T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 665.67
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-12-15T15:05:00Z",
+        "entry_price": 681.54,
+        "features": {
+          "drive_return": -0.004877906510437624,
+          "efficiency": 0.9435825105783281,
+          "relative_volume": 1.0771097899883912,
+          "session_vwap": 683.8331640306181
+        },
+        "session_date": "2025-12-15",
+        "signal_at": "2025-12-15T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 682.4
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-12-19T15:05:00Z",
+        "entry_price": 680.015,
+        "features": {
+          "drive_return": 0.004751629446801076,
+          "efficiency": 0.7538100820633561,
+          "relative_volume": 1.0310343251519722,
+          "session_vwap": 678.4571548587818
+        },
+        "session_date": "2025-12-19",
+        "signal_at": "2025-12-19T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 679.825
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-01-21T15:05:00Z",
+        "entry_price": 682.25,
+        "features": {
+          "drive_return": 0.0046147052329432725,
+          "efficiency": 0.9874015748031609,
+          "relative_volume": 1.8380249900689756,
+          "session_vwap": 680.5716781619701
+        },
+        "session_date": "2026-01-21",
+        "signal_at": "2026-01-21T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 682.485
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-01-29T15:05:00Z",
+        "entry_price": 690.28,
+        "features": {
+          "drive_return": -0.006964938356705419,
+          "efficiency": 0.8614564831261149,
+          "relative_volume": 1.1256575372556274,
+          "session_vwap": 694.2664033218098
+        },
+        "session_date": "2026-01-29",
+        "signal_at": "2026-01-29T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 691.495
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-02-06T15:05:00Z",
+        "entry_price": 684.06,
+        "features": {
+          "drive_return": 0.005018820577164407,
+          "efficiency": 0.7080745341615164,
+          "relative_volume": 1.6444469555452756,
+          "session_vwap": 684.6403842055377
+        },
+        "session_date": "2026-02-06",
+        "signal_at": "2026-02-06T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 684.855
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-03-02T15:05:00Z",
+        "entry_price": 684.17,
+        "features": {
+          "drive_return": 0.006291161433854331,
+          "efficiency": 0.7452006980802441,
+          "relative_volume": 2.184191734547709,
+          "session_vwap": 681.6440289509677
+        },
+        "session_date": "2026-03-02",
+        "signal_at": "2026-03-02T15:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 683.0
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-03-30T14:05:00Z",
+        "entry_price": 636.13,
+        "features": {
+          "drive_return": -0.007454755727815399,
+          "efficiency": 1.0,
+          "relative_volume": 1.5271830749923916,
+          "session_vwap": 637.1604038796455
+        },
+        "session_date": "2026-03-30",
+        "signal_at": "2026-03-30T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 635.09
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-03-31T14:05:00Z",
+        "entry_price": 642.37,
+        "features": {
+          "drive_return": 0.005877243095608886,
+          "efficiency": 0.7399014778324882,
+          "relative_volume": 1.3637050638927928,
+          "session_vwap": 640.7104761577308
+        },
+        "session_date": "2026-03-31",
+        "signal_at": "2026-03-31T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 642.66
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-06-23T14:05:00Z",
+        "entry_price": 737.97,
+        "features": {
+          "drive_return": 0.004701970057309435,
+          "efficiency": 1.0,
+          "relative_volume": 1.383228444052933,
+          "session_vwap": 734.6396129092457
+        },
+        "session_date": "2026-06-23",
+        "signal_at": "2026-06-23T14:00:00Z",
+        "signal_bar_count": 6,
+        "signal_price": 737.185
+      }
+    ],
+    "trades": [
+      {
+        "direction": "bullish",
+        "entry_at": "2025-01-27T15:05:00Z",
+        "entry_price": 597.59,
+        "exit_at": "2025-01-27T16:05:00Z",
+        "exit_price": 597.705,
+        "exit_reason": "time",
+        "net_pnl_dollars": -1.5120734952178359,
+        "return_r": -0.0030241469904356715,
+        "session_date": "2025-01-27",
+        "signal_at": "2025-01-27T15:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-02-24T15:05:00Z",
+        "entry_price": 597.32,
+        "exit_at": "2025-02-24T15:15:00Z",
+        "exit_price": 598.96,
+        "exit_reason": "stop",
+        "net_pnl_dollars": -589.1193999866084,
+        "return_r": -1.178238799973217,
+        "session_date": "2025-02-24",
+        "signal_at": "2025-02-24T15:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-02-27T15:05:00Z",
+        "entry_price": 591.85,
+        "exit_at": "2025-02-27T15:15:00Z",
+        "exit_price": 594.05,
+        "exit_reason": "stop",
+        "net_pnl_dollars": -783.4316127397088,
+        "return_r": -1.5668632254794177,
+        "session_date": "2025-02-27",
+        "signal_at": "2025-02-27T15:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-03-04T15:05:00Z",
+        "entry_price": 575.64,
+        "exit_at": "2025-03-04T15:20:00Z",
+        "exit_price": 572.7,
+        "exit_reason": "target",
+        "net_pnl_dollars": 981.4717531790596,
+        "return_r": 1.9629435063581193,
+        "session_date": "2025-03-04",
+        "signal_at": "2025-03-04T15:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-03-12T14:05:00Z",
+        "entry_price": 559.07,
+        "exit_at": "2025-03-12T14:50:00Z",
+        "exit_price": 556.085,
+        "exit_reason": "target",
+        "net_pnl_dollars": 1027.844813708474,
+        "return_r": 2.055689627416948,
+        "session_date": "2025-03-12",
+        "signal_at": "2025-03-12T14:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-04-30T14:05:00Z",
+        "entry_price": 542.97,
+        "exit_at": "2025-04-30T14:15:00Z",
+        "exit_price": 544.97,
+        "exit_reason": "stop",
+        "net_pnl_dollars": -776.6889515074693,
+        "return_r": -1.5533779030149386,
+        "session_date": "2025-04-30",
+        "signal_at": "2025-04-30T14:00:00Z"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-05-19T14:05:00Z",
+        "entry_price": 591.96,
+        "exit_at": "2025-05-19T15:05:00Z",
+        "exit_price": 592.6,
+        "exit_reason": "time",
+        "net_pnl_dollars": 176.23082640718215,
+        "return_r": 0.3524616528143643,
+        "session_date": "2025-05-19",
+        "signal_at": "2025-05-19T14:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-06-05T14:05:00Z",
+        "entry_price": 594.5,
+        "exit_at": "2025-06-05T14:30:00Z",
+        "exit_price": 596.14,
+        "exit_reason": "stop",
+        "net_pnl_dollars": -591.724137931009,
+        "return_r": -1.183448275862018,
+        "session_date": "2025-06-05",
+        "signal_at": "2025-06-05T14:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-08-01T14:05:00Z",
+        "entry_price": 621.04,
+        "exit_at": "2025-08-01T14:25:00Z",
+        "exit_price": 623.085,
+        "exit_reason": "stop",
+        "net_pnl_dollars": -698.5727167332411,
+        "return_r": -1.3971454334664823,
+        "session_date": "2025-08-01",
+        "signal_at": "2025-08-01T14:00:00Z"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-08-04T14:05:00Z",
+        "entry_price": 629.03,
+        "exit_at": "2025-08-04T15:05:00Z",
+        "exit_price": 629.27,
+        "exit_reason": "time",
+        "net_pnl_dollars": 36.307966233724045,
+        "return_r": 0.07261593246744809,
+        "session_date": "2025-08-04",
+        "signal_at": "2025-08-04T14:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-08-20T14:05:00Z",
+        "entry_price": 635.605,
+        "exit_at": "2025-08-20T15:05:00Z",
+        "exit_price": 633.74,
+        "exit_reason": "time",
+        "net_pnl_dollars": 546.8424571864539,
+        "return_r": 1.0936849143729077,
+        "session_date": "2025-08-20",
+        "signal_at": "2025-08-20T14:00:00Z"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-11-19T15:05:00Z",
+        "entry_price": 666.12,
+        "exit_at": "2025-11-19T15:55:00Z",
+        "exit_price": 664.02,
+        "exit_reason": "stop",
+        "net_pnl_dollars": -670.5170239596647,
+        "return_r": -1.3410340479193295,
+        "session_date": "2025-11-19",
+        "signal_at": "2025-11-19T15:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-12-15T15:05:00Z",
+        "entry_price": 681.54,
+        "exit_at": "2025-12-15T16:05:00Z",
+        "exit_price": 681.03,
+        "exit_reason": "time",
+        "net_pnl_dollars": 109.66106171316885,
+        "return_r": 0.2193221234263377,
+        "session_date": "2025-12-15",
+        "signal_at": "2025-12-15T15:00:00Z"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-12-19T15:05:00Z",
+        "entry_price": 680.015,
+        "exit_at": "2025-12-19T16:05:00Z",
+        "exit_price": 679.43,
+        "exit_reason": "time",
+        "net_pnl_dollars": -212.05502819792608,
+        "return_r": -0.42411005639585214,
+        "session_date": "2025-12-19",
+        "signal_at": "2025-12-19T15:00:00Z"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-01-21T15:05:00Z",
+        "entry_price": 682.25,
+        "exit_at": "2026-01-21T16:05:00Z",
+        "exit_price": 684.4,
+        "exit_reason": "time",
+        "net_pnl_dollars": 590.2674972517241,
+        "return_r": 1.1805349945034482,
+        "session_date": "2026-01-21",
+        "signal_at": "2026-01-21T15:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-01-29T15:05:00Z",
+        "entry_price": 690.28,
+        "exit_at": "2026-01-29T15:45:00Z",
+        "exit_price": 686.56,
+        "exit_reason": "target",
+        "net_pnl_dollars": 1037.823491916341,
+        "return_r": 2.075646983832682,
+        "session_date": "2026-01-29",
+        "signal_at": "2026-01-29T15:00:00Z"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-02-06T15:05:00Z",
+        "entry_price": 684.06,
+        "exit_at": "2026-02-06T16:05:00Z",
+        "exit_price": 686.9,
+        "exit_reason": "time",
+        "net_pnl_dollars": 790.3365201883129,
+        "return_r": 1.5806730403766258,
+        "session_date": "2026-02-06",
+        "signal_at": "2026-02-06T15:00:00Z"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-03-02T15:05:00Z",
+        "entry_price": 684.17,
+        "exit_at": "2026-03-02T16:05:00Z",
+        "exit_price": 684.67,
+        "exit_reason": "time",
+        "net_pnl_dollars": 106.16250347136983,
+        "return_r": 0.21232500694273967,
+        "session_date": "2026-03-02",
+        "signal_at": "2026-03-02T15:00:00Z"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-03-30T14:05:00Z",
+        "entry_price": 636.13,
+        "exit_at": "2026-03-30T15:05:00Z",
+        "exit_price": 638.315,
+        "exit_reason": "stop",
+        "net_pnl_dollars": -726.9665005580839,
+        "return_r": -1.4539330011161677,
+        "session_date": "2026-03-30",
+        "signal_at": "2026-03-30T14:00:00Z"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-03-31T14:05:00Z",
+        "entry_price": 642.37,
+        "exit_at": "2026-03-31T14:45:00Z",
+        "exit_price": 640.25,
+        "exit_reason": "stop",
+        "net_pnl_dollars": -700.0557311206901,
+        "return_r": -1.4001114622413802,
+        "session_date": "2026-03-31",
+        "signal_at": "2026-03-31T14:00:00Z"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-06-23T14:05:00Z",
+        "entry_price": 737.97,
+        "exit_at": "2026-06-23T15:05:00Z",
+        "exit_price": 736.55,
+        "exit_reason": "time",
+        "net_pnl_dollars": -424.8394921202925,
+        "return_r": -0.849678984240585,
+        "session_date": "2026-06-23",
+        "signal_at": "2026-06-23T14:00:00Z"
+      }
+    ],
+    "wins": 10
+  },
+  "training_option_validation": {
+    "contract_limitation": "inactive contract metadata queried after expiration; not a point-in-time chain snapshot",
+    "coverage_rate": 1.0,
+    "excluded_signals": 0,
+    "exclusions": [],
+    "expectancy_r": -0.280983,
+    "fee_reserve_per_contract_side": 0.65,
+    "flats": 0,
+    "hit_rate": 0.380952,
+    "losses": 13,
+    "max_drawdown_dollars": 377.4,
+    "net_pnl_dollars": -366.6,
+    "pricing_basis": "next synchronized 5-minute closes; no quote reconstruction",
+    "requested_signals": 21,
+    "results": [
+      {
+        "direction": "bullish",
+        "entry_at": "2025-01-27T15:05:00Z",
+        "entry_debit": 2.18,
+        "exit_at": "2025-01-27T16:05:00Z",
+        "exit_credit": 2.02,
+        "exit_reason": "time",
+        "expiration_date": "2025-01-29",
+        "long_symbol": "SPY250129C00599000",
+        "net_pnl_dollars": -18.6,
+        "return_r": -0.3257443082311736,
+        "risk_dollars": 57.1,
+        "session_date": "2025-01-27",
+        "short_symbol": "SPY250129C00605000",
+        "signal_at": "2025-01-27T15:00:00Z",
+        "signal_price": 598.61,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-02-24T15:05:00Z",
+        "entry_debit": 2.39,
+        "exit_at": "2025-02-24T16:05:00Z",
+        "exit_credit": 2.11,
+        "exit_reason": "time",
+        "expiration_date": "2025-02-26",
+        "long_symbol": "SPY250226P00599000",
+        "net_pnl_dollars": -30.6,
+        "return_r": -0.49077786688051295,
+        "risk_dollars": 62.35,
+        "session_date": "2025-02-24",
+        "short_symbol": "SPY250226P00593000",
+        "signal_at": "2025-02-24T15:00:00Z",
+        "signal_price": 598.76,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-02-27T15:05:00Z",
+        "entry_debit": 2.36,
+        "exit_at": "2025-02-27T15:20:00Z",
+        "exit_credit": 1.69,
+        "exit_reason": "stop",
+        "expiration_date": "2025-03-03",
+        "long_symbol": "SPY250303P00593000",
+        "net_pnl_dollars": -69.6,
+        "return_r": -1.1298701298701297,
+        "risk_dollars": 61.6,
+        "session_date": "2025-02-27",
+        "short_symbol": "SPY250303P00587000",
+        "signal_at": "2025-02-27T15:00:00Z",
+        "signal_price": 592.52,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-03-04T15:05:00Z",
+        "entry_debit": 2.4,
+        "exit_at": "2025-03-04T16:05:00Z",
+        "exit_credit": 2.23,
+        "exit_reason": "time",
+        "expiration_date": "2025-03-06",
+        "long_symbol": "SPY250306P00576000",
+        "net_pnl_dollars": -19.6,
+        "return_r": -0.3130990415335469,
+        "risk_dollars": 62.6,
+        "session_date": "2025-03-04",
+        "short_symbol": "SPY250306P00570000",
+        "signal_at": "2025-03-04T15:00:00Z",
+        "signal_price": 575.71,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-03-12T14:05:00Z",
+        "entry_debit": 2.38,
+        "exit_at": "2025-03-12T15:05:00Z",
+        "exit_credit": 2.92,
+        "exit_reason": "time",
+        "expiration_date": "2025-03-14",
+        "long_symbol": "SPY250314P00559000",
+        "net_pnl_dollars": 51.4,
+        "return_r": 0.8276972624798712,
+        "risk_dollars": 62.1,
+        "session_date": "2025-03-12",
+        "short_symbol": "SPY250314P00553000",
+        "signal_at": "2025-03-12T14:00:00Z",
+        "signal_price": 559.43,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-04-30T14:05:00Z",
+        "entry_debit": 2.27,
+        "exit_at": "2025-04-30T14:25:00Z",
+        "exit_credit": 1.68,
+        "exit_reason": "stop",
+        "expiration_date": "2025-05-02",
+        "long_symbol": "SPY250502P00542000",
+        "net_pnl_dollars": -61.6,
+        "return_r": -1.037910699241786,
+        "risk_dollars": 59.35,
+        "session_date": "2025-04-30",
+        "short_symbol": "SPY250502P00536000",
+        "signal_at": "2025-04-30T14:00:00Z",
+        "signal_price": 541.9,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-05-19T14:05:00Z",
+        "entry_debit": 2.73,
+        "exit_at": "2025-05-19T15:05:00Z",
+        "exit_credit": 2.85,
+        "exit_reason": "time",
+        "expiration_date": "2025-05-21",
+        "long_symbol": "SPY250521C00591000",
+        "net_pnl_dollars": 9.4,
+        "return_r": 0.1326746647847573,
+        "risk_dollars": 70.85,
+        "session_date": "2025-05-19",
+        "short_symbol": "SPY250521C00597000",
+        "signal_at": "2025-05-19T14:00:00Z",
+        "signal_price": 591.26,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-06-05T14:05:00Z",
+        "entry_debit": 1.96,
+        "exit_at": "2025-06-05T14:55:00Z",
+        "exit_credit": 1.4,
+        "exit_reason": "stop",
+        "expiration_date": "2025-06-09",
+        "long_symbol": "SPY250609P00594000",
+        "net_pnl_dollars": -58.6,
+        "return_r": -1.135658914728682,
+        "risk_dollars": 51.6,
+        "session_date": "2025-06-05",
+        "short_symbol": "SPY250609P00588000",
+        "signal_at": "2025-06-05T14:00:00Z",
+        "signal_price": 594.29,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-08-01T14:05:00Z",
+        "entry_debit": 1.93,
+        "exit_at": "2025-08-01T14:25:00Z",
+        "exit_credit": 1.37,
+        "exit_reason": "stop",
+        "expiration_date": "2025-08-04",
+        "long_symbol": "SPY250804P00621000",
+        "net_pnl_dollars": -58.6,
+        "return_r": -1.152409046214356,
+        "risk_dollars": 50.85,
+        "session_date": "2025-08-01",
+        "short_symbol": "SPY250804P00615000",
+        "signal_at": "2025-08-01T14:00:00Z",
+        "signal_price": 621.46,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-08-04T14:05:00Z",
+        "entry_debit": 2.45,
+        "exit_at": "2025-08-04T15:05:00Z",
+        "exit_credit": 2.51,
+        "exit_reason": "time",
+        "expiration_date": "2025-08-06",
+        "long_symbol": "SPY250806C00629000",
+        "net_pnl_dollars": 3.4,
+        "return_r": 0.05324980422866101,
+        "risk_dollars": 63.85,
+        "session_date": "2025-08-04",
+        "short_symbol": "SPY250806C00635000",
+        "signal_at": "2025-08-04T14:00:00Z",
+        "signal_price": 629.02,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-08-20T14:05:00Z",
+        "entry_debit": 1.71,
+        "exit_at": "2025-08-20T15:05:00Z",
+        "exit_credit": 2.02,
+        "exit_reason": "time",
+        "expiration_date": "2025-08-22",
+        "long_symbol": "SPY250822P00635000",
+        "net_pnl_dollars": 28.4,
+        "return_r": 0.6262403528114655,
+        "risk_dollars": 45.35,
+        "session_date": "2025-08-20",
+        "short_symbol": "SPY250822P00629000",
+        "signal_at": "2025-08-20T14:00:00Z",
+        "signal_price": 635.35,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-11-19T15:05:00Z",
+        "entry_debit": 3.05,
+        "exit_at": "2025-11-19T16:05:00Z",
+        "exit_credit": 2.28,
+        "exit_reason": "stop",
+        "expiration_date": "2025-11-21",
+        "long_symbol": "SPY251121C00666000",
+        "net_pnl_dollars": -79.6,
+        "return_r": -1.0095117311350665,
+        "risk_dollars": 78.85,
+        "session_date": "2025-11-19",
+        "short_symbol": "SPY251121C00672000",
+        "signal_at": "2025-11-19T15:00:00Z",
+        "signal_price": 665.67,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2025-12-15T15:05:00Z",
+        "entry_debit": 2.0,
+        "exit_at": "2025-12-15T16:05:00Z",
+        "exit_credit": 1.98,
+        "exit_reason": "time",
+        "expiration_date": "2025-12-17",
+        "long_symbol": "SPY251217P00682000",
+        "net_pnl_dollars": -4.6,
+        "return_r": -0.08745247148288976,
+        "risk_dollars": 52.6,
+        "session_date": "2025-12-15",
+        "short_symbol": "SPY251217P00676000",
+        "signal_at": "2025-12-15T15:00:00Z",
+        "signal_price": 682.4,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2025-12-19T15:05:00Z",
+        "entry_debit": 2.2,
+        "exit_at": "2025-12-19T15:50:00Z",
+        "exit_credit": 1.54,
+        "exit_reason": "stop",
+        "expiration_date": "2025-12-22",
+        "long_symbol": "SPY251222C00680000",
+        "net_pnl_dollars": -68.6,
+        "return_r": -1.190972222222222,
+        "risk_dollars": 57.6,
+        "session_date": "2025-12-19",
+        "short_symbol": "SPY251222C00686000",
+        "signal_at": "2025-12-19T15:00:00Z",
+        "signal_price": 679.825,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-01-21T15:05:00Z",
+        "entry_debit": 2.7,
+        "exit_at": "2026-01-21T16:05:00Z",
+        "exit_credit": 3.35,
+        "exit_reason": "time",
+        "expiration_date": "2026-01-23",
+        "long_symbol": "SPY260123C00682000",
+        "net_pnl_dollars": 62.4,
+        "return_r": 0.8901569186875884,
+        "risk_dollars": 70.1,
+        "session_date": "2026-01-21",
+        "short_symbol": "SPY260123C00688000",
+        "signal_at": "2026-01-21T15:00:00Z",
+        "signal_price": 682.485,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-01-29T15:05:00Z",
+        "entry_debit": 2.24,
+        "exit_at": "2026-01-29T16:05:00Z",
+        "exit_credit": 2.84,
+        "exit_reason": "time",
+        "expiration_date": "2026-02-02",
+        "long_symbol": "SPY260202P00691000",
+        "net_pnl_dollars": 57.4,
+        "return_r": 0.9795221843003414,
+        "risk_dollars": 58.6,
+        "session_date": "2026-01-29",
+        "short_symbol": "SPY260202P00685000",
+        "signal_at": "2026-01-29T15:00:00Z",
+        "signal_price": 691.495,
+        "synchronized_bars": 12
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-02-06T15:05:00Z",
+        "entry_debit": 2.44,
+        "exit_at": "2026-02-06T16:05:00Z",
+        "exit_credit": 3.1,
+        "exit_reason": "time",
+        "expiration_date": "2026-02-09",
+        "long_symbol": "SPY260209C00685000",
+        "net_pnl_dollars": 63.4,
+        "return_r": 0.9968553459119492,
+        "risk_dollars": 63.6,
+        "session_date": "2026-02-06",
+        "short_symbol": "SPY260209C00691000",
+        "signal_at": "2026-02-06T15:00:00Z",
+        "signal_price": 684.855,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-03-02T15:05:00Z",
+        "entry_debit": 3.24,
+        "exit_at": "2026-03-02T16:05:00Z",
+        "exit_credit": 3.33,
+        "exit_reason": "time",
+        "expiration_date": "2026-03-04",
+        "long_symbol": "SPY260304C00683000",
+        "net_pnl_dollars": 6.4,
+        "return_r": 0.07655502392344535,
+        "risk_dollars": 83.6,
+        "session_date": "2026-03-02",
+        "short_symbol": "SPY260304C00689000",
+        "signal_at": "2026-03-02T15:00:00Z",
+        "signal_price": 683.0,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-03-30T14:05:00Z",
+        "entry_debit": 2.26,
+        "exit_at": "2026-03-30T15:05:00Z",
+        "exit_credit": 1.75,
+        "exit_reason": "time",
+        "expiration_date": "2026-04-01",
+        "long_symbol": "SPY260401P00635000",
+        "net_pnl_dollars": -53.6,
+        "return_r": -0.9069373942470391,
+        "risk_dollars": 59.1,
+        "session_date": "2026-03-30",
+        "short_symbol": "SPY260401P00629000",
+        "signal_at": "2026-03-30T14:00:00Z",
+        "signal_price": 635.09,
+        "synchronized_bars": 12
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-03-31T14:05:00Z",
+        "entry_debit": 2.66,
+        "exit_at": "2026-03-31T14:50:00Z",
+        "exit_credit": 1.97,
+        "exit_reason": "stop",
+        "expiration_date": "2026-04-02",
+        "long_symbol": "SPY260402C00643000",
+        "net_pnl_dollars": -71.6,
+        "return_r": -1.0361794500723591,
+        "risk_dollars": 69.1,
+        "session_date": "2026-03-31",
+        "short_symbol": "SPY260402C00649000",
+        "signal_at": "2026-03-31T14:00:00Z",
+        "signal_price": 642.66,
+        "synchronized_bars": 13
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-06-23T14:05:00Z",
+        "entry_debit": 3.11,
+        "exit_at": "2026-06-23T15:05:00Z",
+        "exit_credit": 2.6,
+        "exit_reason": "time",
+        "expiration_date": "2026-06-25",
+        "long_symbol": "SPY260625C00737000",
+        "net_pnl_dollars": -53.6,
+        "return_r": -0.6670815183571865,
+        "risk_dollars": 80.35,
+        "session_date": "2026-06-23",
+        "short_symbol": "SPY260625C00743000",
+        "signal_at": "2026-06-23T14:00:00Z",
+        "signal_price": 737.185,
+        "synchronized_bars": 13
+      }
+    ],
+    "sample_count": 21,
+    "slippage_per_leg_per_fill": 0.02,
+    "source": "Alpaca historical option trade bars via official CLI",
+    "validated_signals": 21,
+    "wins": 8
+  },
+  "underlying_proxy": {
+    "purpose": "training-only parameter selection; option claims require real option bars",
+    "risk_dollars_per_trade": 500.0,
+    "round_trip_impact_bps": 2.0
+  },
+  "variants": [
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0025,
+        "efficiency_threshold": 0.55,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.51416,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.26045,
+        "flats": 0,
+        "hit_rate": 0.453333,
+        "losses": 41,
+        "max_drawdown_dollars": 9920.78,
+        "median_r": -0.153365,
+        "net_pnl_dollars": -9766.89,
+        "sample_count": 75,
+        "wins": 34
+      },
+      "variant_id": "opening_drive_vwap-d1c978933e",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.51416,
+          "flats": 0,
+          "hit_rate": 0.3,
+          "losses": 7,
+          "max_drawdown_dollars": 3384.37,
+          "median_r": -0.690006,
+          "net_pnl_dollars": -2570.8,
+          "sample_count": 10,
+          "wins": 3
+        },
+        {
+          "expectancy_r": 0.204412,
+          "flats": 0,
+          "hit_rate": 0.647059,
+          "losses": 6,
+          "max_drawdown_dollars": 2383.48,
+          "median_r": 0.219322,
+          "net_pnl_dollars": 1737.5,
+          "sample_count": 17,
+          "wins": 11
+        },
+        {
+          "expectancy_r": -0.641051,
+          "flats": 0,
+          "hit_rate": 0.277778,
+          "losses": 13,
+          "max_drawdown_dollars": 5769.46,
+          "median_r": -1.106336,
+          "net_pnl_dollars": -5769.46,
+          "sample_count": 18,
+          "wins": 5
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0025,
+        "efficiency_threshold": 0.55,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.622172,
+        "nonempty_folds": 3,
+        "positive_folds": 0
+      },
+      "training": {
+        "expectancy_r": -0.336981,
+        "flats": 0,
+        "hit_rate": 0.409836,
+        "losses": 36,
+        "max_drawdown_dollars": 11249.61,
+        "median_r": -0.42411,
+        "net_pnl_dollars": -10277.92,
+        "sample_count": 61,
+        "wins": 25
+      },
+      "variant_id": "opening_drive_vwap-ec92b2d0c7",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.690323,
+          "flats": 0,
+          "hit_rate": 0.25,
+          "losses": 6,
+          "max_drawdown_dollars": 3309.19,
+          "median_r": -1.158975,
+          "net_pnl_dollars": -2761.29,
+          "sample_count": 8,
+          "wins": 2
+        },
+        {
+          "expectancy_r": -0.012317,
+          "flats": 0,
+          "hit_rate": 0.571429,
+          "losses": 6,
+          "max_drawdown_dollars": 2383.48,
+          "median_r": 0.210311,
+          "net_pnl_dollars": -86.22,
+          "sample_count": 14,
+          "wins": 8
+        },
+        {
+          "expectancy_r": -0.622172,
+          "flats": 0,
+          "hit_rate": 0.25,
+          "losses": 12,
+          "max_drawdown_dollars": 5028.2,
+          "median_r": -1.106336,
+          "net_pnl_dollars": -4977.38,
+          "sample_count": 16,
+          "wins": 4
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0025,
+        "efficiency_threshold": 0.7,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.145574,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.086862,
+        "flats": 0,
+        "hit_rate": 0.519231,
+        "losses": 25,
+        "max_drawdown_dollars": 4258.01,
+        "median_r": 0.040692,
+        "net_pnl_dollars": -2258.41,
+        "sample_count": 52,
+        "wins": 27
+      },
+      "variant_id": "opening_drive_vwap-844e3d8cb7",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.145574,
+          "flats": 0,
+          "hit_rate": 0.428571,
+          "losses": 4,
+          "max_drawdown_dollars": 1323.08,
+          "median_r": -0.150367,
+          "net_pnl_dollars": -509.51,
+          "sample_count": 7,
+          "wins": 3
+        },
+        {
+          "expectancy_r": 0.225812,
+          "flats": 0,
+          "hit_rate": 0.615385,
+          "losses": 5,
+          "max_drawdown_dollars": 1820.99,
+          "median_r": 0.219322,
+          "net_pnl_dollars": 1467.78,
+          "sample_count": 13,
+          "wins": 8
+        },
+        {
+          "expectancy_r": -0.592437,
+          "flats": 0,
+          "hit_rate": 0.3,
+          "losses": 7,
+          "max_drawdown_dollars": 2962.19,
+          "median_r": -1.145332,
+          "net_pnl_dollars": -2962.19,
+          "sample_count": 10,
+          "wins": 3
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0025,
+        "efficiency_threshold": 0.7,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.279999,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.144731,
+        "flats": 0,
+        "hit_rate": 0.488372,
+        "losses": 22,
+        "max_drawdown_dollars": 4803.04,
+        "median_r": -0.003024,
+        "net_pnl_dollars": -3111.72,
+        "sample_count": 43,
+        "wins": 21
+      },
+      "variant_id": "opening_drive_vwap-491e26f2f0",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.279999,
+          "flats": 0,
+          "hit_rate": 0.4,
+          "losses": 3,
+          "max_drawdown_dollars": 1247.89,
+          "median_r": -0.26229,
+          "net_pnl_dollars": -700.0,
+          "sample_count": 5,
+          "wins": 2
+        },
+        {
+          "expectancy_r": 0.06202,
+          "flats": 0,
+          "hit_rate": 0.583333,
+          "losses": 5,
+          "max_drawdown_dollars": 1820.99,
+          "median_r": 0.215824,
+          "net_pnl_dollars": 372.12,
+          "sample_count": 12,
+          "wins": 7
+        },
+        {
+          "expectancy_r": -0.46202,
+          "flats": 0,
+          "hit_rate": 0.333333,
+          "losses": 6,
+          "max_drawdown_dollars": 2683.57,
+          "median_r": -1.136354,
+          "net_pnl_dollars": -2079.09,
+          "sample_count": 9,
+          "wins": 3
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0035,
+        "efficiency_threshold": 0.55,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.635853,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.319237,
+        "flats": 0,
+        "hit_rate": 0.422222,
+        "losses": 26,
+        "max_drawdown_dollars": 7182.83,
+        "median_r": -0.42411,
+        "net_pnl_dollars": -7182.83,
+        "sample_count": 45,
+        "wins": 19
+      },
+      "variant_id": "opening_drive_vwap-8418c1bb15",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.635853,
+          "flats": 0,
+          "hit_rate": 0.2,
+          "losses": 4,
+          "max_drawdown_dollars": 2136.48,
+          "median_r": -1.200226,
+          "net_pnl_dollars": -1589.63,
+          "sample_count": 5,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.634237,
+          "flats": 0,
+          "hit_rate": 0.833333,
+          "losses": 2,
+          "max_drawdown_dollars": 772.91,
+          "median_r": 0.261929,
+          "net_pnl_dollars": 3805.42,
+          "sample_count": 12,
+          "wins": 10
+        },
+        {
+          "expectancy_r": -1.228625,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 9,
+          "max_drawdown_dollars": 5528.81,
+          "median_r": -1.136354,
+          "net_pnl_dollars": -5528.81,
+          "sample_count": 9,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0035,
+        "efficiency_threshold": 0.55,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.757225,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.461808,
+        "flats": 0,
+        "hit_rate": 0.368421,
+        "losses": 24,
+        "max_drawdown_dollars": 8774.35,
+        "median_r": -1.102605,
+        "net_pnl_dollars": -8774.35,
+        "sample_count": 38,
+        "wins": 14
+      },
+      "variant_id": "opening_drive_vwap-e474dcce1c",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.757225,
+          "flats": 0,
+          "hit_rate": 0.25,
+          "losses": 3,
+          "max_drawdown_dollars": 2061.29,
+          "median_r": -1.282407,
+          "net_pnl_dollars": -1514.45,
+          "sample_count": 4,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.440377,
+          "flats": 0,
+          "hit_rate": 0.777778,
+          "losses": 2,
+          "max_drawdown_dollars": 772.91,
+          "median_r": 0.219322,
+          "net_pnl_dollars": 1981.69,
+          "sample_count": 9,
+          "wins": 7
+        },
+        {
+          "expectancy_r": -1.228625,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 9,
+          "max_drawdown_dollars": 5528.81,
+          "median_r": -1.136354,
+          "net_pnl_dollars": -5528.81,
+          "sample_count": 9,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0035,
+        "efficiency_threshold": 0.7,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": 0.471659,
+        "nonempty_folds": 3,
+        "positive_folds": 2
+      },
+      "training": {
+        "expectancy_r": -0.056809,
+        "flats": 0,
+        "hit_rate": 0.5,
+        "losses": 15,
+        "max_drawdown_dollars": 3006.74,
+        "median_r": 0.034796,
+        "net_pnl_dollars": -852.13,
+        "sample_count": 30,
+        "wins": 15
+      },
+      "variant_id": "opening_drive_vwap-924812f91f",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": 0.471659,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 1,
+          "max_drawdown_dollars": 75.18,
+          "median_r": 0.471659,
+          "net_pnl_dollars": 471.66,
+          "sample_count": 2,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.660712,
+          "flats": 0,
+          "hit_rate": 0.777778,
+          "losses": 2,
+          "max_drawdown_dollars": 772.91,
+          "median_r": 0.251735,
+          "net_pnl_dollars": 2973.2,
+          "sample_count": 9,
+          "wins": 7
+        },
+        {
+          "expectancy_r": -1.202694,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 5,
+          "max_drawdown_dollars": 3006.74,
+          "median_r": -1.173394,
+          "net_pnl_dollars": -3006.74,
+          "sample_count": 5,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0035,
+        "efficiency_threshold": 0.7,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": 0.469387,
+        "nonempty_folds": 3,
+        "positive_folds": 2
+      },
+      "training": {
+        "expectancy_r": -0.137247,
+        "flats": 0,
+        "hit_rate": 0.48,
+        "losses": 13,
+        "max_drawdown_dollars": 3006.74,
+        "median_r": -0.003024,
+        "net_pnl_dollars": -1715.58,
+        "sample_count": 25,
+        "wins": 12
+      },
+      "variant_id": "opening_drive_vwap-2d0ce73899",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": 1.093685,
+          "flats": 0,
+          "hit_rate": 1.0,
+          "losses": 0,
+          "max_drawdown_dollars": 0.0,
+          "median_r": 1.093685,
+          "net_pnl_dollars": 546.84,
+          "sample_count": 1,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.469387,
+          "flats": 0,
+          "hit_rate": 0.75,
+          "losses": 2,
+          "max_drawdown_dollars": 772.91,
+          "median_r": 0.235528,
+          "net_pnl_dollars": 1877.55,
+          "sample_count": 8,
+          "wins": 6
+        },
+        {
+          "expectancy_r": -1.202694,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 5,
+          "max_drawdown_dollars": 3006.74,
+          "median_r": -1.173394,
+          "net_pnl_dollars": -3006.74,
+          "sample_count": 5,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0045,
+        "efficiency_threshold": 0.55,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.085636,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.361931,
+        "flats": 0,
+        "hit_rate": 0.382353,
+        "losses": 21,
+        "max_drawdown_dollars": 6152.82,
+        "median_r": -0.636895,
+        "net_pnl_dollars": -6152.82,
+        "sample_count": 34,
+        "wins": 13
+      },
+      "variant_id": "opening_drive_vwap-e230ad6245",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.085636,
+          "flats": 0,
+          "hit_rate": 0.333333,
+          "losses": 2,
+          "max_drawdown_dollars": 675.3,
+          "median_r": -0.150367,
+          "net_pnl_dollars": -128.45,
+          "sample_count": 3,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.50048,
+          "flats": 0,
+          "hit_rate": 0.714286,
+          "losses": 2,
+          "max_drawdown_dollars": 772.91,
+          "median_r": 0.219322,
+          "net_pnl_dollars": 1751.68,
+          "sample_count": 7,
+          "wins": 5
+        },
+        {
+          "expectancy_r": -1.273429,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 6,
+          "max_drawdown_dollars": 3820.29,
+          "median_r": -1.252739,
+          "net_pnl_dollars": -3820.29,
+          "sample_count": 6,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0045,
+        "efficiency_threshold": 0.55,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.053271,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.394708,
+        "flats": 0,
+        "hit_rate": 0.366667,
+        "losses": 19,
+        "max_drawdown_dollars": 5920.62,
+        "median_r": -0.97476,
+        "net_pnl_dollars": -5920.62,
+        "sample_count": 30,
+        "wins": 11
+      },
+      "variant_id": "opening_drive_vwap-0c291e82c5",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.053271,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 1,
+          "max_drawdown_dollars": 600.11,
+          "median_r": -0.053271,
+          "net_pnl_dollars": -53.27,
+          "sample_count": 2,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.50048,
+          "flats": 0,
+          "hit_rate": 0.714286,
+          "losses": 2,
+          "max_drawdown_dollars": 772.91,
+          "median_r": 0.219322,
+          "net_pnl_dollars": 1751.68,
+          "sample_count": 7,
+          "wins": 5
+        },
+        {
+          "expectancy_r": -1.273429,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 6,
+          "max_drawdown_dollars": 3820.29,
+          "median_r": -1.252739,
+          "net_pnl_dollars": -3820.29,
+          "sample_count": 6,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0045,
+        "efficiency_threshold": 0.7,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": 0.471659,
+        "nonempty_folds": 3,
+        "positive_folds": 2
+      },
+      "training": {
+        "expectancy_r": -0.080379,
+        "flats": 0,
+        "hit_rate": 0.48,
+        "losses": 13,
+        "max_drawdown_dollars": 2588.31,
+        "median_r": -0.003024,
+        "net_pnl_dollars": -1004.74,
+        "sample_count": 25,
+        "wins": 12
+      },
+      "variant_id": "opening_drive_vwap-45eb6f3e57",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": 0.471659,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 1,
+          "max_drawdown_dollars": 75.18,
+          "median_r": 0.471659,
+          "net_pnl_dollars": 471.66,
+          "sample_count": 2,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.50048,
+          "flats": 0,
+          "hit_rate": 0.714286,
+          "losses": 2,
+          "max_drawdown_dollars": 772.91,
+          "median_r": 0.219322,
+          "net_pnl_dollars": 1751.68,
+          "sample_count": 7,
+          "wins": 5
+        },
+        {
+          "expectancy_r": -1.234574,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 3,
+          "max_drawdown_dollars": 1851.86,
+          "median_r": -1.400111,
+          "net_pnl_dollars": -1851.86,
+          "sample_count": 3,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.0045,
+        "efficiency_threshold": 0.7,
+        "family": "opening_drive_vwap",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 30,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": 0.50048,
+        "nonempty_folds": 3,
+        "positive_folds": 2
+      },
+      "training": {
+        "expectancy_r": -0.073575,
+        "flats": 0,
+        "hit_rate": 0.47619,
+        "losses": 11,
+        "max_drawdown_dollars": 2080.52,
+        "median_r": -0.003024,
+        "net_pnl_dollars": -772.53,
+        "sample_count": 21,
+        "wins": 10
+      },
+      "variant_id": "opening_drive_vwap-62dcb6d54f",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": 1.093685,
+          "flats": 0,
+          "hit_rate": 1.0,
+          "losses": 0,
+          "max_drawdown_dollars": 0.0,
+          "median_r": 1.093685,
+          "net_pnl_dollars": 546.84,
+          "sample_count": 1,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.50048,
+          "flats": 0,
+          "hit_rate": 0.714286,
+          "losses": 2,
+          "max_drawdown_dollars": 772.91,
+          "median_r": 0.219322,
+          "net_pnl_dollars": 1751.68,
+          "sample_count": 7,
+          "wins": 5
+        },
+        {
+          "expectancy_r": -1.234574,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 3,
+          "max_drawdown_dollars": 1851.86,
+          "median_r": -1.400111,
+          "net_pnl_dollars": -1851.86,
+          "sample_count": 3,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.002,
+        "efficiency_threshold": 0.45,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.071226,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": 0.003468,
+        "flats": 0,
+        "hit_rate": 0.527273,
+        "losses": 26,
+        "max_drawdown_dollars": 3091.98,
+        "median_r": 0.068595,
+        "net_pnl_dollars": 95.38,
+        "sample_count": 55,
+        "wins": 29
+      },
+      "variant_id": "opening_range_breakout-55f1775fd6",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.071226,
+          "flats": 0,
+          "hit_rate": 0.571429,
+          "losses": 6,
+          "max_drawdown_dollars": 1136.46,
+          "median_r": 0.120066,
+          "net_pnl_dollars": -498.58,
+          "sample_count": 14,
+          "wins": 8
+        },
+        {
+          "expectancy_r": -0.309306,
+          "flats": 0,
+          "hit_rate": 0.307692,
+          "losses": 9,
+          "max_drawdown_dollars": 2366.6,
+          "median_r": -0.196998,
+          "net_pnl_dollars": -2010.49,
+          "sample_count": 13,
+          "wins": 4
+        },
+        {
+          "expectancy_r": 0.136435,
+          "flats": 0,
+          "hit_rate": 0.714286,
+          "losses": 2,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.299681,
+          "net_pnl_dollars": 477.52,
+          "sample_count": 7,
+          "wins": 5
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.002,
+        "efficiency_threshold": 0.45,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.147573,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.036201,
+        "flats": 0,
+        "hit_rate": 0.5,
+        "losses": 23,
+        "max_drawdown_dollars": 3341.29,
+        "median_r": 0.006441,
+        "net_pnl_dollars": -832.63,
+        "sample_count": 46,
+        "wins": 23
+      },
+      "variant_id": "opening_range_breakout-7bb0361a55",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.147573,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 6,
+          "max_drawdown_dollars": 1429.3,
+          "median_r": 0.012864,
+          "net_pnl_dollars": -885.44,
+          "sample_count": 12,
+          "wins": 6
+        },
+        {
+          "expectancy_r": -0.318665,
+          "flats": 0,
+          "hit_rate": 0.333333,
+          "losses": 8,
+          "max_drawdown_dollars": 2268.1,
+          "median_r": -0.356863,
+          "net_pnl_dollars": -1911.99,
+          "sample_count": 12,
+          "wins": 4
+        },
+        {
+          "expectancy_r": 0.102173,
+          "flats": 0,
+          "hit_rate": 0.75,
+          "losses": 1,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.433734,
+          "net_pnl_dollars": 204.35,
+          "sample_count": 4,
+          "wins": 3
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.002,
+        "efficiency_threshold": 0.45,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": 0.10625,
+        "nonempty_folds": 3,
+        "positive_folds": 2
+      },
+      "training": {
+        "expectancy_r": 0.008328,
+        "flats": 0,
+        "hit_rate": 0.52381,
+        "losses": 20,
+        "max_drawdown_dollars": 3489.31,
+        "median_r": 0.097883,
+        "net_pnl_dollars": 174.88,
+        "sample_count": 42,
+        "wins": 22
+      },
+      "variant_id": "opening_range_breakout-b727bc5b55",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": 0.10625,
+          "flats": 0,
+          "hit_rate": 0.727273,
+          "losses": 3,
+          "max_drawdown_dollars": 710.21,
+          "median_r": 0.278377,
+          "net_pnl_dollars": 584.38,
+          "sample_count": 11,
+          "wins": 8
+        },
+        {
+          "expectancy_r": -0.507184,
+          "flats": 0,
+          "hit_rate": 0.25,
+          "losses": 9,
+          "max_drawdown_dollars": 3043.1,
+          "median_r": -0.368892,
+          "net_pnl_dollars": -3043.1,
+          "sample_count": 12,
+          "wins": 3
+        },
+        {
+          "expectancy_r": 0.138112,
+          "flats": 0,
+          "hit_rate": 0.666667,
+          "losses": 2,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.40536,
+          "net_pnl_dollars": 414.34,
+          "sample_count": 6,
+          "wins": 4
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.002,
+        "efficiency_threshold": 0.45,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": 0.043893,
+        "nonempty_folds": 3,
+        "positive_folds": 2
+      },
+      "training": {
+        "expectancy_r": -0.040585,
+        "flats": 0,
+        "hit_rate": 0.5,
+        "losses": 17,
+        "max_drawdown_dollars": 3508.37,
+        "median_r": 0.004425,
+        "net_pnl_dollars": -689.95,
+        "sample_count": 34,
+        "wins": 17
+      },
+      "variant_id": "opening_range_breakout-95858508e8",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": 0.043893,
+          "flats": 0,
+          "hit_rate": 0.666667,
+          "losses": 3,
+          "max_drawdown_dollars": 710.21,
+          "median_r": 0.278377,
+          "net_pnl_dollars": 197.52,
+          "sample_count": 9,
+          "wins": 6
+        },
+        {
+          "expectancy_r": -0.535382,
+          "flats": 0,
+          "hit_rate": 0.272727,
+          "losses": 8,
+          "max_drawdown_dollars": 2944.6,
+          "median_r": -0.540786,
+          "net_pnl_dollars": -2944.6,
+          "sample_count": 11,
+          "wins": 3
+        },
+        {
+          "expectancy_r": 0.102173,
+          "flats": 0,
+          "hit_rate": 0.75,
+          "losses": 1,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.433734,
+          "net_pnl_dollars": 204.35,
+          "sample_count": 4,
+          "wins": 3
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.002,
+        "efficiency_threshold": 0.6,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.345751,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.236606,
+        "flats": 0,
+        "hit_rate": 0.375,
+        "losses": 20,
+        "max_drawdown_dollars": 4068.79,
+        "median_r": -0.15194,
+        "net_pnl_dollars": -3785.7,
+        "sample_count": 32,
+        "wins": 12
+      },
+      "variant_id": "opening_range_breakout-bc933e1756",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.639299,
+          "flats": 0,
+          "hit_rate": 0.4,
+          "losses": 3,
+          "max_drawdown_dollars": 1598.25,
+          "median_r": -0.852492,
+          "net_pnl_dollars": -1598.25,
+          "sample_count": 5,
+          "wins": 2
+        },
+        {
+          "expectancy_r": -0.345751,
+          "flats": 0,
+          "hit_rate": 0.222222,
+          "losses": 7,
+          "max_drawdown_dollars": 1911.99,
+          "median_r": -0.540786,
+          "net_pnl_dollars": -1555.88,
+          "sample_count": 9,
+          "wins": 2
+        },
+        {
+          "expectancy_r": 0.004488,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 2,
+          "max_drawdown_dollars": 693.75,
+          "median_r": 0.238363,
+          "net_pnl_dollars": 8.98,
+          "sample_count": 4,
+          "wins": 2
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.002,
+        "efficiency_threshold": 0.6,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.364345,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.2969,
+        "flats": 0,
+        "hit_rate": 0.37037,
+        "losses": 17,
+        "max_drawdown_dollars": 4336.76,
+        "median_r": -0.332656,
+        "net_pnl_dollars": -4008.14,
+        "sample_count": 27,
+        "wins": 10
+      },
+      "variant_id": "opening_range_breakout-6cb158b90c",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.639299,
+          "flats": 0,
+          "hit_rate": 0.4,
+          "losses": 3,
+          "max_drawdown_dollars": 1598.25,
+          "median_r": -0.852492,
+          "net_pnl_dollars": -1598.25,
+          "sample_count": 5,
+          "wins": 2
+        },
+        {
+          "expectancy_r": -0.364345,
+          "flats": 0,
+          "hit_rate": 0.25,
+          "losses": 6,
+          "max_drawdown_dollars": 1813.49,
+          "median_r": -0.60763,
+          "net_pnl_dollars": -1457.38,
+          "sample_count": 8,
+          "wins": 2
+        },
+        {
+          "expectancy_r": 0.036338,
+          "flats": 0,
+          "hit_rate": 0.666667,
+          "losses": 1,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.567787,
+          "net_pnl_dollars": 54.51,
+          "sample_count": 3,
+          "wins": 2
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.002,
+        "efficiency_threshold": 0.6,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.357816,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.330266,
+        "flats": 0,
+        "hit_rate": 0.333333,
+        "losses": 16,
+        "max_drawdown_dollars": 3972.17,
+        "median_r": -0.15194,
+        "net_pnl_dollars": -3963.19,
+        "sample_count": 24,
+        "wins": 8
+      },
+      "variant_id": "opening_range_breakout-56789a84a6",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.357816,
+          "flats": 0,
+          "hit_rate": 0.666667,
+          "losses": 1,
+          "max_drawdown_dollars": 710.21,
+          "median_r": 0.068595,
+          "net_pnl_dollars": -536.72,
+          "sample_count": 3,
+          "wins": 2
+        },
+        {
+          "expectancy_r": -0.647123,
+          "flats": 0,
+          "hit_rate": 0.125,
+          "losses": 7,
+          "max_drawdown_dollars": 2588.49,
+          "median_r": -0.60763,
+          "net_pnl_dollars": -2588.49,
+          "sample_count": 8,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.004488,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 2,
+          "max_drawdown_dollars": 693.75,
+          "median_r": 0.238363,
+          "net_pnl_dollars": 8.98,
+          "sample_count": 4,
+          "wins": 2
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.002,
+        "efficiency_threshold": 0.6,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.357816,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.440593,
+        "flats": 0,
+        "hit_rate": 0.315789,
+        "losses": 13,
+        "max_drawdown_dollars": 4240.14,
+        "median_r": -0.466401,
+        "net_pnl_dollars": -4185.64,
+        "sample_count": 19,
+        "wins": 6
+      },
+      "variant_id": "opening_range_breakout-de932a04f7",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.357816,
+          "flats": 0,
+          "hit_rate": 0.666667,
+          "losses": 1,
+          "max_drawdown_dollars": 710.21,
+          "median_r": 0.068595,
+          "net_pnl_dollars": -536.72,
+          "sample_count": 3,
+          "wins": 2
+        },
+        {
+          "expectancy_r": -0.711426,
+          "flats": 0,
+          "hit_rate": 0.142857,
+          "losses": 6,
+          "max_drawdown_dollars": 2489.99,
+          "median_r": -0.674474,
+          "net_pnl_dollars": -2489.99,
+          "sample_count": 7,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.036338,
+          "flats": 0,
+          "hit_rate": 0.666667,
+          "losses": 1,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.567787,
+          "net_pnl_dollars": 54.51,
+          "sample_count": 3,
+          "wins": 2
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.003,
+        "efficiency_threshold": 0.45,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.280722,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.040284,
+        "flats": 0,
+        "hit_rate": 0.488372,
+        "losses": 22,
+        "max_drawdown_dollars": 3731.13,
+        "median_r": -0.029136,
+        "net_pnl_dollars": -866.12,
+        "sample_count": 43,
+        "wins": 21
+      },
+      "variant_id": "opening_range_breakout-c0e7591991",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.280722,
+          "flats": 0,
+          "hit_rate": 0.444444,
+          "losses": 5,
+          "max_drawdown_dollars": 1807.11,
+          "median_r": -0.51348,
+          "net_pnl_dollars": -1263.25,
+          "sample_count": 9,
+          "wins": 4
+        },
+        {
+          "expectancy_r": -0.32067,
+          "flats": 0,
+          "hit_rate": 0.333333,
+          "losses": 8,
+          "max_drawdown_dollars": 2280.13,
+          "median_r": -0.368892,
+          "net_pnl_dollars": -1924.02,
+          "sample_count": 12,
+          "wins": 4
+        },
+        {
+          "expectancy_r": 0.063527,
+          "flats": 0,
+          "hit_rate": 0.6,
+          "losses": 2,
+          "max_drawdown_dollars": 693.75,
+          "median_r": 0.299681,
+          "net_pnl_dollars": 158.82,
+          "sample_count": 5,
+          "wins": 3
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.003,
+        "efficiency_threshold": 0.45,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.280722,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.057293,
+        "flats": 0,
+        "hit_rate": 0.5,
+        "losses": 19,
+        "max_drawdown_dollars": 3632.63,
+        "median_r": 0.004425,
+        "net_pnl_dollars": -1088.56,
+        "sample_count": 38,
+        "wins": 19
+      },
+      "variant_id": "opening_range_breakout-1d1b1ecaeb",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.280722,
+          "flats": 0,
+          "hit_rate": 0.444444,
+          "losses": 5,
+          "max_drawdown_dollars": 1807.11,
+          "median_r": -0.51348,
+          "net_pnl_dollars": -1263.25,
+          "sample_count": 9,
+          "wins": 4
+        },
+        {
+          "expectancy_r": -0.331913,
+          "flats": 0,
+          "hit_rate": 0.363636,
+          "losses": 7,
+          "max_drawdown_dollars": 2181.63,
+          "median_r": -0.540786,
+          "net_pnl_dollars": -1825.52,
+          "sample_count": 11,
+          "wins": 4
+        },
+        {
+          "expectancy_r": 0.102173,
+          "flats": 0,
+          "hit_rate": 0.75,
+          "losses": 1,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.433734,
+          "net_pnl_dollars": 204.35,
+          "sample_count": 4,
+          "wins": 3
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.003,
+        "efficiency_threshold": 0.45,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.057636,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.05196,
+        "flats": 0,
+        "hit_rate": 0.470588,
+        "losses": 18,
+        "max_drawdown_dollars": 3702.22,
+        "median_r": -0.044441,
+        "net_pnl_dollars": -883.32,
+        "sample_count": 34,
+        "wins": 16
+      },
+      "variant_id": "opening_range_breakout-59286c3fd8",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.057636,
+          "flats": 0,
+          "hit_rate": 0.571429,
+          "losses": 3,
+          "max_drawdown_dollars": 745.59,
+          "median_r": 0.068595,
+          "net_pnl_dollars": -201.73,
+          "sample_count": 7,
+          "wins": 4
+        },
+        {
+          "expectancy_r": -0.537569,
+          "flats": 0,
+          "hit_rate": 0.272727,
+          "losses": 8,
+          "max_drawdown_dollars": 2956.63,
+          "median_r": -0.540786,
+          "net_pnl_dollars": -2956.63,
+          "sample_count": 11,
+          "wins": 3
+        },
+        {
+          "expectancy_r": 0.063527,
+          "flats": 0,
+          "hit_rate": 0.6,
+          "losses": 2,
+          "max_drawdown_dollars": 693.75,
+          "median_r": 0.299681,
+          "net_pnl_dollars": 158.82,
+          "sample_count": 5,
+          "wins": 3
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.003,
+        "efficiency_threshold": 0.45,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.057636,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.07626,
+        "flats": 0,
+        "hit_rate": 0.482759,
+        "losses": 15,
+        "max_drawdown_dollars": 3603.72,
+        "median_r": -0.059746,
+        "net_pnl_dollars": -1105.76,
+        "sample_count": 29,
+        "wins": 14
+      },
+      "variant_id": "opening_range_breakout-3c971b2672",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.057636,
+          "flats": 0,
+          "hit_rate": 0.571429,
+          "losses": 3,
+          "max_drawdown_dollars": 745.59,
+          "median_r": 0.068595,
+          "net_pnl_dollars": -201.73,
+          "sample_count": 7,
+          "wins": 4
+        },
+        {
+          "expectancy_r": -0.571626,
+          "flats": 0,
+          "hit_rate": 0.3,
+          "losses": 7,
+          "max_drawdown_dollars": 2858.13,
+          "median_r": -0.60763,
+          "net_pnl_dollars": -2858.13,
+          "sample_count": 10,
+          "wins": 3
+        },
+        {
+          "expectancy_r": 0.102173,
+          "flats": 0,
+          "hit_rate": 0.75,
+          "losses": 1,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.433734,
+          "net_pnl_dollars": 204.35,
+          "sample_count": 4,
+          "wins": 3
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.003,
+        "efficiency_threshold": 0.6,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.345751,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.253596,
+        "flats": 0,
+        "hit_rate": 0.37931,
+        "losses": 18,
+        "max_drawdown_dollars": 3960.23,
+        "median_r": -0.14104,
+        "net_pnl_dollars": -3677.14,
+        "sample_count": 29,
+        "wins": 11
+      },
+      "variant_id": "opening_range_breakout-337ba96c7f",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.868718,
+          "flats": 0,
+          "hit_rate": 0.25,
+          "losses": 3,
+          "max_drawdown_dollars": 1737.44,
+          "median_r": -1.061523,
+          "net_pnl_dollars": -1737.44,
+          "sample_count": 4,
+          "wins": 1
+        },
+        {
+          "expectancy_r": -0.345751,
+          "flats": 0,
+          "hit_rate": 0.222222,
+          "losses": 7,
+          "max_drawdown_dollars": 1911.99,
+          "median_r": -0.540786,
+          "net_pnl_dollars": -1555.88,
+          "sample_count": 9,
+          "wins": 2
+        },
+        {
+          "expectancy_r": 0.004488,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 2,
+          "max_drawdown_dollars": 693.75,
+          "median_r": 0.238363,
+          "net_pnl_dollars": 8.98,
+          "sample_count": 4,
+          "wins": 2
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.003,
+        "efficiency_threshold": 0.6,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.364345,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.324965,
+        "flats": 0,
+        "hit_rate": 0.375,
+        "losses": 15,
+        "max_drawdown_dollars": 4228.2,
+        "median_r": -0.503593,
+        "net_pnl_dollars": -3899.58,
+        "sample_count": 24,
+        "wins": 9
+      },
+      "variant_id": "opening_range_breakout-9a362309ce",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.868718,
+          "flats": 0,
+          "hit_rate": 0.25,
+          "losses": 3,
+          "max_drawdown_dollars": 1737.44,
+          "median_r": -1.061523,
+          "net_pnl_dollars": -1737.44,
+          "sample_count": 4,
+          "wins": 1
+        },
+        {
+          "expectancy_r": -0.364345,
+          "flats": 0,
+          "hit_rate": 0.25,
+          "losses": 6,
+          "max_drawdown_dollars": 1813.49,
+          "median_r": -0.60763,
+          "net_pnl_dollars": -1457.38,
+          "sample_count": 8,
+          "wins": 2
+        },
+        {
+          "expectancy_r": 0.036338,
+          "flats": 0,
+          "hit_rate": 0.666667,
+          "losses": 1,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.567787,
+          "net_pnl_dollars": 54.51,
+          "sample_count": 3,
+          "wins": 2
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0,
+        "drive_threshold": 0.003,
+        "efficiency_threshold": 0.6,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.647123,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.365542,
+        "flats": 0,
+        "hit_rate": 0.318182,
+        "losses": 15,
+        "max_drawdown_dollars": 4029.93,
+        "median_r": -0.169019,
+        "net_pnl_dollars": -4020.96,
+        "sample_count": 22,
+        "wins": 7
+      },
+      "variant_id": "opening_range_breakout-cc40a06cfc",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.675912,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 1,
+          "max_drawdown_dollars": 710.21,
+          "median_r": -0.675912,
+          "net_pnl_dollars": -675.91,
+          "sample_count": 2,
+          "wins": 1
+        },
+        {
+          "expectancy_r": -0.647123,
+          "flats": 0,
+          "hit_rate": 0.125,
+          "losses": 7,
+          "max_drawdown_dollars": 2588.49,
+          "median_r": -0.60763,
+          "net_pnl_dollars": -2588.49,
+          "sample_count": 8,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.004488,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 2,
+          "max_drawdown_dollars": 693.75,
+          "median_r": 0.238363,
+          "net_pnl_dollars": 8.98,
+          "sample_count": 4,
+          "wins": 2
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.003,
+        "efficiency_threshold": 0.6,
+        "family": "opening_range_breakout",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -0.675912,
+        "nonempty_folds": 3,
+        "positive_folds": 1
+      },
+      "training": {
+        "expectancy_r": -0.499224,
+        "flats": 0,
+        "hit_rate": 0.294118,
+        "losses": 12,
+        "max_drawdown_dollars": 4297.91,
+        "median_r": -0.540786,
+        "net_pnl_dollars": -4243.4,
+        "sample_count": 17,
+        "wins": 5
+      },
+      "variant_id": "opening_range_breakout-46ce500da7",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -0.675912,
+          "flats": 0,
+          "hit_rate": 0.5,
+          "losses": 1,
+          "max_drawdown_dollars": 710.21,
+          "median_r": -0.675912,
+          "net_pnl_dollars": -675.91,
+          "sample_count": 2,
+          "wins": 1
+        },
+        {
+          "expectancy_r": -0.711426,
+          "flats": 0,
+          "hit_rate": 0.142857,
+          "losses": 6,
+          "max_drawdown_dollars": 2489.99,
+          "median_r": -0.674474,
+          "net_pnl_dollars": -2489.99,
+          "sample_count": 7,
+          "wins": 1
+        },
+        {
+          "expectancy_r": 0.036338,
+          "flats": 0,
+          "hit_rate": 0.666667,
+          "losses": 1,
+          "max_drawdown_dollars": 648.22,
+          "median_r": 0.567787,
+          "net_pnl_dollars": 54.51,
+          "sample_count": 3,
+          "wins": 2
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.0025,
+        "efficiency_threshold": 0.4,
+        "family": "vwap_pullback_reclaim",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -1.345487,
+        "nonempty_folds": 3,
+        "positive_folds": 0
+      },
+      "training": {
+        "expectancy_r": -0.873918,
+        "flats": 0,
+        "hit_rate": 0.153846,
+        "losses": 11,
+        "max_drawdown_dollars": 5954.58,
+        "median_r": -1.270555,
+        "net_pnl_dollars": -5680.47,
+        "sample_count": 13,
+        "wins": 2
+      },
+      "variant_id": "vwap_pullback_reclaim-af27b8ad1d",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -1.345487,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 2,
+          "max_drawdown_dollars": 1345.49,
+          "median_r": -1.345487,
+          "net_pnl_dollars": -1345.49,
+          "sample_count": 2,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.35356,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 2,
+          "max_drawdown_dollars": 1353.56,
+          "median_r": -1.35356,
+          "net_pnl_dollars": -1353.56,
+          "sample_count": 2,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.344246,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 672.12,
+          "median_r": -1.344246,
+          "net_pnl_dollars": -672.12,
+          "sample_count": 1,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.0025,
+        "efficiency_threshold": 0.4,
+        "family": "vwap_pullback_reclaim",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -1.35356,
+        "nonempty_folds": 3,
+        "positive_folds": 0
+      },
+      "training": {
+        "expectancy_r": -1.15055,
+        "flats": 0,
+        "hit_rate": 0.0,
+        "losses": 9,
+        "max_drawdown_dollars": 5177.47,
+        "median_r": -1.344246,
+        "net_pnl_dollars": -5177.47,
+        "sample_count": 9,
+        "wins": 0
+      },
+      "variant_id": "vwap_pullback_reclaim-f5f8f033f2",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -1.420419,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 710.21,
+          "median_r": -1.420419,
+          "net_pnl_dollars": -710.21,
+          "sample_count": 1,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.35356,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 2,
+          "max_drawdown_dollars": 1353.56,
+          "median_r": -1.35356,
+          "net_pnl_dollars": -1353.56,
+          "sample_count": 2,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.344246,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 672.12,
+          "median_r": -1.344246,
+          "net_pnl_dollars": -672.12,
+          "sample_count": 1,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.0025,
+        "efficiency_threshold": 0.55,
+        "family": "vwap_pullback_reclaim",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -1.259063,
+        "nonempty_folds": 2,
+        "positive_folds": 0
+      },
+      "training": {
+        "expectancy_r": -0.738781,
+        "flats": 0,
+        "hit_rate": 0.125,
+        "losses": 7,
+        "max_drawdown_dollars": 3229.24,
+        "median_r": -0.873657,
+        "net_pnl_dollars": -2955.13,
+        "sample_count": 8,
+        "wins": 1
+      },
+      "variant_id": "vwap_pullback_reclaim-64e456d749",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -1.345487,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 2,
+          "max_drawdown_dollars": 1345.49,
+          "median_r": -1.345487,
+          "net_pnl_dollars": -1345.49,
+          "sample_count": 2,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.172639,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 586.32,
+          "median_r": -1.172639,
+          "net_pnl_dollars": -586.32,
+          "sample_count": 1,
+          "wins": 0
+        },
+        {
+          "expectancy_r": 0.0,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 0,
+          "max_drawdown_dollars": 0.0,
+          "median_r": 0.0,
+          "net_pnl_dollars": 0,
+          "sample_count": 0,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.0025,
+        "efficiency_threshold": 0.55,
+        "family": "vwap_pullback_reclaim",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -1.296529,
+        "nonempty_folds": 2,
+        "positive_folds": 0
+      },
+      "training": {
+        "expectancy_r": -0.92265,
+        "flats": 0,
+        "hit_rate": 0.0,
+        "losses": 5,
+        "max_drawdown_dollars": 2306.62,
+        "median_r": -1.172639,
+        "net_pnl_dollars": -2306.62,
+        "sample_count": 5,
+        "wins": 0
+      },
+      "variant_id": "vwap_pullback_reclaim-855f988511",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -1.420419,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 710.21,
+          "median_r": -1.420419,
+          "net_pnl_dollars": -710.21,
+          "sample_count": 1,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.172639,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 586.32,
+          "median_r": -1.172639,
+          "net_pnl_dollars": -586.32,
+          "sample_count": 1,
+          "wins": 0
+        },
+        {
+          "expectancy_r": 0.0,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 0,
+          "max_drawdown_dollars": 0.0,
+          "median_r": 0.0,
+          "net_pnl_dollars": 0,
+          "sample_count": 0,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.0035,
+        "efficiency_threshold": 0.4,
+        "family": "vwap_pullback_reclaim",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -1.345487,
+        "nonempty_folds": 3,
+        "positive_folds": 0
+      },
+      "training": {
+        "expectancy_r": -1.204306,
+        "flats": 0,
+        "hit_rate": 0.0,
+        "losses": 8,
+        "max_drawdown_dollars": 4817.22,
+        "median_r": -1.310955,
+        "net_pnl_dollars": -4817.22,
+        "sample_count": 8,
+        "wins": 0
+      },
+      "variant_id": "vwap_pullback_reclaim-50f214f1c7",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -1.345487,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 2,
+          "max_drawdown_dollars": 1345.49,
+          "median_r": -1.345487,
+          "net_pnl_dollars": -1345.49,
+          "sample_count": 2,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.35356,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 2,
+          "max_drawdown_dollars": 1353.56,
+          "median_r": -1.35356,
+          "net_pnl_dollars": -1353.56,
+          "sample_count": 2,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.344246,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 672.12,
+          "median_r": -1.344246,
+          "net_pnl_dollars": -672.12,
+          "sample_count": 1,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.0035,
+        "efficiency_threshold": 0.4,
+        "family": "vwap_pullback_reclaim",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -1.35356,
+        "nonempty_folds": 3,
+        "positive_folds": 0
+      },
+      "training": {
+        "expectancy_r": -1.194842,
+        "flats": 0,
+        "hit_rate": 0.0,
+        "losses": 7,
+        "max_drawdown_dollars": 4181.95,
+        "median_r": -1.344246,
+        "net_pnl_dollars": -4181.95,
+        "sample_count": 7,
+        "wins": 0
+      },
+      "variant_id": "vwap_pullback_reclaim-38ac920f61",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -1.420419,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 710.21,
+          "median_r": -1.420419,
+          "net_pnl_dollars": -710.21,
+          "sample_count": 1,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.35356,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 2,
+          "max_drawdown_dollars": 1353.56,
+          "median_r": -1.35356,
+          "net_pnl_dollars": -1353.56,
+          "sample_count": 2,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.344246,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 672.12,
+          "median_r": -1.344246,
+          "net_pnl_dollars": -672.12,
+          "sample_count": 1,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.0035,
+        "efficiency_threshold": 0.55,
+        "family": "vwap_pullback_reclaim",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 0.8,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -1.259063,
+        "nonempty_folds": 2,
+        "positive_folds": 0
+      },
+      "training": {
+        "expectancy_r": -0.973187,
+        "flats": 0,
+        "hit_rate": 0.0,
+        "losses": 4,
+        "max_drawdown_dollars": 1946.37,
+        "median_r": -1.221597,
+        "net_pnl_dollars": -1946.37,
+        "sample_count": 4,
+        "wins": 0
+      },
+      "variant_id": "vwap_pullback_reclaim-6b396e5675",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -1.345487,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 2,
+          "max_drawdown_dollars": 1345.49,
+          "median_r": -1.345487,
+          "net_pnl_dollars": -1345.49,
+          "sample_count": 2,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.172639,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 586.32,
+          "median_r": -1.172639,
+          "net_pnl_dollars": -586.32,
+          "sample_count": 1,
+          "wins": 0
+        },
+        {
+          "expectancy_r": 0.0,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 0,
+          "max_drawdown_dollars": 0.0,
+          "median_r": 0.0,
+          "net_pnl_dollars": 0,
+          "sample_count": 0,
+          "wins": 0
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "breakout_buffer": 0.0005,
+        "drive_threshold": 0.0035,
+        "efficiency_threshold": 0.55,
+        "family": "vwap_pullback_reclaim",
+        "hold_minutes": 60,
+        "rel_volume_threshold": 1.0,
+        "signal_minutes": 60,
+        "stop_fraction": 0.0025,
+        "target_fraction": 0.005
+      },
+      "selection_score": {
+        "median_fold_expectancy_r": -1.296529,
+        "nonempty_folds": 2,
+        "positive_folds": 0
+      },
+      "training": {
+        "expectancy_r": -0.874065,
+        "flats": 0,
+        "hit_rate": 0.0,
+        "losses": 3,
+        "max_drawdown_dollars": 1311.1,
+        "median_r": -1.172639,
+        "net_pnl_dollars": -1311.1,
+        "sample_count": 3,
+        "wins": 0
+      },
+      "variant_id": "vwap_pullback_reclaim-3cba6d76b3",
+      "walk_forward_folds": [
+        {
+          "expectancy_r": -1.420419,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 710.21,
+          "median_r": -1.420419,
+          "net_pnl_dollars": -710.21,
+          "sample_count": 1,
+          "wins": 0
+        },
+        {
+          "expectancy_r": -1.172639,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 1,
+          "max_drawdown_dollars": 586.32,
+          "median_r": -1.172639,
+          "net_pnl_dollars": -586.32,
+          "sample_count": 1,
+          "wins": 0
+        },
+        {
+          "expectancy_r": 0.0,
+          "flats": 0,
+          "hit_rate": 0.0,
+          "losses": 0,
+          "max_drawdown_dollars": 0.0,
+          "median_r": 0.0,
+          "net_pnl_dollars": 0,
+          "sample_count": 0,
+          "wins": 0
+        }
+      ]
+    }
+  ]
+}

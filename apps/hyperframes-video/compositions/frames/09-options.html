@@ -1,0 +1,546 @@
+<template>
+  <style>
+    @font-face { font-family: "DM Sans Variable"; src: url("assets/fonts/dm-sans-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/jetbrains-mono-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    #root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      container-type: size;
+      color: #11110f;
+      font-family: "DM Sans Variable", sans-serif;
+      perspective: 1800px;
+    }
+
+    #root .clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 27% 42%, rgba(243, 173, 0, 0.58) 0%, rgba(255, 214, 108, 0.32) 18%, rgba(255, 241, 194, 0.18) 38%, rgba(255, 255, 255, 0) 62%),
+        radial-gradient(circle at 77% 30%, rgba(255, 101, 95, 0.14) 0%, rgba(255, 101, 95, 0) 36%),
+        #ffffff;
+    }
+
+    #root [id="09-options-stage"] {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    #root [id="09-options-kicker"] {
+      position: absolute;
+      top: 42px;
+      left: 78px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    #root [id="09-options-kicker"]::before {
+      width: 72px;
+      height: 1px;
+      background: #11110f;
+      content: "";
+    }
+
+    #root [id="09-options-pair"] {
+      position: absolute;
+      top: 112px;
+      left: 80px;
+      display: grid;
+      grid-template-columns: 800px 800px;
+      gap: 160px;
+      width: 1760px;
+      height: 680px;
+      perspective: 1800px;
+      transform-style: preserve-3d;
+    }
+
+    #root [data-options-shell] {
+      width: 800px;
+      height: 680px;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    #root [id="09-options-left-shell"] { transform-origin: right center; }
+    #root [id="09-options-right-shell"] { transform-origin: left center; }
+
+    #root [data-options-card] {
+      position: relative;
+      width: 800px;
+      height: 680px;
+      border-top: 1px solid #11110f;
+      border-bottom: 1px solid #11110f;
+      background: rgba(255, 255, 255, 0.8);
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    #root [data-options-eyebrow] {
+      position: absolute;
+      top: 24px;
+      left: 28px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    #root [data-options-title] {
+      position: absolute;
+      top: 58px;
+      left: 24px;
+      margin: 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 72px;
+      font-weight: 600;
+      line-height: 0.88;
+      letter-spacing: -0.018em;
+    }
+
+    #root [id="09-options-equity-status"] {
+      position: absolute;
+      top: 26px;
+      right: 28px;
+      padding: 8px 10px 7px;
+      background: #f3ad00;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [id="09-options-equity-diagram"] {
+      position: absolute;
+      top: 170px;
+      left: 34px;
+      width: 732px;
+      height: 410px;
+    }
+
+    #root [id="09-options-equity-svg"] {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    #root [data-options-path] {
+      fill: none;
+      stroke: #11110f;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #root [id="09-options-equity-order"] {
+      position: absolute;
+      top: 46px;
+      left: 236px;
+      display: grid;
+      width: 260px;
+      height: 84px;
+      place-items: center;
+      background: #f3ad00;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 34px;
+      font-weight: 600;
+    }
+
+    #root [id="09-options-equity-stop"],
+    #root [id="09-options-equity-target"] {
+      position: absolute;
+      top: 272px;
+      width: 280px;
+      padding-top: 16px;
+      border-top: 1px solid #11110f;
+    }
+
+    #root [id="09-options-equity-stop"] { left: 16px; }
+    #root [id="09-options-equity-target"] { right: 16px; text-align: right; }
+
+    #root [id="09-options-equity-stop"] strong,
+    #root [id="09-options-equity-target"] strong,
+    #root [id="09-options-equity-stop"] span,
+    #root [id="09-options-equity-target"] span {
+      display: block;
+    }
+
+    #root [id="09-options-equity-stop"] strong,
+    #root [id="09-options-equity-target"] strong {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 44px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    #root [id="09-options-equity-stop"] span,
+    #root [id="09-options-equity-target"] span {
+      margin-top: 10px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [id="09-options-equity-foot"] {
+      position: absolute;
+      right: 28px;
+      bottom: 24px;
+      left: 28px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(17, 17, 15, 0.2);
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [id="09-options-level"] {
+      position: absolute;
+      top: 26px;
+      right: 28px;
+      padding: 8px 10px 7px;
+      border: 1px solid #11110f;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [id="09-options-crop"] {
+      position: absolute;
+      top: 152px;
+      left: 0;
+      width: 800px;
+      height: 278px;
+      overflow: hidden;
+      border-top: 1px solid rgba(17, 17, 15, 0.24);
+      border-bottom: 1px solid rgba(17, 17, 15, 0.18);
+    }
+
+    #root [id="09-options-crop"] img {
+      position: absolute;
+      top: -380px;
+      left: -745px;
+      width: 1420px;
+      height: 799px;
+      opacity: 0.42;
+      filter: saturate(0.85) contrast(0.94);
+    }
+
+    #root [id="09-options-discovery"] {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      left: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: rgba(255, 255, 255, 0.9);
+      border-top: 1px solid #11110f;
+      border-bottom: 1px solid #11110f;
+    }
+
+    #root [data-options-discovery] {
+      min-height: 82px;
+      padding: 15px 14px 10px;
+      border-left: 1px solid rgba(17, 17, 15, 0.2);
+    }
+
+    #root [data-options-discovery]:first-child { border-left: 0; }
+
+    #root [data-options-discovery] span,
+    #root [data-options-discovery] strong {
+      display: block;
+    }
+
+    #root [data-options-discovery] span {
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [data-options-discovery] strong {
+      margin-top: 8px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    #root [id="09-options-ready"] {
+      position: absolute;
+      top: 464px;
+      right: 24px;
+      left: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #11110f;
+      border-bottom: 1px solid #11110f;
+    }
+
+    #root [data-options-ready] {
+      min-height: 118px;
+      padding: 22px 18px 12px;
+      border-left: 1px solid rgba(17, 17, 15, 0.2);
+      transform-origin: center;
+    }
+
+    #root [data-options-ready]:first-child { border-left: 0; }
+
+    #root [data-options-ready] strong,
+    #root [data-options-ready] span {
+      display: block;
+    }
+
+    #root [data-options-ready] strong {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 0.96;
+    }
+
+    #root [data-options-ready] span {
+      margin-top: 16px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [data-options-ready] i {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      margin: 2px 0 0 182px;
+      border: 1px solid #11110f;
+      background: #f3ad00;
+    }
+
+    #root [id="09-options-options-foot"] {
+      position: absolute;
+      right: 28px;
+      bottom: 24px;
+      left: 28px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(17, 17, 15, 0.2);
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [id="09-options-center-rule"] {
+      position: absolute;
+      top: 96px;
+      left: 959px;
+      width: 1px;
+      height: 714px;
+      background: rgba(17, 17, 15, 0.22);
+      transform-origin: center top;
+    }
+
+    #root [id="09-options-bridge-svg"] {
+      position: absolute;
+      top: 742px;
+      left: 636px;
+      z-index: 3;
+      width: 648px;
+      height: 92px;
+      overflow: visible;
+    }
+
+    #root [data-options-bridge-path] {
+      fill: none;
+      stroke: #11110f;
+      stroke-width: 1;
+      stroke-linecap: round;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #root [id="09-options-bridge"] {
+      position: absolute;
+      top: 748px;
+      left: 770px;
+      z-index: 4;
+      display: grid;
+      width: 380px;
+      height: 76px;
+      place-items: center;
+      background: #f3ad00;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transform-origin: center;
+    }
+
+    #root [id="09-options-page"] {
+      position: absolute;
+      top: 850px;
+      right: 78px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      opacity: 0.75;
+    }
+  </style>
+
+  <div data-hf-id="hf-5qbz" id="root" data-composition-id="09-options" data-width="1920" data-height="1080" data-duration="13.716">
+    <div data-hf-id="hf-jt0n" class="clip" data-start="0" data-duration="12" data-track-index="0"></div>
+
+    <div data-hf-id="hf-dznc" id="09-options-stage">
+      <div data-hf-id="hf-n7qj" id="09-options-kicker">AFTERIMAGE / modular execution</div>
+      <div data-hf-id="hf-z8pg" id="09-options-center-rule"></div>
+
+      <div data-hf-id="hf-y8r6" id="09-options-pair">
+        <div data-hf-id="hf-e7i1" id="09-options-left-shell" data-options-shell="">
+          <section data-hf-id="hf-67kz" id="09-options-left-card" data-options-card="">
+            <div data-hf-id="hf-4fe7" data-options-eyebrow="">GuavaMango / live strategy</div>
+            <h2 data-hf-id="hf-88im" data-options-title="">EQUITY BRACKET</h2>
+            <div data-hf-id="hf-j45g" id="09-options-equity-status">Deployed / equity</div>
+
+            <div data-hf-id="hf-qlkj" id="09-options-equity-diagram">
+              <svg data-hf-id="hf-e6hy" id="09-options-equity-svg" viewBox="0 0 732 410" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path data-hf-id="hf-3k4x" id="09-options-equity-stem" data-options-path="" d="M 366 130 L 366 202" />
+                <path data-hf-id="hf-ticw" id="09-options-equity-left" data-options-path="" d="M 366 202 C 306 220 220 238 156 272" />
+                <path data-hf-id="hf-039s" id="09-options-equity-right" data-options-path="" d="M 366 202 C 426 220 512 238 576 272" />
+              </svg>
+              <div data-hf-id="hf-q840" id="09-options-equity-order">ONE ORDER</div>
+              <div data-hf-id="hf-7llw" id="09-options-equity-stop"><strong data-hf-id="hf-ihq4">1 ATR STOP</strong><span data-hf-id="hf-olns">loss boundary</span></div>
+              <div data-hf-id="hf-hkaf" id="09-options-equity-target"><strong data-hf-id="hf-w5pr">≥ 3R TARGET</strong><span data-hf-id="hf-774f">after costs</span></div>
+            </div>
+
+            <div data-hf-id="hf-uz5c" id="09-options-equity-foot"><span data-hf-id="hf-x378">Limit entry</span><span data-hf-id="hf-wj6t">Bracket attached</span></div>
+          </section>
+        </div>
+
+        <div data-hf-id="hf-59im" id="09-options-right-shell" data-options-shell="">
+          <section data-hf-id="hf-accy" id="09-options-right-card" data-options-card="">
+            <div data-hf-id="hf-6pps" data-options-eyebrow="">Level 3 / options ready</div>
+            <h2 data-hf-id="hf-zipy" data-options-title="">OPTIONS LAB</h2>
+            <div data-hf-id="hf-hi0v" id="09-options-level">Multi-leg ready</div>
+
+            <div data-hf-id="hf-g7vc" id="09-options-crop">
+              <img data-hf-id="hf-lnor" src="assets/scroll-100.png" alt="Real Level-3 Options Lab in the AFTERIMAGE product">
+              <div data-hf-id="hf-xj28" id="09-options-discovery">
+                <div data-hf-id="hf-042i" id="09-options-chain" data-options-discovery=""><span data-hf-id="hf-jyqm">01 / discover</span><strong data-hf-id="hf-i7qf">CHAIN</strong></div>
+                <div data-hf-id="hf-vwnd" id="09-options-contract" data-options-discovery=""><span data-hf-id="hf-ncn2">02 / select</span><strong data-hf-id="hf-vcpk">CONTRACT</strong></div>
+                <div data-hf-id="hf-iydw" id="09-options-legs" data-options-discovery=""><span data-hf-id="hf-qfts">03 / construct</span><strong data-hf-id="hf-5gwv">LEGS</strong></div>
+              </div>
+            </div>
+
+            <div data-hf-id="hf-l4lj" id="09-options-ready">
+              <div data-hf-id="hf-crqd" id="09-options-payoff" data-options-ready=""><i data-hf-id="hf-wt6k"></i><strong data-hf-id="hf-ic29">PAYOFF</strong><span data-hf-id="hf-93gd">Preview / ready</span></div>
+              <div data-hf-id="hf-drb1" id="09-options-risk" data-options-ready=""><i data-hf-id="hf-zeb8"></i><strong data-hf-id="hf-gnmd">RISK PREVIEW</strong><span data-hf-id="hf-8ad5">Deterministic</span></div>
+              <div data-hf-id="hf-u1db" id="09-options-dry-run" data-options-ready=""><i data-hf-id="hf-y7e5"></i><strong data-hf-id="hf-m6yg">ALPACA DRY RUN</strong><span data-hf-id="hf-05km">Official CLI</span></div>
+            </div>
+
+            <div data-hf-id="hf-ewot" id="09-options-options-foot"><span data-hf-id="hf-pweg">Call / put / multi-leg</span><span data-hf-id="hf-8ffl">No active option order</span></div>
+          </section>
+        </div>
+      </div>
+
+      <svg data-hf-id="hf-7tny" id="09-options-bridge-svg" viewBox="0 0 648 92" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path data-hf-id="hf-pdb1" id="09-options-bridge-left" data-options-bridge-path="" d="M 0 44 L 154 44" />
+        <path data-hf-id="hf-nf1l" id="09-options-bridge-right" data-options-bridge-path="" d="M 494 44 L 648 44" />
+      </svg>
+      <div data-hf-id="hf-2om6" id="09-options-bridge">ONE GOVERNED PATH</div>
+      <div data-hf-id="hf-ku3c" id="09-options-page">09 / 09</div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.querySelector('[data-composition-id="09-options"]');
+      const gsap = window.gsap;
+      if (!root || !gsap) return;
+
+      const get = (id) => document.getElementById(id);
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["09-options"] = tl;
+
+      const pathIds = [
+        "09-options-equity-stem",
+        "09-options-equity-left",
+        "09-options-equity-right",
+        "09-options-bridge-left",
+        "09-options-bridge-right",
+      ];
+      const lengths = {};
+      pathIds.forEach((id) => {
+        const path = get(id);
+        const length = path.getTotalLength();
+        lengths[id] = length;
+        path.style.strokeDasharray = `${length}`;
+        path.style.strokeDashoffset = `${length}`;
+      });
+
+      const floatDriver = { p: 0 };
+      const leftCard = get("09-options-left-card");
+      const rightCard = get("09-options-right-card");
+      tl.to(floatDriver, {
+        p: Math.PI * 4,
+        duration: 12,
+        ease: "none",
+        onUpdate: () => {
+          const progress = floatDriver.p / (Math.PI * 4);
+          const envelope = progress < 0.82 ? 1 : (1 - progress) / 0.18;
+          const amplitude = Math.max(0, envelope) * 2.2;
+          leftCard.style.transform = `translateY(${Math.sin(floatDriver.p) * amplitude}px)`;
+          rightCard.style.transform = `translateY(${Math.sin(floatDriver.p + Math.PI) * amplitude}px)`;
+        },
+      }, 0);
+
+      tl.fromTo(get("09-options-kicker"), { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.42, ease: "power2.out" }, 0.04);
+      tl.fromTo(get("09-options-center-rule"), { opacity: 0, scaleY: 0 }, { opacity: 1, scaleY: 1, duration: 0.72, ease: "power3.out" }, 0.12);
+      tl.fromTo(get("09-options-left-shell"), { opacity: 0, x: -340, scale: 0.85, rotateY: 20 }, { opacity: 1, x: 0, scale: 1, rotateY: 4, duration: 0.94, ease: "power3.out" }, 0.08);
+      tl.fromTo(get("09-options-left-card").querySelector("[data-options-eyebrow]"), { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 0.38);
+      tl.fromTo(get("09-options-left-card").querySelector("[data-options-title]"), { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.44, ease: "expo.out" }, 0.48);
+      tl.fromTo(get("09-options-equity-status"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.42, ease: "power3.out" }, 0.62);
+      tl.fromTo(get("09-options-equity-order"), { opacity: 0, scale: 0.62 }, { opacity: 1, scale: 1, duration: 0.48, ease: "power3.out" }, 0.72);
+      tl.to(get("09-options-equity-stem"), { strokeDashoffset: 0, duration: 0.48, ease: "power2.out" }, 1.02);
+      tl.to(get("09-options-equity-left"), { strokeDashoffset: 0, duration: 0.68, ease: "power2.out" }, 1.38);
+      tl.to(get("09-options-equity-right"), { strokeDashoffset: 0, duration: 0.68, ease: "power2.out" }, 1.72);
+      tl.fromTo(get("09-options-equity-stop"), { opacity: 0, x: -34 }, { opacity: 1, x: 0, duration: 0.42, ease: "expo.out" }, 1.74);
+      tl.fromTo(get("09-options-equity-target"), { opacity: 0, x: 34 }, { opacity: 1, x: 0, duration: 0.42, ease: "expo.out" }, 2.08);
+      tl.fromTo(get("09-options-equity-foot"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 2.48);
+
+      tl.fromTo(get("09-options-right-shell"), { opacity: 0, x: 340, scale: 0.85, rotateY: -20 }, { opacity: 1, x: 0, scale: 1, rotateY: -4, duration: 1.02, ease: "power3.out" }, 3.02);
+      tl.fromTo(get("09-options-right-card").querySelector("[data-options-eyebrow]"), { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 3.34);
+      tl.fromTo(get("09-options-right-card").querySelector("[data-options-title]"), { opacity: 0, x: 26 }, { opacity: 1, x: 0, duration: 0.44, ease: "expo.out" }, 3.44);
+      tl.fromTo(get("09-options-level"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.42, ease: "power3.out" }, 3.58);
+      tl.fromTo(get("09-options-crop"), { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.56, ease: "power2.out" }, 3.48);
+
+      tl.fromTo(get("09-options-chain"), { opacity: 0, scale: 1.24, filter: "blur(9px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.46, ease: "power4.out" }, 3.82);
+      tl.fromTo(get("09-options-contract"), { opacity: 0, x: 70 }, { opacity: 1, x: 0, duration: 0.46, ease: "expo.out" }, 4.82);
+      tl.fromTo(get("09-options-legs"), { opacity: 0, y: 40, rotation: 2 }, { opacity: 1, y: 0, rotation: 0, duration: 0.5, ease: "circ.out" }, 5.82);
+      tl.fromTo(get("09-options-options-foot"), { opacity: 0, x: 18 }, { opacity: 1, x: 0, duration: 0.4, ease: "power2.out" }, 6.54);
+
+      tl.fromTo(get("09-options-payoff"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.52, ease: "power3.out" }, 7.22);
+      tl.fromTo(get("09-options-risk"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 8.14);
+      tl.fromTo(get("09-options-dry-run"), { opacity: 0, x: 48 }, { opacity: 1, x: 0, duration: 0.48, ease: "expo.out" }, 9.04);
+
+      tl.to(get("09-options-bridge-left"), { strokeDashoffset: 0, duration: 0.54, ease: "power2.out" }, 10.0);
+      tl.to(get("09-options-bridge-right"), { strokeDashoffset: 0, duration: 0.54, ease: "power2.out" }, 10.18);
+      tl.fromTo(get("09-options-bridge"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.58, ease: "back.out(1.22)" }, 10.32);
+      tl.fromTo(get("09-options-page"), { opacity: 0, x: 12 }, { opacity: 0.75, x: 0, duration: 0.38, ease: "power1.out" }, 11.2);
+    })();
+  </script>
+</template>

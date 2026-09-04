@@ -1,9 +1,15 @@
 from __future__ import annotations
 
+from importlib import import_module
+from typing import TYPE_CHECKING, Any, cast
+
 from .base import StrategyPlugin
 from .momentum_continuation import MomentumContinuationStrategy
 from .opening_range_failure import OpeningRangeFailureStrategy
 from .volatility_dislocation import VolatilityDislocationStrategy
+
+if TYPE_CHECKING:
+    from afterimage.config import RuntimeConfig
 
 
 class StrategyRegistry:
@@ -31,4 +37,36 @@ def default_registry() -> StrategyRegistry:
     registry.register(OpeningRangeFailureStrategy())
     registry.register(MomentumContinuationStrategy())
     registry.register(VolatilityDislocationStrategy())
+    return registry
+
+
+def _load_plugin(reference: str) -> StrategyPlugin:
+    module_name, separator, attribute = reference.partition(":")
+    if not separator or not module_name or not attribute:
+        raise RuntimeError(f"STRATEGY_PLUGIN_REFERENCE_INVALID:{reference}")
+    module = import_module(module_name)
+    plugin_type: Any = getattr(module, attribute, None)
+    if plugin_type is None or not callable(plugin_type):
+        raise RuntimeError(f"STRATEGY_PLUGIN_NOT_CALLABLE:{reference}")
+    plugin = plugin_type()
+    if not hasattr(plugin, "identity"):
+        raise RuntimeError(f"STRATEGY_PLUGIN_IDENTITY_MISSING:{reference}")
+    return cast(StrategyPlugin, plugin)
+
+
+def configured_registry(config: RuntimeConfig) -> StrategyRegistry:
+    """Discover immutable plugins from config so adding one requires no registry edit."""
+    registry = StrategyRegistry()
+    for strategy_id in sorted(config.strategies):
+        configured = config.strategies[strategy_id]
+        reference = configured.payload.get("plugin")
+        if not isinstance(reference, str):
+            raise TypeError(f"STRATEGY_PLUGIN_MISSING:{strategy_id}")
+        plugin = _load_plugin(reference)
+        if (
+            plugin.identity.strategy_id != configured.strategy_id
+            or plugin.identity.strategy_version != configured.strategy_version
+        ):
+            raise RuntimeError(f"STRATEGY_PLUGIN_IDENTITY_MISMATCH:{strategy_id}")
+        registry.register(plugin)
     return registry

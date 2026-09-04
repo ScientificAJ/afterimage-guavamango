@@ -4,7 +4,7 @@ import asyncio
 from dataclasses import dataclass
 from typing import Any
 
-from .alpaca_gateway import AlpacaGateway
+from .protocols import OrderLookupGateway
 
 
 @dataclass(frozen=True)
@@ -15,7 +15,7 @@ class ReconciliationResult:
 
 
 class Reconciler:
-    def __init__(self, gateway: AlpacaGateway) -> None:
+    def __init__(self, gateway: OrderLookupGateway) -> None:
         self.gateway = gateway
 
     async def by_client_id(

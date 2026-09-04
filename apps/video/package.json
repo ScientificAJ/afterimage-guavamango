@@ -1,0 +1,21 @@
+{
+  "name": "afterimage-judge-video",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio --no-open",
+    "still": "remotion still src/index.ts AfterimageJudge --frame=150 ../../tmp/video/afterimage-preview.png",
+    "render": "remotion render src/index.ts AfterimageJudge ../../output/video/AFTERIMAGE_Judge_Demo.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.506",
+    "@remotion/transitions": "4.0.506",
+    "remotion": "4.0.506",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.0",
+    "typescript": "5.9.3"
+  }
+}

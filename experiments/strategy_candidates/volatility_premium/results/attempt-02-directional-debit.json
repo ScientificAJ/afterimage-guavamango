@@ -1,0 +1,5448 @@
+{
+  "all_variants": {
+    "momentum_balanced": {
+      "all_april_august": {
+        "expectancy_r": "-0.3516191779989173897575830762",
+        "flats": 0,
+        "gross_loss": "847.96",
+        "gross_profit": "78.88",
+        "hit_rate": "0.1111111111111111111111111111",
+        "losses": 8,
+        "max_drawdown": "769.08",
+        "max_drawdown_r": "3.164572601990256507818247686",
+        "mean_ci95_lower_r": "-0.5812241515756602968254104347",
+        "mean_ci95_upper_r": "-0.1220142044221744826897557177",
+        "net_pnl": "-769.08",
+        "profit_factor": "0.09302325581395348837209302326",
+        "sample_count": 9,
+        "sample_stddev_r": "0.2987055163617644064195499027",
+        "wins": 1
+      },
+      "exclusion_count": 201,
+      "exclusions": [
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_balanced",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        }
+      ],
+      "researcher_visible_may_august": {
+        "expectancy_r": "-0.3208463442835064980105718175",
+        "flats": 0,
+        "gross_loss": "697.84",
+        "gross_profit": "78.88",
+        "hit_rate": "0.125",
+        "losses": 7,
+        "max_drawdown": "618.96",
+        "max_drawdown_r": "2.566770754268051984084574540",
+        "mean_ci95_lower_r": "-0.5747827843681276063221175549",
+        "mean_ci95_upper_r": "-0.0669099041988853896990260801",
+        "net_pnl": "-618.96",
+        "profit_factor": "0.1130345064771294279491000802",
+        "sample_count": 8,
+        "sample_stddev_r": "0.3036958626202232790795414124",
+        "wins": 1
+      },
+      "trades": [
+        {
+          "direction": "bearish",
+          "entry_at": "2026-04-07T14:00:00+00:00",
+          "entry_value": "2.51",
+          "exit_at": "2026-04-07T14:05:00+00:00",
+          "exit_value": "1.01",
+          "family": "momentum_balanced",
+          "leg_symbols": [
+            "QQQ260410P00583000",
+            "QQQ260410P00578000"
+          ],
+          "max_loss": "251.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-150.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.5978018477222045237336731443",
+          "session_date": "2026-04-07",
+          "stop_risk_dollars": "62.7800",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 59,
+          "target_dollars": "188.3400"
+        },
+        {
+          "direction": "bullish",
+          "entry_at": "2026-05-01T14:00:00+00:00",
+          "entry_value": "2.59",
+          "exit_at": "2026-05-01T14:05:00+00:00",
+          "exit_value": "1.76",
+          "family": "momentum_balanced",
+          "leg_symbols": [
+            "QQQ260504C00675000",
+            "QQQ260504C00680000"
+          ],
+          "max_loss": "259.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-83.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.3207780179067613460944736030",
+          "session_date": "2026-05-01",
+          "stop_risk_dollars": "64.7800",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 69,
+          "target_dollars": "194.3400"
+        },
+        {
+          "direction": "bullish",
+          "entry_at": "2026-05-08T14:00:00+00:00",
+          "entry_value": "2.76",
+          "exit_at": "2026-05-08T14:05:00+00:00",
+          "exit_value": "1.93",
+          "family": "momentum_balanced",
+          "leg_symbols": [
+            "QQQ260511C00705000",
+            "QQQ260511C00710000"
+          ],
+          "max_loss": "276.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-83.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.3010285383166739098942488773",
+          "session_date": "2026-05-08",
+          "stop_risk_dollars": "69.0300",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 68,
+          "target_dollars": "207.0900"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-07-15T14:00:00+00:00",
+          "entry_value": "1.89",
+          "exit_at": "2026-07-15T14:05:00+00:00",
+          "exit_value": "1.26",
+          "family": "momentum_balanced",
+          "leg_symbols": [
+            "QQQ260720P00720000",
+            "QQQ260720P00715000"
+          ],
+          "max_loss": "189.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-63.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.3337563451776649746192893401",
+          "session_date": "2026-07-15",
+          "stop_risk_dollars": "47.2800",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 63,
+          "target_dollars": "141.8400"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-07-24T14:00:00+00:00",
+          "entry_value": "2.69",
+          "exit_at": "2026-07-24T14:05:00+00:00",
+          "exit_value": "0.72",
+          "family": "momentum_balanced",
+          "leg_symbols": [
+            "QQQ260727P00685000",
+            "QQQ260727P00680000"
+          ],
+          "max_loss": "269.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-197.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.7324613555291319857312722949",
+          "session_date": "2026-07-24",
+          "stop_risk_dollars": "67.2800",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 69,
+          "target_dollars": "201.8400"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-07-27T14:00:00+00:00",
+          "entry_value": "2.36",
+          "exit_at": "2026-07-27T14:15:00+00:00",
+          "exit_value": "1.61",
+          "family": "momentum_balanced",
+          "leg_symbols": [
+            "QQQ260730P00686000",
+            "QQQ260730P00681000"
+          ],
+          "max_loss": "236.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-75.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.3181433169574792478400813146",
+          "session_date": "2026-07-27",
+          "stop_risk_dollars": "59.0300",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 20,
+          "target_dollars": "177.0900"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-07-29T14:00:00+00:00",
+          "entry_value": "2.10",
+          "exit_at": "2026-07-29T14:05:00+00:00",
+          "exit_value": "0.94",
+          "family": "momentum_balanced",
+          "leg_symbols": [
+            "QQQ260803P00671000",
+            "QQQ260803P00666000"
+          ],
+          "max_loss": "210.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-116.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.5526365886160289358461831334",
+          "session_date": "2026-07-29",
+          "stop_risk_dollars": "52.5300",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 41,
+          "target_dollars": "157.5900"
+        },
+        {
+          "direction": "bullish",
+          "entry_at": "2026-08-13T14:00:00+00:00",
+          "entry_value": "2.38",
+          "exit_at": "2026-08-13T15:30:00+00:00",
+          "exit_value": "1.58",
+          "family": "momentum_balanced",
+          "leg_symbols": [
+            "QQQ260817C00732000",
+            "QQQ260817C00737000"
+          ],
+          "max_loss": "238.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-80.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.3364690072232487821266588275",
+          "session_date": "2026-08-13",
+          "stop_risk_dollars": "59.5300",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 59,
+          "target_dollars": "178.5900"
+        },
+        {
+          "direction": "bullish",
+          "entry_at": "2026-08-03T14:00:00+00:00",
+          "entry_value": "2.40",
+          "exit_at": "2026-08-03T19:40:00+00:00",
+          "exit_value": "3.19",
+          "family": "momentum_balanced",
+          "leg_symbols": [
+            "SPY260806C00754000",
+            "SPY260806C00759000"
+          ],
+          "max_loss": "240.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "78.88",
+          "operational_target_stop": "3",
+          "outcome": "time",
+          "return_r": "0.3285024154589371980676328502",
+          "session_date": "2026-08-03",
+          "stop_risk_dollars": "60.0300",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY",
+          "synchronized_frames": 53,
+          "target_dollars": "180.0900"
+        }
+      ]
+    },
+    "momentum_conservative": {
+      "all_april_august": {
+        "expectancy_r": "-0.3990505539591744951602292815",
+        "flats": 0,
+        "gross_loss": "672.72",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 6,
+        "max_drawdown": "672.72",
+        "max_drawdown_r": "2.394303323755046970961375689",
+        "mean_ci95_lower_r": "-0.6443266402842545398501619536",
+        "mean_ci95_upper_r": "-0.1537744676340944504702966094",
+        "net_pnl": "-672.72",
+        "profit_factor": "0",
+        "sample_count": 6,
+        "sample_stddev_r": "0.2336838808258595509989267662",
+        "wins": 0
+      },
+      "exclusion_count": 204,
+      "exclusions": [
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_conservative",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        }
+      ],
+      "researcher_visible_may_august": {
+        "expectancy_r": "-0.3990505539591744951602292815",
+        "flats": 0,
+        "gross_loss": "672.72",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 6,
+        "max_drawdown": "672.72",
+        "max_drawdown_r": "2.394303323755046970961375689",
+        "mean_ci95_lower_r": "-0.6443266402842545398501619536",
+        "mean_ci95_upper_r": "-0.1537744676340944504702966094",
+        "net_pnl": "-672.72",
+        "profit_factor": "0",
+        "sample_count": 6,
+        "sample_stddev_r": "0.2336838808258595509989267662",
+        "wins": 0
+      },
+      "trades": [
+        {
+          "direction": "bullish",
+          "entry_at": "2026-05-01T14:00:00+00:00",
+          "entry_value": "2.82",
+          "exit_at": "2026-05-01T14:05:00+00:00",
+          "exit_value": "2.15",
+          "family": "momentum_conservative",
+          "leg_symbols": [
+            "QQQ260506C00675000",
+            "QQQ260506C00680000"
+          ],
+          "max_loss": "282.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-67.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.2379129448461647525875513966",
+          "session_date": "2026-05-01",
+          "stop_risk_dollars": "56.4240",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 54,
+          "target_dollars": "169.2720"
+        },
+        {
+          "direction": "bullish",
+          "entry_at": "2026-05-08T14:00:00+00:00",
+          "entry_value": "2.80",
+          "exit_at": "2026-05-08T14:05:00+00:00",
+          "exit_value": "2.13",
+          "family": "momentum_conservative",
+          "leg_symbols": [
+            "QQQ260513C00705000",
+            "QQQ260513C00710000"
+          ],
+          "max_loss": "280.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-67.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.2396115950307011280879623019",
+          "session_date": "2026-05-08",
+          "stop_risk_dollars": "56.0240",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 69,
+          "target_dollars": "168.0720"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-07-27T14:00:00+00:00",
+          "entry_value": "2.45",
+          "exit_at": "2026-07-27T14:25:00+00:00",
+          "exit_value": "1.73",
+          "family": "momentum_conservative",
+          "leg_symbols": [
+            "QQQ260803P00686000",
+            "QQQ260803P00681000"
+          ],
+          "max_loss": "245.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-72.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.2942232375979112271540469974",
+          "session_date": "2026-07-27",
+          "stop_risk_dollars": "49.0240",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 12,
+          "target_dollars": "147.0720"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-07-31T14:00:00+00:00",
+          "entry_value": "2.91",
+          "exit_at": "2026-07-31T14:05:00+00:00",
+          "exit_value": "1.08",
+          "family": "momentum_conservative",
+          "leg_symbols": [
+            "QQQ260805P00687000",
+            "QQQ260805P00682000"
+          ],
+          "max_loss": "291.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-183.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.6290189612530915086562242374",
+          "session_date": "2026-07-31",
+          "stop_risk_dollars": "58.2240",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 42,
+          "target_dollars": "174.6720"
+        },
+        {
+          "direction": "bullish",
+          "entry_at": "2026-08-13T14:05:00+00:00",
+          "entry_value": "2.36",
+          "exit_at": "2026-08-13T15:40:00+00:00",
+          "exit_value": "1.81",
+          "family": "momentum_conservative",
+          "leg_symbols": [
+            "QQQ260818C00732000",
+            "QQQ260818C00737000"
+          ],
+          "max_loss": "236.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-55.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.2334406234118244960189734034",
+          "session_date": "2026-08-13",
+          "stop_risk_dollars": "47.2240",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 38,
+          "target_dollars": "141.6720"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-06-25T14:00:00+00:00",
+          "entry_value": "3.00",
+          "exit_at": "2026-06-25T14:05:00+00:00",
+          "exit_value": "0.72",
+          "family": "momentum_conservative",
+          "leg_symbols": [
+            "SPY260630P00730000",
+            "SPY260630P00725000"
+          ],
+          "max_loss": "300.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-228.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.7600959616153538584566173531",
+          "session_date": "2026-06-25",
+          "stop_risk_dollars": "60.0240",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY",
+          "synchronized_frames": 69,
+          "target_dollars": "180.0720"
+        }
+      ]
+    },
+    "momentum_fast": {
+      "all_april_august": {
+        "expectancy_r": "-0.6090424044325064045758005414",
+        "flats": 0,
+        "gross_loss": "444.60",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 5,
+        "max_drawdown": "444.60",
+        "max_drawdown_r": "3.045212022162532022879002707",
+        "mean_ci95_lower_r": "-0.7997221638393867131606842998",
+        "mean_ci95_upper_r": "-0.4183626450256260959909167830",
+        "net_pnl": "-444.60",
+        "profit_factor": "0",
+        "sample_count": 5,
+        "sample_stddev_r": "0.1535925446567324749869869398",
+        "wins": 0
+      },
+      "exclusion_count": 205,
+      "exclusions": [
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-04-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-05-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-15",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-06-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-09",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-07-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-07",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-10",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-11",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-14",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-18",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-20",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "MOMENTUM_SIGNAL_FILTER_FALSE",
+          "session_date": "2026-08-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-04-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-04-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-04-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-05-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-05-05",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-05-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-05-26",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-05-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-22",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-16",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-28",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-29",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "DEBIT_OUTSIDE_SPREAD_WIDTH",
+          "session_date": "2026-07-31",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-19",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-21",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-24",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-04-02",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-04-06",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-04-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-05-01",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-08",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-12",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-23",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-25",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-06-30",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-17",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-07-27",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-03",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-04",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        },
+        {
+          "family": "momentum_fast",
+          "reason": "THREE_TO_ONE_TARGET_EXCEEDS_MAXIMUM_PROFIT",
+          "session_date": "2026-08-13",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY"
+        }
+      ],
+      "researcher_visible_may_august": {
+        "expectancy_r": "-0.6090424044325064045758005414",
+        "flats": 0,
+        "gross_loss": "444.60",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 5,
+        "max_drawdown": "444.60",
+        "max_drawdown_r": "3.045212022162532022879002707",
+        "mean_ci95_lower_r": "-0.7997221638393867131606842998",
+        "mean_ci95_upper_r": "-0.4183626450256260959909167830",
+        "net_pnl": "-444.60",
+        "profit_factor": "0",
+        "sample_count": 5,
+        "sample_stddev_r": "0.1535925446567324749869869398",
+        "wins": 0
+      },
+      "trades": [
+        {
+          "direction": "bearish",
+          "entry_at": "2026-07-15T14:00:00+00:00",
+          "entry_value": "1.40",
+          "exit_at": "2026-07-15T14:05:00+00:00",
+          "exit_value": "0.51",
+          "family": "momentum_fast",
+          "leg_symbols": [
+            "QQQ260717P00720000",
+            "QQQ260717P00717000"
+          ],
+          "max_loss": "140.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-89.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.6360262632029688838138738224",
+          "session_date": "2026-07-15",
+          "stop_risk_dollars": "42.0360",
+          "strategy": "directional_debit_momentum",
+          "symbol": "QQQ",
+          "synchronized_frames": 68,
+          "target_dollars": "126.1080"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-06-18T14:00:00+00:00",
+          "entry_value": "1.46",
+          "exit_at": "2026-06-18T14:05:00+00:00",
+          "exit_value": "0.35",
+          "family": "momentum_fast",
+          "leg_symbols": [
+            "SPY260622P00745000",
+            "SPY260622P00742000"
+          ],
+          "max_loss": "146.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-111.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.7604708458800985491376950452",
+          "session_date": "2026-06-18",
+          "stop_risk_dollars": "43.8360",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY",
+          "synchronized_frames": 69,
+          "target_dollars": "131.5080"
+        },
+        {
+          "direction": "bullish",
+          "entry_at": "2026-07-02T14:00:00+00:00",
+          "entry_value": "1.57",
+          "exit_at": "2026-07-02T14:05:00+00:00",
+          "exit_value": "1.02",
+          "family": "momentum_fast",
+          "leg_symbols": [
+            "SPY260706C00751000",
+            "SPY260706C00754000"
+          ],
+          "max_loss": "157.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-55.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.3508146639511201629327902240",
+          "session_date": "2026-07-02",
+          "stop_risk_dollars": "47.1360",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY",
+          "synchronized_frames": 69,
+          "target_dollars": "141.4080"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-07-28T14:00:00+00:00",
+          "entry_value": "1.56",
+          "exit_at": "2026-07-28T14:05:00+00:00",
+          "exit_value": "0.58",
+          "family": "momentum_fast",
+          "leg_symbols": [
+            "SPY260730P00736000",
+            "SPY260730P00733000"
+          ],
+          "max_loss": "156.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-98.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.6284909044324878298744555470",
+          "session_date": "2026-07-28",
+          "stop_risk_dollars": "46.8360",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY",
+          "synchronized_frames": 65,
+          "target_dollars": "140.5080"
+        },
+        {
+          "direction": "bearish",
+          "entry_at": "2026-07-29T14:00:00+00:00",
+          "entry_value": "1.36",
+          "exit_at": "2026-07-29T14:05:00+00:00",
+          "exit_value": "0.45",
+          "family": "momentum_fast",
+          "leg_symbols": [
+            "SPY260731P00737000",
+            "SPY260731P00734000"
+          ],
+          "max_loss": "136.12",
+          "modeled_fees": "0.12",
+          "modeled_slippage": "4.00",
+          "net_pnl": "-91.12",
+          "operational_target_stop": "3",
+          "outcome": "stop",
+          "return_r": "-0.6694093446958565971201880694",
+          "session_date": "2026-07-29",
+          "stop_risk_dollars": "40.8360",
+          "strategy": "directional_debit_momentum",
+          "symbol": "SPY",
+          "synchronized_frames": 68,
+          "target_dollars": "122.5080"
+        }
+      ]
+    }
+  },
+  "evaluation_label": "researcher-visible expanding monthly pseudo-OOS; not untouched",
+  "evaluation_months": [
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "failed_gates": [
+    "at_least_60_percent_positive_neighbors",
+    "cross_symbol_or_three_positive_regimes",
+    "expectancy_at_least_quarter_r",
+    "largest_trade_at_most_25_percent_profit",
+    "minimum_pooled_sample",
+    "positive_at_least_60_percent_months",
+    "profit_factor_at_least_2",
+    "profitable_at_one_and_half_costs"
+  ],
+  "family_selection_rule": "highest prior-month pooled SPY+QQQ expectancy/R, then profit factor, drawdown, n, declared order",
+  "pricing_model": {
+    "basis": "adverse synchronized 5-minute option trade-bar extremes",
+    "fee_per_contract_side": "0.03",
+    "quotes_used": false,
+    "slippage_per_leg_side": "0.01",
+    "warning": "bar-extreme bounds are not historical bid/ask quotes or guaranteed fills"
+  },
+  "promotion_gates": {
+    "at_least_60_percent_positive_neighbors": false,
+    "cross_symbol_or_three_positive_regimes": false,
+    "expectancy_at_least_quarter_r": false,
+    "largest_trade_at_most_25_percent_profit": false,
+    "max_drawdown_at_most_6r": true,
+    "minimum_pooled_sample": false,
+    "operational_target_stop_at_least_3": true,
+    "positive_at_least_60_percent_months": false,
+    "profit_factor_at_least_2": false,
+    "profitable_at_one_and_half_costs": false,
+    "promoted": false
+  },
+  "promotion_policy": {
+    "cross_symbol_positive_or_positive_regimes_minimum": 3,
+    "expectancy_r_minimum": "0.25",
+    "largest_trade_profit_share_maximum": "0.25",
+    "max_drawdown_r_maximum": "6.0",
+    "operational_target_stop_minimum": "3.0",
+    "pooled_sample_minimum": 30,
+    "positive_month_fold_fraction_minimum": "0.60",
+    "positive_neighbor_family_fraction_minimum": "0.60",
+    "profit_factor_minimum": "2.0",
+    "profitable_at_one_and_half_costs": true
+  },
+  "result_hash": "9fb92f3af4f0c1d552bf5f6776a26c2dda2cacdcbde8f95f9437756ab74861c2",
+  "rolling": {
+    "by_month": {
+      "2026-05": {
+        "expectancy_r": "-0.3109032781117176279943612402",
+        "flats": 0,
+        "gross_loss": "166.24",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 2,
+        "max_drawdown": "166.24",
+        "max_drawdown_r": "0.6218065562234352559887224803",
+        "mean_ci95_lower_r": "-0.4363717219475431101743889226",
+        "mean_ci95_upper_r": "-0.1854348342758921458143335578",
+        "net_pnl": "-166.24",
+        "profit_factor": "0",
+        "sample_count": 2,
+        "sample_stddev_r": "0.01396499094305614304581959098",
+        "wins": 0
+      },
+      "2026-06": {
+        "expectancy_r": "-0.7600959616153538584566173531",
+        "flats": 0,
+        "gross_loss": "228.12",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 1,
+        "max_drawdown": "228.12",
+        "max_drawdown_r": "0.7600959616153538584566173531",
+        "mean_ci95_lower_r": "-0.7600959616153538584566173531",
+        "mean_ci95_upper_r": "-0.7600959616153538584566173531",
+        "net_pnl": "-228.12",
+        "profit_factor": "0",
+        "sample_count": 1,
+        "sample_stddev_r": "0",
+        "wins": 0
+      },
+      "2026-07": {
+        "expectancy_r": "-0.4842494015700762860092065208",
+        "flats": 0,
+        "gross_loss": "451.48",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 4,
+        "max_drawdown": "451.48",
+        "max_drawdown_r": "1.936997606280305144036826083",
+        "mean_ci95_lower_r": "-0.7978087857418370773338941008",
+        "mean_ci95_upper_r": "-0.1706900173983154946845189408",
+        "net_pnl": "-451.48",
+        "profit_factor": "0",
+        "sample_count": 4,
+        "sample_stddev_r": "0.1970832081532123138432982904",
+        "wins": 0
+      },
+      "2026-08": {
+        "expectancy_r": "-0.2334406234118244960189734034",
+        "flats": 0,
+        "gross_loss": "55.12",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 1,
+        "max_drawdown": "55.12",
+        "max_drawdown_r": "0.2334406234118244960189734034",
+        "mean_ci95_lower_r": "-0.2334406234118244960189734034",
+        "mean_ci95_upper_r": "-0.2334406234118244960189734034",
+        "net_pnl": "-55.12",
+        "profit_factor": "0",
+        "sample_count": 1,
+        "sample_stddev_r": "0",
+        "wins": 0
+      }
+    },
+    "by_symbol": {
+      "QQQ": {
+        "expectancy_r": "-0.3988921122736521280063602809",
+        "flats": 0,
+        "gross_loss": "672.84",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 7,
+        "max_drawdown": "672.84",
+        "max_drawdown_r": "2.792244785915564896044521966",
+        "mean_ci95_lower_r": "-0.5629211490142458670249656206",
+        "mean_ci95_upper_r": "-0.2348630755330583889877549412",
+        "net_pnl": "-672.84",
+        "profit_factor": "0",
+        "sample_count": 7,
+        "sample_stddev_r": "0.1773518753612945583446477754",
+        "wins": 0
+      },
+      "SPY": {
+        "expectancy_r": "-0.7600959616153538584566173531",
+        "flats": 0,
+        "gross_loss": "228.12",
+        "gross_profit": "0.00",
+        "hit_rate": "0",
+        "losses": 1,
+        "max_drawdown": "228.12",
+        "max_drawdown_r": "0.7600959616153538584566173531",
+        "mean_ci95_lower_r": "-0.7600959616153538584566173531",
+        "mean_ci95_upper_r": "-0.7600959616153538584566173531",
+        "net_pnl": "-228.12",
+        "profit_factor": "0",
+        "sample_count": 1,
+        "sample_stddev_r": "0",
+        "wins": 0
+      }
+    },
+    "folds": [
+      {
+        "evaluation_metrics": {
+          "expectancy_r": "-0.3109032781117176279943612402",
+          "flats": 0,
+          "gross_loss": "166.24",
+          "gross_profit": "0.00",
+          "hit_rate": "0",
+          "losses": 2,
+          "max_drawdown": "166.24",
+          "max_drawdown_r": "0.6218065562234352559887224803",
+          "mean_ci95_lower_r": "-0.4363717219475431101743889226",
+          "mean_ci95_upper_r": "-0.1854348342758921458143335578",
+          "net_pnl": "-166.24",
+          "profit_factor": "0",
+          "sample_count": 2,
+          "sample_stddev_r": "0.01396499094305614304581959098",
+          "wins": 0
+        },
+        "evaluation_month": "2026-05",
+        "selected_family": "momentum_balanced",
+        "selection_metrics": {
+          "expectancy_r": "-0.5978018477222045237336731443",
+          "flats": 0,
+          "gross_loss": "150.12",
+          "gross_profit": "0.00",
+          "hit_rate": "0",
+          "losses": 1,
+          "max_drawdown": "150.12",
+          "max_drawdown_r": "0.5978018477222045237336731443",
+          "mean_ci95_lower_r": "-0.5978018477222045237336731443",
+          "mean_ci95_upper_r": "-0.5978018477222045237336731443",
+          "net_pnl": "-150.12",
+          "profit_factor": "0",
+          "sample_count": 1,
+          "sample_stddev_r": "0",
+          "wins": 0
+        },
+        "trade_count": 2,
+        "training_end": "2026-04-30",
+        "training_start": "2026-04-01"
+      },
+      {
+        "evaluation_metrics": {
+          "expectancy_r": "-0.7600959616153538584566173531",
+          "flats": 0,
+          "gross_loss": "228.12",
+          "gross_profit": "0.00",
+          "hit_rate": "0",
+          "losses": 1,
+          "max_drawdown": "228.12",
+          "max_drawdown_r": "0.7600959616153538584566173531",
+          "mean_ci95_lower_r": "-0.7600959616153538584566173531",
+          "mean_ci95_upper_r": "-0.7600959616153538584566173531",
+          "net_pnl": "-228.12",
+          "profit_factor": "0",
+          "sample_count": 1,
+          "sample_stddev_r": "0",
+          "wins": 0
+        },
+        "evaluation_month": "2026-06",
+        "selected_family": "momentum_conservative",
+        "selection_metrics": {
+          "expectancy_r": "-0.2387622699384329403377568492",
+          "flats": 0,
+          "gross_loss": "134.24",
+          "gross_profit": "0.00",
+          "hit_rate": "0",
+          "losses": 2,
+          "max_drawdown": "134.24",
+          "max_drawdown_r": "0.4775245398768658806755136985",
+          "mean_ci95_lower_r": "-0.2495537945607925338918673306",
+          "mean_ci95_upper_r": "-0.2279707453160733467836463678",
+          "net_pnl": "-134.24",
+          "profit_factor": "0",
+          "sample_count": 2,
+          "sample_stddev_r": "0.001201127064349451444251117711",
+          "wins": 0
+        },
+        "trade_count": 1,
+        "training_end": "2026-05-31",
+        "training_start": "2026-04-01"
+      },
+      {
+        "evaluation_metrics": {
+          "expectancy_r": "-0.4842494015700762860092065208",
+          "flats": 0,
+          "gross_loss": "451.48",
+          "gross_profit": "0.00",
+          "hit_rate": "0",
+          "losses": 4,
+          "max_drawdown": "451.48",
+          "max_drawdown_r": "1.936997606280305144036826083",
+          "mean_ci95_lower_r": "-0.7978087857418370773338941008",
+          "mean_ci95_upper_r": "-0.1706900173983154946845189408",
+          "net_pnl": "-451.48",
+          "profit_factor": "0",
+          "sample_count": 4,
+          "sample_stddev_r": "0.1970832081532123138432982904",
+          "wins": 0
+        },
+        "evaluation_month": "2026-07",
+        "selected_family": "momentum_balanced",
+        "selection_metrics": {
+          "expectancy_r": "-0.4065361346485465932407985417",
+          "flats": 0,
+          "gross_loss": "316.36",
+          "gross_profit": "0.00",
+          "hit_rate": "0",
+          "losses": 3,
+          "max_drawdown": "316.36",
+          "max_drawdown_r": "1.219608403945639779722395625",
+          "mean_ci95_lower_r": "-0.8187749150895187278243403398",
+          "mean_ci95_upper_r": "0.0057026457924255413427432564",
+          "net_pnl": "-316.36",
+          "profit_factor": "0",
+          "sample_count": 3,
+          "sample_stddev_r": "0.1659350482393666937658032980",
+          "wins": 0
+        },
+        "trade_count": 4,
+        "training_end": "2026-06-30",
+        "training_start": "2026-04-01"
+      },
+      {
+        "evaluation_metrics": {
+          "expectancy_r": "-0.2334406234118244960189734034",
+          "flats": 0,
+          "gross_loss": "55.12",
+          "gross_profit": "0.00",
+          "hit_rate": "0",
+          "losses": 1,
+          "max_drawdown": "55.12",
+          "max_drawdown_r": "0.2334406234118244960189734034",
+          "mean_ci95_lower_r": "-0.2334406234118244960189734034",
+          "mean_ci95_upper_r": "-0.2334406234118244960189734034",
+          "net_pnl": "-55.12",
+          "profit_factor": "0",
+          "sample_count": 1,
+          "sample_stddev_r": "0",
+          "wins": 0
+        },
+        "evaluation_month": "2026-08",
+        "selected_family": "momentum_conservative",
+        "selection_metrics": {
+          "expectancy_r": "-0.4321725400686444949884804572",
+          "flats": 0,
+          "gross_loss": "617.60",
+          "gross_profit": "0.00",
+          "hit_rate": "0",
+          "losses": 5,
+          "max_drawdown": "617.60",
+          "max_drawdown_r": "2.160862700343222474942402286",
+          "mean_ci95_lower_r": "-0.7363496932138885762690959736",
+          "mean_ci95_upper_r": "-0.1279953869234004137078649408",
+          "net_pnl": "-617.60",
+          "profit_factor": "0",
+          "sample_count": 5,
+          "sample_stddev_r": "0.2450146943930582590149271513",
+          "wins": 0
+        },
+        "trade_count": 1,
+        "training_end": "2026-07-31",
+        "training_start": "2026-04-01"
+      }
+    ],
+    "largest_trade_profit_share": "Infinity",
+    "metrics": {
+      "expectancy_r": "-0.4440425934413648443126424149",
+      "flats": 0,
+      "gross_loss": "900.96",
+      "gross_profit": "0.00",
+      "hit_rate": "0",
+      "losses": 8,
+      "max_drawdown": "900.96",
+      "max_drawdown_r": "3.552340747530918754501139319",
+      "mean_ci95_lower_r": "-0.6179722879824331728345419845",
+      "mean_ci95_upper_r": "-0.2701128989002965157907428453",
+      "net_pnl": "-900.96",
+      "profit_factor": "0",
+      "sample_count": 8,
+      "sample_stddev_r": "0.2080116134624849928433018911",
+      "wins": 0
+    },
+    "one_and_half_cost_net_pnl": "-917.4400",
+    "operational_target_stop_minimum": "3",
+    "trades": [
+      {
+        "direction": "bullish",
+        "entry_at": "2026-05-01T14:00:00+00:00",
+        "entry_value": "2.59",
+        "exit_at": "2026-05-01T14:05:00+00:00",
+        "exit_value": "1.76",
+        "family": "momentum_balanced",
+        "leg_symbols": [
+          "QQQ260504C00675000",
+          "QQQ260504C00680000"
+        ],
+        "max_loss": "259.12",
+        "modeled_fees": "0.12",
+        "modeled_slippage": "4.00",
+        "net_pnl": "-83.12",
+        "operational_target_stop": "3",
+        "outcome": "stop",
+        "return_r": "-0.3207780179067613460944736030",
+        "session_date": "2026-05-01",
+        "stop_risk_dollars": "64.7800",
+        "strategy": "directional_debit_momentum",
+        "symbol": "QQQ",
+        "synchronized_frames": 69,
+        "target_dollars": "194.3400"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-05-08T14:00:00+00:00",
+        "entry_value": "2.76",
+        "exit_at": "2026-05-08T14:05:00+00:00",
+        "exit_value": "1.93",
+        "family": "momentum_balanced",
+        "leg_symbols": [
+          "QQQ260511C00705000",
+          "QQQ260511C00710000"
+        ],
+        "max_loss": "276.12",
+        "modeled_fees": "0.12",
+        "modeled_slippage": "4.00",
+        "net_pnl": "-83.12",
+        "operational_target_stop": "3",
+        "outcome": "stop",
+        "return_r": "-0.3010285383166739098942488773",
+        "session_date": "2026-05-08",
+        "stop_risk_dollars": "69.0300",
+        "strategy": "directional_debit_momentum",
+        "symbol": "QQQ",
+        "synchronized_frames": 68,
+        "target_dollars": "207.0900"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-06-25T14:00:00+00:00",
+        "entry_value": "3.00",
+        "exit_at": "2026-06-25T14:05:00+00:00",
+        "exit_value": "0.72",
+        "family": "momentum_conservative",
+        "leg_symbols": [
+          "SPY260630P00730000",
+          "SPY260630P00725000"
+        ],
+        "max_loss": "300.12",
+        "modeled_fees": "0.12",
+        "modeled_slippage": "4.00",
+        "net_pnl": "-228.12",
+        "operational_target_stop": "3",
+        "outcome": "stop",
+        "return_r": "-0.7600959616153538584566173531",
+        "session_date": "2026-06-25",
+        "stop_risk_dollars": "60.0240",
+        "strategy": "directional_debit_momentum",
+        "symbol": "SPY",
+        "synchronized_frames": 69,
+        "target_dollars": "180.0720"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-07-15T14:00:00+00:00",
+        "entry_value": "1.89",
+        "exit_at": "2026-07-15T14:05:00+00:00",
+        "exit_value": "1.26",
+        "family": "momentum_balanced",
+        "leg_symbols": [
+          "QQQ260720P00720000",
+          "QQQ260720P00715000"
+        ],
+        "max_loss": "189.12",
+        "modeled_fees": "0.12",
+        "modeled_slippage": "4.00",
+        "net_pnl": "-63.12",
+        "operational_target_stop": "3",
+        "outcome": "stop",
+        "return_r": "-0.3337563451776649746192893401",
+        "session_date": "2026-07-15",
+        "stop_risk_dollars": "47.2800",
+        "strategy": "directional_debit_momentum",
+        "symbol": "QQQ",
+        "synchronized_frames": 63,
+        "target_dollars": "141.8400"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-07-24T14:00:00+00:00",
+        "entry_value": "2.69",
+        "exit_at": "2026-07-24T14:05:00+00:00",
+        "exit_value": "0.72",
+        "family": "momentum_balanced",
+        "leg_symbols": [
+          "QQQ260727P00685000",
+          "QQQ260727P00680000"
+        ],
+        "max_loss": "269.12",
+        "modeled_fees": "0.12",
+        "modeled_slippage": "4.00",
+        "net_pnl": "-197.12",
+        "operational_target_stop": "3",
+        "outcome": "stop",
+        "return_r": "-0.7324613555291319857312722949",
+        "session_date": "2026-07-24",
+        "stop_risk_dollars": "67.2800",
+        "strategy": "directional_debit_momentum",
+        "symbol": "QQQ",
+        "synchronized_frames": 69,
+        "target_dollars": "201.8400"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-07-27T14:00:00+00:00",
+        "entry_value": "2.36",
+        "exit_at": "2026-07-27T14:15:00+00:00",
+        "exit_value": "1.61",
+        "family": "momentum_balanced",
+        "leg_symbols": [
+          "QQQ260730P00686000",
+          "QQQ260730P00681000"
+        ],
+        "max_loss": "236.12",
+        "modeled_fees": "0.12",
+        "modeled_slippage": "4.00",
+        "net_pnl": "-75.12",
+        "operational_target_stop": "3",
+        "outcome": "stop",
+        "return_r": "-0.3181433169574792478400813146",
+        "session_date": "2026-07-27",
+        "stop_risk_dollars": "59.0300",
+        "strategy": "directional_debit_momentum",
+        "symbol": "QQQ",
+        "synchronized_frames": 20,
+        "target_dollars": "177.0900"
+      },
+      {
+        "direction": "bearish",
+        "entry_at": "2026-07-29T14:00:00+00:00",
+        "entry_value": "2.10",
+        "exit_at": "2026-07-29T14:05:00+00:00",
+        "exit_value": "0.94",
+        "family": "momentum_balanced",
+        "leg_symbols": [
+          "QQQ260803P00671000",
+          "QQQ260803P00666000"
+        ],
+        "max_loss": "210.12",
+        "modeled_fees": "0.12",
+        "modeled_slippage": "4.00",
+        "net_pnl": "-116.12",
+        "operational_target_stop": "3",
+        "outcome": "stop",
+        "return_r": "-0.5526365886160289358461831334",
+        "session_date": "2026-07-29",
+        "stop_risk_dollars": "52.5300",
+        "strategy": "directional_debit_momentum",
+        "symbol": "QQQ",
+        "synchronized_frames": 41,
+        "target_dollars": "157.5900"
+      },
+      {
+        "direction": "bullish",
+        "entry_at": "2026-08-13T14:05:00+00:00",
+        "entry_value": "2.36",
+        "exit_at": "2026-08-13T15:40:00+00:00",
+        "exit_value": "1.81",
+        "family": "momentum_conservative",
+        "leg_symbols": [
+          "QQQ260818C00732000",
+          "QQQ260818C00737000"
+        ],
+        "max_loss": "236.12",
+        "modeled_fees": "0.12",
+        "modeled_slippage": "4.00",
+        "net_pnl": "-55.12",
+        "operational_target_stop": "3",
+        "outcome": "stop",
+        "return_r": "-0.2334406234118244960189734034",
+        "session_date": "2026-08-13",
+        "stop_risk_dollars": "47.2240",
+        "strategy": "directional_debit_momentum",
+        "symbol": "QQQ",
+        "synchronized_frames": 38,
+        "target_dollars": "141.6720"
+      }
+    ]
+  },
+  "schema_version": "afterimage-options-pivot-attempt-v1",
+  "source_cache_hash": "06b8ff76a2d12f3142aa1e976e621c815c71da4a1e313f7e11a3d4b215435aa9",
+  "strategy": "directional_debit_momentum",
+  "verdict": "rejected"
+}

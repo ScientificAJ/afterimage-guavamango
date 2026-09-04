@@ -1,0 +1,1105 @@
+{
+  "broker_pnl_claim": false,
+  "cases": [
+    {
+      "agent_provenance": {
+        "live_inference": false,
+        "live_routes_verified_separately": "evidence/research/spy-live-model-receipt-v1.json",
+        "mode": "recorded-historical-replay-jury-after-bounded-live-provider-timeout",
+        "models": [
+          "recorded-historical-replay"
+        ]
+      },
+      "agent_reports": {
+        "options_witness": {
+          "falsifiers": [
+            "Reject if the cited packet path is absent or hash binding fails."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "The declared instrument is an equity bracket, so option fields are not required for this replay path.",
+              "evidence_keys": [
+                "strategy_adapter.asset_class"
+              ],
+              "severity": "support"
+            }
+          ],
+          "input_packet_hash": "unbound",
+          "latency_ms": 0,
+          "model_id": "recorded-historical-replay",
+          "prompt_hash": "fc3e93d9c64fce7f327234b22a1250d79624c7d09a7c7b7a84ce55802c7e32ee",
+          "prompt_version": "unversioned",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "RECORDED_HISTORICAL_REPLAY_PACKET",
+          "response_hash": "ec2acea1a7a63c8bfd60c8a42a6351755081046cb5e8c4387d32f22b136b9c9d",
+          "response_preimage": {
+            "role": "options_witness",
+            "status": "support",
+            "thesis": "The declared instrument is an equity bracket, so option fields are not required for this replay path."
+          },
+          "role": "options_witness",
+          "status": "support",
+          "thesis": "The declared instrument is an equity bracket, so option fields are not required for this replay path."
+        },
+        "prosecutor": {
+          "falsifiers": [
+            "Reject if the cited packet path is absent or hash binding fails."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "The pseudo-OOS and daily-bar limitations remain material, but they do not contradict the exact replay packet.",
+              "evidence_keys": [
+                "source_packets.evidence_protocol.deployment_evidence.limitations"
+              ],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "unbound",
+          "latency_ms": 0,
+          "model_id": "recorded-historical-replay",
+          "prompt_hash": "4c70bdb390c6daee97e04c30bf54f3fddee44ab198d0b3105371e3eee94d7e13",
+          "prompt_version": "unversioned",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "RECORDED_HISTORICAL_REPLAY_PACKET",
+          "response_hash": "9b1591dabbd19784c4d18c5f4bfb1829280ca340853cdce9dbe0a14455ad0417",
+          "response_preimage": {
+            "role": "prosecutor",
+            "status": "challenge",
+            "thesis": "The pseudo-OOS and daily-bar limitations remain material, but they do not contradict the exact replay packet."
+          },
+          "role": "prosecutor",
+          "status": "challenge",
+          "thesis": "The pseudo-OOS and daily-bar limitations remain material, but they do not contradict the exact replay packet."
+        },
+        "regime_witness": {
+          "falsifiers": [
+            "Reject if the cited packet path is absent or hash binding fails."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "The causal packet contains the trend, ATR shock, and close-location observations required by the frozen rule.",
+              "evidence_keys": [
+                "candidate.features"
+              ],
+              "severity": "support"
+            }
+          ],
+          "input_packet_hash": "unbound",
+          "latency_ms": 0,
+          "model_id": "recorded-historical-replay",
+          "prompt_hash": "5d9965d2d23e0516e02c2c5bf04167ba3b6fe82e2612115481600f3f2e00331f",
+          "prompt_version": "unversioned",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "RECORDED_HISTORICAL_REPLAY_PACKET",
+          "response_hash": "101416fe49ae8c615cb34799fb9dd814b52bd1d7e6a2f3c4b2eaaf48fd16f741",
+          "response_preimage": {
+            "role": "regime_witness",
+            "status": "support",
+            "thesis": "The causal packet contains the trend, ATR shock, and close-location observations required by the frozen rule."
+          },
+          "role": "regime_witness",
+          "status": "support",
+          "thesis": "The causal packet contains the trend, ATR shock, and close-location observations required by the frozen rule."
+        },
+        "strategist": {
+          "falsifiers": [
+            "Reject if the cited packet path is absent or hash binding fails."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "The causal candidate and admitted aggregate research packet form a falsifiable long-only shock-reversal thesis.",
+              "evidence_keys": [
+                "market.candidate.features"
+              ],
+              "severity": "support"
+            }
+          ],
+          "input_packet_hash": "unbound",
+          "latency_ms": 0,
+          "model_id": "recorded-historical-replay",
+          "prompt_hash": "e2c45122b480a0c5d84cb367ffa7d18e6d08a60ea0c3d263fafa83ae19977bf0",
+          "prompt_version": "unversioned",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "RECORDED_HISTORICAL_REPLAY_PACKET",
+          "response_hash": "6f0b5bd2ad90a51484b07e194f0560d87cd52e9202cfb13ecd730307d3c9b85f",
+          "response_preimage": {
+            "role": "strategist",
+            "status": "support",
+            "thesis": "The causal candidate and admitted aggregate research packet form a falsifiable long-only shock-reversal thesis."
+          },
+          "role": "strategist",
+          "status": "support",
+          "thesis": "The causal candidate and admitted aggregate research packet form a falsifiable long-only shock-reversal thesis."
+        }
+      },
+      "alpaca_cli_dry_run": {
+        "advanced_instructions": {},
+        "claim": "official Alpaca CLI dry-run rendering; no order submitted",
+        "client_order_id": "afterimage-419bc4b8-74636bb66e8a-1",
+        "historical_replay": true,
+        "limit_price": "168.0918075",
+        "network_call_performed": false,
+        "order_class": "bracket",
+        "qty": "59",
+        "renderer": "official Alpaca CLI 0.0.14 --dry-run",
+        "side": "buy",
+        "stop_loss": {
+          "stop_price": "166.59"
+        },
+        "submitted": false,
+        "symbol": "GLD",
+        "take_profit": {
+          "limit_price": "172.78"
+        },
+        "time_in_force": "day",
+        "type": "limit"
+      },
+      "audit": {
+        "failed_sequence": null,
+        "records": 9,
+        "valid": true
+      },
+      "authorization_boundary": "The pre-approved recorded jury is an engineering fixture. It proves downstream construction only and grants no production or broker authority.",
+      "broker_pnl_claim": false,
+      "candidate": {
+        "candidate_id": "257d0d8a-1149-5a10-88ba-ce4aefe5e240",
+        "direction": "bullish",
+        "features": {
+          "atr": 1.5067857142857144,
+          "atr_fraction": 0.008877022000033664,
+          "blocking_signal_weekday": "",
+          "calendar_allowed": true,
+          "close_location": 0.09433962264150944,
+          "complete": true,
+          "countertrend_shock_atr": 1.4866367523377342,
+          "equity_side": "buy",
+          "fee_per_share_per_side": 0.005,
+          "latest_session": "2022-01-26",
+          "long_only": true,
+          "maximum_holding_sessions": 5,
+          "missing_symbols": "",
+          "modeled_slippage_bps": 1.0,
+          "next_bar_execution": true,
+          "selected_symbol": "GLD",
+          "shadow_blocked": false,
+          "shadow_signal_started": true,
+          "sma100": 167.81485,
+          "sma50": 168.8698,
+          "stop_distance": 1.5067857142857144,
+          "stop_distance_basis": "signal_close_reference",
+          "stop_distance_fraction": 0.008877022000033664,
+          "stop_r": -1.0,
+          "symbol_count": 11,
+          "target_r": 3.0,
+          "trend": 1,
+          "two_day_atr_return": -1.4866367523377342,
+          "universe_complete": true
+        },
+        "identity": {
+          "strategy_id": "shadow_clock_shock_reversal_v1",
+          "strategy_version": "1.0.0"
+        },
+        "permitted_structures": [
+          "equity_bracket"
+        ],
+        "signal_at": "2022-01-26T21:00:00Z",
+        "snapshot_id": "38151accad4dad4dab0b826a7d994d2d285adc5cef6bb8c7f39c006a63b078e4",
+        "symbol": "GLD"
+      },
+      "causal_signal_cutoff": "2022-01-26T21:00:00+00:00",
+      "counterfactual_state": "SHADOW_READY",
+      "counterfactual_warrant_receipt": {
+        "expires_at": "2026-09-04T12:57:05.320778Z",
+        "intent": {
+          "asset_class": "equity",
+          "evidence_commit_hash": "cdd4351de18e75c0cf008df63fb49283b55228a08dbf3c8098996a303ef5089a",
+          "intent_id": "c75d65d1-59e9-40c1-9cfe-2af87ef01d77",
+          "legs": [],
+          "limit_price": "168.0918075",
+          "order_class": "bracket",
+          "order_type": "limit",
+          "quantity": 59,
+          "reduce_only": false,
+          "risk_decision_id": "a4c638cc-191f-439a-a1da-5fd527ccbd0d",
+          "side": "buy",
+          "stop_price": "166.59",
+          "strategy_manifest_hash": "c54e93e4f4125f5cebf7bdca5c77ffc9c9787b8598e689faff59984a974af3f5",
+          "symbol": "GLD",
+          "take_profit_price": "172.78",
+          "time_in_force": "day"
+        },
+        "intent_hash": "74636bb66e8a5babe12633cdac317c1ca5476aeb38bfd3939707b13880ef0676",
+        "risk_vector_hash": "39f873d4f5f87325a4bd099d850885de4e0a3741e897191fa989865128cef8c7",
+        "signature_present": true,
+        "single_use": true
+      },
+      "deployment_evidence": {
+        "commit_hash": "cdd4351de18e75c0cf008df63fb49283b55228a08dbf3c8098996a303ef5089a",
+        "metrics": {
+          "expectancy_r": "0.5058285073258596004268724454",
+          "max_drawdown_r": "4.74577717452504776292080443",
+          "minimum_target_to_stop": "3.000013277233859032762997108",
+          "neighbor_positive_fraction": "1",
+          "positive_month_fraction": "0.7234042553191489361702127660",
+          "positive_underlyings": 8,
+          "profit_factor": "2.252990790803920449771526138",
+          "sample_count": 95,
+          "stress_profit_factor": "2.221542138502801333118779760"
+        },
+        "reasons": [],
+        "result_hash": "7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2",
+        "status": "PASS"
+      },
+      "future_bars_revealed_after_decision": [
+        {
+          "c": 167.61,
+          "h": 169.06,
+          "l": 167.35,
+          "n": 1945,
+          "o": 168.075,
+          "t": "2022-01-27T05:00:00+00:00",
+          "v": 161998,
+          "vw": 167.796747
+        },
+        {
+          "c": 167.06,
+          "h": 167.46,
+          "l": 166.39,
+          "n": 1363,
+          "o": 166.8,
+          "t": "2022-01-28T05:00:00+00:00",
+          "v": 111393,
+          "vw": 166.826966
+        },
+        {
+          "c": 168.09,
+          "h": 168.11,
+          "l": 167.525,
+          "n": 671,
+          "o": 167.89,
+          "t": "2022-01-31T05:00:00+00:00",
+          "v": 58067,
+          "vw": 167.857027
+        },
+        {
+          "c": 168.21,
+          "h": 168.84,
+          "l": 168.03,
+          "n": 821,
+          "o": 168.55,
+          "t": "2022-02-01T05:00:00+00:00",
+          "v": 71938,
+          "vw": 168.329232
+        },
+        {
+          "c": 168.79,
+          "h": 169.1,
+          "l": 168.17,
+          "n": 788,
+          "o": 168.55,
+          "t": "2022-02-02T05:00:00+00:00",
+          "v": 61098,
+          "vw": 168.796047
+        }
+      ],
+      "future_data_visible_during_decision": false,
+      "label": "DETERMINISTIC COUNTERFACTUAL PATH PROOF",
+      "modeled_historical_outcome": {
+        "claim": "historical execution replay on real Alpaca bars; not broker P&L",
+        "entry_price": "168.0918075",
+        "exit_at": "2022-01-28T05:00:00+00:00",
+        "exit_price": "166.59",
+        "future_bar_count": 5,
+        "future_bars_revealed_after_decision": true,
+        "modeled_cost_per_share": "0.04361836150",
+        "modeled_net_pnl_dollars": "-91.18",
+        "outcome": "stop",
+        "quantity": 59,
+        "realized_r": "-1",
+        "same_bar_ambiguity": "stop_first",
+        "stop_price": "166.59",
+        "target_price": "172.78"
+      },
+      "order_submission_performed": false,
+      "payoff": {
+        "asset_class": "equity",
+        "entry_net_debit": "168.0918075",
+        "entry_price": "168.0918075",
+        "legs": [],
+        "modeled_costs": "0.04361836150",
+        "operational_ratio": "3.005368458110276032804696274",
+        "operational_stop_loss": "1.54542586150",
+        "operational_target_profit": "4.64457413850",
+        "side": "buy",
+        "stop_price": "166.59",
+        "stressed_max_loss": "1.54542586150",
+        "stressed_max_profit": "4.64457413850",
+        "structural_ratio": "3.005368458110276032804696274",
+        "structure": "equity_bracket",
+        "symbol": "GLD",
+        "target_price": "172.78"
+      },
+      "production_ai_gate_outcome": "FAIL_CLOSED_PROVIDER_TIMEOUT",
+      "production_authorized": false,
+      "published_research_trade": {
+        "direction": 1,
+        "entry_at": "2022-01-27T14:30:00+00:00",
+        "entry_fill": "168.0918075",
+        "exit_at": "2022-01-28T14:30:00+00:00",
+        "exit_fill": "166.563342",
+        "family": "trend-aligned shock reversal",
+        "modeled_fees": "0.59",
+        "modeled_slippage": "1.97",
+        "net_pnl": "-90.77",
+        "outcome": "stop",
+        "raw_entry": "168.075",
+        "raw_exit": "166.58",
+        "return_r": "-1.000005899561079816660150066",
+        "risk_dollars": "90.7694645",
+        "shares": 59,
+        "signal_at": "2022-01-26T21:00:00+00:00",
+        "stop_price": "166.58",
+        "symbol": "GLD",
+        "target_price": "172.74",
+        "target_to_stop": "3.003589290757576299241029454",
+        "variant": "shadow_mtw_l2_z0.6_c0.25_s1_h5"
+      },
+      "risk": {
+        "decided_at": "2026-09-04T12:56:40.319333Z",
+        "decision_id": "a4c638cc-191f-439a-a1da-5fd527ccbd0d",
+        "evidence_commit_hash": "cdd4351de18e75c0cf008df63fb49283b55228a08dbf3c8098996a303ef5089a",
+        "gates": [
+          {
+            "name": "paper",
+            "observed": "True",
+            "passed": true,
+            "reason_code": null,
+            "required": "True"
+          },
+          {
+            "name": "account",
+            "observed": "ab955202b0f3976c1f4c5ba108c2259fc4827f2d2d5a5bfd79f9be98c8991ff0",
+            "passed": true,
+            "reason_code": null,
+            "required": "ab955202b0f3976c1f4c5ba108c2259fc4827f2d2d5a5bfd79f9be98c8991ff0"
+          },
+          {
+            "name": "active",
+            "observed": "ACTIVE",
+            "passed": true,
+            "reason_code": null,
+            "required": "ACTIVE"
+          },
+          {
+            "name": "trading_unblocked",
+            "observed": "False",
+            "passed": true,
+            "reason_code": null,
+            "required": "False"
+          },
+          {
+            "name": "options_level",
+            "observed": "3",
+            "passed": true,
+            "reason_code": null,
+            "required": "not-required-for-equity"
+          },
+          {
+            "name": "market_open",
+            "observed": "True",
+            "passed": true,
+            "reason_code": null,
+            "required": "True"
+          },
+          {
+            "name": "entry_cutoff",
+            "observed": "False",
+            "passed": true,
+            "reason_code": null,
+            "required": "False"
+          },
+          {
+            "name": "evidence",
+            "observed": "PASS",
+            "passed": true,
+            "reason_code": null,
+            "required": "PASS"
+          },
+          {
+            "name": "quote_age",
+            "observed": "0.0",
+            "passed": true,
+            "reason_code": null,
+            "required": "2"
+          },
+          {
+            "name": "leg_skew",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "1"
+          },
+          {
+            "name": "relative_spread",
+            "observed": "0.0002",
+            "passed": true,
+            "reason_code": null,
+            "required": "0.05"
+          },
+          {
+            "name": "structural_3r",
+            "observed": "3.005368458110276032804696274",
+            "passed": true,
+            "reason_code": null,
+            "required": "3.0"
+          },
+          {
+            "name": "operational_3r",
+            "observed": "3.005368458110276032804696274",
+            "passed": true,
+            "reason_code": null,
+            "required": "3.0"
+          },
+          {
+            "name": "quantity",
+            "observed": "59",
+            "passed": true,
+            "reason_code": null,
+            "required": ">=1"
+          },
+          {
+            "name": "position_loss",
+            "observed": "91.18012582850",
+            "passed": true,
+            "reason_code": null,
+            "required": "500"
+          },
+          {
+            "name": "equity_notional",
+            "observed": "9917.4166425",
+            "passed": true,
+            "reason_code": null,
+            "required": "10000"
+          },
+          {
+            "name": "position_collision",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "<1"
+          },
+          {
+            "name": "unknown_orders",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "0"
+          },
+          {
+            "name": "daily_loss",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "1000"
+          },
+          {
+            "name": "drawdown",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "0.02"
+          }
+        ],
+        "modeled_max_loss": "91.18012582850",
+        "quantity": 59,
+        "quote_hash": "0a0cde7f8483a1592d947e56103b821208b0b02e5b750619fa4c068f7254c3f7",
+        "status": "PASS",
+        "strategy_manifest_hash": "c54e93e4f4125f5cebf7bdca5c77ffc9c9787b8598e689faff59984a974af3f5"
+      },
+      "signal_date": "2022-01-26",
+      "source": {
+        "causal_record_count": 3036,
+        "data_content_hash": "9d770f80007093c046e4ce1b8e48d6bb61f05b8526745b341dd6f914b0cfcc0a",
+        "feed": "iex",
+        "name": "authenticated Alpaca CLI 0.0.14 historical stock bars",
+        "research_result_hash": "7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2"
+      },
+      "strategy": {
+        "display_name": "GuavaMango",
+        "strategy_id": "shadow_clock_shock_reversal_v1",
+        "strategy_version": "1.0.0"
+      }
+    },
+    {
+      "agent_provenance": {
+        "live_inference": false,
+        "live_routes_verified_separately": "evidence/research/spy-live-model-receipt-v1.json",
+        "mode": "recorded-historical-replay-jury-after-bounded-live-provider-timeout",
+        "models": [
+          "recorded-historical-replay"
+        ]
+      },
+      "agent_reports": {
+        "options_witness": {
+          "falsifiers": [
+            "Reject if the cited packet path is absent or hash binding fails."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "The declared instrument is an equity bracket, so option fields are not required for this replay path.",
+              "evidence_keys": [
+                "strategy_adapter.asset_class"
+              ],
+              "severity": "support"
+            }
+          ],
+          "input_packet_hash": "unbound",
+          "latency_ms": 0,
+          "model_id": "recorded-historical-replay",
+          "prompt_hash": "fc3e93d9c64fce7f327234b22a1250d79624c7d09a7c7b7a84ce55802c7e32ee",
+          "prompt_version": "unversioned",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "RECORDED_HISTORICAL_REPLAY_PACKET",
+          "response_hash": "ec2acea1a7a63c8bfd60c8a42a6351755081046cb5e8c4387d32f22b136b9c9d",
+          "response_preimage": {
+            "role": "options_witness",
+            "status": "support",
+            "thesis": "The declared instrument is an equity bracket, so option fields are not required for this replay path."
+          },
+          "role": "options_witness",
+          "status": "support",
+          "thesis": "The declared instrument is an equity bracket, so option fields are not required for this replay path."
+        },
+        "prosecutor": {
+          "falsifiers": [
+            "Reject if the cited packet path is absent or hash binding fails."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "The pseudo-OOS and daily-bar limitations remain material, but they do not contradict the exact replay packet.",
+              "evidence_keys": [
+                "source_packets.evidence_protocol.deployment_evidence.limitations"
+              ],
+              "severity": "warning"
+            }
+          ],
+          "input_packet_hash": "unbound",
+          "latency_ms": 0,
+          "model_id": "recorded-historical-replay",
+          "prompt_hash": "4c70bdb390c6daee97e04c30bf54f3fddee44ab198d0b3105371e3eee94d7e13",
+          "prompt_version": "unversioned",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "RECORDED_HISTORICAL_REPLAY_PACKET",
+          "response_hash": "9b1591dabbd19784c4d18c5f4bfb1829280ca340853cdce9dbe0a14455ad0417",
+          "response_preimage": {
+            "role": "prosecutor",
+            "status": "challenge",
+            "thesis": "The pseudo-OOS and daily-bar limitations remain material, but they do not contradict the exact replay packet."
+          },
+          "role": "prosecutor",
+          "status": "challenge",
+          "thesis": "The pseudo-OOS and daily-bar limitations remain material, but they do not contradict the exact replay packet."
+        },
+        "regime_witness": {
+          "falsifiers": [
+            "Reject if the cited packet path is absent or hash binding fails."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "The causal packet contains the trend, ATR shock, and close-location observations required by the frozen rule.",
+              "evidence_keys": [
+                "candidate.features"
+              ],
+              "severity": "support"
+            }
+          ],
+          "input_packet_hash": "unbound",
+          "latency_ms": 0,
+          "model_id": "recorded-historical-replay",
+          "prompt_hash": "5d9965d2d23e0516e02c2c5bf04167ba3b6fe82e2612115481600f3f2e00331f",
+          "prompt_version": "unversioned",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "RECORDED_HISTORICAL_REPLAY_PACKET",
+          "response_hash": "101416fe49ae8c615cb34799fb9dd814b52bd1d7e6a2f3c4b2eaaf48fd16f741",
+          "response_preimage": {
+            "role": "regime_witness",
+            "status": "support",
+            "thesis": "The causal packet contains the trend, ATR shock, and close-location observations required by the frozen rule."
+          },
+          "role": "regime_witness",
+          "status": "support",
+          "thesis": "The causal packet contains the trend, ATR shock, and close-location observations required by the frozen rule."
+        },
+        "strategist": {
+          "falsifiers": [
+            "Reject if the cited packet path is absent or hash binding fails."
+          ],
+          "findings": [
+            {
+              "basis": "observation",
+              "claim": "The causal candidate and admitted aggregate research packet form a falsifiable long-only shock-reversal thesis.",
+              "evidence_keys": [
+                "market.candidate.features"
+              ],
+              "severity": "support"
+            }
+          ],
+          "input_packet_hash": "unbound",
+          "latency_ms": 0,
+          "model_id": "recorded-historical-replay",
+          "prompt_hash": "e2c45122b480a0c5d84cb367ffa7d18e6d08a60ea0c3d263fafa83ae19977bf0",
+          "prompt_version": "unversioned",
+          "provider_created_at": null,
+          "provider_request_id": null,
+          "provider_system_fingerprint": null,
+          "reason_code": "RECORDED_HISTORICAL_REPLAY_PACKET",
+          "response_hash": "6f0b5bd2ad90a51484b07e194f0560d87cd52e9202cfb13ecd730307d3c9b85f",
+          "response_preimage": {
+            "role": "strategist",
+            "status": "support",
+            "thesis": "The causal candidate and admitted aggregate research packet form a falsifiable long-only shock-reversal thesis."
+          },
+          "role": "strategist",
+          "status": "support",
+          "thesis": "The causal candidate and admitted aggregate research packet form a falsifiable long-only shock-reversal thesis."
+        }
+      },
+      "alpaca_cli_dry_run": {
+        "advanced_instructions": {},
+        "claim": "official Alpaca CLI dry-run rendering; no order submitted",
+        "client_order_id": "afterimage-42ca8797-ff7ba3d865e7-1",
+        "historical_replay": true,
+        "limit_price": "78.297829",
+        "network_call_performed": false,
+        "order_class": "bracket",
+        "qty": "127",
+        "renderer": "official Alpaca CLI 0.0.14 --dry-run",
+        "side": "buy",
+        "stop_loss": {
+          "stop_price": "77.44"
+        },
+        "submitted": false,
+        "symbol": "XLP",
+        "take_profit": {
+          "limit_price": "80.98"
+        },
+        "time_in_force": "day",
+        "type": "limit"
+      },
+      "audit": {
+        "failed_sequence": null,
+        "records": 9,
+        "valid": true
+      },
+      "authorization_boundary": "The pre-approved recorded jury is an engineering fixture. It proves downstream construction only and grants no production or broker authority.",
+      "broker_pnl_claim": false,
+      "candidate": {
+        "candidate_id": "1f97b5f1-32d2-52e6-b192-0052489eb170",
+        "direction": "bullish",
+        "features": {
+          "atr": 0.8535714285714285,
+          "atr_fraction": 0.010913840027764079,
+          "blocking_signal_weekday": "",
+          "calendar_allowed": true,
+          "close_location": 0.23711340206185566,
+          "complete": true,
+          "countertrend_shock_atr": 0.7552295949497918,
+          "equity_side": "buy",
+          "fee_per_share_per_side": 0.005,
+          "latest_session": "2022-04-18",
+          "long_only": true,
+          "maximum_holding_sessions": 5,
+          "missing_symbols": "",
+          "modeled_slippage_bps": 1.0,
+          "next_bar_execution": true,
+          "selected_symbol": "XLP",
+          "shadow_blocked": false,
+          "shadow_signal_started": true,
+          "sma100": 75.2624,
+          "sma50": 75.425,
+          "stop_distance": 0.8535714285714285,
+          "stop_distance_basis": "signal_close_reference",
+          "stop_distance_fraction": 0.010913840027764079,
+          "stop_r": -1.0,
+          "symbol_count": 11,
+          "target_r": 3.0,
+          "trend": 1,
+          "two_day_atr_return": -0.7552295949497918,
+          "universe_complete": true
+        },
+        "identity": {
+          "strategy_id": "shadow_clock_shock_reversal_v1",
+          "strategy_version": "1.0.0"
+        },
+        "permitted_structures": [
+          "equity_bracket"
+        ],
+        "signal_at": "2022-04-18T20:00:00Z",
+        "snapshot_id": "819f1fff6ea9a4149f1db39b9d7978ee8269466849bbc095e5344b803fe1fead",
+        "symbol": "XLP"
+      },
+      "causal_signal_cutoff": "2022-04-18T20:00:00+00:00",
+      "counterfactual_state": "SHADOW_READY",
+      "counterfactual_warrant_receipt": {
+        "expires_at": "2026-09-04T12:57:05.481827Z",
+        "intent": {
+          "asset_class": "equity",
+          "evidence_commit_hash": "cdd4351de18e75c0cf008df63fb49283b55228a08dbf3c8098996a303ef5089a",
+          "intent_id": "7c33ba06-7a7f-4afe-b506-329ec4b4dad6",
+          "legs": [],
+          "limit_price": "78.297829",
+          "order_class": "bracket",
+          "order_type": "limit",
+          "quantity": 127,
+          "reduce_only": false,
+          "risk_decision_id": "9eae08f4-73ab-45ad-b350-00d72b25c058",
+          "side": "buy",
+          "stop_price": "77.44",
+          "strategy_manifest_hash": "c54e93e4f4125f5cebf7bdca5c77ffc9c9787b8598e689faff59984a974af3f5",
+          "symbol": "XLP",
+          "take_profit_price": "80.98",
+          "time_in_force": "day"
+        },
+        "intent_hash": "ff7ba3d865e72f998acf4069a9c2c7d23c2974483c2a9ea3e6a2f58ab476f673",
+        "risk_vector_hash": "650c614d6009f5a7c1c644e9487cb66a201ba03fab4dadf2b41ccdb1d97a97bf",
+        "signature_present": true,
+        "single_use": true
+      },
+      "deployment_evidence": {
+        "commit_hash": "cdd4351de18e75c0cf008df63fb49283b55228a08dbf3c8098996a303ef5089a",
+        "metrics": {
+          "expectancy_r": "0.5058285073258596004268724454",
+          "max_drawdown_r": "4.74577717452504776292080443",
+          "minimum_target_to_stop": "3.000013277233859032762997108",
+          "neighbor_positive_fraction": "1",
+          "positive_month_fraction": "0.7234042553191489361702127660",
+          "positive_underlyings": 8,
+          "profit_factor": "2.252990790803920449771526138",
+          "sample_count": 95,
+          "stress_profit_factor": "2.221542138502801333118779760"
+        },
+        "reasons": [],
+        "result_hash": "7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2",
+        "status": "PASS"
+      },
+      "future_bars_revealed_after_decision": [
+        {
+          "c": 79.38,
+          "h": 79.49,
+          "l": 78.16,
+          "n": 2481,
+          "o": 78.29,
+          "t": "2022-04-19T04:00:00+00:00",
+          "v": 313225,
+          "vw": 79.173585
+        },
+        {
+          "c": 80.54,
+          "h": 80.75,
+          "l": 79.77,
+          "n": 3751,
+          "o": 79.77,
+          "t": "2022-04-20T04:00:00+00:00",
+          "v": 404180,
+          "vw": 80.489818
+        },
+        {
+          "c": 80.49,
+          "h": 81.33,
+          "l": 80.445,
+          "n": 2653,
+          "o": 80.71,
+          "t": "2022-04-21T04:00:00+00:00",
+          "v": 335737,
+          "vw": 80.846079
+        },
+        {
+          "c": 79.26,
+          "h": 80.79,
+          "l": 79.17,
+          "n": 2388,
+          "o": 80.66,
+          "t": "2022-04-22T04:00:00+00:00",
+          "v": 307172,
+          "vw": 79.809456
+        },
+        {
+          "c": 79.61,
+          "h": 79.815,
+          "l": 78.185,
+          "n": 4790,
+          "o": 79.45,
+          "t": "2022-04-25T04:00:00+00:00",
+          "v": 545825,
+          "vw": 78.983032
+        }
+      ],
+      "future_data_visible_during_decision": false,
+      "label": "DETERMINISTIC COUNTERFACTUAL PATH PROOF",
+      "modeled_historical_outcome": {
+        "claim": "historical execution replay on real Alpaca bars; not broker P&L",
+        "entry_price": "78.297829",
+        "exit_at": "2022-04-21T04:00:00+00:00",
+        "exit_price": "80.98",
+        "future_bar_count": 5,
+        "future_bars_revealed_after_decision": true,
+        "modeled_cost_per_share": "0.0256595658",
+        "modeled_net_pnl_dollars": "337.38",
+        "outcome": "target",
+        "quantity": 127,
+        "realized_r": "3.006843027781039336683625929",
+        "same_bar_ambiguity": "stop_first",
+        "stop_price": "77.44",
+        "target_price": "80.98"
+      },
+      "order_submission_performed": false,
+      "payoff": {
+        "asset_class": "equity",
+        "entry_net_debit": "78.297829",
+        "entry_price": "78.297829",
+        "legs": [],
+        "modeled_costs": "0.0256595658",
+        "operational_ratio": "3.006843027781039336683625929",
+        "operational_stop_loss": "0.8834885658",
+        "operational_target_profit": "2.6565114342",
+        "side": "buy",
+        "stop_price": "77.44",
+        "stressed_max_loss": "0.8834885658",
+        "stressed_max_profit": "2.6565114342",
+        "structural_ratio": "3.006843027781039336683625929",
+        "structure": "equity_bracket",
+        "symbol": "XLP",
+        "target_price": "80.98"
+      },
+      "production_ai_gate_outcome": "FAIL_CLOSED_PROVIDER_TIMEOUT",
+      "production_authorized": false,
+      "published_research_trade": {
+        "direction": 1,
+        "entry_at": "2022-04-19T13:30:00+00:00",
+        "entry_fill": "78.297829",
+        "exit_at": "2022-04-21T13:30:00+00:00",
+        "exit_fill": "80.941905",
+        "family": "trend-aligned shock reversal",
+        "modeled_fees": "1.27",
+        "modeled_slippage": "2.02",
+        "net_pnl": "334.53",
+        "outcome": "target",
+        "raw_entry": "78.29",
+        "raw_exit": "80.95",
+        "return_r": "3.008423613095625810700827807",
+        "risk_dollars": "111.197771",
+        "shares": 127,
+        "signal_at": "2022-04-18T20:00:00+00:00",
+        "stop_price": "77.44",
+        "symbol": "XLP",
+        "target_price": "80.95",
+        "target_to_stop": "3.008402497564452078810104926",
+        "variant": "shadow_mtw_l2_z0.6_c0.25_s1_h5"
+      },
+      "risk": {
+        "decided_at": "2026-09-04T12:56:40.480057Z",
+        "decision_id": "9eae08f4-73ab-45ad-b350-00d72b25c058",
+        "evidence_commit_hash": "cdd4351de18e75c0cf008df63fb49283b55228a08dbf3c8098996a303ef5089a",
+        "gates": [
+          {
+            "name": "paper",
+            "observed": "True",
+            "passed": true,
+            "reason_code": null,
+            "required": "True"
+          },
+          {
+            "name": "account",
+            "observed": "ab955202b0f3976c1f4c5ba108c2259fc4827f2d2d5a5bfd79f9be98c8991ff0",
+            "passed": true,
+            "reason_code": null,
+            "required": "ab955202b0f3976c1f4c5ba108c2259fc4827f2d2d5a5bfd79f9be98c8991ff0"
+          },
+          {
+            "name": "active",
+            "observed": "ACTIVE",
+            "passed": true,
+            "reason_code": null,
+            "required": "ACTIVE"
+          },
+          {
+            "name": "trading_unblocked",
+            "observed": "False",
+            "passed": true,
+            "reason_code": null,
+            "required": "False"
+          },
+          {
+            "name": "options_level",
+            "observed": "3",
+            "passed": true,
+            "reason_code": null,
+            "required": "not-required-for-equity"
+          },
+          {
+            "name": "market_open",
+            "observed": "True",
+            "passed": true,
+            "reason_code": null,
+            "required": "True"
+          },
+          {
+            "name": "entry_cutoff",
+            "observed": "False",
+            "passed": true,
+            "reason_code": null,
+            "required": "False"
+          },
+          {
+            "name": "evidence",
+            "observed": "PASS",
+            "passed": true,
+            "reason_code": null,
+            "required": "PASS"
+          },
+          {
+            "name": "quote_age",
+            "observed": "0.0",
+            "passed": true,
+            "reason_code": null,
+            "required": "2"
+          },
+          {
+            "name": "leg_skew",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "1"
+          },
+          {
+            "name": "relative_spread",
+            "observed": "0.0002",
+            "passed": true,
+            "reason_code": null,
+            "required": "0.05"
+          },
+          {
+            "name": "structural_3r",
+            "observed": "3.006843027781039336683625929",
+            "passed": true,
+            "reason_code": null,
+            "required": "3.0"
+          },
+          {
+            "name": "operational_3r",
+            "observed": "3.006843027781039336683625929",
+            "passed": true,
+            "reason_code": null,
+            "required": "3.0"
+          },
+          {
+            "name": "quantity",
+            "observed": "127",
+            "passed": true,
+            "reason_code": null,
+            "required": ">=1"
+          },
+          {
+            "name": "position_loss",
+            "observed": "112.2030478566",
+            "passed": true,
+            "reason_code": null,
+            "required": "500"
+          },
+          {
+            "name": "equity_notional",
+            "observed": "9943.824283",
+            "passed": true,
+            "reason_code": null,
+            "required": "10000"
+          },
+          {
+            "name": "position_collision",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "<1"
+          },
+          {
+            "name": "unknown_orders",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "0"
+          },
+          {
+            "name": "daily_loss",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "1000"
+          },
+          {
+            "name": "drawdown",
+            "observed": "0",
+            "passed": true,
+            "reason_code": null,
+            "required": "0.02"
+          }
+        ],
+        "modeled_max_loss": "112.2030478566",
+        "quantity": 127,
+        "quote_hash": "2989c4d64f9658e37a768f7348ce40a74bfacaf9cebe9df0d4a769134aa20877",
+        "status": "PASS",
+        "strategy_manifest_hash": "c54e93e4f4125f5cebf7bdca5c77ffc9c9787b8598e689faff59984a974af3f5"
+      },
+      "signal_date": "2022-04-18",
+      "source": {
+        "causal_record_count": 3036,
+        "data_content_hash": "9d770f80007093c046e4ce1b8e48d6bb61f05b8526745b341dd6f914b0cfcc0a",
+        "feed": "iex",
+        "name": "authenticated Alpaca CLI 0.0.14 historical stock bars",
+        "research_result_hash": "7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2"
+      },
+      "strategy": {
+        "display_name": "GuavaMango",
+        "strategy_id": "shadow_clock_shock_reversal_v1",
+        "strategy_version": "1.0.0"
+      }
+    }
+  ],
+  "coverage_summary": {
+    "counterfactual_full_path_cases": 2,
+    "counterfactual_modeled_net_pnl_dollars": "246.20",
+    "requested_cases": 2,
+    "stop_outcomes": 1,
+    "target_outcomes": 1
+  },
+  "deterministic_counterfactual_only": true,
+  "jury_mode": "recorded",
+  "label": "DETERMINISTIC ENGINEERING REPLAY \u2014 NOT AI AUTHORIZATION OR BROKER P&L",
+  "live_jury_attempt": "Not repeated. v1 preserves a completed fail-closed abstention; a later bounded retry was terminated on provider timeout. Exact routes are proven separately by evidence/research/spy-live-model-receipt-v1.json.",
+  "order_submission_performed": false,
+  "production_ai_gate_outcome": "FAIL_CLOSED_PROVIDER_TIMEOUT",
+  "production_authorized": false,
+  "purpose": "Exercise the production strategy, AI gate, deterministic risk, signed warrant, and official Alpaca CLI dry-run on causal historical packets before revealing outcomes.",
+  "receipt_sha256": "4a66f2a76dd7450f4cc6a9a32e37cb9fb52ae21375b4c1e6ca247cd08d68dca1",
+  "schema": "afterimage-guavamango-engineering-replay-v2",
+  "selection_disclosure": "One known winner and one known loser are deliberately selected for path coverage; they are not an unbiased performance sample. Use the admitted 95-trade result for aggregate research metrics."
+}

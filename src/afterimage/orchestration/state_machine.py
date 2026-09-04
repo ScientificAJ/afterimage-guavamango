@@ -37,28 +37,45 @@ ALLOWED: dict[SessionState, dict[str, SessionState]] = {
     SessionState.RISK_APPROVED: {"warrant_minted": SessionState.WARRANT_MINTED},
     SessionState.WARRANT_MINTED: {
         "submit_started": SessionState.SUBMITTING,
+        "shadow_ready": SessionState.SHADOW_READY,
+        "insufficient_evidence": SessionState.INSUFFICIENT_EVIDENCE,
         "warrant_expired": SessionState.EXPIRED,
+    },
+    SessionState.SHADOW_READY: {
+        "submit_started": SessionState.SUBMITTING,
+        "insufficient_evidence": SessionState.INSUFFICIENT_EVIDENCE,
     },
     SessionState.SUBMITTING: {
         "working": SessionState.WORKING,
         "filled": SessionState.FILLED,
+        "partial_fill": SessionState.PARTIAL_OR_ANOMALOUS,
         "ambiguous": SessionState.AMBIGUOUS,
         "anomaly": SessionState.PARTIAL_OR_ANOMALOUS,
     },
     SessionState.AMBIGUOUS: {
         "working": SessionState.WORKING,
         "filled": SessionState.FILLED,
+        "partial_fill": SessionState.PARTIAL_OR_ANOMALOUS,
         "rejected": SessionState.REJECTED,
         "anomaly": SessionState.PARTIAL_OR_ANOMALOUS,
     },
     SessionState.WORKING: {
         "filled": SessionState.FILLED,
+        "partial_fill": SessionState.PARTIAL_OR_ANOMALOUS,
         "rejected": SessionState.REJECTED,
+        "anomaly": SessionState.PARTIAL_OR_ANOMALOUS,
+    },
+    SessionState.PARTIAL_OR_ANOMALOUS: {
+        "partial_fill": SessionState.PARTIAL_OR_ANOMALOUS,
+        "filled": SessionState.FILLED,
+        "rejected": SessionState.REJECTED,
+        "exit_started": SessionState.EXITING,
         "anomaly": SessionState.PARTIAL_OR_ANOMALOUS,
     },
     SessionState.FILLED: {"exit_started": SessionState.EXITING},
     SessionState.EXITING: {
         "closed": SessionState.CLOSED,
+        "exit_retry": SessionState.EXITING,
         "anomaly": SessionState.PARTIAL_OR_ANOMALOUS,
     },
     SessionState.CLOSED: {"autopsy_saved": SessionState.AUTOPSY},
@@ -71,7 +88,6 @@ TERMINAL = {
     SessionState.INSUFFICIENT_EVIDENCE,
     SessionState.EXPIRED,
     SessionState.HALTED,
-    SessionState.PARTIAL_OR_ANOMALOUS,
 }
 
 
@@ -111,13 +127,6 @@ class StateMachine:
             created_at=datetime.now(UTC),
             evidence_level=evidence_level,
         )
-        self.ledger.append(event)
-        self.repository.upsert_session(
-            str(self.session_id),
-            target.value,
-            self.identity.strategy_id,
-            self.identity.strategy_version,
-            event.model_dump(mode="json"),
-        )
+        self.ledger.append_and_upsert_session(event)
         self.state = target
         return event

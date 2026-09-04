@@ -5,7 +5,7 @@ import argparse
 import json
 from pathlib import Path
 
-from afterimage.contracts.hashing import canonical_sha256
+from afterimage.evidence.export import evidence_core, evidence_core_hash
 
 
 def main() -> None:
@@ -14,10 +14,15 @@ def main() -> None:
     parser.add_argument("--out", type=Path, default=Path("evidence/submission"))
     args = parser.parse_args()
     payload = json.loads(args.summary.read_text(encoding="utf-8"))
-    digest = canonical_sha256(payload)
+    digest = evidence_core_hash(payload)
     target = args.out / f"session-{payload['session_id']}-{digest[:12]}.json"
     target.parent.mkdir(parents=True, exist_ok=True)
-    envelope = {"sha256": digest, "payload": payload}
+    envelope = {
+        "schema": "afterimage-evidence-envelope-v1",
+        "evidence_core_sha256": digest,
+        "evidence_core": evidence_core(payload),
+        "run_record": payload,
+    }
     target.write_text(json.dumps(envelope, indent=2, sort_keys=True), encoding="utf-8")
     print(target)
 

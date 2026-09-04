@@ -1,0 +1,27 @@
+{
+  "client_order_id": "afterimage-trend-historical-20260803",
+  "contract_status": "inactive_after_expiration",
+  "dry_run": true,
+  "historical_example_only": true,
+  "legs": [
+    {
+      "position_intent": "buy_to_open",
+      "ratio_qty": "1",
+      "side": "buy",
+      "symbol": "SPY260805C00754000"
+    },
+    {
+      "position_intent": "sell_to_open",
+      "ratio_qty": "1",
+      "side": "sell",
+      "symbol": "SPY260805C00760000"
+    }
+  ],
+  "limit_price": "2.00",
+  "order_class": "mleg",
+  "qty": "1",
+  "submission_forbidden": true,
+  "time_in_force": "day",
+  "transport": "alpaca-mcp-local-validation",
+  "type": "limit"
+}

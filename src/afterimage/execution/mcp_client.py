@@ -26,6 +26,25 @@ class MCPProcess:
 
 
 class MCPClient:
+    CHILD_ENV_ALLOWLIST = frozenset(
+        {
+            "HOME",
+            "HTTP_PROXY",
+            "HTTPS_PROXY",
+            "LOGNAME",
+            "NO_PROXY",
+            "PATH",
+            "SSL_CERT_DIR",
+            "SSL_CERT_FILE",
+            "TEMP",
+            "TMP",
+            "TMPDIR",
+            "USER",
+            "XDG_CACHE_HOME",
+            "XDG_CONFIG_HOME",
+        }
+    )
+
     def __init__(self, process: MCPProcess) -> None:
         self.process = process
         self._stack: AsyncExitStack | None = None
@@ -36,7 +55,7 @@ class MCPClient:
         if self._session is not None:
             return
         self._stack = AsyncExitStack()
-        environment = {**os.environ, **self.process.env, "ALPACA_PAPER_TRADE": "true"}
+        environment = self._child_environment()
         parameters = StdioServerParameters(
             command=self.process.command,
             args=list(self.process.args),
@@ -48,6 +67,12 @@ class MCPClient:
         )
         await self._session.initialize()
         await self.list_tools()
+
+    def _child_environment(self) -> dict[str, str]:
+        inherited = {
+            key: value for key, value in os.environ.items() if key in self.CHILD_ENV_ALLOWLIST
+        }
+        return {**inherited, **self.process.env, "ALPACA_PAPER_TRADE": "true"}
 
     async def close(self) -> None:
         if self._stack is not None:

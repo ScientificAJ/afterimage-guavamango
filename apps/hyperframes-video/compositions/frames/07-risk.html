@@ -1,0 +1,595 @@
+<template>
+  <style>
+    @font-face { font-family: "DM Sans Variable"; src: url("assets/fonts/dm-sans-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/jetbrains-mono-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    #root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      container-type: size;
+      color: #11110f;
+      font-family: "DM Sans Variable", sans-serif;
+    }
+
+    #root .clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    #root [id="07-risk-sun-bloom"] {
+      position: absolute;
+      top: -80px;
+      left: 390px;
+      width: 960px;
+      height: 960px;
+      background: radial-gradient(circle, rgba(243, 173, 0, 0.6) 0%, rgba(255, 214, 108, 0.34) 20%, rgba(255, 241, 194, 0.18) 40%, rgba(255, 255, 255, 0) 67%);
+      transform-origin: center;
+    }
+
+    #root [id="07-risk-ember-bloom"] {
+      position: absolute;
+      top: -180px;
+      right: -130px;
+      width: 620px;
+      height: 620px;
+      background: radial-gradient(circle, rgba(255, 101, 95, 0.16) 0%, rgba(255, 101, 95, 0) 68%);
+    }
+
+    #root [id="07-risk-stage"] {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    #root [id="07-risk-kicker"] {
+      position: absolute;
+      top: 44px;
+      left: 78px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    #root [id="07-risk-kicker"]::before {
+      width: 72px;
+      height: 1px;
+      background: #11110f;
+      content: "";
+    }
+
+    #root [id="07-risk-ai-zone"] {
+      position: absolute;
+      top: 152px;
+      left: 76px;
+      width: 654px;
+      height: 560px;
+    }
+
+    #root [id="07-risk-ai-label"] {
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    #root [id="07-risk-ai-title"] {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 620px;
+      margin: 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 142px;
+      font-weight: 700;
+      line-height: 0.78;
+      letter-spacing: -0.035em;
+      transform-origin: right center;
+    }
+
+    #root [id="07-risk-ai-title"] span {
+      display: block;
+    }
+
+    #root [id="07-risk-impact-trace"] {
+      position: absolute;
+      top: 426px;
+      right: -52px;
+      width: 220px;
+      height: 1px;
+      background: #ff655f;
+      transform-origin: left center;
+    }
+
+    #root [id="07-risk-impact-token"] {
+      position: absolute;
+      top: 415px;
+      right: -64px;
+      width: 22px;
+      height: 22px;
+      border: 1px solid #11110f;
+      background: #ff655f;
+    }
+
+    #root [id="07-risk-boundary"] {
+      position: absolute;
+      top: 92px;
+      left: 790px;
+      width: 1px;
+      height: 728px;
+      background: #ff655f;
+      transform-origin: center top;
+    }
+
+    #root [id="07-risk-boundary-label"] {
+      position: absolute;
+      top: 96px;
+      left: 807px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+    }
+
+    #root [id="07-risk-broker-label"] {
+      position: absolute;
+      top: 98px;
+      right: 80px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    #root [id="07-risk-governed"] {
+      position: absolute;
+      top: 196px;
+      left: 900px;
+      width: 850px;
+    }
+
+    #root [data-risk-row] {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 230px 28px;
+      align-items: center;
+      width: 100%;
+      height: 128px;
+      border-bottom: 1px solid rgba(17, 17, 15, 0.22);
+      transform-origin: left center;
+    }
+
+    #root [data-risk-row] strong {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 70px;
+      font-weight: 600;
+      line-height: 0.9;
+      letter-spacing: -0.018em;
+    }
+
+    #root [data-risk-value] {
+      justify-self: end;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    #root [data-risk-gate] {
+      justify-self: end;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #11110f;
+      background: #f3ad00;
+    }
+
+    #root [id="07-risk-balance"] {
+      position: absolute;
+      top: 650px;
+      left: 880px;
+      width: 900px;
+      height: 130px;
+    }
+
+    #root [id="07-risk-balance-svg"] {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    #root [id="07-risk-balance-path"] {
+      fill: none;
+      stroke: #11110f;
+      stroke-width: 1;
+      stroke-linecap: round;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #root [id="07-risk-stop"],
+    #root [id="07-risk-target"] {
+      position: absolute;
+      top: 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 46px;
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    #root [id="07-risk-stop"] { left: 0; }
+    #root [id="07-risk-target"] { right: 0; text-align: right; }
+
+    #root [id="07-risk-stop"] small,
+    #root [id="07-risk-target"] small {
+      display: block;
+      margin-top: 10px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [id="07-risk-balance-lock"] {
+      position: absolute;
+      top: 47px;
+      left: 432px;
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid #11110f;
+      background: #f3ad00;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      transform-origin: center;
+    }
+
+    #root [id="07-risk-real-crop"] {
+      position: absolute;
+      top: 598px;
+      left: 1040px;
+      width: 760px;
+      height: 270px;
+      overflow: hidden;
+      border-top: 1px solid rgba(17, 17, 15, 0.28);
+      border-bottom: 1px solid rgba(17, 17, 15, 0.18);
+    }
+
+    #root [id="07-risk-real-crop"] img {
+      position: absolute;
+      top: -382px;
+      left: -338px;
+      width: 1440px;
+      height: 810px;
+      opacity: 0.38;
+      filter: saturate(0.82) contrast(0.94);
+    }
+
+    #root [id="07-risk-crop-label"] {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      padding: 6px 9px 5px;
+      background: rgba(255, 255, 255, 0.9);
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [id="07-risk-warrant"] {
+      position: absolute;
+      top: 162px;
+      left: 870px;
+      width: 930px;
+      height: 552px;
+      background: rgba(255, 255, 255, 0.95);
+      border-top: 1px solid #11110f;
+      border-bottom: 1px solid #11110f;
+      transform-origin: center;
+    }
+
+    #root [id="07-risk-warrant-head"] {
+      position: absolute;
+      top: 30px;
+      left: 34px;
+    }
+
+    #root [id="07-risk-warrant-head"] span,
+    #root [id="07-risk-warrant-head"] strong {
+      display: block;
+    }
+
+    #root [id="07-risk-warrant-head"] span {
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    #root [id="07-risk-warrant-head"] strong {
+      margin-top: 9px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 58px;
+      font-weight: 600;
+      line-height: 0.9;
+      letter-spacing: -0.018em;
+    }
+
+    #root [id="07-risk-signature"] {
+      position: absolute;
+      top: 26px;
+      right: 28px;
+      display: grid;
+      grid-template-columns: 94px 1fr;
+      align-items: center;
+      width: 246px;
+      height: 82px;
+      background: #f3ad00;
+      transform-origin: right center;
+    }
+
+    #root [id="07-risk-signature-svg"] {
+      width: 94px;
+      height: 82px;
+    }
+
+    #root [id="07-risk-signature-path"] {
+      fill: none;
+      stroke: #11110f;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #root [id="07-risk-signature-copy"] strong,
+    #root [id="07-risk-signature-copy"] span {
+      display: block;
+    }
+
+    #root [id="07-risk-signature-copy"] strong {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    #root [id="07-risk-signature-copy"] span {
+      margin-top: 7px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+    }
+
+    #root [id="07-risk-warrant-fields"] {
+      position: absolute;
+      top: 142px;
+      left: 34px;
+      right: 34px;
+    }
+
+    #root [data-warrant-row] {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      min-height: 100px;
+      border-bottom: 1px solid rgba(17, 17, 15, 0.2);
+    }
+
+    #root [data-warrant-row="wide"] {
+      grid-template-columns: 1.35fr 1.35fr 0.8fr;
+    }
+
+    #root [data-warrant-field] {
+      padding: 18px 18px 12px 0;
+    }
+
+    #root [data-warrant-field] span,
+    #root [data-warrant-field] strong {
+      display: block;
+    }
+
+    #root [data-warrant-field] span {
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 10px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    #root [data-warrant-field] strong {
+      margin-top: 12px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    #root [id="07-risk-warrant-foot"] {
+      position: absolute;
+      right: 34px;
+      bottom: 22px;
+      left: 34px;
+      display: flex;
+      justify-content: space-between;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [id="07-risk-page"] {
+      position: absolute;
+      top: 850px;
+      right: 78px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      opacity: 0.75;
+    }
+  </style>
+
+  <div data-hf-id="hf-ei9s" id="root" data-composition-id="07-risk" data-width="1920" data-height="1080" data-duration="14.584">
+    <div data-hf-id="hf-481x" class="clip" data-start="0" data-duration="14" data-track-index="0">
+      <div data-hf-id="hf-1c0x" id="07-risk-sun-bloom"></div>
+      <div data-hf-id="hf-p28i" id="07-risk-ember-bloom"></div>
+    </div>
+
+    <div data-hf-id="hf-qf2r" id="07-risk-stage">
+      <div data-hf-id="hf-gxam" id="07-risk-kicker">GuavaMango / bounded autonomy</div>
+
+      <div data-hf-id="hf-esbg" id="07-risk-ai-zone">
+        <div data-hf-id="hf-jex9" id="07-risk-ai-label">Model side / reasoning only</div>
+        <h2 data-hf-id="hf-i659" id="07-risk-ai-title"><span data-hf-id="hf-vtvh" data-layout-allow-overlap="">AI STOPS</span><span data-hf-id="hf-rsps" data-layout-allow-overlap="">HERE</span></h2>
+        <div data-hf-id="hf-4szx" id="07-risk-impact-trace"></div>
+        <div data-hf-id="hf-5hed" id="07-risk-impact-token"></div>
+      </div>
+
+      <div data-hf-id="hf-vh75" id="07-risk-boundary"></div>
+      <div data-hf-id="hf-yxkq" id="07-risk-boundary-label">Hard authority boundary</div>
+      <div data-hf-id="hf-s5b7" id="07-risk-broker-label">Governed side / broker mutation</div>
+
+      <div data-hf-id="hf-sh4x" id="07-risk-governed">
+        <div data-hf-id="hf-ws8a" id="07-risk-size" data-risk-row="">
+          <strong data-hf-id="hf-hhdf">SIZE</strong><span data-hf-id="hf-ewu1" data-risk-value="">CALCULATED</span><i data-hf-id="hf-8gyk" data-risk-gate=""></i>
+        </div>
+        <div data-hf-id="hf-x95m" id="07-risk-exposure" data-risk-row="">
+          <strong data-hf-id="hf-6p03">EXPOSURE</strong><span data-hf-id="hf-nfpe" data-risk-value="">BOUNDED</span><i data-hf-id="hf-9uc4" data-risk-gate=""></i>
+        </div>
+        <div data-hf-id="hf-xgxf" id="07-risk-liquidity" data-risk-row="">
+          <strong data-hf-id="hf-tpwi">LIQUIDITY</strong><span data-hf-id="hf-7h65" data-risk-value="">VERIFIED</span><i data-hf-id="hf-8nf1" data-risk-gate=""></i>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-zlc5" id="07-risk-balance">
+        <svg data-hf-id="hf-fcle" id="07-risk-balance-svg" viewBox="0 0 900 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path data-hf-id="hf-r0v2" id="07-risk-balance-path" d="M 8 65 L 892 65" />
+        </svg>
+        <div data-hf-id="hf-6mt1" id="07-risk-stop">1 ATR STOP<small data-hf-id="hf-s7pn">loss boundary</small></div>
+        <div data-hf-id="hf-si88" id="07-risk-target">≥ 3R AFTER COSTS<small data-hf-id="hf-d795">reward floor</small></div>
+        <div data-hf-id="hf-7y9c" id="07-risk-balance-lock">✓</div>
+      </div>
+
+      <div data-hf-id="hf-irfq" id="07-risk-real-crop">
+        <img data-hf-id="hf-yalg" src="assets/scroll-100.png" alt="Real GuavaMango risk passport in the product dashboard">
+        <div data-hf-id="hf-qsgr" id="07-risk-crop-label">Real risk passport</div>
+      </div>
+
+      <div data-hf-id="hf-m3jy" id="07-risk-warrant">
+        <div data-hf-id="hf-df1l" id="07-risk-warrant-head">
+          <span data-hf-id="hf-jfdc">Execution authority</span>
+          <strong data-hf-id="hf-b0np">SINGLE-USE WARRANT</strong>
+        </div>
+
+        <div data-hf-id="hf-v2vn" id="07-risk-signature">
+          <svg data-hf-id="hf-oaqa" id="07-risk-signature-svg" viewBox="0 0 94 82" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path data-hf-id="hf-wn3y" id="07-risk-signature-path" d="M 16 48 C 24 64 31 64 39 39 C 43 26 48 25 48 43 C 49 60 58 64 76 29" />
+          </svg>
+          <div data-hf-id="hf-evfn" id="07-risk-signature-copy"><strong data-hf-id="hf-git2">SIGNED</strong><span data-hf-id="hf-vgzc">ONE USE</span></div>
+        </div>
+
+        <div data-hf-id="hf-1718" id="07-risk-warrant-fields">
+          <div data-hf-id="hf-xi5d" id="07-risk-warrant-row-a" data-warrant-row="">
+            <div data-hf-id="hf-kl5p" data-warrant-field=""><span data-hf-id="hf-vaq8">Account hash</span><strong data-hf-id="hf-28tm">BOUND</strong></div>
+            <div data-hf-id="hf-qomp" data-warrant-field=""><span data-hf-id="hf-ijpx">Symbol</span><strong data-hf-id="hf-mfvy">BOUND</strong></div>
+            <div data-hf-id="hf-rvjs" data-warrant-field=""><span data-hf-id="hf-ptt6">Side</span><strong data-hf-id="hf-mu6z">BOUND</strong></div>
+            <div data-hf-id="hf-rh8r" data-warrant-field=""><span data-hf-id="hf-8aw4">Quantity</span><strong data-hf-id="hf-n8i0">BOUND</strong></div>
+          </div>
+          <div data-hf-id="hf-1g9e" id="07-risk-warrant-row-b" data-warrant-row="">
+            <div data-hf-id="hf-phpm" data-warrant-field=""><span data-hf-id="hf-gbsw">Limit</span><strong data-hf-id="hf-kgct">BOUND</strong></div>
+            <div data-hf-id="hf-p3el" data-warrant-field=""><span data-hf-id="hf-0vlt">Stop</span><strong data-hf-id="hf-kunu">BOUND</strong></div>
+            <div data-hf-id="hf-qabo" data-warrant-field=""><span data-hf-id="hf-9cno">Target</span><strong data-hf-id="hf-l8yv">BOUND</strong></div>
+            <div data-hf-id="hf-pw0n" data-warrant-field=""><span data-hf-id="hf-96x0">Time in force</span><strong data-hf-id="hf-ln9w">BOUND</strong></div>
+          </div>
+          <div data-hf-id="hf-e0yc" id="07-risk-warrant-row-c" data-warrant-row="wide">
+            <div data-hf-id="hf-u9dy" data-warrant-field=""><span data-hf-id="hf-nau3">Risk vector hash</span><strong data-hf-id="hf-qguu">SEALED</strong></div>
+            <div data-hf-id="hf-tv2x" data-warrant-field=""><span data-hf-id="hf-h9ww">Evidence hash</span><strong data-hf-id="hf-p41m">SEALED</strong></div>
+            <div data-hf-id="hf-80b7" data-warrant-field=""><span data-hf-id="hf-faak">Nonce</span><strong data-hf-id="hf-jqbm">1×</strong></div>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-jv7v" id="07-risk-warrant-foot"><span data-hf-id="hf-c1of">Exact order vector</span><span data-hf-id="hf-7dm3">Immutable after signature</span></div>
+      </div>
+
+      <div data-hf-id="hf-u8tx" id="07-risk-page">07 / 09</div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.querySelector('[data-composition-id="07-risk"]');
+      const gsap = window.gsap;
+      if (!root || !gsap) return;
+
+      const get = (id) => document.getElementById(id);
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["07-risk"] = tl;
+
+      const BEATS = [0.08, 2.84, 4.22, 5.6, 7.22, 8.6, 10.76, 11.36, 11.96, 12.56];
+
+      const balancePath = get("07-risk-balance-path");
+      const balanceLength = balancePath.getTotalLength();
+      balancePath.style.strokeDasharray = `${balanceLength}`;
+      balancePath.style.strokeDashoffset = `${balanceLength}`;
+
+      const signaturePath = get("07-risk-signature-path");
+      const signatureLength = signaturePath.getTotalLength();
+      signaturePath.style.strokeDasharray = `${signatureLength}`;
+      signaturePath.style.strokeDashoffset = `${signatureLength}`;
+
+      tl.fromTo(get("07-risk-sun-bloom"), { x: -12, scale: 0.98 }, { x: 12, scale: 1.04, duration: 14, ease: "none" }, 0);
+      tl.fromTo(get("07-risk-kicker"), { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.42, ease: "power2.out" }, BEATS[0]);
+      tl.fromTo(get("07-risk-ai-label"), { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.42, ease: "expo.out" }, BEATS[0]);
+      tl.fromTo(get("07-risk-ai-title"), { opacity: 0, scale: 1.45, x: -230, filter: "blur(16px)" }, { opacity: 1, scale: 1, x: 0, filter: "blur(0px)", duration: 0.56, ease: "power4.out" }, BEATS[0]);
+      tl.fromTo(get("07-risk-boundary"), { opacity: 0, scaleY: 0 }, { opacity: 1, scaleY: 1, duration: 0.58, ease: "power3.out" }, BEATS[0] + 0.18);
+      tl.fromTo(get("07-risk-boundary-label"), { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.38, ease: "circ.out" }, BEATS[0] + 0.46);
+      tl.fromTo(get("07-risk-impact-trace"), { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.34, ease: "expo.out" }, BEATS[0] + 0.5);
+      tl.fromTo(get("07-risk-impact-token"), { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.36, ease: "power4.out" }, BEATS[0] + 0.72);
+      tl.fromTo(get("07-risk-broker-label"), { opacity: 0 }, { opacity: 0.5, duration: 0.4, ease: "power1.out" }, BEATS[0] + 1.26);
+
+      const size = get("07-risk-size");
+      tl.fromTo(size, { opacity: 0, scale: 1.22, filter: "blur(12px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.52, ease: "power4.out" }, BEATS[1]);
+      tl.fromTo(size.querySelector("[data-risk-value]"), { opacity: 0, x: 28 }, { opacity: 1, x: 0, duration: 0.34, ease: "expo.out" }, BEATS[1] + 0.36);
+      tl.fromTo(size.querySelector("[data-risk-gate]"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.34, ease: "power3.out" }, BEATS[1] + 0.54);
+
+      const exposure = get("07-risk-exposure");
+      tl.fromTo(exposure, { opacity: 0, x: 190 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, BEATS[2]);
+      tl.fromTo(exposure.querySelector("[data-risk-value]"), { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.34, ease: "circ.out" }, BEATS[2] + 0.36);
+      tl.fromTo(exposure.querySelector("[data-risk-gate]"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.34, ease: "power3.out" }, BEATS[2] + 0.54);
+
+      const liquidity = get("07-risk-liquidity");
+      tl.fromTo(liquidity, { opacity: 0, y: 56, rotation: 2 }, { opacity: 1, y: 0, rotation: 0, duration: 0.54, ease: "circ.out" }, BEATS[3]);
+      tl.fromTo(liquidity.querySelector("[data-risk-value]"), { opacity: 0, x: -26 }, { opacity: 1, x: 0, duration: 0.34, ease: "expo.out" }, BEATS[3] + 0.36);
+      tl.fromTo(liquidity.querySelector("[data-risk-gate]"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.34, ease: "power3.out" }, BEATS[3] + 0.54);
+
+      tl.to(balancePath, { strokeDashoffset: 0, duration: 0.82, ease: "power2.out" }, BEATS[4]);
+      tl.fromTo(get("07-risk-stop"), { opacity: 0, x: -120 }, { opacity: 1, x: 0, duration: 0.52, ease: "expo.out" }, BEATS[4]);
+      tl.fromTo(get("07-risk-target"), { opacity: 0, x: 140 }, { opacity: 1, x: 0, duration: 0.54, ease: "circ.out" }, BEATS[5]);
+      tl.fromTo(get("07-risk-balance-lock"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.48, ease: "power3.out" }, BEATS[5] + 0.48);
+
+      tl.to([get("07-risk-ai-zone"), get("07-risk-governed"), get("07-risk-balance")], { opacity: 0, duration: 0.42, ease: "power2.inOut" }, BEATS[6] - 0.3);
+      tl.fromTo(get("07-risk-real-crop"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.62, ease: "power2.out" }, BEATS[6]);
+      tl.fromTo(get("07-risk-warrant"), { opacity: 0, scale: 0.84, y: 30, filter: "blur(10px)" }, { opacity: 1, scale: 1, y: 0, filter: "blur(0px)", duration: 0.62, ease: "power3.out" }, BEATS[6]);
+      tl.fromTo(get("07-risk-warrant-head"), { opacity: 0, x: -22 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, BEATS[6] + 0.22);
+
+      tl.fromTo(get("07-risk-warrant-row-a").children, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.36, stagger: 0.055, ease: "power2.out" }, BEATS[7]);
+      tl.fromTo(get("07-risk-warrant-row-b").children, { opacity: 0, x: 18 }, { opacity: 1, x: 0, duration: 0.36, stagger: 0.055, ease: "expo.out" }, BEATS[8]);
+      tl.fromTo(get("07-risk-warrant-row-c").children, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.36, stagger: 0.06, ease: "circ.out" }, BEATS[9]);
+      tl.fromTo(get("07-risk-warrant-foot"), { opacity: 0, scaleX: 0.82, transformOrigin: "left center" }, { opacity: 1, scaleX: 1, duration: 0.38, ease: "power2.out" }, BEATS[9] + 0.18);
+      tl.fromTo(get("07-risk-signature"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.54, ease: "power3.out" }, BEATS[9] + 0.28);
+      tl.to(signaturePath, { strokeDashoffset: 0, duration: 0.58, ease: "power2.out" }, BEATS[9] + 0.56);
+      tl.fromTo(get("07-risk-page"), { opacity: 0, x: 12 }, { opacity: 0.75, x: 0, duration: 0.36, ease: "power1.out" }, BEATS[9] + 0.72);
+    })();
+  </script>
+</template>

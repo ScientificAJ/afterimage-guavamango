@@ -1,8 +1,9 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import date, datetime
+from decimal import Decimal
 
-from sqlalchemy import DateTime, Integer, String, Text, UniqueConstraint
+from sqlalchemy import Date, DateTime, Integer, Numeric, String, Text, UniqueConstraint
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
@@ -65,4 +66,13 @@ class BrokerOrderRow(Base):
     intent_hash: Mapped[str] = mapped_column(String(64), nullable=False)
     status: Mapped[str] = mapped_column(String(40), nullable=False)
     payload_json: Mapped[str] = mapped_column(Text, nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+
+
+class RiskStateRow(Base):
+    __tablename__ = "risk_state"
+
+    account_id_hash: Mapped[str] = mapped_column(String(64), primary_key=True)
+    session_date: Mapped[date] = mapped_column(Date, primary_key=True)
+    high_water_equity: Mapped[Decimal] = mapped_column(Numeric(20, 4), nullable=False)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)

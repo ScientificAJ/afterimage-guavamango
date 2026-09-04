@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from enum import StrEnum
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -18,6 +18,7 @@ class AgentFinding(BaseModel):
     claim: str
     evidence_keys: tuple[str, ...]
     severity: Literal["support", "warning", "fatal"]
+    basis: Literal["observation", "inference"] = "observation"
 
 
 class AgentReport(BaseModel):
@@ -29,8 +30,14 @@ class AgentReport(BaseModel):
     falsifiers: tuple[str, ...]
     reason_code: str
     model_id: str
+    prompt_version: str = "unversioned"
     prompt_hash: str
+    input_packet_hash: str = "unbound"
     response_hash: str
+    response_preimage: dict[str, Any] | None = None
+    provider_request_id: str | None = None
+    provider_created_at: int | None = None
+    provider_system_fingerprint: str | None = None
     latency_ms: int = Field(ge=0)
 
 

@@ -4,25 +4,18 @@ import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "rec
 import { Panel, Metric, Badge } from "./ui";
 import { number, percent } from "@/lib/format";
 
-const path = [
-  { t: "09:55", median: 0, lo: 0, hi: 0 },
-  { t: "+15m", median: 0.34, lo: -0.28, hi: 0.92 },
-  { t: "+30m", median: 0.88, lo: -0.55, hi: 1.72 },
-  { t: "+60m", median: 1.62, lo: -0.72, hi: 2.68 },
-  { t: "exit", median: 3.0, lo: -1, hi: 3.0 },
-];
-
-export function GhostPaths({ evidence }: { evidence?: Record<string, any> }) {
+export function GhostPaths({ evidence, paths = [], mode }: { evidence?: Record<string, any>; paths?: Array<{ step: number; low: string; median: string; high: string }>; mode: string }) {
   const metrics = evidence?.metrics ?? {};
   const pass = evidence?.status === "PASS";
+  const chart = paths.map((point) => ({ ...point, t: point.step === 0 ? "entry" : `step ${point.step}` }));
   return (
     <Panel eyebrow="03 / Commit → reveal" title="Ghost paths" mark="∿" className="wide">
       <div className="row split"><Badge tone={pass ? "verified" : "rejected"}>{pass ? "Evidence survived reveal" : "Gate rejected"}</Badge><span className="mono">Wilson lower bound · weighted</span></div>
-      <div className="chart-wrap" aria-label="Historical twin path visualization">
+      <div className="chart-wrap" aria-label={mode === "recorded-replay" ? "Synthetic engineering fixture path visualization" : "Real Alpaca training path visualization"}>
         <ResponsiveContainer width="100%" height={210}>
-          <AreaChart data={path} margin={{ top: 16, right: 8, bottom: 0, left: -20 }}>
+          <AreaChart data={chart} margin={{ top: 16, right: 8, bottom: 0, left: -20 }}>
             <defs><linearGradient id="cyan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#55e8dc" stopOpacity={0.35}/><stop offset="1" stopColor="#55e8dc" stopOpacity={0}/></linearGradient></defs>
-            <XAxis dataKey="t" tickLine={false} axisLine={false}/><YAxis tickLine={false} axisLine={false}/><Tooltip contentStyle={{ background: "#0c1518", border: "1px solid #24434a" }}/><Area type="monotone" dataKey="median" stroke="#55e8dc" fill="url(#cyan)" strokeWidth={2}/>
+            <XAxis dataKey="t" tickLine={false} axisLine={false}/><YAxis tickLine={false} axisLine={false}/><Tooltip contentStyle={{ background: "#0c1518", border: "1px solid #24434a" }}/><Area type="monotone" dataKey="high" stroke="transparent" fill="rgba(85,232,220,.08)"/><Area type="monotone" dataKey="median" stroke="#55e8dc" fill="url(#cyan)" strokeWidth={2}/><Area type="monotone" dataKey="low" stroke="#ff6c69" fill="transparent" strokeDasharray="3 4"/>
           </AreaChart>
         </ResponsiveContainer>
       </div>

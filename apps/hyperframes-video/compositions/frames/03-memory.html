@@ -1,0 +1,580 @@
+<template>
+  <style>
+    @font-face { font-family: "DM Sans Variable"; src: url("assets/fonts/dm-sans-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/jetbrains-mono-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    #root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      container-type: size;
+      color: #11110f;
+      font-family: "DM Sans Variable", sans-serif;
+    }
+
+    #root .clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    #root > .clip {
+      z-index: 0;
+      background:
+        radial-gradient(circle at 28% 44%, rgba(243, 173, 0, 0.64) 0%, rgba(255, 214, 108, 0.36) 18%, rgba(255, 241, 194, 0.21) 36%, rgba(255, 255, 255, 0) 61%),
+        radial-gradient(circle at 91% 12%, rgba(255, 101, 95, 0.16) 0%, rgba(255, 101, 95, 0) 30%),
+        #ffffff;
+    }
+
+    #root [id="03-memory-stage"] {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    #root [id="03-memory-kicker"] {
+      position: absolute;
+      top: 42px;
+      left: 78px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    #root [id="03-memory-kicker"]::before {
+      width: 74px;
+      height: 1px;
+      background: #11110f;
+      content: "";
+    }
+
+    #root [id="03-memory-title-wrap"] {
+      position: absolute;
+      top: 86px;
+      left: 74px;
+      display: flex;
+      align-items: baseline;
+      min-width: 1680px;
+      white-space: nowrap;
+    }
+
+    #root [id="03-memory-title"] {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 126px;
+      font-weight: 600;
+      line-height: 0.88;
+      letter-spacing: -0.018em;
+    }
+
+    #root [id="03-memory-cursor"] {
+      display: inline-block;
+      width: 34px;
+      margin-left: 9px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 86px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    #root [id="03-memory-rail-label"] {
+      position: absolute;
+      top: 296px;
+      left: 26px;
+      writing-mode: vertical-rl;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+    }
+
+    #root [id="03-memory-week"] {
+      position: absolute;
+      top: 284px;
+      left: 160px;
+      width: 1600px;
+      height: 390px;
+    }
+
+    #root [id="03-memory-rail-svg"] {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    #root [data-memory-path] {
+      fill: none;
+      stroke: #11110f;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #root [data-memory-path="ghost"] {
+      opacity: 0.32;
+      stroke-dasharray: 4 8;
+    }
+
+    #root [data-memory-endpoint] {
+      fill: #f3ad00;
+      stroke: #11110f;
+      stroke-width: 1;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #root [data-memory-day] {
+      position: absolute;
+      top: 4px;
+      width: 112px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 14px;
+      letter-spacing: 0.14em;
+      text-align: center;
+    }
+
+    #root [id="03-memory-day-mon"] { left: 44px; }
+    #root [id="03-memory-day-tue"] { left: 404px; }
+    #root [id="03-memory-day-wed"] { left: 744px; }
+    #root [id="03-memory-day-thu"] { left: 1084px; }
+    #root [id="03-memory-day-fri"] { left: 1424px; }
+
+    #root [data-memory-clock] {
+      position: absolute;
+      top: 55px;
+      width: 100px;
+      height: 132px;
+      text-align: center;
+    }
+
+    #root [id="03-memory-mon"] { left: 50px; }
+    #root [id="03-memory-tue"] { left: 410px; }
+    #root [id="03-memory-wed"] { left: 750px; }
+    #root [id="03-memory-thu"] { left: 1090px; }
+    #root [id="03-memory-fri"] { left: 1430px; }
+
+    #root [data-memory-clock] svg {
+      display: block;
+      width: 100px;
+      height: 100px;
+      overflow: visible;
+    }
+
+    #root [data-memory-clock] circle,
+    #root [data-memory-clock] line {
+      stroke: #11110f;
+      stroke-width: 1;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #root [data-memory-clock] circle:first-child {
+      fill: #ffffff;
+    }
+
+    #root [data-memory-clock="shock"] circle:first-child {
+      fill: #f3ad00;
+    }
+
+    #root [data-memory-clock="skipped"] circle:first-child {
+      fill: #fff1c2;
+    }
+
+    #root [data-memory-clock] line {
+      stroke-linecap: round;
+    }
+
+    #root [data-memory-clock] span {
+      display: block;
+      margin-top: 9px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+    }
+
+    #root [id="03-memory-clock-halo"] {
+      position: absolute;
+      top: 22px;
+      left: 1058px;
+      width: 164px;
+      height: 164px;
+      background: radial-gradient(circle, rgba(243, 173, 0, 0.52) 0%, rgba(255, 214, 108, 0.22) 40%, rgba(255, 255, 255, 0) 72%);
+    }
+
+    #root [id="03-memory-ownership-label"] {
+      position: absolute;
+      top: 216px;
+      left: 122px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [id="03-memory-ownership-label"]::before {
+      display: inline-block;
+      width: 42px;
+      height: 1px;
+      margin: 0 12px 4px 0;
+      background: #11110f;
+      content: "";
+    }
+
+    #root [id="03-memory-cooldown-band"] {
+      position: absolute;
+      top: 658px;
+      left: 222px;
+      width: 1400px;
+      height: 82px;
+      background: rgba(243, 173, 0, 0.28);
+    }
+
+    #root [id="03-memory-cooldown-rule"] {
+      position: absolute;
+      top: 698px;
+      left: 222px;
+      width: 1400px;
+      height: 1px;
+      background: #11110f;
+    }
+
+    #root [id="03-memory-cooldown-label"] {
+      position: absolute;
+      top: 677px;
+      left: 248px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    #root [id="03-memory-cooldown-status"] {
+      position: absolute;
+      top: 675px;
+      right: 320px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    #root [id="03-memory-blocker"] {
+      position: absolute;
+      top: 515px;
+      left: 1532px;
+      width: 150px;
+      height: 120px;
+      text-align: center;
+    }
+
+    #root [id="03-memory-blocker-mark"] {
+      position: relative;
+      width: 62px;
+      height: 62px;
+      margin: 0 auto;
+      border: 1px solid #11110f;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    #root [id="03-memory-blocker-mark"]::before,
+    #root [id="03-memory-blocker-mark"]::after {
+      position: absolute;
+      top: 30px;
+      left: 13px;
+      width: 36px;
+      height: 1px;
+      background: #11110f;
+      content: "";
+    }
+
+    #root [id="03-memory-blocker-mark"]::before { rotate: 45deg; }
+    #root [id="03-memory-blocker-mark"]::after { rotate: -45deg; }
+
+    #root [id="03-memory-blocker"] span {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+    }
+
+    #root [id="03-memory-state"] {
+      position: absolute;
+      top: 786px;
+      left: 78px;
+      display: grid;
+      grid-template-columns: 74px auto;
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    #root [id="03-memory-state-index"] {
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    #root [id="03-memory-state-copy"] {
+      padding-left: 20px;
+      border-left: 1px solid #11110f;
+    }
+
+    #root [id="03-memory-state-copy"] strong,
+    #root [id="03-memory-state-copy"] span {
+      display: block;
+    }
+
+    #root [id="03-memory-state-copy"] strong {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    #root [id="03-memory-state-copy"] span {
+      margin-top: 7px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+    }
+
+    #root [id="03-memory-page"] {
+      position: absolute;
+      top: 842px;
+      right: 78px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      opacity: 0.75;
+    }
+  </style>
+
+  <div data-hf-id="hf-r4pp" id="root" data-composition-id="03-memory" data-width="1920" data-height="1080" data-duration="14.824">
+    <div data-hf-id="hf-9n6i" class="clip" data-start="0" data-duration="13" data-track-index="0"></div>
+
+    <div data-hf-id="hf-p5iz" id="03-memory-stage">
+      <div data-hf-id="hf-80qs" id="03-memory-kicker">GuavaMango / temporal state</div>
+      <div data-hf-id="hf-8ojo" id="03-memory-title-wrap">
+        <span data-hf-id="hf-jlku" id="03-memory-title">MARKET</span><span data-hf-id="hf-7adb" id="03-memory-cursor">_</span>
+      </div>
+      <div data-hf-id="hf-kdg0" id="03-memory-rail-label">Stateful signal engine</div>
+
+      <div data-hf-id="hf-t3ez" id="03-memory-week">
+        <div data-hf-id="hf-917i" id="03-memory-clock-halo"></div>
+
+        <svg data-hf-id="hf-vakm" id="03-memory-rail-svg" viewBox="0 0 1600 390" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path data-hf-id="hf-q34m" id="03-memory-rail-path" data-memory-path="" d="M 100 105 L 1480 105" />
+          <path data-hf-id="hf-3niv" id="03-memory-own-mon" data-memory-path="" d="M 100 105 C 160 166 264 246 385 260" />
+          <path data-hf-id="hf-sdcu" id="03-memory-own-tue" data-memory-path="" d="M 460 105 C 520 166 624 246 745 260" />
+          <path data-hf-id="hf-giu4" id="03-memory-own-wed" data-memory-path="" d="M 800 105 C 860 166 964 246 1085 260" />
+          <path data-hf-id="hf-1tle" id="03-memory-own-thu" data-memory-path="ghost" d="M 1140 105 C 1210 166 1326 246 1440 260" />
+          <path data-hf-id="hf-0jc6" id="03-memory-own-fri" data-memory-path="ghost" d="M 1480 105 C 1514 166 1542 250 1564 318" />
+          <rect data-hf-id="hf-f3h6" id="03-memory-end-mon" data-memory-endpoint="" x="380" y="255" width="10" height="10" />
+          <rect data-hf-id="hf-omcy" id="03-memory-end-tue" data-memory-endpoint="" x="740" y="255" width="10" height="10" />
+          <rect data-hf-id="hf-wd7u" id="03-memory-end-wed" data-memory-endpoint="" x="1080" y="255" width="10" height="10" />
+          <rect data-hf-id="hf-b7pf" id="03-memory-end-thu" data-memory-endpoint="" x="1435" y="255" width="10" height="10" />
+          <rect data-hf-id="hf-ci4f" id="03-memory-end-fri" data-memory-endpoint="" x="1559" y="313" width="10" height="10" />
+        </svg>
+
+        <div data-hf-id="hf-5kaw" id="03-memory-day-mon" data-memory-day="">MON</div>
+        <div data-hf-id="hf-on0o" id="03-memory-day-tue" data-memory-day="">TUE</div>
+        <div data-hf-id="hf-dnro" id="03-memory-day-wed" data-memory-day="">WED</div>
+        <div data-hf-id="hf-en2s" id="03-memory-day-thu" data-memory-day="">THU</div>
+        <div data-hf-id="hf-hk28" id="03-memory-day-fri" data-memory-day="">FRI</div>
+
+        <div data-hf-id="hf-jfq3" id="03-memory-mon" data-memory-clock="shock">
+          <svg data-hf-id="hf-v8h0" viewBox="0 0 100 100" aria-hidden="true">
+            <circle data-hf-id="hf-yent" cx="50" cy="50" r="43" />
+            <circle data-hf-id="hf-ub4c" cx="50" cy="50" r="3" fill="#11110f" />
+            <line data-hf-id="hf-t4er" x1="50" y1="50" x2="50" y2="24" />
+            <line data-hf-id="hf-98wn" x1="50" y1="50" x2="70" y2="57" />
+          </svg>
+          <span data-hf-id="hf-j2ml">VALID</span>
+        </div>
+
+        <div data-hf-id="hf-bdl8" id="03-memory-tue" data-memory-clock="tradable">
+          <svg data-hf-id="hf-e6vw" viewBox="0 0 100 100" aria-hidden="true">
+            <circle data-hf-id="hf-p1fx" cx="50" cy="50" r="43" />
+            <circle data-hf-id="hf-yqsk" cx="50" cy="50" r="3" fill="#f3ad00" />
+            <line data-hf-id="hf-furr" x1="50" y1="50" x2="39" y2="27" />
+            <line data-hf-id="hf-i93u" x1="50" y1="50" x2="68" y2="42" />
+          </svg>
+          <span data-hf-id="hf-bih1">TRADE</span>
+        </div>
+
+        <div data-hf-id="hf-4o4e" id="03-memory-wed" data-memory-clock="tradable">
+          <svg data-hf-id="hf-czyt" viewBox="0 0 100 100" aria-hidden="true">
+            <circle data-hf-id="hf-uac4" cx="50" cy="50" r="43" />
+            <circle data-hf-id="hf-3sgs" cx="50" cy="50" r="3" fill="#f3ad00" />
+            <line data-hf-id="hf-avg1" x1="50" y1="50" x2="33" y2="34" />
+            <line data-hf-id="hf-8f66" x1="50" y1="50" x2="61" y2="69" />
+          </svg>
+          <span data-hf-id="hf-3ic9">TRADE</span>
+        </div>
+
+        <div data-hf-id="hf-6xpi" id="03-memory-thu" data-memory-clock="skipped">
+          <svg data-hf-id="hf-de9u" viewBox="0 0 100 100" aria-hidden="true">
+            <circle data-hf-id="hf-pu1z" cx="50" cy="50" r="43" />
+            <circle data-hf-id="hf-z3dw" cx="50" cy="50" r="3" fill="#11110f" />
+            <line data-hf-id="hf-yfvb" x1="50" y1="50" x2="66" y2="30" />
+            <line data-hf-id="hf-7oui" x1="50" y1="50" x2="42" y2="68" />
+          </svg>
+          <span data-hf-id="hf-az5a">SKIP</span>
+        </div>
+
+        <div data-hf-id="hf-02u2" id="03-memory-fri" data-memory-clock="skipped">
+          <svg data-hf-id="hf-fdsz" viewBox="0 0 100 100" aria-hidden="true">
+            <circle data-hf-id="hf-v2y6" cx="50" cy="50" r="43" />
+            <circle data-hf-id="hf-xwgt" cx="50" cy="50" r="3" fill="#11110f" />
+            <line data-hf-id="hf-5mx8" x1="50" y1="50" x2="50" y2="23" />
+            <line data-hf-id="hf-h7mt" x1="50" y1="50" x2="31" y2="58" />
+          </svg>
+          <span data-hf-id="hf-wsxe">SKIP</span>
+        </div>
+
+        <div data-hf-id="hf-70rv" id="03-memory-ownership-label">virtual ownership</div>
+      </div>
+
+      <div data-hf-id="hf-19w3" id="03-memory-blocker">
+        <div data-hf-id="hf-5unr" id="03-memory-blocker-mark"></div>
+        <span data-hf-id="hf-w4wc">NEXT SETUP / BLOCKED</span>
+      </div>
+
+      <div data-hf-id="hf-oxm4" id="03-memory-cooldown-band"></div>
+      <div data-hf-id="hf-1ktr" id="03-memory-cooldown-rule"></div>
+      <div data-hf-id="hf-jt4f" id="03-memory-cooldown-label">cooldown memory</div>
+      <div data-hf-id="hf-wt6e" id="03-memory-cooldown-status">OWNERSHIP STILL OPEN</div>
+
+      <div data-hf-id="hf-3kja" id="03-memory-state">
+        <div data-hf-id="hf-fypk" id="03-memory-state-index">THU</div>
+        <div data-hf-id="hf-brsk" id="03-memory-state-copy">
+          <strong data-hf-id="hf-at8m">STATE HELD</strong>
+          <span data-hf-id="hf-25pk">REJECTED / REMEMBERED</span>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-0lbw" id="03-memory-page">03 / 06</div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.querySelector('[data-composition-id="03-memory"]');
+      const gsap = window.gsap;
+      if (!root || !gsap) return;
+
+      const get = (id) => document.getElementById(id);
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["03-memory"] = tl;
+
+      const title = get("03-memory-title");
+      const cursor = get("03-memory-cursor");
+      const titleStates = [
+        { t: 0.0, text: "MARKET" },
+        { t: 0.38, text: "MARKET MEM" },
+        { t: 0.72, text: "MARKET MEMRY" },
+        { t: 1.02, text: "MARKET MEM" },
+        { t: 1.34, text: "MARKET MEMORY" },
+        { t: 2.16, text: "MARKET MEMORY ✓" },
+        { t: 10.1, text: "SKIPPED" },
+        { t: 10.54, text: "SKIPPED ≠" },
+        { t: 10.96, text: "SKIPPED ≠ FORGOT" },
+        { t: 11.24, text: "SKIPPED ≠ FORGO" },
+        { t: 11.56, text: "SKIPPED ≠ FORGOTTEN" },
+      ];
+      const textAt = (time) => {
+        for (let index = titleStates.length - 1; index >= 0; index -= 1) {
+          if (time >= titleStates[index].t) return titleStates[index].text;
+        }
+        return "";
+      };
+
+      const titleDriver = { t: 0 };
+      const blinkDriver = { p: 0 };
+      title.textContent = textAt(0);
+
+      const drawPath = (id, start, duration) => {
+        const path = get(id);
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = `${length}`;
+        path.style.strokeDashoffset = `${length}`;
+        tl.to(path, { strokeDashoffset: 0, duration, ease: "power2.out" }, start);
+      };
+
+      [
+        "03-memory-end-mon",
+        "03-memory-end-tue",
+        "03-memory-end-wed",
+        "03-memory-end-thu",
+        "03-memory-end-fri",
+      ].forEach((id) => gsap.set(get(id), { opacity: 0, scale: 0.4, transformOrigin: "center" }));
+
+      tl.fromTo(get("03-memory-stage"), { x: -12 }, { x: 0, duration: 13, ease: "none" }, 0);
+      tl.fromTo(get("03-memory-kicker"), { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.08);
+      tl.fromTo(get("03-memory-title-wrap"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.48, ease: "power2.out" }, 0.06);
+      tl.to(titleDriver, {
+        t: 13,
+        duration: 13,
+        ease: "none",
+        onUpdate: () => {
+          title.textContent = textAt(titleDriver.t);
+        },
+      }, 0);
+      tl.to(blinkDriver, {
+        p: Math.PI * 38,
+        duration: 13,
+        ease: "none",
+        onUpdate: () => {
+          cursor.style.opacity = titleDriver.t < 11.9 && Math.sin(blinkDriver.p) > 0 ? "1" : "0";
+        },
+      }, 0);
+
+      drawPath("03-memory-rail-path", 0.18, 1.34);
+      tl.fromTo(get("03-memory-rail-label"), { opacity: 0, y: 20 }, { opacity: 0.74, y: 0, duration: 0.5, ease: "power1.out" }, 0.45);
+
+      tl.fromTo(get("03-memory-day-mon"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 0.64);
+      tl.fromTo(get("03-memory-mon"), { opacity: 0, scale: 0.38, rotation: -26 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.66, ease: "back.out(1.35)" }, 0.88);
+      drawPath("03-memory-own-mon", 1.55, 0.74);
+      tl.to(get("03-memory-end-mon"), { opacity: 1, scale: 1, duration: 0.26, ease: "power2.out" }, 2.12);
+      tl.fromTo(get("03-memory-ownership-label"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.44, ease: "power2.out" }, 2.42);
+
+      tl.fromTo(get("03-memory-day-tue"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 3.2);
+      tl.fromTo(get("03-memory-tue"), { opacity: 0, scale: 0.42, rotation: -18 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.58, ease: "back.out(1.25)" }, 3.38);
+      drawPath("03-memory-own-tue", 3.84, 0.72);
+      tl.to(get("03-memory-end-tue"), { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, 4.4);
+
+      tl.fromTo(get("03-memory-day-wed"), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 4.72);
+      tl.fromTo(get("03-memory-wed"), { opacity: 0, scale: 0.42, rotation: -18 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.58, ease: "back.out(1.25)" }, 4.9);
+      drawPath("03-memory-own-wed", 5.36, 0.72);
+      tl.to(get("03-memory-end-wed"), { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, 5.92);
+
+      tl.fromTo(get("03-memory-cooldown-band"), { opacity: 0, scaleX: 0, transformOrigin: "left center" }, { opacity: 1, scaleX: 1, duration: 1.04, ease: "power2.out" }, 6.58);
+      tl.fromTo(get("03-memory-cooldown-rule"), { opacity: 0, scaleX: 0, transformOrigin: "left center" }, { opacity: 1, scaleX: 1, duration: 1.0, ease: "power2.out" }, 6.72);
+      tl.fromTo(get("03-memory-cooldown-label"), { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.4, ease: "power2.out" }, 7.05);
+
+      tl.fromTo(get("03-memory-day-thu"), { opacity: 0, y: 10 }, { opacity: 0.46, y: 0, duration: 0.3, ease: "power2.out" }, 6.76);
+      tl.fromTo(get("03-memory-thu"), { opacity: 0, scale: 0.42, rotation: -18 }, { opacity: 0.42, scale: 1, rotation: 0, duration: 0.6, ease: "back.out(1.2)" }, 6.92);
+      drawPath("03-memory-own-thu", 7.38, 0.78);
+      tl.to(get("03-memory-end-thu"), { opacity: 0.42, scale: 1, duration: 0.26, ease: "power2.out" }, 8.0);
+
+      tl.fromTo(get("03-memory-day-fri"), { opacity: 0, y: 10 }, { opacity: 0.36, y: 0, duration: 0.3, ease: "power2.out" }, 8.04);
+      tl.fromTo(get("03-memory-fri"), { opacity: 0, scale: 0.42, rotation: -18 }, { opacity: 0.32, scale: 1, rotation: 0, duration: 0.6, ease: "back.out(1.2)" }, 8.2);
+      drawPath("03-memory-own-fri", 8.62, 0.76);
+      tl.to(get("03-memory-end-fri"), { opacity: 0.34, scale: 1, duration: 0.26, ease: "power2.out" }, 9.18);
+
+      tl.fromTo(get("03-memory-blocker"), { opacity: 0, scale: 0.7, y: -14 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "back.out(1.25)" }, 9.1);
+      tl.fromTo(get("03-memory-cooldown-status"), { opacity: 0, x: 18 }, { opacity: 1, x: 0, duration: 0.44, ease: "power2.out" }, 9.54);
+
+      tl.fromTo(get("03-memory-clock-halo"), { opacity: 0, scale: 0.62 }, { opacity: 1, scale: 1, duration: 0.72, ease: "power2.out" }, 10.18);
+      tl.to(get("03-memory-thu"), { opacity: 0.78, scale: 1.06, duration: 0.52, ease: "power2.out" }, 10.34);
+      tl.fromTo(get("03-memory-state"), { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.54, ease: "power2.out" }, 10.72);
+      tl.fromTo(get("03-memory-page"), { opacity: 0, x: 12 }, { opacity: 0.75, x: 0, duration: 0.4, ease: "power1.out" }, 11.78);
+    })();
+  </script>
+</template>

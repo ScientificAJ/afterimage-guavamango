@@ -3,6 +3,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import Any, Protocol
+from uuid import NAMESPACE_URL, UUID, uuid5
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -39,6 +40,12 @@ class StrategyPlugin(Protocol):
 class BaseStrategy(ABC):
     identity: StrategyIdentity
 
+    def candidate_id(self, snapshot: FrozenSnapshot) -> UUID:
+        return uuid5(
+            NAMESPACE_URL,
+            f"afterimage:{self.identity.strategy_id}:{self.identity.strategy_version}:{snapshot.snapshot_id}",
+        )
+
     def freeze(self, raw: MarketFrame) -> FrozenSnapshot:
         eligible = tuple(record for record in raw.records if record.timestamp <= raw.cutoff)
         features = self.build_features(
@@ -48,7 +55,9 @@ class BaseStrategy(ABC):
             "identity": self.identity.model_dump(),
             "cutoff": raw.cutoff,
             "features": features,
-            "records": eligible,
+            "records": [
+                record.model_dump(mode="json", exclude={"received_at"}) for record in eligible
+            ],
         }
         return FrozenSnapshot(
             snapshot_id=canonical_sha256(payload),

@@ -1,0 +1,697 @@
+<template>
+  <style>
+    @font-face { font-family: "DM Sans Variable"; src: url("assets/fonts/dm-sans-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/jetbrains-mono-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    #root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      container-type: size;
+      color: #11110f;
+      font-family: "DM Sans Variable", sans-serif;
+    }
+
+    #root .clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    #root > .clip {
+      z-index: 0;
+      background:
+        radial-gradient(circle at 22% 40%, rgba(243, 173, 0, 0.6) 0%, rgba(255, 214, 108, 0.34) 18%, rgba(255, 241, 194, 0.18) 39%, rgba(255, 255, 255, 0) 64%),
+        radial-gradient(circle at 91% 13%, rgba(255, 101, 95, 0.14) 0%, rgba(255, 101, 95, 0) 30%),
+        #ffffff;
+    }
+
+    #root [id="04-proof-camera"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 5760px;
+      height: 1080px;
+      overflow: visible;
+      transform-origin: 960px 450px;
+      will-change: transform;
+    }
+
+    #root [data-proof-station] {
+      position: absolute;
+      top: 0;
+      width: 1920px;
+      height: 900px;
+      overflow: hidden;
+    }
+
+    #root [id="04-proof-years"] { left: 0; }
+    #root [id="04-proof-neighbors"] { left: 1920px; }
+    #root [id="04-proof-cost"] { left: 3840px; }
+
+    #root [data-proof-kicker] {
+      position: absolute;
+      top: 48px;
+      left: 78px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    #root [data-proof-kicker]::before {
+      width: 72px;
+      height: 1px;
+      background: #11110f;
+      content: "";
+    }
+
+    #root [data-proof-title] {
+      position: absolute;
+      top: 95px;
+      left: 74px;
+      margin: 0;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 96px;
+      font-weight: 600;
+      line-height: 0.9;
+      letter-spacing: -0.018em;
+    }
+
+    #root [id="04-proof-year-summary"] {
+      position: absolute;
+      top: 105px;
+      right: 84px;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #root [id="04-proof-year-summary"] strong {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 92px;
+      font-weight: 700;
+      line-height: 0.84;
+      letter-spacing: -0.025em;
+    }
+
+    #root [id="04-proof-year-summary"] span {
+      font-size: 14px;
+      letter-spacing: 0.12em;
+    }
+
+    #root [id="04-proof-year-rail"] {
+      position: absolute;
+      top: 270px;
+      left: 80px;
+      width: 1760px;
+      height: 420px;
+    }
+
+    #root [id="04-proof-year-svg"] {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    #root [id="04-proof-year-path"] {
+      fill: none;
+      stroke: #11110f;
+      stroke-width: 1;
+      stroke-linecap: round;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #root [data-proof-year] {
+      position: absolute;
+      top: 38px;
+      width: 268px;
+      height: 278px;
+      padding-top: 48px;
+      border-left: 1px solid rgba(17, 17, 15, 0.2);
+    }
+
+    #root [id="04-proof-y2022"] { left: 40px; }
+    #root [id="04-proof-y2023"] { left: 390px; }
+    #root [id="04-proof-y2024"] { left: 740px; }
+    #root [id="04-proof-y2025"] { left: 1090px; }
+    #root [id="04-proof-y2026"] { left: 1440px; }
+
+    #root [data-proof-year] strong,
+    #root [data-proof-year] span {
+      display: block;
+      margin-left: 22px;
+    }
+
+    #root [data-proof-year] strong {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 84px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.018em;
+    }
+
+    #root [data-proof-year] span {
+      margin-top: 84px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+    }
+
+    #root [data-proof-year] i {
+      position: absolute;
+      top: 0;
+      left: 21px;
+      display: grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      border: 1px solid #11110f;
+      background: #163cff;
+      color: #ffffff;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      font-style: normal;
+    }
+
+    #root [id="04-proof-year-foot"] {
+      position: absolute;
+      top: 742px;
+      left: 80px;
+      width: 1760px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(17, 17, 15, 0.22);
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    #root [id="04-proof-grid"] {
+      position: absolute;
+      top: 228px;
+      left: 90px;
+      display: grid;
+      grid-template-columns: repeat(12, 54px);
+      grid-template-rows: repeat(9, 42px);
+      gap: 8px;
+      width: 736px;
+      height: 442px;
+    }
+
+    #root [data-proof-cell] {
+      width: 54px;
+      height: 42px;
+      border: 1px solid rgba(17, 17, 15, 0.22);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    #root [id="04-proof-grid-axis-x"] {
+      position: absolute;
+      top: 688px;
+      left: 90px;
+      width: 736px;
+      height: 1px;
+      background: #11110f;
+    }
+
+    #root [id="04-proof-grid-axis-y"] {
+      position: absolute;
+      top: 228px;
+      left: 72px;
+      width: 1px;
+      height: 442px;
+      background: #11110f;
+    }
+
+    #root [id="04-proof-neighbor-stat"] {
+      position: absolute;
+      top: 244px;
+      left: 960px;
+      width: 770px;
+    }
+
+    #root [id="04-proof-neighbor-number-wrap"] {
+      display: flex;
+      align-items: baseline;
+      min-width: 700px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    #root [id="04-proof-neighbor-number"] {
+      display: inline-block;
+      min-width: 248px;
+      color: #163cff;
+      font-size: 220px;
+      font-weight: 700;
+      line-height: 0.8;
+      letter-spacing: -0.045em;
+      transform-origin: left bottom;
+    }
+
+    #root [id="04-proof-neighbor-total"] {
+      margin-left: 20px;
+      font-size: 84px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    #root [id="04-proof-neighbor-label"] {
+      margin-top: 38px;
+      padding-top: 22px;
+      border-top: 1px solid #11110f;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    #root [id="04-proof-neighbor-foot"] {
+      position: absolute;
+      top: 750px;
+      left: 960px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    #root [id="04-proof-dial"] {
+      position: absolute;
+      top: 206px;
+      left: 80px;
+      width: 620px;
+      height: 500px;
+    }
+
+    #root [id="04-proof-dial-bloom"] {
+      position: absolute;
+      top: 12px;
+      left: 28px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(243, 173, 0, 0.55) 0%, rgba(255, 214, 108, 0.26) 38%, rgba(255, 255, 255, 0) 72%);
+    }
+
+    #root [id="04-proof-dial-svg"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 460px;
+      height: 460px;
+      overflow: visible;
+    }
+
+    #root [id="04-proof-dial-track"],
+    #root [id="04-proof-dial-progress"],
+    #root [id="04-proof-dial-pointer"] {
+      fill: none;
+      stroke: #11110f;
+      stroke-width: 1;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #root [id="04-proof-dial-progress"] {
+      stroke: #163cff;
+    }
+
+    #root [id="04-proof-dial-hub"] {
+      fill: #f3ad00;
+      stroke: #11110f;
+      stroke-width: 1;
+    }
+
+    #root [id="04-proof-cost-value"] {
+      position: absolute;
+      top: 142px;
+      left: 76px;
+      width: 308px;
+      text-align: center;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 102px;
+      font-weight: 700;
+      line-height: 0.86;
+      letter-spacing: -0.025em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #root [id="04-proof-cost-caption"] {
+      position: absolute;
+      top: 270px;
+      left: 112px;
+      width: 236px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    #root [id="04-proof-pf-panel"] {
+      position: absolute;
+      top: 222px;
+      left: 790px;
+      width: 940px;
+      height: 350px;
+      background: rgba(22, 60, 255, 0.09);
+    }
+
+    #root [id="04-proof-cost-proof-field"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0.6;
+      background-image:
+        linear-gradient(to right, rgba(22, 60, 255, 0.18) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(22, 60, 255, 0.18) 1px, transparent 1px);
+      background-size: 8.333% 11.111%;
+    }
+
+    #root [id="04-proof-pf-content"] {
+      position: absolute;
+      top: 70px;
+      left: 74px;
+      right: 74px;
+    }
+
+    #root [id="04-proof-pf-label"] {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    #root [id="04-proof-pf-value"] {
+      display: inline-block;
+      min-width: 530px;
+      margin-top: 14px;
+      color: #163cff;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 158px;
+      font-weight: 700;
+      line-height: 0.82;
+      letter-spacing: -0.04em;
+      font-variant-numeric: tabular-nums;
+      transform-origin: left bottom;
+    }
+
+    #root [id="04-proof-pf-rule"] {
+      position: absolute;
+      left: 74px;
+      right: 74px;
+      bottom: 46px;
+      height: 1px;
+      background: #11110f;
+      transform-origin: left center;
+    }
+
+    #root [id="04-proof-metrics"] {
+      position: absolute;
+      top: 606px;
+      left: 650px;
+      display: grid;
+      grid-template-columns: repeat(3, 340px);
+      width: 1020px;
+    }
+
+    #root [data-proof-metric] {
+      min-height: 112px;
+      padding: 18px 30px 0 22px;
+      border-top: 1px solid #11110f;
+      border-left: 1px solid rgba(17, 17, 15, 0.2);
+    }
+
+    #root [data-proof-metric] strong,
+    #root [data-proof-metric] span {
+      display: block;
+    }
+
+    #root [data-proof-metric] strong {
+      color: #163cff;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 58px;
+      font-weight: 600;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #root [data-proof-metric] span {
+      margin-top: 12px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 11px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    #root [id="04-proof-real-crop"] {
+      position: absolute;
+      top: 760px;
+      left: 78px;
+      width: 1764px;
+      height: 118px;
+      object-fit: cover;
+      object-position: center bottom;
+      opacity: 0.34;
+      border-top: 1px solid rgba(17, 17, 15, 0.3);
+      filter: saturate(0.84) contrast(0.94);
+    }
+
+    #root [id="04-proof-crop-label"] {
+      position: absolute;
+      top: 776px;
+      left: 98px;
+      padding: 7px 10px 6px;
+      background: rgba(255, 255, 255, 0.86);
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #root [data-proof-page] {
+      position: absolute;
+      top: 854px;
+      right: 78px;
+      font-family: "JetBrains Mono Variable", monospace;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      opacity: 0.75;
+    }
+  </style>
+
+  <div data-hf-id="hf-4bwo" id="root" data-composition-id="04-proof" data-width="1920" data-height="1080" data-duration="21.348">
+    <div data-hf-id="hf-uu7a" class="clip" data-start="0" data-duration="17" data-track-index="0"></div>
+
+    <div data-hf-id="hf-4zgk" id="04-proof-camera">
+      <section data-hf-id="hf-g8dk" id="04-proof-years" data-proof-station="">
+        <div data-hf-id="hf-0mm8" data-proof-kicker="">GuavaMango / robustness</div>
+        <h2 data-hf-id="hf-5uru" data-proof-title="">ANNUAL FOLDS</h2>
+        <div data-hf-id="hf-e2jh" id="04-proof-year-summary"><strong data-hf-id="hf-rsc7">5 / 5</strong><span data-hf-id="hf-i7v3">NET POSITIVE</span></div>
+
+        <div data-hf-id="hf-6g73" id="04-proof-year-rail">
+          <svg data-hf-id="hf-tolg" id="04-proof-year-svg" viewBox="0 0 1760 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path data-hf-id="hf-qdlp" id="04-proof-year-path" d="M 60 52 L 1710 52" />
+          </svg>
+          <div data-hf-id="hf-pcwg" id="04-proof-y2022" data-proof-year=""><i data-hf-id="hf-5511">+</i><strong data-hf-id="hf-h2pg">2022</strong><span data-hf-id="hf-wp52">POSITIVE</span></div>
+          <div data-hf-id="hf-q4k9" id="04-proof-y2023" data-proof-year=""><i data-hf-id="hf-9hpl">+</i><strong data-hf-id="hf-goef">2023</strong><span data-hf-id="hf-xbnu">POSITIVE</span></div>
+          <div data-hf-id="hf-hgoe" id="04-proof-y2024" data-proof-year=""><i data-hf-id="hf-aomo">+</i><strong data-hf-id="hf-hvbi">2024</strong><span data-hf-id="hf-xpyv">POSITIVE</span></div>
+          <div data-hf-id="hf-lesf" id="04-proof-y2025" data-proof-year=""><i data-hf-id="hf-aabn">+</i><strong data-hf-id="hf-hh0h">2025</strong><span data-hf-id="hf-y49w">POSITIVE</span></div>
+          <div data-hf-id="hf-cqwk" id="04-proof-y2026" data-proof-year=""><i data-hf-id="hf-8asi">+</i><strong data-hf-id="hf-inxk">2026</strong><span data-hf-id="hf-yikx">POSITIVE</span></div>
+        </div>
+
+        <div data-hf-id="hf-arq2" id="04-proof-year-foot">No single year carries the result</div>
+        <div data-hf-id="hf-eciw" data-proof-page="">04A</div>
+      </section>
+
+      <section data-hf-id="hf-1npj" id="04-proof-neighbors" data-proof-station="">
+        <div data-hf-id="hf-fnkh" data-proof-kicker="">GuavaMango / parameter field</div>
+        <h2 data-hf-id="hf-ebzd" data-proof-title="">NEIGHBORHOOD</h2>
+        <div data-hf-id="hf-lgxp" id="04-proof-grid"></div>
+        <div data-hf-id="hf-35he" id="04-proof-grid-axis-x"></div>
+        <div data-hf-id="hf-73lf" id="04-proof-grid-axis-y"></div>
+
+        <div data-hf-id="hf-mjdy" id="04-proof-neighbor-stat">
+          <div data-hf-id="hf-ip08" id="04-proof-neighbor-number-wrap">
+            <span data-hf-id="hf-ep6o" id="04-proof-neighbor-number">0</span>
+            <span data-hf-id="hf-ovcr" id="04-proof-neighbor-total">/ 108</span>
+          </div>
+          <div data-hf-id="hf-dr4w" id="04-proof-neighbor-label">NET POSITIVE</div>
+        </div>
+        <div data-hf-id="hf-sjz3" id="04-proof-neighbor-foot">12 × 9 nearby configurations</div>
+        <div data-hf-id="hf-d5lt" data-proof-page="">04B</div>
+      </section>
+
+      <section data-hf-id="hf-ajm5" id="04-proof-cost" data-proof-station="">
+        <div data-hf-id="hf-b5u1" data-proof-kicker="">GuavaMango / cost stress</div>
+        <h2 data-hf-id="hf-a9l9" data-proof-title="">EDGE, STRESSED</h2>
+
+        <div data-hf-id="hf-h7ez" id="04-proof-dial">
+          <div data-hf-id="hf-hld9" id="04-proof-dial-bloom"></div>
+          <svg data-hf-id="hf-cysj" id="04-proof-dial-svg" viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle data-hf-id="hf-iiq4" id="04-proof-dial-track" cx="230" cy="230" r="174" />
+            <circle data-hf-id="hf-5rvj" id="04-proof-dial-progress" cx="230" cy="230" r="174" transform="rotate(-90 230 230)" />
+            <line data-hf-id="hf-e1b9" id="04-proof-dial-pointer" x1="230" y1="230" x2="230" y2="82" />
+            <circle data-hf-id="hf-apys" id="04-proof-dial-hub" cx="230" cy="230" r="8" />
+          </svg>
+          <div data-hf-id="hf-009o" id="04-proof-cost-value">1.0×</div>
+          <div data-hf-id="hf-uojz" id="04-proof-cost-caption">modeled costs</div>
+        </div>
+
+        <div data-hf-id="hf-vzsa" id="04-proof-pf-panel">
+          <div data-hf-id="hf-bf14" id="04-proof-cost-proof-field"></div>
+          <div data-hf-id="hf-jbjr" id="04-proof-pf-content">
+            <div data-hf-id="hf-skv5" id="04-proof-pf-label" data-layout-allow-overlap="">Profit factor holds</div>
+            <div data-hf-id="hf-7crb" id="04-proof-pf-value">0.000</div>
+          </div>
+          <div data-hf-id="hf-w502" id="04-proof-pf-rule"></div>
+        </div>
+
+        <div data-hf-id="hf-uvb8" id="04-proof-metrics">
+          <div data-hf-id="hf-vr0y" data-proof-metric=""><strong data-hf-id="hf-6x1c">+0.506R</strong><span data-hf-id="hf-wxac">Expectancy / trade</span></div>
+          <div data-hf-id="hf-npau" data-proof-metric=""><strong data-hf-id="hf-fc4b">4.746R</strong><span data-hf-id="hf-q6pp">Maximum drawdown</span></div>
+          <div data-hf-id="hf-o3lv" data-proof-metric=""><strong data-hf-id="hf-i6ra">8</strong><span data-hf-id="hf-r6pv">Profitable underlyings</span></div>
+        </div>
+
+        <img data-hf-id="hf-xod8" id="04-proof-real-crop" src="assets/scroll-100.png" alt="GuavaMango research evidence in the live product dashboard">
+        <div data-hf-id="hf-u912" id="04-proof-crop-label">Real product evidence</div>
+        <div data-hf-id="hf-qh8u" data-proof-page="">04 / 06</div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.querySelector('[data-composition-id="04-proof"]');
+      const gsap = window.gsap;
+      if (!root || !gsap) return;
+
+      const get = (id) => document.getElementById(id);
+      const grid = get("04-proof-grid");
+      for (let index = 0; index < 108; index += 1) {
+        const cell = document.createElement("div");
+        cell.setAttribute("data-proof-cell", String(index + 1));
+        grid.appendChild(cell);
+      }
+
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["04-proof"] = tl;
+
+      const camera = get("04-proof-camera");
+      const phase = { x: 0, scale: 0.96 };
+      const drift = { p: 0 };
+      const writeCamera = () => {
+        const dx = Math.sin(drift.p) * 4;
+        const dy = Math.sin(drift.p * 1.31) * 2;
+        camera.style.transform = `translate3d(${phase.x + dx}px, ${dy}px, 0) scale(${phase.scale})`;
+      };
+      writeCamera();
+
+      const yearPath = get("04-proof-year-path");
+      const yearLength = yearPath.getTotalLength();
+      yearPath.style.strokeDasharray = `${yearLength}`;
+      yearPath.style.strokeDashoffset = `${yearLength}`;
+
+      const dialProgress = get("04-proof-dial-progress");
+      const dialLength = dialProgress.getTotalLength();
+      dialProgress.style.strokeDasharray = `${dialLength}`;
+      dialProgress.style.strokeDashoffset = `${dialLength * 0.82}`;
+      gsap.set(get("04-proof-dial-pointer"), { rotation: -112, transformOrigin: "230px 230px" });
+
+      tl.to(drift, { p: Math.PI * 4, duration: 17, ease: "none", onUpdate: writeCamera }, 0);
+      tl.to(phase, { scale: 1, duration: 1.05, ease: "power2.out" }, 0.18);
+      tl.to(phase, { x: -1920, scale: 1.055, duration: 0.92, ease: "power3.inOut" }, 3.72);
+      tl.to(phase, { scale: 1, duration: 0.42, ease: "power2.out" }, 4.64);
+      tl.to(phase, { x: -3840, scale: 1.06, duration: 1, ease: "power3.inOut" }, 8.02);
+      tl.to(phase, { scale: 1, duration: 0.44, ease: "power2.out" }, 9.02);
+      tl.to(phase, { x: -3832, scale: 0.955, duration: 1.2, ease: "power2.inOut" }, 12.72);
+
+      tl.fromTo(get("04-proof-years").querySelector("[data-proof-kicker]"), { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.44, ease: "power2.out" }, 0.04);
+      tl.fromTo(get("04-proof-years").querySelector("[data-proof-title]"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.52, ease: "power2.out" }, 0.08);
+      tl.fromTo(get("04-proof-year-summary"), { opacity: 0, scale: 0.72 }, { opacity: 1, scale: 1, duration: 0.58, ease: "power2.out" }, 0.12);
+      tl.to(yearPath, { strokeDashoffset: 0, duration: 1.42, ease: "power2.out" }, 0.18);
+
+      const yearIds = ["04-proof-y2022", "04-proof-y2023", "04-proof-y2024", "04-proof-y2025", "04-proof-y2026"];
+      yearIds.forEach((id, index) => {
+        const start = 0.34 + index * 0.68;
+        const year = get(id);
+        tl.fromTo(year, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.48, ease: "power2.out" }, start);
+        tl.fromTo(year.querySelector("i"), { opacity: 0, scale: 0.35 }, { opacity: 1, scale: 1, duration: 0.34, ease: "back.out(1.35)" }, start + 0.34);
+      });
+      tl.fromTo(get("04-proof-year-foot"), { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: 0.45, ease: "power2.out" }, 3.32);
+
+      const neighborStation = get("04-proof-neighbors");
+      tl.fromTo(neighborStation.querySelector("[data-proof-kicker]"), { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 4.26);
+      tl.fromTo(neighborStation.querySelector("[data-proof-title]"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.46, ease: "power2.out" }, 4.34);
+      tl.fromTo(get("04-proof-grid-axis-x"), { opacity: 0, scaleX: 0, transformOrigin: "left center" }, { opacity: 1, scaleX: 1, duration: 0.62, ease: "power2.out" }, 4.48);
+      tl.fromTo(get("04-proof-grid-axis-y"), { opacity: 0, scaleY: 0, transformOrigin: "center top" }, { opacity: 1, scaleY: 1, duration: 0.62, ease: "power2.out" }, 4.48);
+      tl.fromTo(grid.children, { opacity: 0.08, scale: 0.65 }, { opacity: 1, scale: 1, backgroundColor: "#163cff", duration: 0.18, stagger: 0.017, ease: "power2.out" }, 4.58);
+
+      const neighborCount = { value: 0 };
+      const neighborNumber = get("04-proof-neighbor-number");
+      tl.to(neighborCount, {
+        value: 108,
+        duration: 2.16,
+        ease: "power2.out",
+        onUpdate: () => {
+          neighborNumber.textContent = String(Math.round(neighborCount.value));
+        },
+      }, 4.62);
+      tl.fromTo(neighborNumber, { opacity: 0, scale: 0.58 }, { opacity: 1, scale: 1, duration: 2.16, ease: "power2.out" }, 4.62);
+      tl.fromTo(get("04-proof-neighbor-total"), { opacity: 0, x: 22 }, { opacity: 1, x: 0, duration: 0.46, ease: "power2.out" }, 6.4);
+      tl.fromTo(get("04-proof-neighbor-label"), { opacity: 0, scaleX: 0.82, transformOrigin: "left center" }, { opacity: 1, scaleX: 1, duration: 0.46, ease: "power2.out" }, 6.76);
+      tl.fromTo(get("04-proof-neighbor-foot"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.42, ease: "power2.out" }, 7.42);
+
+      const costStation = get("04-proof-cost");
+      tl.fromTo(costStation.querySelector("[data-proof-kicker]"), { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 8.54);
+      tl.fromTo(costStation.querySelector("[data-proof-title]"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.46, ease: "power2.out" }, 8.62);
+      tl.fromTo(get("04-proof-dial"), { opacity: 0, scale: 0.78 }, { opacity: 1, scale: 1, duration: 0.62, ease: "power2.out" }, 8.76);
+      tl.fromTo(get("04-proof-pf-panel"), { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.58, ease: "power2.out" }, 8.9);
+      tl.fromTo(get("04-proof-pf-rule"), { scaleX: 0 }, { scaleX: 1, duration: 1.9, ease: "power2.out" }, 9.08);
+
+      const costCount = { value: 1 };
+      const costValue = get("04-proof-cost-value");
+      tl.to(costCount, {
+        value: 1.5,
+        duration: 2.12,
+        ease: "power2.out",
+        onUpdate: () => {
+          costValue.textContent = `${costCount.value.toFixed(1)}×`;
+        },
+      }, 9.16);
+      tl.to(get("04-proof-dial-pointer"), { rotation: 112, duration: 2.12, ease: "power2.out" }, 9.16);
+      tl.to(dialProgress, { strokeDashoffset: dialLength * 0.28, duration: 2.12, ease: "power2.out" }, 9.16);
+
+      const pfCount = { value: 1.7 };
+      const pfValue = get("04-proof-pf-value");
+      tl.to(pfCount, {
+        value: 2.222,
+        duration: 2.08,
+        ease: "power2.out",
+        onUpdate: () => {
+          pfValue.textContent = pfCount.value.toFixed(3);
+        },
+      }, 9.42);
+      tl.fromTo(pfValue, { opacity: 0, scale: 0.64 }, { opacity: 1, scale: 1, duration: 2.08, ease: "power2.out" }, 9.42);
+
+      const metrics = Array.from(get("04-proof-metrics").children);
+      metrics.forEach((metric, index) => {
+        tl.fromTo(metric, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.52, ease: "power2.out" }, 12.82 + index * 0.56);
+      });
+      tl.fromTo(get("04-proof-real-crop"), { opacity: 0, y: 18 }, { opacity: 0.34, y: 0, duration: 0.72, ease: "power2.out" }, 14.26);
+      tl.fromTo(get("04-proof-crop-label"), { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.42, ease: "power2.out" }, 14.72);
+      tl.fromTo(costStation.querySelector("[data-proof-page]"), { opacity: 0, x: 12 }, { opacity: 0.75, x: 0, duration: 0.4, ease: "power1.out" }, 15.54);
+    })();
+  </script>
+</template>

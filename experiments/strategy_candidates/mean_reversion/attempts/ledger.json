@@ -1,0 +1,165 @@
+{
+  "attempts": [
+    {
+      "artifacts": {
+        "order_dry_run.json": "920a1ba8386a9ad8697b67b3ad27c65176eee50d6e7b38cb0642361ad0e96644",
+        "report.md": "f2f3b5f3a620357fd58c8da8c4a392cd8e0511e62bb9366ee5469a6f5e0fae50",
+        "results.json": "afa31ef5b1b48911f10a2d89e1cd286030cd8de5a4e59a9ed12a3df1f167331c"
+      },
+      "attempt_id": "001_failed_auction",
+      "date_partition": "2025-01-02 through 2025-04-30",
+      "decision": "reject; negative OOS and no explicit 3:1 bracket",
+      "family": "failed-auction mean reversion",
+      "frozen_at": "2026-09-04T10:45:39.659139+00:00",
+      "meets_profit_factor_gte_3": false,
+      "meets_target_stop_gte_3": false,
+      "operational_target_stop": null,
+      "rolling_oos_profit_factor": "0.2340585146286571642910727682",
+      "status": "failed"
+    },
+    {
+      "artifacts": {
+        "order_dry_run.json": "168ca42d9c0311bd2044a70a4556cdf5db82ecba0bbece3a7d66e3c777a7ecf4",
+        "report.md": "73c8244514909cb6c1c6baa058cf1ae593e6cf582fe57d0d94b3865d39215fd6",
+        "results.json": "0accbb012d61126b88d6a772f8f5287ec9ac0c757649b81a2a3be61c37edb1a4"
+      },
+      "attempt_id": "002_cross_index_vwap_trend",
+      "date_partition": "2025-05-01 through 2025-08-29",
+      "decision": "reject; negative OOS, PF/expectancy/sample/underlying floors missed",
+      "family": "cross-index VWAP trend persistence",
+      "frozen_at": "2026-09-04T10:53:13.208309+00:00",
+      "meets_expectancy_gte_half_r": false,
+      "meets_multiple_underlyings": false,
+      "meets_oos_sample_gte_40": false,
+      "meets_profit_factor_gte_3": false,
+      "meets_target_stop_gte_3": true,
+      "operational_target_stop": "3.0",
+      "rolling_oos_profit_factor": "0.1198428290766208251473477407",
+      "status": "failed"
+    },
+    {
+      "artifacts": {
+        "order_dry_run.json": "0c16cfaa88d60e48a1c6b48b5a99b6edbef4f7b3668389fb322cc38a416ff657",
+        "report.md": "cb6186ce91bdb83c477ddd921a1fe57ad67d4260f360b82dc7ec739ecff959e2",
+        "results.json": "808591c6a13a6ea0b39232819123066aecb5217975e7ec7ef04eafad38787ade"
+      },
+      "attempt_id": "003_multi_underlying_gap_expansion",
+      "closed_oos_trades": 0,
+      "date_partition": "2025-09-02 through 2025-12-31",
+      "decision": "reject; sparse signal/inner-selection coverage and negative neighbor outcomes",
+      "family": "multi-underlying compression-to-gap expansion",
+      "frozen_at": "2026-09-04T10:59:11.867570+00:00",
+      "operational_target_stop": "3.0",
+      "rolling_oos_profit_factor": null,
+      "status": "failed"
+    },
+    {
+      "artifacts": {
+        "order_dry_run.json": "5dd5d2fe850e3af158cbe48578101907efd1df3bbee6c2396f0fd7cf913338ab",
+        "report.md": "ce6bd6ec49a0f2d08206383a00344e33214cc15404394e471f1fdebe4b7d983c",
+        "results.json": "b2682d304218941d83fc2c65c105e12783417a9c5414470f54cb9b7d7b7bb347"
+      },
+      "attempt_id": "004_multi_day_cross_index_trend",
+      "closed_oos_trades": 95,
+      "date_partition": "2026-01-02 through 2026-04-30",
+      "decision": "reject; negative OOS, PF/expectancy/drawdown/stability/cost floors missed",
+      "expectancy_r": "-0.5310147368421052631578947368",
+      "family": "multi-day cross-index trend carry",
+      "frozen_at": "2026-09-04T11:05:49.575511+00:00",
+      "operational_target_stop": "3.0",
+      "rolling_oos_profit_factor": "0.6872091277585948055847470350",
+      "status": "failed"
+    },
+    {
+      "artifacts": {
+        "order_dry_run.json": "475f93b552ceb03428a428d2f38176cfd9f5c59dde94973b1a578b9f8c26a6bf",
+        "report.md": "7d43fdbd1be97b79234b80506146ce284796d8f460e834c498a50102d771216a",
+        "results.json": "52323ec4d3e59ecc59b19c7ae1393211eda706066a6d13b0fc8856e7cdebd7a1"
+      },
+      "attempt_id": "005_cross_index_underlying_comparison",
+      "closed_oos_trades": 34,
+      "date_partition": "2025-05-01 through 2025-08-29 pseudo-OOS",
+      "decision": "reject despite positive P&L; PF/expectancy/drawdown/fold-month-neighbor floors missed",
+      "expectancy_r": "0.1114235294117647058823529412",
+      "family": "cross-index VWAP trend direct-ETF comparison",
+      "frozen_at": "2026-09-04T11:11:24.442540+00:00",
+      "net_pnl": "444.05",
+      "operational_target_stop": "3.0",
+      "rolling_oos_profit_factor": "1.308584493290432873056796781",
+      "status": "failed"
+    },
+    {
+      "artifacts": {
+        "order_dry_run.json": "197c51007d5edadaf7398a52fcd3311ed40489f1c6aa84bba8fefdbd42ff3473",
+        "report.md": "709c351d4b708d65901572bcdafca2dc0d844f7fda217a64841797205d662f9a",
+        "results.json": "5961e8828d5b159aeb08dc69b8f65ea661d7cc19aad8bfee4f9290a98171bf53"
+      },
+      "attempt_id": "006_multi_day_trend_direct_etf",
+      "closed_oos_trades": 118,
+      "date_partition": "2026-01-02 through 2026-04-30 pseudo-OOS",
+      "decision": "reject despite positive P&L/cost/neighbors; PF/expectancy/drawdown/fold-month floors missed",
+      "expectancy_r": "0.01574830508474576271186440678",
+      "family": "multi-day cross-index trend direct-ETF comparison",
+      "frozen_at": "2026-09-04T11:13:16.841870+00:00",
+      "net_pnl": "249.71",
+      "operational_target_stop": "3.0",
+      "rolling_oos_profit_factor": "1.027162024724393175501857321",
+      "status": "failed"
+    },
+    {
+      "artifacts": {
+        "order_dry_run.json": "896396635adf764287b307afefbfa17284f29bcc83f5dd5ba66361f479146ae7",
+        "report.md": "c3dca5e27a31ca5dd56ad2d7a325e9671cd749c2e7383e38744cf1c44f4f40fc",
+        "results.json": "3ddf028f6bb0eecd343372f12939621e21b8b0aba0565e96d68a5ce8634bd314"
+      },
+      "attempt_id": "007_fresh_cross_index_pullback",
+      "closed_oos_trades": 69,
+      "date_partition": "2026-05-01 through 2026-08-31 fresh OOS",
+      "decision": "reject; negative OOS and PF/expectancy/drawdown/breadth/stress/neighbor floors missed",
+      "expectancy_r": "-0.2823347826086956521739130435",
+      "family": "cross-index pullback/resumption direct ETF",
+      "frozen_at": "2026-09-04T11:17:09.670599+00:00",
+      "net_pnl": "-2051.07",
+      "operational_target_stop": "3.0",
+      "rolling_oos_profit_factor": "0.5302218944398127364843198871",
+      "status": "failed"
+    },
+    {
+      "artifacts": {
+        "order_dry_run.json": "851077e127a0e7baf0996a05787d3abc5f203a7572730821259354503719d75b",
+        "report.md": "fcefc80f4e17eb9660705d9dd6fe36da8fd3157e60f5f847d28f616089f13891",
+        "results.json": "659bd7458a3b7d9d74d189baea36a817a49857aad4943b477332cef2ea6a8283"
+      },
+      "attempt_id": "008_fresh_cross_index_relative_value",
+      "closed_oos_trades": 26,
+      "date_partition": "2024-09-03 through 2024-12-31 fresh OOS",
+      "decision": "reject; negative OOS and PF/expectancy/sample/fold-month/stress/neighbor floors missed",
+      "expectancy_r": "-0.05329615384615384615384615385",
+      "family": "cross-index intraday relative-value convergence pair",
+      "frozen_at": "2026-09-04T11:21:49.386927+00:00",
+      "net_pnl": "-138.57",
+      "operational_target_stop": "3.0",
+      "rolling_oos_profit_factor": "0.8446785854396682172280446113",
+      "status": "failed"
+    },
+    {
+      "artifacts": {
+        "order_dry_run.json": "4c81cd949e6524f37d89d6b981baa2d95fce83639f2a880257b7ab15aad56058",
+        "report.md": "718c716d248f6e7f6b5d26a39f9e7c70bad8ca6c99a8b9a021026ac6915940c9",
+        "results.json": "7ef77f8d831c9956662c0df3c1b07459fb5aa0a1b79f199145dfacfa3aea481a"
+      },
+      "attempt_id": "009_fresh_cross_index_relative_momentum",
+      "closed_oos_trades": 48,
+      "date_partition": "2024-01-02 through 2024-04-30 fresh OOS",
+      "decision": "reject; negative OOS and PF/expectancy/drawdown/regime/stress/neighbor floors missed",
+      "expectancy_r": "-0.2424708333333333333333333333",
+      "family": "cross-index intraday relative-momentum pair",
+      "frozen_at": "2026-09-04T11:24:38.230756+00:00",
+      "net_pnl": "-1163.86",
+      "operational_target_stop": "3.0",
+      "rolling_oos_profit_factor": "0.4441026718760448210311129792",
+      "status": "failed"
+    }
+  ],
+  "schema_version": 1
+}

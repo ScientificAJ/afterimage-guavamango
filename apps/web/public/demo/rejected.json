@@ -1,0 +1,1046 @@
+{
+  "audit_valid": true,
+  "evidence_core": {
+    "agent_provenance": {
+      "live_inference": false,
+      "mode": "recorded-fixture",
+      "model_id": "recorded-demo"
+    },
+    "agents": {
+      "options_witness": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "The defined-risk vertical passes the recorded liquidity screen.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "support"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "c1b6fa0d66eb73ef00bbd6f4bb52ddfdad108e013f6acb6e781eb56212f66dbb",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "7abd91a2890e56758926e987df45ad8c03fcd827bcc1f16018f40fb7ec124843",
+        "role": "options_witness",
+        "status": "support",
+        "thesis": "The defined-risk vertical passes the recorded liquidity screen."
+      },
+      "prosecutor": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "Evidence must still survive reveal.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "warning"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "a74551cb717071cd43583c58b6cfd37d748a684af5ecdc34b78dd6b0fc18cb6f",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "084f9dc8e42267afe69dd62f4d50e9ecddeeba4a35489b32d2ed7b66cff671ba",
+        "role": "prosecutor",
+        "status": "challenge",
+        "thesis": "Evidence must still survive reveal."
+      },
+      "regime_witness": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "The recorded regime packet is compatible.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "support"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "1ed5ac3c7ba1a7106bd56c3d07657f50b8d58d6c03fb1cec2eecee2007a0a5f1",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "521bbad5ba39567c0734ad20d1b5d72fc3e67ef11340a5513fa86cfcd2cf5f87",
+        "role": "regime_witness",
+        "status": "support",
+        "thesis": "The recorded regime packet is compatible."
+      },
+      "strategist": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "The re-entry is a falsifiable failed-breakout claim.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "support"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "bae5ad3ab622c75ae5747beaca2491ce03b47c29e262a90e7f070ba7a9a3bfa8",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "5b83de6a1804b40ca9900c6d3c9660a5987226c855b536b1ef3642e3677f7bef",
+        "role": "strategist",
+        "status": "support",
+        "thesis": "The re-entry is a falsifiable failed-breakout claim."
+      }
+    },
+    "candidate": {
+      "direction": "bearish",
+      "features": {
+        "close_0955": 651.4,
+        "complete": true,
+        "lower_penetration": false,
+        "range_high": 652.0,
+        "range_low": 649.5,
+        "range_width": 2.5,
+        "realized_volatility": 0.16,
+        "reentered": true,
+        "relative_volume": 1.18,
+        "upper_penetration": true
+      },
+      "identity": {
+        "strategy_id": "opening_range_failure_v1",
+        "strategy_version": "1.0.0"
+      },
+      "permitted_structures": [
+        "put_debit_vertical"
+      ],
+      "signal_at": "2026-09-03T13:55:00Z",
+      "snapshot_id": "1ade9d021cb37b83c9443b87ec09e242489f80b81cdf7de69e92dceb188ac6ab",
+      "symbol": "SPY"
+    },
+    "config_manifest_hash": "2d7784c77bd4b06123999abcef178c6670ed91bd04bab6390b0064ee1f4444d0",
+    "dataset_hash": "839bbeaed1fd3869e9873ef5be03856a6236b4303e75f88425d187453c004135",
+    "evidence": {
+      "commit_hash": "5bd346c39d646bafa977d16ed9ceebf10c662477cdb40349ac9c6c17d01721e1",
+      "metrics": {
+        "confidence_method": "one-sided Wilson 0.95",
+        "coverage": "1",
+        "expected_value_r": "0.1663167832607954909160310836",
+        "lower_confidence_bound": "0.1886455828900547329496088364",
+        "maximum_drawdown_r": "9",
+        "n": 40,
+        "n_eff": "39.08384893218555257485572745",
+        "placebo_edge_r": "0.1883024076299645325020974469",
+        "placebo_expected_value_r": "-0.02198562436916904158606636334",
+        "positive_loo_fraction": "1",
+        "target_first_probability": "0.2915791958151988727290077710"
+      },
+      "reasons": [
+        "PROBABILITY_LOWER_BOUND",
+        "MAXIMUM_DRAWDOWN"
+      ],
+      "reveal_hash": "e6d93fb7ef5df77ff6ed63f603bf37c9f874cc1dc22689e551beef0db707a040",
+      "status": "REJECT"
+    },
+    "evidence_paths": [
+      {
+        "high": "0",
+        "low": "0",
+        "median": "0",
+        "step": 0
+      },
+      {
+        "high": "1",
+        "low": "-1",
+        "median": "-1",
+        "step": 1
+      },
+      {
+        "high": "3",
+        "low": "-1",
+        "median": "-1",
+        "step": 2
+      }
+    ],
+    "exit_plan": {
+      "exit_at": "2026-09-03T14:45:00Z",
+      "stop_r": "-1",
+      "target_r": "3"
+    },
+    "mode": "recorded-replay",
+    "schema": "afterimage-evidence-core-v1",
+    "snapshot": {
+      "cutoff": "2026-09-03T13:55:00Z",
+      "features": {
+        "close_0955": 651.4,
+        "complete": true,
+        "lower_penetration": false,
+        "range_high": 652.0,
+        "range_low": 649.5,
+        "range_width": 2.5,
+        "realized_volatility": 0.16,
+        "reentered": true,
+        "relative_volume": 1.18,
+        "upper_penetration": true
+      },
+      "identity": {
+        "strategy_id": "opening_range_failure_v1",
+        "strategy_version": "1.0.0"
+      },
+      "provenance": {
+        "builder": "OpeningRangeFailureStrategy",
+        "point_in_time": "true"
+      },
+      "records": [
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:30:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:30:00Z",
+          "values": {
+            "close": 650.5,
+            "high": 651.0,
+            "low": 649.5,
+            "open": 650.0,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:35:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:35:00Z",
+          "values": {
+            "close": 651.0,
+            "high": 651.5,
+            "low": 650.0,
+            "open": 650.5,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:40:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:40:00Z",
+          "values": {
+            "close": 651.6,
+            "high": 652.0,
+            "low": 650.8,
+            "open": 651.0,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:45:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:45:00Z",
+          "values": {
+            "close": 652.1,
+            "high": 652.4,
+            "low": 651.2,
+            "open": 651.6,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:50:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:50:00Z",
+          "values": {
+            "close": 651.8,
+            "high": 652.6,
+            "low": 651.5,
+            "open": 652.1,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:55:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:55:00Z",
+          "values": {
+            "close": 651.4,
+            "high": 652.55,
+            "low": 651.2,
+            "open": 651.8,
+            "volume": 1000000
+          }
+        }
+      ],
+      "snapshot_id": "1ade9d021cb37b83c9443b87ec09e242489f80b81cdf7de69e92dceb188ac6ab"
+    },
+    "tournament": {
+      "champion": {
+        "strategy_id": "opening_range_failure_v1",
+        "strategy_version": "1.0.0"
+      },
+      "champion_manifest_hash": "894ccd0314a8652e998b5526953535d96762ccf5021c157f0588c157c3c6f41f",
+      "entries": [
+        {
+          "failed_gates": [],
+          "identity": {
+            "strategy_id": "opening_range_failure_v1",
+            "strategy_version": "1.0.0"
+          },
+          "manifest_hash": "894ccd0314a8652e998b5526953535d96762ccf5021c157f0588c157c3c6f41f",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "2",
+            "lower_confidence_bound": "0.6240270595401831618224288439",
+            "maximum_drawdown_r": "1",
+            "n": 40,
+            "n_eff": "4E+1",
+            "placebo_edge_r": "2",
+            "placebo_expected_value_r": "0",
+            "positive_loo_fraction": "1",
+            "target_first_probability": "0.75"
+          },
+          "score": "1.181006764885045790455607211",
+          "status": "PASS"
+        },
+        {
+          "failed_gates": [
+            "EXPECTED_VALUE",
+            "PROBABILITY_LOWER_BOUND",
+            "LEAVE_ONE_CLUSTER_OUT",
+            "MAXIMUM_DRAWDOWN"
+          ],
+          "identity": {
+            "strategy_id": "momentum_continuation_v1",
+            "strategy_version": "1.0.0"
+          },
+          "manifest_hash": "08f3d34de98c1bfdf159fe1eb43bcedf6c85e5c2525b1dcd2a64891f30a25bcf",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "-0.2",
+            "lower_confidence_bound": "0.1165473544623384882192424519",
+            "maximum_drawdown_r": "11",
+            "n": 40,
+            "n_eff": "4E+1",
+            "placebo_edge_r": "-0.2",
+            "placebo_expected_value_r": "0",
+            "positive_loo_fraction": "0",
+            "target_first_probability": "0.2"
+          },
+          "score": "0.06913683861558462205481061298",
+          "status": "REJECT"
+        },
+        {
+          "failed_gates": [
+            "EXPECTED_VALUE",
+            "PROBABILITY_LOWER_BOUND",
+            "LEAVE_ONE_CLUSTER_OUT",
+            "MAXIMUM_DRAWDOWN"
+          ],
+          "identity": {
+            "strategy_id": "volatility_dislocation_v1",
+            "strategy_version": "1.0.0"
+          },
+          "manifest_hash": "37c305ca48518cb701b008e1881c4b716b74ad28e6e9851f04c1f194e1b6d0ce",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "-0.5",
+            "lower_confidence_bound": "0.06219135869811128625079903420",
+            "maximum_drawdown_r": "23",
+            "n": 40,
+            "n_eff": "4E+1",
+            "placebo_edge_r": "-0.5",
+            "placebo_expected_value_r": "0",
+            "positive_loo_fraction": "0",
+            "target_first_probability": "0.125"
+          },
+          "score": "-0.0344521603254721784373002414",
+          "status": "REJECT"
+        }
+      ],
+      "result_provenance": {
+        "08f3d34de98c1bfdf159fe1eb43bcedf6c85e5c2525b1dcd2a64891f30a25bcf": {
+          "cost_model": {
+            "fee_per_contract": "0",
+            "slippage_per_leg": "0.01"
+          },
+          "observations": 40,
+          "outcome_series_hash": "9f50f33e056765265fb8109a434a415a30c1fd4144098b9127d3eab85319633c",
+          "strategy_id": "momentum_continuation_v1"
+        },
+        "37c305ca48518cb701b008e1881c4b716b74ad28e6e9851f04c1f194e1b6d0ce": {
+          "cost_model": {
+            "fee_per_contract": "0",
+            "slippage_per_leg": "0.01"
+          },
+          "observations": 40,
+          "outcome_series_hash": "10f07c1ab8685306bb06d2379cdacf12084083bd22f6818a627f88c50489c32a",
+          "strategy_id": "volatility_dislocation_v1"
+        },
+        "894ccd0314a8652e998b5526953535d96762ccf5021c157f0588c157c3c6f41f": {
+          "cost_model": {
+            "fee_per_contract": "0",
+            "slippage_per_leg": "0.01"
+          },
+          "observations": 40,
+          "outcome_series_hash": "9f0c6e8c27d91973482192c38b649b813942ecb7573827b336dfac9cdec8a7de",
+          "strategy_id": "opening_range_failure_v1"
+        }
+      }
+    }
+  },
+  "evidence_core_sha256": "94f0925afac6f39e60f8e970b8d33826d05c2110d138557b89fc53d8507e6173",
+  "run_record": {
+    "agent_provenance": {
+      "live_inference": false,
+      "mode": "recorded-fixture",
+      "model_id": "recorded-demo"
+    },
+    "agents": {
+      "options_witness": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "The defined-risk vertical passes the recorded liquidity screen.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "support"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "c1b6fa0d66eb73ef00bbd6f4bb52ddfdad108e013f6acb6e781eb56212f66dbb",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "7abd91a2890e56758926e987df45ad8c03fcd827bcc1f16018f40fb7ec124843",
+        "role": "options_witness",
+        "status": "support",
+        "thesis": "The defined-risk vertical passes the recorded liquidity screen."
+      },
+      "prosecutor": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "Evidence must still survive reveal.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "warning"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "a74551cb717071cd43583c58b6cfd37d748a684af5ecdc34b78dd6b0fc18cb6f",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "084f9dc8e42267afe69dd62f4d50e9ecddeeba4a35489b32d2ed7b66cff671ba",
+        "role": "prosecutor",
+        "status": "challenge",
+        "thesis": "Evidence must still survive reveal."
+      },
+      "regime_witness": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "The recorded regime packet is compatible.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "support"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "1ed5ac3c7ba1a7106bd56c3d07657f50b8d58d6c03fb1cec2eecee2007a0a5f1",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "521bbad5ba39567c0734ad20d1b5d72fc3e67ef11340a5513fa86cfcd2cf5f87",
+        "role": "regime_witness",
+        "status": "support",
+        "thesis": "The recorded regime packet is compatible."
+      },
+      "strategist": {
+        "falsifiers": [
+          "The sealed outcomes fail the declared statistical gates."
+        ],
+        "findings": [
+          {
+            "claim": "The re-entry is a falsifiable failed-breakout claim.",
+            "evidence_keys": [
+              "candidate.features"
+            ],
+            "severity": "support"
+          }
+        ],
+        "latency_ms": 0,
+        "model_id": "recorded-demo",
+        "prompt_hash": "bae5ad3ab622c75ae5747beaca2491ce03b47c29e262a90e7f070ba7a9a3bfa8",
+        "reason_code": "RECORDED_DEMO_PACKET",
+        "response_hash": "5b83de6a1804b40ca9900c6d3c9660a5987226c855b536b1ef3642e3677f7bef",
+        "role": "strategist",
+        "status": "support",
+        "thesis": "The re-entry is a falsifiable failed-breakout claim."
+      }
+    },
+    "audit": {
+      "failed_sequence": null,
+      "records": 7,
+      "valid": true
+    },
+    "candidate": {
+      "candidate_id": "25fe04c5-c33e-5549-b50d-d26d5b574bd9",
+      "direction": "bearish",
+      "features": {
+        "close_0955": 651.4,
+        "complete": true,
+        "lower_penetration": false,
+        "range_high": 652.0,
+        "range_low": 649.5,
+        "range_width": 2.5,
+        "realized_volatility": 0.16,
+        "reentered": true,
+        "relative_volume": 1.18,
+        "upper_penetration": true
+      },
+      "identity": {
+        "strategy_id": "opening_range_failure_v1",
+        "strategy_version": "1.0.0"
+      },
+      "permitted_structures": [
+        "put_debit_vertical"
+      ],
+      "signal_at": "2026-09-03T13:55:00Z",
+      "snapshot_id": "1ade9d021cb37b83c9443b87ec09e242489f80b81cdf7de69e92dceb188ac6ab",
+      "symbol": "SPY"
+    },
+    "config_manifest_hash": "2d7784c77bd4b06123999abcef178c6670ed91bd04bab6390b0064ee1f4444d0",
+    "dataset_hash": "839bbeaed1fd3869e9873ef5be03856a6236b4303e75f88425d187453c004135",
+    "events": [
+      {
+        "created_at": "2026-09-04T07:00:26.766099Z",
+        "event_id": "77b66a51-b931-41d1-bc74-804fec923125",
+        "event_type": "precheck_passed",
+        "evidence_level": "L0",
+        "payload": {
+          "account": {
+            "account_id_hash": "ccc237f928e54b9a7b7d1556ec7e0e7f2bd4d52fe22c878b785952390c652027",
+            "cash": "100000",
+            "equity": "100000",
+            "last_equity": "100000",
+            "options_approved_level": 3,
+            "options_buying_power": "100000",
+            "options_trading_level": 3,
+            "paper": true,
+            "status": "ACTIVE",
+            "timestamp": "2026-09-03T13:55:00Z",
+            "trading_blocked": false
+          },
+          "mode": "recorded-paper"
+        },
+        "sequence": 1,
+        "session_id": "94f74a72-c000-4084-812b-a5a086a4a411",
+        "state": "PRECHECKED",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T07:00:26.775891Z",
+        "event_id": "a18eccb2-dd74-4631-b5b1-722c71d94fec",
+        "event_type": "observe",
+        "evidence_level": "L0",
+        "payload": {
+          "strategy": {
+            "strategy_id": "opening_range_failure_v1",
+            "strategy_version": "1.0.0"
+          },
+          "symbol": "SPY"
+        },
+        "sequence": 2,
+        "session_id": "94f74a72-c000-4084-812b-a5a086a4a411",
+        "state": "OBSERVING",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T07:00:26.782956Z",
+        "event_id": "3789d26d-76ec-4165-a4bc-bded1e4842be",
+        "event_type": "snapshot_frozen",
+        "evidence_level": "L1",
+        "payload": {
+          "snapshot_id": "1ade9d021cb37b83c9443b87ec09e242489f80b81cdf7de69e92dceb188ac6ab"
+        },
+        "sequence": 3,
+        "session_id": "94f74a72-c000-4084-812b-a5a086a4a411",
+        "state": "SNAPSHOT_FROZEN",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T07:00:26.784734Z",
+        "event_id": "8146d981-25c0-4ad6-bf3e-8e37ecf98501",
+        "event_type": "candidate_created",
+        "evidence_level": "L1",
+        "payload": {
+          "candidate_id": "25fe04c5-c33e-5549-b50d-d26d5b574bd9",
+          "direction": "bearish",
+          "features": {
+            "close_0955": 651.4,
+            "complete": true,
+            "lower_penetration": false,
+            "range_high": 652.0,
+            "range_low": 649.5,
+            "range_width": 2.5,
+            "realized_volatility": 0.16,
+            "reentered": true,
+            "relative_volume": 1.18,
+            "upper_penetration": true
+          },
+          "identity": {
+            "strategy_id": "opening_range_failure_v1",
+            "strategy_version": "1.0.0"
+          },
+          "permitted_structures": [
+            "put_debit_vertical"
+          ],
+          "signal_at": "2026-09-03T13:55:00Z",
+          "snapshot_id": "1ade9d021cb37b83c9443b87ec09e242489f80b81cdf7de69e92dceb188ac6ab",
+          "symbol": "SPY"
+        },
+        "sequence": 4,
+        "session_id": "94f74a72-c000-4084-812b-a5a086a4a411",
+        "state": "SIGNAL_CANDIDATE",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T07:00:26.790393Z",
+        "event_id": "8ee61c5c-b964-42dc-adf3-a865f77f3dde",
+        "event_type": "evidence_committed",
+        "evidence_level": "L3",
+        "payload": {
+          "commit_hash": "5bd346c39d646bafa977d16ed9ceebf10c662477cdb40349ac9c6c17d01721e1",
+          "outcomes_visible": false,
+          "twin_count": 40
+        },
+        "sequence": 5,
+        "session_id": "94f74a72-c000-4084-812b-a5a086a4a411",
+        "state": "EVIDENCE_COMMITTED",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T07:00:26.794446Z",
+        "event_id": "f61aba5c-8769-45db-acfc-cb61e13fbe05",
+        "event_type": "evidence_revealed",
+        "evidence_level": "L3",
+        "payload": {
+          "commit_hash": "5bd346c39d646bafa977d16ed9ceebf10c662477cdb40349ac9c6c17d01721e1",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "0.1663167832607954909160310836",
+            "lower_confidence_bound": "0.1886455828900547329496088364",
+            "maximum_drawdown_r": "9",
+            "n": 40,
+            "n_eff": "39.08384893218555257485572745",
+            "placebo_edge_r": "0.1883024076299645325020974469",
+            "placebo_expected_value_r": "-0.02198562436916904158606636334",
+            "positive_loo_fraction": "1",
+            "target_first_probability": "0.2915791958151988727290077710"
+          },
+          "reasons": [
+            "PROBABILITY_LOWER_BOUND",
+            "MAXIMUM_DRAWDOWN"
+          ],
+          "reveal_hash": "e6d93fb7ef5df77ff6ed63f603bf37c9f874cc1dc22689e551beef0db707a040",
+          "status": "REJECT"
+        },
+        "sequence": 6,
+        "session_id": "94f74a72-c000-4084-812b-a5a086a4a411",
+        "state": "EVIDENCE_REVEALED",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      },
+      {
+        "created_at": "2026-09-04T07:00:26.796036Z",
+        "event_id": "190f9fd7-2070-4066-8404-2dad934ebe4d",
+        "event_type": "rejected",
+        "evidence_level": "L3",
+        "payload": {
+          "reasons": [
+            "PROBABILITY_LOWER_BOUND",
+            "MAXIMUM_DRAWDOWN"
+          ]
+        },
+        "sequence": 7,
+        "session_id": "94f74a72-c000-4084-812b-a5a086a4a411",
+        "state": "REJECTED",
+        "versions": {
+          "data_snapshot_id": "unbound",
+          "evidence_protocol_version": "sealed-twins-v1",
+          "feature_schema_version": "1",
+          "model_id": "deterministic",
+          "prompt_hash": "none",
+          "risk_policy_version": "hackathon-v1",
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        }
+      }
+    ],
+    "evidence": {
+      "commit_hash": "5bd346c39d646bafa977d16ed9ceebf10c662477cdb40349ac9c6c17d01721e1",
+      "metrics": {
+        "confidence_method": "one-sided Wilson 0.95",
+        "coverage": "1",
+        "expected_value_r": "0.1663167832607954909160310836",
+        "lower_confidence_bound": "0.1886455828900547329496088364",
+        "maximum_drawdown_r": "9",
+        "n": 40,
+        "n_eff": "39.08384893218555257485572745",
+        "placebo_edge_r": "0.1883024076299645325020974469",
+        "placebo_expected_value_r": "-0.02198562436916904158606636334",
+        "positive_loo_fraction": "1",
+        "target_first_probability": "0.2915791958151988727290077710"
+      },
+      "reasons": [
+        "PROBABILITY_LOWER_BOUND",
+        "MAXIMUM_DRAWDOWN"
+      ],
+      "reveal_hash": "e6d93fb7ef5df77ff6ed63f603bf37c9f874cc1dc22689e551beef0db707a040",
+      "status": "REJECT"
+    },
+    "evidence_paths": [
+      {
+        "high": "0",
+        "low": "0",
+        "median": "0",
+        "step": 0
+      },
+      {
+        "high": "1",
+        "low": "-1",
+        "median": "-1",
+        "step": 1
+      },
+      {
+        "high": "3",
+        "low": "-1",
+        "median": "-1",
+        "step": 2
+      }
+    ],
+    "exit_plan": {
+      "exit_at": "2026-09-03T14:45:00Z",
+      "stop_r": "-1",
+      "target_r": "3"
+    },
+    "mode": "recorded-replay",
+    "session_id": "94f74a72-c000-4084-812b-a5a086a4a411",
+    "snapshot": {
+      "cutoff": "2026-09-03T13:55:00Z",
+      "features": {
+        "close_0955": 651.4,
+        "complete": true,
+        "lower_penetration": false,
+        "range_high": 652.0,
+        "range_low": 649.5,
+        "range_width": 2.5,
+        "realized_volatility": 0.16,
+        "reentered": true,
+        "relative_volume": 1.18,
+        "upper_penetration": true
+      },
+      "identity": {
+        "strategy_id": "opening_range_failure_v1",
+        "strategy_version": "1.0.0"
+      },
+      "provenance": {
+        "builder": "OpeningRangeFailureStrategy",
+        "point_in_time": "true"
+      },
+      "records": [
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:30:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:30:00Z",
+          "values": {
+            "close": 650.5,
+            "high": 651.0,
+            "low": 649.5,
+            "open": 650.0,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:35:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:35:00Z",
+          "values": {
+            "close": 651.0,
+            "high": 651.5,
+            "low": 650.0,
+            "open": 650.5,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:40:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:40:00Z",
+          "values": {
+            "close": 651.6,
+            "high": 652.0,
+            "low": 650.8,
+            "open": 651.0,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:45:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:45:00Z",
+          "values": {
+            "close": 652.1,
+            "high": 652.4,
+            "low": 651.2,
+            "open": 651.6,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:50:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:50:00Z",
+          "values": {
+            "close": 651.8,
+            "high": 652.6,
+            "low": 651.5,
+            "open": 652.1,
+            "volume": 1000000
+          }
+        },
+        {
+          "feed": "iex",
+          "kind": "bar",
+          "received_at": "2026-09-03T13:55:01Z",
+          "source": "alpaca-recorded",
+          "symbol": "SPY",
+          "timestamp": "2026-09-03T13:55:00Z",
+          "values": {
+            "close": 651.4,
+            "high": 652.55,
+            "low": 651.2,
+            "open": 651.8,
+            "volume": 1000000
+          }
+        }
+      ],
+      "snapshot_id": "1ade9d021cb37b83c9443b87ec09e242489f80b81cdf7de69e92dceb188ac6ab"
+    },
+    "state": "REJECTED",
+    "tournament": {
+      "champion": {
+        "strategy_id": "opening_range_failure_v1",
+        "strategy_version": "1.0.0"
+      },
+      "champion_manifest_hash": "894ccd0314a8652e998b5526953535d96762ccf5021c157f0588c157c3c6f41f",
+      "entries": [
+        {
+          "failed_gates": [],
+          "identity": {
+            "strategy_id": "opening_range_failure_v1",
+            "strategy_version": "1.0.0"
+          },
+          "manifest_hash": "894ccd0314a8652e998b5526953535d96762ccf5021c157f0588c157c3c6f41f",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "2",
+            "lower_confidence_bound": "0.6240270595401831618224288439",
+            "maximum_drawdown_r": "1",
+            "n": 40,
+            "n_eff": "4E+1",
+            "placebo_edge_r": "2",
+            "placebo_expected_value_r": "0",
+            "positive_loo_fraction": "1",
+            "target_first_probability": "0.75"
+          },
+          "score": "1.181006764885045790455607211",
+          "status": "PASS"
+        },
+        {
+          "failed_gates": [
+            "EXPECTED_VALUE",
+            "PROBABILITY_LOWER_BOUND",
+            "LEAVE_ONE_CLUSTER_OUT",
+            "MAXIMUM_DRAWDOWN"
+          ],
+          "identity": {
+            "strategy_id": "momentum_continuation_v1",
+            "strategy_version": "1.0.0"
+          },
+          "manifest_hash": "08f3d34de98c1bfdf159fe1eb43bcedf6c85e5c2525b1dcd2a64891f30a25bcf",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "-0.2",
+            "lower_confidence_bound": "0.1165473544623384882192424519",
+            "maximum_drawdown_r": "11",
+            "n": 40,
+            "n_eff": "4E+1",
+            "placebo_edge_r": "-0.2",
+            "placebo_expected_value_r": "0",
+            "positive_loo_fraction": "0",
+            "target_first_probability": "0.2"
+          },
+          "score": "0.06913683861558462205481061298",
+          "status": "REJECT"
+        },
+        {
+          "failed_gates": [
+            "EXPECTED_VALUE",
+            "PROBABILITY_LOWER_BOUND",
+            "LEAVE_ONE_CLUSTER_OUT",
+            "MAXIMUM_DRAWDOWN"
+          ],
+          "identity": {
+            "strategy_id": "volatility_dislocation_v1",
+            "strategy_version": "1.0.0"
+          },
+          "manifest_hash": "37c305ca48518cb701b008e1881c4b716b74ad28e6e9851f04c1f194e1b6d0ce",
+          "metrics": {
+            "confidence_method": "one-sided Wilson 0.95",
+            "coverage": "1",
+            "expected_value_r": "-0.5",
+            "lower_confidence_bound": "0.06219135869811128625079903420",
+            "maximum_drawdown_r": "23",
+            "n": 40,
+            "n_eff": "4E+1",
+            "placebo_edge_r": "-0.5",
+            "placebo_expected_value_r": "0",
+            "positive_loo_fraction": "0",
+            "target_first_probability": "0.125"
+          },
+          "score": "-0.0344521603254721784373002414",
+          "status": "REJECT"
+        }
+      ],
+      "result_provenance": {
+        "08f3d34de98c1bfdf159fe1eb43bcedf6c85e5c2525b1dcd2a64891f30a25bcf": {
+          "cost_model": {
+            "fee_per_contract": "0",
+            "slippage_per_leg": "0.01"
+          },
+          "observations": 40,
+          "outcome_series_hash": "9f50f33e056765265fb8109a434a415a30c1fd4144098b9127d3eab85319633c",
+          "strategy_id": "momentum_continuation_v1"
+        },
+        "37c305ca48518cb701b008e1881c4b716b74ad28e6e9851f04c1f194e1b6d0ce": {
+          "cost_model": {
+            "fee_per_contract": "0",
+            "slippage_per_leg": "0.01"
+          },
+          "observations": 40,
+          "outcome_series_hash": "10f07c1ab8685306bb06d2379cdacf12084083bd22f6818a627f88c50489c32a",
+          "strategy_id": "volatility_dislocation_v1"
+        },
+        "894ccd0314a8652e998b5526953535d96762ccf5021c157f0588c157c3c6f41f": {
+          "cost_model": {
+            "fee_per_contract": "0",
+            "slippage_per_leg": "0.01"
+          },
+          "observations": 40,
+          "outcome_series_hash": "9f0c6e8c27d91973482192c38b649b813942ecb7573827b336dfac9cdec8a7de",
+          "strategy_id": "opening_range_failure_v1"
+        }
+      },
+      "revealed_at": "2026-09-04T07:00:26.800619Z",
+      "tournament_hash": "a8f91e8b2feca11cee279694b1d7da295e88344e6bd5206a2b5e88716b1cf6ee"
+    }
+  },
+  "schema": "afterimage-evidence-envelope-v1"
+}

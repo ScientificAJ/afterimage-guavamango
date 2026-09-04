@@ -1,0 +1,1 @@
+"""Trend strategy research lane."""

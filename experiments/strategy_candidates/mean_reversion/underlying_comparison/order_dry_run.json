@@ -1,0 +1,42 @@
+{
+  "cli_arguments": [
+    "order",
+    "submit",
+    "--symbol",
+    "SPY",
+    "--qty",
+    "134",
+    "--side",
+    "buy",
+    "--type",
+    "limit",
+    "--limit-price",
+    "606.0506",
+    "--time-in-force",
+    "day",
+    "--order-class",
+    "bracket",
+    "--take-profit",
+    "{\"limit_price\":\"608.74\"}",
+    "--stop-loss",
+    "{\"stop_price\":\"605.25\"}",
+    "--quiet",
+    "--dry-run"
+  ],
+  "payload": {
+    "limit_price": "606.0506",
+    "order_class": "bracket",
+    "qty": "134",
+    "side": "buy",
+    "stop_loss": {
+      "stop_price": "605.25"
+    },
+    "symbol": "SPY",
+    "take_profit": {
+      "limit_price": "608.74"
+    },
+    "time_in_force": "day",
+    "type": "limit"
+  },
+  "submission_allowed": false
+}

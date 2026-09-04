@@ -1,0 +1,61 @@
+{
+  "atomic_pair_not_supported": true,
+  "cli_arguments": [
+    [
+      "order",
+      "submit",
+      "--symbol",
+      "QQQ",
+      "--qty",
+      "20",
+      "--side",
+      "buy",
+      "--type",
+      "limit",
+      "--limit-price",
+      "492.98",
+      "--time-in-force",
+      "day",
+      "--quiet",
+      "--dry-run"
+    ],
+    [
+      "order",
+      "submit",
+      "--symbol",
+      "IWM",
+      "--qty",
+      "45",
+      "--side",
+      "sell",
+      "--type",
+      "limit",
+      "--limit-price",
+      "220.73",
+      "--time-in-force",
+      "day",
+      "--quiet",
+      "--dry-run"
+    ]
+  ],
+  "payloads": [
+    {
+      "limit_price": "492.98",
+      "qty": "20",
+      "side": "buy",
+      "symbol": "QQQ",
+      "time_in_force": "day",
+      "type": "limit"
+    },
+    {
+      "limit_price": "220.73",
+      "qty": "45",
+      "side": "sell",
+      "symbol": "IWM",
+      "time_in_force": "day",
+      "type": "limit"
+    }
+  ],
+  "required_execution": "serialize both dry-run legs; live paper pair requires parent-approved paired execution and combined-PnL monitor",
+  "submission_allowed": false
+}

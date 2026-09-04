@@ -1,0 +1,60 @@
+{
+  "schema_version": "afterimage-attempts-001-007-snapshot-v1",
+  "frozen_at": "2026-09-04T18:05:00+05:30",
+  "source_ledger_internal_hash": "16b4f9b4ce3e55d02a0fde675676053334e3c1c478c19649b0309a4e97b74ddb",
+  "source_ledger_file_sha256": "dbfba54f7b12c6c499ec781c78d56037f6303266e1df394b41877628554ddebd",
+  "attempts": [
+    {
+      "attempt_id": "cross_asset_breadth_rotation_v1",
+      "recommendation": "REJECT",
+      "result_hash": "06573fe7873fd93d4b1649ffc7540d368ee4173e01be26409edb06bf4328b9ef",
+      "result_file_sha256": "6c5aaf302f74fd78882f82dd250638ad006d631449c4e85ec6a3ad0ab7806c9e"
+    },
+    {
+      "attempt_id": "overnight_breadth_confirmation_v2",
+      "recommendation": "REJECT",
+      "result_hash": "425a0aee372c0739f5081be9a4bdc0647ec3176bd780f19eee8d6f67553a0ed2",
+      "result_file_sha256": "f7d495a58d05580a515e919ecc13720410651f25f44c5c9724d144f03d8e2228"
+    },
+    {
+      "attempt_id": "sector_index_leadlag_v3",
+      "recommendation": "REJECT",
+      "result_hash": "891c136ada807cbf3faf3c5a03bfd23e160f6933855434e9c7f3fbe793d2aa24",
+      "result_file_sha256": "05a1edab9e8e6f11be875f23f3de4f7f2616d985e1a721a6c6c39fc5de88413b"
+    },
+    {
+      "attempt_id": "equity_sector_index_leadlag_v4",
+      "recommendation": "REJECT",
+      "result_hash": "1b294d1403a7d4a4e711d50d130d0660b4846d024f04413c6b4f4e021f9acce2",
+      "result_file_sha256": "89bde95a34edbf4742923753cacc04eb806ce7c2789718a03fbb835bd512be39"
+    },
+    {
+      "attempt_id": "equity_overnight_gap_v5",
+      "recommendation": "REJECT_AFTER_FRESH_EXTENSION",
+      "result_hash": "171211fa23c317882aedc30f59f252bfd98c389f499238d092c36ea000833f1c",
+      "extension_result_hash": "50f081fbacea13bcc5889a169502da2189465389b428f8997a8a28ddf3d5e662",
+      "rule_hash": "fbf67ec3cefd371533ef83d57dc74939c97b52ac1c1b649ff5996b6568c2fd98"
+    },
+    {
+      "attempt_id": "qqq_regime_gap_v6",
+      "recommendation": "REJECT",
+      "result_hash": "18a0901f1408cf08a6b0bab118a3669339aa41c45947a0f3fc8143ad79510f0f",
+      "family_hash": "45227af6bc0598473d4e37a4faa20bd67350727a85bbbfc67fbbbbc8ed65c437"
+    },
+    {
+      "attempt_id": "qqq_regime_active_rule_v7",
+      "recommendation": "REJECT",
+      "result_hash": "f761cbae24f6a8b73fd1c59f44fe3c678888893a76fa533eb6437f8125bbe5b9",
+      "rule_hash": "87a27dc2687918a04b6b5a5aa8e474ea88aec6381c71280fb5c38dd3dcea6844"
+    }
+  ],
+  "immutable_file_hashes": {
+    "candidate.py": "2bf8e4b27574e4c3c1592f3091fd5355e82bbe254d84d45f61872a0bf181a96e",
+    "equity_candidate.py": "6e2f597749caaef3c6690da469e25812bb76999c249300d3de2b7093b180c87d",
+    "gap_candidate.py": "a4a7b54709fe5d3ef8a93364e96647605d5ac5ca66df5fbaabb7b381035d19da",
+    "leadlag_candidate.py": "5f935952c9cb1bac0bc2d5e3eb6c0d130f11e3d89605dbb29af5f653e728732a",
+    "qqq_regime_candidate.py": "ae60dc9837263192bd1b12f7a0399372dbd6e1c6ff815095e97ad573aa5c05e5"
+  },
+  "snapshot_hash": "d9aa8d0820fe58c9cacf814da1c64cde5333cb3248f69c46778c5aad02218bb7",
+  "snapshot_hash_scope": "canonical JSON of all fields above except snapshot_hash and snapshot_hash_scope"
+}

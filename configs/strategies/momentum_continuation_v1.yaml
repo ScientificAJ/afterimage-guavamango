@@ -1,6 +1,14 @@
 strategy_id: momentum_continuation_v1
 strategy_version: 1.0.0
+plugin: afterimage.strategies.momentum_continuation:MomentumContinuationStrategy
 symbols: [SPY, QQQ]
+runtime:
+  bar_timeframe: 5Min
+  lookback_calendar_days: 1
+  session_start: "09:30"
+  signal_at: "10:00"
+  entry_cutoff: "10:05"
+  execution_kind: option
 window_minutes: 30
 minimum_absolute_return: 0.002
 minimum_volume_ratio: 1.25

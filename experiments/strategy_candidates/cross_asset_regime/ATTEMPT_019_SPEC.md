@@ -1,0 +1,7 @@
+# Attempt 019 — remaining-history exhaustion audit
+
+Attempts 008–018 screened multiple materially distinct longer-horizon families on revealed data. None cleared the development economics, and the strongest exact frozen candidate (`lv_v12_a125_h05`, rule hash `472fcf2bdfb48791faa8e50e15190fc5060c0df886b9e76cadf0a80098d5dbdc`) failed fresh 2021–2022 validation.
+
+To make the data-exhaustion stopping condition explicit, this audit applies that unchanged frozen rule once to all remaining pre-2021 daily IEX history returned by Alpaca for SPY, QQQ, IWM, XLK, XLF, XLE, XLV, and XLY. Request 2000-01-01 through 2020-12-31 (earlier than the inception of parts of the fixed universe), use the earliest common returned bars as indicator warm-up, and score all eligible outcomes through 2020-12-31. This request is deliberately broader than the likely Alpaca retention window so that the actual earliest common session establishes the exhaustion boundary rather than an arbitrary researcher-selected start date.
+
+This is an exhaustion/temporal diagnostic, not a new selection opportunity. No rule parameter, symbol, gate, cost, or execution assumption may change. Report the actual earliest returned session, base and 1.5x costs, yearly/monthly/symbol stability, the pre-2021 result separately, and a provenance-labeled aggregate with 2021–2022. The rule remains rejected unless every admission and temporal criterion passes; prior failed evidence is never discarded.

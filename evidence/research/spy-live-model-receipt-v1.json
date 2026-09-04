@@ -1,0 +1,279 @@
+{
+  "all_roles_non_abstaining": false,
+  "blocking_reasons": [
+    "AGENT_FATAL_STRATEGIST",
+    "AGENT_FATAL_REGIME_WITNESS",
+    "AGENT_FATAL_PROSECUTOR",
+    "AGENT_ABSTAIN_REGIME_WITNESS",
+    "AGENT_ABSTAIN_OPTIONS_WITNESS"
+  ],
+  "candidate_packet_hash": "1a3e603c68c72d1374a2fa7f51d0ef97161b44a963e9872278e571917132e69a",
+  "dataset_hash": "2439c1579d9f3fc4f0286d6eed5e1acf2787799a32658423a8a28c828b986534",
+  "exact_routes_verified": true,
+  "expected_models": [
+    "zai-org/GLM-5.3",
+    "zai-org/GLM-5.3-Flash"
+  ],
+  "mode": "live Featherless inference over a real Alpaca historical candidate",
+  "observed_models": [
+    "zai-org/GLM-5.3",
+    "zai-org/GLM-5.3-Flash"
+  ],
+  "outcomes_visible": false,
+  "reports": {
+    "options_witness": {
+      "falsifiers": [
+        "Provide bid/ask quotes or open interest/volume for both legs to enable a liquidity audit.",
+        "Provide per-leg Greeks and IV snapshots at entry to enable a Greeks audit.",
+        "Provide post-entry bar data (future_path_visible=true) to validate scenario behavior."
+      ],
+      "findings": [
+        {
+          "claim": "Pricing basis is trade-bar closes, not bid/ask quotes, so spread, slippage, and fill-quality cannot be assessed.",
+          "evidence_keys": [
+            "packet.pricing_basis"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "No open interest, volume, or quote depth is provided for either leg, so option liquidity cannot be audited.",
+          "evidence_keys": [
+            "packet.long_symbol",
+            "packet.short_symbol"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "No Greeks (delta, gamma, theta, vega) or implied volatility are supplied for either leg, so risk profile and scenario behavior cannot be evaluated.",
+          "evidence_keys": [
+            "packet.long_symbol",
+            "packet.short_symbol",
+            "packet.entry_debit"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "Both legs share the same expiration (2026-07-10), so the structure is a same-expiry vertical; leg synchronization risk is limited to bar-close timing, which the packet states is synchronized.",
+          "evidence_keys": [
+            "packet.expiration_date",
+            "packet.pricing_basis"
+          ],
+          "severity": "support"
+        },
+        {
+          "claim": "Future path is not visible, so post-entry scenario outcomes (max profit/loss realization) cannot be verified.",
+          "evidence_keys": [
+            "packet.future_path_visible",
+            "packet.entry_at"
+          ],
+          "severity": "warning"
+        }
+      ],
+      "latency_ms": 7021,
+      "model_id": "zai-org/GLM-5.3-Flash",
+      "prompt_hash": "27a9df951ba25eb31dcc6c1a093386a63eac65210d530660c9cc24501950c885",
+      "reason_code": "INSUFFICIENT_EVIDENCE_LIQUIDITY_GREEKS_SCENARIOS",
+      "response_hash": "23e996c733a81b35a2765a1c9ee12d12566d687eafaff06d2db9315a7cdbb244",
+      "role": "options_witness",
+      "status": "abstain",
+      "thesis": "The packet identifies a SPY put vertical spread (long 744 / short 738, exp 2026-07-10) entered at a 1.67 debit on synchronized 5-minute trade-bar closes, but contains no liquidity, Greeks, IV, quote, or scenario data; a liquidity/Greeks/synchronization audit cannot be completed without inventing data."
+    },
+    "prosecutor": {
+      "falsifiers": [
+        "Visible outcomes (packet.outcomes_visible = true) showing price breaking below packet.features.range_low (742.74) before packet.features.range_high (744.705), with the spread actually filled at the stated packet.entry_debit (1.67) against quoted prices.",
+        "Post-entry path data (packet.future_path_visible = true) showing the underlying at or below the short strike 738 by packet.expiration_date (2026-07-10), demonstrating the required magnitude of move is achievable in this regime.",
+        "Point-in-time proof that packet.features.range_high, range_low, relative_volume, and realized_volatility were computed only from bars at or before packet.signal_at, eliminating the lookahead concern.",
+        "Bid/ask quotes, open interest, volume, and per-leg Greeks/IV for packet.long_symbol and packet.short_symbol showing the 1.67 debit is achievable and not priced above realized volatility.",
+        "A defined evaluation window and volume threshold sourced from the packet itself, making the falsification protocol testable rather than invented."
+      ],
+      "findings": [
+        {
+          "claim": "Outcomes are not visible anywhere in the packet, so the bearish claim has no historical hit rate, forward return, or label confirmation; the entire thesis rests on one frozen feature snapshot and cannot be verified from the evidence supplied.",
+          "evidence_keys": [
+            "packet.outcomes_visible",
+            "packet.retrieval.outcomes_visible"
+          ],
+          "severity": "fatal"
+        },
+        {
+          "claim": "The options structure's expiry breakeven is 744 minus the 1.67 debit, i.e., 742.33, which is below the strategist's directional confirmation level of range_low 742.74. Any settle between 742.33 and 742.74 'confirms' the bearish thesis while the spread loses money, so the stated falsifiers do not align with the position's P&L.",
+          "evidence_keys": [
+            "packet.long_symbol",
+            "packet.short_symbol",
+            "packet.entry_debit",
+            "packet.features.range_low"
+          ],
+          "severity": "fatal"
+        },
+        {
+          "claim": "Max profit on the 744/738 put vertical requires the underlying at or below 738 by the 2026-07-10 expiration, roughly 6.1 points below the 744.09 signal price, more than three times the entire observed intraday range width of 1.965, in a regime the packet itself characterizes as compressed (realized volatility 0.0774). The packet contains no evidence supporting a move of that magnitude; the profitability conclusion is unsupported.",
+          "evidence_keys": [
+            "packet.short_symbol",
+            "packet.expiration_date",
+            "packet.signal_price",
+            "packet.features.range_width",
+            "packet.features.realized_volatility"
+          ],
+          "severity": "fatal"
+        },
+        {
+          "claim": "The packet does not establish that range_high, range_low, relative_volume, or realized_volatility were computed exclusively from data at or before signal_at; if the 'observed intraday range' includes post-signal bars, the claim that the entry sits in the upper 69% of the range is contaminated by lookahead leakage and cannot be assessed from the packet as given.",
+          "evidence_keys": [
+            "packet.signal_at",
+            "packet.features.range_high",
+            "packet.features.range_low",
+            "packet.features.relative_volume"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "Pricing is based on synchronized trade-bar closes with no bid/ask quotes, open interest, or volume for either leg, so the achievability of the 1.67 entry debit is unverifiable; slippage of even a few cents on a 6-point-wide spread materially changes the risk/reward and could consume the edge.",
+          "evidence_keys": [
+            "packet.pricing_basis",
+            "packet.entry_debit",
+            "packet.long_symbol",
+            "packet.short_symbol"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "No Greeks or implied volatility are supplied for either leg, so it cannot be ruled out that the 1.67 debit embeds implied volatility above the 0.0774 realized level; with only two days to the 2026-07-10 expiration, theta decay could erode the spread even if the bearish direction is correct.",
+          "evidence_keys": [
+            "packet.long_symbol",
+            "packet.short_symbol",
+            "packet.entry_debit",
+            "packet.features.realized_volatility",
+            "packet.expiration_date"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "The thesis is internally inconsistent: it is labeled 'bearish continuation' while the entry at 744.09 near range_high 744.705 is a fade-the-range-high mean-reversion setup. These are different mechanisms with different expected dynamics, and the packet provides no directional history to distinguish them.",
+          "evidence_keys": [
+            "packet.direction",
+            "packet.signal_price",
+            "packet.features.range_high"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "The strategist's falsifiers introduce thresholds that appear nowhere in the packet: the 'evaluation window' for the close-based falsifier is undefined, and the relative-volume-decays-below-1.0 condition is an invented threshold not tied to any packet field, making the falsification protocol itself unverifiable.",
+          "evidence_keys": [
+            "packet.features.relative_volume",
+            "packet.signal_at"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "The regime witness abstained for lack of regime observations, so the thesis proceeds with no regime compatibility check; a single-snapshot directional claim in a compressed, low-dispersion regime is being acted on without any evidence the regime supports directional follow-through.",
+          "evidence_keys": [
+            "packet.partition",
+            "packet.outcomes_visible"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "Relative volume of 1.113 is only modestly above baseline, which the strategist itself concedes is weak evidence of conviction; the participation condition supporting the signal is too fragile to carry a directional claim on its own.",
+          "evidence_keys": [
+            "packet.features.relative_volume"
+          ],
+          "severity": "warning"
+        }
+      ],
+      "latency_ms": 32189,
+      "model_id": "zai-org/GLM-5.3",
+      "prompt_hash": "b3f05ccec8756cd3fbf427ada2595794fc5409574b8fa753275e10f6589c4401",
+      "reason_code": "UNVERIFIABLE_SNAPSHOT_MISALIGNED_FALSIFIERS_UNSUPPORTED_MAGNITUDE",
+      "response_hash": "5f6ed87809dc3875431a66c76c39326544ecce5bd0903084404e8cb03e72d818",
+      "role": "prosecutor",
+      "status": "challenge",
+      "thesis": "The bearish thesis and the options structure are individually weak and jointly misaligned: the directional claim rests on a single unverifiable snapshot with no outcomes, no regime validation, and unproven point-in-time feature construction, while the put debit spread's breakeven (742.33) sits below the strategist's own confirmation level (range_low 742.74) and its max profit requires a move roughly three times the entire observed intraday range within two days in a low-volatility regime. Confirming the stated thesis can still lose money, and profiting requires an outcome the packet's own features argue against."
+    },
+    "regime_witness": {
+      "falsifiers": [
+        "A packet containing explicit regime observations and a candidate description would allow evaluation.",
+        "Visible outcomes (packet.outcomes_visible = true) plus candidate claims would enable compatibility testing."
+      ],
+      "findings": [
+        {
+          "claim": "Packet provides a session date and partition hash but no regime observations, candidate profile, or outcomes.",
+          "evidence_keys": [
+            "packet.partition",
+            "packet.partition_source_hash",
+            "packet.session_date",
+            "packet.outcomes_visible"
+          ],
+          "severity": "fatal"
+        }
+      ],
+      "latency_ms": 3430,
+      "model_id": "zai-org/GLM-5.3-Flash",
+      "prompt_hash": "67725091604cf744b4b02c461fe1524d34b2b639c8bd009132842619f8a34e9d",
+      "reason_code": "INSUFFICIENT_EVIDENCE",
+      "response_hash": "ee2f51b9894867dfc6c2d1f6ca3a391d2b58f11f8edeb66090e0f2bac9206feb",
+      "role": "regime_witness",
+      "status": "abstain",
+      "thesis": "Cannot judge candidate-regime compatibility: the packet contains only partition metadata and no regime observations or candidate description."
+    },
+    "strategist": {
+      "falsifiers": [
+        "After packet.signal_at, price trades above packet.features.range_high (744.705) before trading below packet.features.range_low (742.74).",
+        "Price closes the evaluation window above packet.signal_price (744.09), invalidating the bearish stance regardless of range breaks.",
+        "Relative volume decays below 1.0 while price holds above 744.09, removing the participation condition that supported the signal.",
+        "Realized volatility expands sharply (well above 0.0774) with price resolving upward through 744.705, indicating regime break against the short thesis."
+      ],
+      "findings": [
+        {
+          "claim": "The packet asserts a bearish directional signal at price 744.09, establishing the direction of the thesis.",
+          "evidence_keys": [
+            "packet.direction",
+            "packet.signal_price",
+            "packet.signal_at"
+          ],
+          "severity": "support"
+        },
+        {
+          "claim": "The signal price of 744.09 sits in the upper portion of the intraday range (742.74 to 744.705), i.e., roughly 68.7% of the way up a 1.965-wide range, which is consistent with a fade-the-range-high short rather than a breakdown entry.",
+          "evidence_keys": [
+            "packet.features.range_high",
+            "packet.features.range_low",
+            "packet.features.range_width",
+            "packet.signal_price"
+          ],
+          "severity": "support"
+        },
+        {
+          "claim": "Relative volume of 1.113 is only modestly above baseline; this provides weak, not strong, evidence of institutional conviction behind the bearish signal.",
+          "evidence_keys": [
+            "packet.features.relative_volume"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "Realized volatility of 0.0774 combined with a narrow 1.965-point range indicates a compressed, low-dispersion regime; directional edge from a single snapshot in such a regime is statistically limited.",
+          "evidence_keys": [
+            "packet.features.realized_volatility",
+            "packet.features.range_width"
+          ],
+          "severity": "warning"
+        },
+        {
+          "claim": "Outcomes are not visible in the packet, so no historical hit rate, forward return, or label confirmation can be cited; the thesis rests solely on the frozen feature snapshot and must be judged prospectively by its falsifiers.",
+          "evidence_keys": [
+            "packet.outcomes_visible"
+          ],
+          "severity": "fatal"
+        }
+      ],
+      "latency_ms": 17989,
+      "model_id": "zai-org/GLM-5.3",
+      "prompt_hash": "41dc4ce7f597e1444fa4ed76112ee3ef835d5dcce87ae9e633d80ab9173aef4b",
+      "reason_code": "SUPPORTED_BY_SNAPSHOT_FEATURES_OUTCOMES_UNVERIFIED",
+      "response_hash": "1b9a4d89247a22711d1492f0e680776152d261249144316ba18cea51a199682b",
+      "role": "strategist",
+      "status": "support",
+      "thesis": "Bearish continuation thesis: at 2026-07-08T13:55:00+00:00 the signal marks a short bias at 744.09, which sits in the upper ~69% of the observed intraday range (742.74 to 744.705, width 1.965) on modestly elevated participation (relative volume 1.113) and low realized volatility (0.0774). The falsifiable claim is that price breaks below range_low 742.74 before trading above range_high 744.705 following signal_at; failure of that ordering falsifies the thesis."
+    }
+  },
+  "schema": "afterimage-live-model-receipt-v1"
+}

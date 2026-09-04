@@ -44,6 +44,7 @@ class MomentumContinuationStrategy(BaseStrategy):
         if bullish == bearish:
             return None
         return CandidateEvent(
+            candidate_id=self.candidate_id(snapshot),
             identity=self.identity,
             snapshot_id=snapshot.snapshot_id,
             symbol=snapshot.records[0].symbol if snapshot.records else "SPY",

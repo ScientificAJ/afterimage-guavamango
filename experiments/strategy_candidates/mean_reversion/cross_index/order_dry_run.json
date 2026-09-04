@@ -1,0 +1,45 @@
+{
+  "cli_arguments": [
+    "order",
+    "submit",
+    "--qty",
+    "1",
+    "--type",
+    "limit",
+    "--limit-price",
+    "2.29",
+    "--time-in-force",
+    "day",
+    "--order-class",
+    "mleg",
+    "--client-order-id",
+    "cross-index-trend-research-dry-run",
+    "--legs",
+    "[{\"symbol\":\"SPY250627C00606000\",\"ratio_qty\":\"1\",\"side\":\"buy\",\"position_intent\":\"buy_to_open\"},{\"symbol\":\"SPY250627C00611000\",\"ratio_qty\":\"1\",\"side\":\"sell\",\"position_intent\":\"sell_to_open\"}]",
+    "--quiet",
+    "--dry-run"
+  ],
+  "payload": {
+    "client_order_id": "cross-index-trend-research-dry-run",
+    "legs": [
+      {
+        "position_intent": "buy_to_open",
+        "ratio_qty": "1",
+        "side": "buy",
+        "symbol": "SPY250627C00606000"
+      },
+      {
+        "position_intent": "sell_to_open",
+        "ratio_qty": "1",
+        "side": "sell",
+        "symbol": "SPY250627C00611000"
+      }
+    ],
+    "limit_price": "2.29",
+    "order_class": "mleg",
+    "qty": "1",
+    "time_in_force": "day",
+    "type": "limit"
+  },
+  "submission_allowed": false
+}

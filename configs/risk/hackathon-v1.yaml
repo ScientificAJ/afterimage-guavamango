@@ -1,6 +1,7 @@
 policy_version: hackathon-v1
 paper_only: true
 maximum_modeled_loss: 500
+maximum_equity_notional: 10000
 maximum_daily_loss: 1000
 maximum_high_water_drawdown_fraction: 0.02
 maximum_open_strategy_positions: 1

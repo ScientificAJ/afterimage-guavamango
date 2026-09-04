@@ -27,8 +27,20 @@ export interface SessionSummary {
   candidate?: Record<string, unknown>;
   agents?: Record<string, unknown>;
   evidence?: Record<string, any>;
+  evidence_paths?: Array<{ step: number; low: string; median: string; high: string }>;
   payoff?: Record<string, any>;
   risk?: { status: string; quantity: number; modeled_max_loss: string; gates: Gate[] };
   warrant?: Record<string, any>;
   tournament?: Record<string, any>;
+  broker?: Record<string, any>;
+  market_data?: Record<string, any>;
+  dry_run?: Record<string, any>;
+  agent_provenance?: { mode?: string; live_inference?: boolean; models?: string[]; model_id?: string };
+  exit_plan?: Record<string, any>;
+  watchdog?: Record<string, any>;
+  strategy?: {
+    strategy_id: string;
+    strategy_version: string;
+    display_name?: string;
+  };
 }

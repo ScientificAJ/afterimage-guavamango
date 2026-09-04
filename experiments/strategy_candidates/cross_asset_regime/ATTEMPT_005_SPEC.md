@@ -1,0 +1,5 @@
+# Attempt 005 — confirmed overnight-gap continuation in ETF shares
+
+Attempt 005 combines the materially distinct overnight signal of attempt 002 with the liquid-share execution introduced only after option microstructure failures. At 09:45 New York time, four or five of the seven risk ETFs must have overnight gaps in one direction with mean magnitude at least 0.10% or 0.20%, and both QQQ and IWM first bars must confirm that direction. Trade the stronger directional overnight gap in QQQ or IWM.
+
+The fixed 12-variant neighborhood is breadth {4,5}, mean gap {0.10%,0.20%}, and stop distance {0.15%,0.25%,0.35%}. Execute at most $10,000 of long/short shares at the next bar open with one basis point adverse slippage and $0.005/share/side. Use a cent-rounded target whose after-cost profit is at least three times the after-cost stop loss, stop-first same-bar handling, and a six-bar timeout. January–April selects with at least 20 trades; May–September is one pseudo-OOS pass. The admission floors are unchanged.

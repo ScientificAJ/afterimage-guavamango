@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" crossorigin="anonymous"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #000;
+      }
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #FFFFFF;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-enmp" id="root" data-composition-id="main" data-start="0" data-duration="143.98" data-width="1920" data-height="1080">
+      <div data-hf-id="hf-9pvc" id="el-01-result" class="scene" data-composition-id="01-result" data-composition-src="compositions/frames/01-result.html" data-start="0" data-duration="10.524" data-track-index="0"></div>
+
+      <div data-hf-id="hf-4wmb" id="el-02-recoil" class="scene" data-composition-id="02-recoil" data-composition-src="compositions/frames/02-recoil.html" data-start="10.024" data-duration="18.04" data-track-index="1"></div>
+
+      <div data-hf-id="hf-44uw" id="el-03-memory" class="scene" data-composition-id="03-memory" data-composition-src="compositions/frames/03-memory.html" data-start="27.664" data-duration="14.824" data-track-index="0"></div>
+
+      <div data-hf-id="hf-naqp" id="el-04-proof" class="scene" data-composition-id="04-proof" data-composition-src="compositions/frames/04-proof.html" data-start="42.088" data-duration="21.348" data-track-index="1"></div>
+
+      <div data-hf-id="hf-gf6j" id="el-05-agent" class="scene" data-composition-id="05-agent" data-composition-src="compositions/frames/05-agent.html" data-start="62.936" data-duration="13.908" data-track-index="0"></div>
+
+      <div data-hf-id="hf-jpb7" id="el-06-jury" class="scene" data-composition-id="06-jury" data-composition-src="compositions/frames/06-jury.html" data-start="76.344" data-duration="16.904" data-track-index="1"></div>
+
+      <div data-hf-id="hf-yrzl" id="el-07-risk" class="scene" data-composition-id="07-risk" data-composition-src="compositions/frames/07-risk.html" data-start="92.848" data-duration="14.584" data-track-index="0"></div>
+
+      <div data-hf-id="hf-z5pd" id="el-08-flight-deck" class="scene" data-composition-id="08-flight-deck" data-composition-src="compositions/frames/08-flight-deck.html" data-start="107.032" data-duration="13.892" data-track-index="1"></div>
+
+      <div data-hf-id="hf-743y" id="el-09-options" class="scene" data-composition-id="09-options" data-composition-src="compositions/frames/09-options.html" data-start="120.42399999999999" data-duration="13.716" data-track-index="0"></div>
+
+      <div data-hf-id="hf-rksq" id="el-10-earned" class="scene" data-composition-id="10-earned" data-composition-src="compositions/frames/10-earned.html" data-start="133.64" data-duration="10.34" data-track-index="1"></div>
+
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+      // ── frame transitions (injected by transitions.mjs) ──
+      (function () { var tl = window.__timelines["main"];
+        tl.to("#el-01-result", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 10.024);
+        tl.fromTo("#el-02-recoil", { x: 1920, opacity: 1 }, { x: 0, duration: 0.5, ease: "power3.inOut" }, 10.024);
+        tl.to("#el-02-recoil", { scaleX: 0, transformOrigin: "left center", duration: 0.4, ease: "power3.inOut" }, 27.664);
+        tl.fromTo("#el-03-memory", { scaleX: 0, transformOrigin: "right center", opacity: 1 }, { scaleX: 1, transformOrigin: "right center", duration: 0.4, ease: "power3.inOut" }, 27.664);
+        tl.to("#el-03-memory", { scale: 2.5, opacity: 0, filter: "blur(8px)", duration: 0.4, ease: "power3.in" }, 42.088);
+        tl.fromTo("#el-04-proof", { scale: 0.5, opacity: 0, filter: "blur(8px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 42.088);
+        tl.to("#el-04-proof", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 62.936);
+        tl.fromTo("#el-05-agent", { x: 1920, opacity: 1 }, { x: 0, duration: 0.5, ease: "power3.inOut" }, 62.936);
+        tl.to("#el-05-agent", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 76.344);
+        tl.fromTo("#el-06-jury", { x: 1920, opacity: 1 }, { x: 0, duration: 0.5, ease: "power3.inOut" }, 76.344);
+        tl.to("#el-06-jury", { scaleX: 0, transformOrigin: "left center", duration: 0.4, ease: "power3.inOut" }, 92.848);
+        tl.fromTo("#el-07-risk", { scaleX: 0, transformOrigin: "right center", opacity: 1 }, { scaleX: 1, transformOrigin: "right center", duration: 0.4, ease: "power3.inOut" }, 92.848);
+        tl.to("#el-07-risk", { scale: 2.5, opacity: 0, filter: "blur(8px)", duration: 0.4, ease: "power3.in" }, 107.032);
+        tl.fromTo("#el-08-flight-deck", { scale: 0.5, opacity: 0, filter: "blur(8px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 107.032);
+        tl.to("#el-08-flight-deck", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 120.424);
+        tl.fromTo("#el-09-options", { x: 1920, opacity: 1 }, { x: 0, duration: 0.5, ease: "power3.inOut" }, 120.424);
+        tl.to("#el-09-options", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 133.64);
+        tl.fromTo("#el-10-earned", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 133.64);
+        tl.to({}, { duration: 143.98 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "admitted": true,
+  "limitations": [
+    "The 2022-2026 evidence is iteratively reused pseudo-OOS, not a sealed future period.",
+    "Alpaca IEX daily bars are not consolidated SIP and contain no bid/ask replay.",
+    "The shadow clock is causal but adds state: skipped Thursday/Friday virtual positions can delay later execution.",
+    "Historical fills use conservative explicit costs but do not model market impact or shorting because the strategy is long-only.",
+    "Results are a backtest, not guaranteed future P&L."
+  ],
+  "manifest_hash": "cdd4351de18e75c0cf008df63fb49283b55228a08dbf3c8098996a303ef5089a",
+  "metrics": {
+    "expectancy_r": "0.5058285073258596004268724454",
+    "max_drawdown_r": "4.74577717452504776292080443",
+    "minimum_target_to_stop": "3.000013277233859032762997108",
+    "neighbor_positive_fraction": "1",
+    "positive_month_fraction": "0.7234042553191489361702127660",
+    "positive_underlyings": 8,
+    "profit_factor": "2.252990790803920449771526138",
+    "sample_count": 95,
+    "stress_profit_factor": "2.221542138502801333118779760"
+  },
+  "required_gates": {
+    "after_cost_target_to_stop_gte_3": true,
+    "expectancy_gte_0_25r": true,
+    "largest_win_lte_25pct_gross": true,
+    "max_drawdown_lte_6r": true,
+    "positive_at_1_5x_costs": true,
+    "positive_month_fraction_gte_60pct": true,
+    "positive_neighbor_fraction_gte_60pct": true,
+    "positive_two_underlyings": true,
+    "profit_factor_gte_2": true,
+    "sample_count_gte_30": true
+  },
+  "research_result_hash": "7431cd90ce0135f7168af02f01ad3e5b5aa25cdc6b2b7afe2d4ba0d5e29a4cb2",
+  "result_content_hash": "d15818b88d7fad4af9c42735497d2985bd97f65425e94fa9dabf16d1dfda30a8",
+  "result_path": "result.json",
+  "schema_version": "afterimage-deployment-evidence-v1",
+  "strategy_authority_hash": "c54e93e4f4125f5cebf7bdca5c77ffc9c9787b8598e689faff59984a974af3f5",
+  "strategy_config_hash": "0e7441c121386c6bbad5e69dd549d11ddc13c6f4a8260ff5007686e226ab853d",
+  "strategy_source_hash": "48fd90ff6e1155a1d43c10ebe7d179b2ff25de309dc69c58c6298445e9950b71",
+  "strategy_id": "shadow_clock_shock_reversal_v1",
+  "strategy_version": "1.0.0"
+}

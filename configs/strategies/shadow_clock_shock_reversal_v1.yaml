@@ -1,0 +1,45 @@
+strategy_id: shadow_clock_shock_reversal_v1
+strategy_version: 1.0.0
+display_name: GuavaMango
+plugin: afterimage.strategies.shadow_clock_shock_reversal:ShadowClockShockReversalStrategy
+symbols: [QQQ, IWM, XLK, XLF, XLE, XLV, XLY, XLI, XLP, TLT, GLD]
+runtime:
+  bar_timeframe: 1Day
+  lookback_calendar_days: 366
+  session_start: "00:00"
+  signal_at: "16:00"
+  entry_cutoff: "10:00"
+  execution_kind: equity
+  market_scope: universe
+signal:
+  long_only: true
+  trend_fast_sma_sessions: 50
+  trend_slow_sma_sessions: 100
+  warmup_index: 110
+  atr_sessions: 14
+  shock_lookback_sessions: 2
+  minimum_shock_atr: 0.6
+  maximum_close_location: 0.25
+  cross_section: most_negative_normalized_shock
+  allowed_signal_weekdays: [Monday, Tuesday, Wednesday]
+shadow_clock:
+  advances_on_all_weekdays: true
+  skipped_signals_consume_clock: true
+  blocks_through_exit_session: true
+execution:
+  timing: next_regular_session_open
+  maximum_holding_sessions: 5
+  serialized_positions: 1
+  notional_dollars: 10000
+  modeled_round_trip_cost_per_share: 0.01
+risk:
+  stop_atr: 1.0
+  minimum_stop_fraction: 0.001
+  maximum_stop_fraction: 0.03
+  after_cost_target_r: 3.0
+  same_bar_ambiguity: stop_first
+costs:
+  slippage_bps_per_fill: 1.0
+  fee_per_share_per_side: 0.005
+evidence:
+  manifest_path: configs/strategies/evidence/shadow_clock_shock_reversal_v1/manifest.json

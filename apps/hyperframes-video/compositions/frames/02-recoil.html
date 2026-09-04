@@ -1,0 +1,784 @@
+<template>
+  <style>
+    @font-face { font-family: "DM Sans Variable"; src: url("assets/fonts/dm-sans-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/jetbrains-mono-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      container-type: size;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-bg"],
+    [class~="02-recoil-visual"] {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    [class~="02-recoil-bg"] {
+      background: #ffffff;
+    }
+
+    [class~="02-recoil-sun-bloom"] {
+      position: absolute;
+      left: 20%;
+      top: 3%;
+      width: 62%;
+      height: 76%;
+      background: radial-gradient(circle at 50% 50%, rgba(243, 173, 0, 0.78) 0%, rgba(255, 214, 108, 0.48) 28%, rgba(255, 241, 194, 0.24) 53%, rgba(255, 255, 255, 0) 74%);
+    }
+
+    [class~="02-recoil-ember-bloom"] {
+      position: absolute;
+      right: -8%;
+      top: -15%;
+      width: 48%;
+      height: 62%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 101, 95, 0.18) 0%, rgba(255, 101, 95, 0.08) 38%, rgba(255, 255, 255, 0) 72%);
+    }
+
+    [class~="02-recoil-visual"] {
+      height: 900px;
+    }
+
+    [class~="02-recoil-world"] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 6200px;
+      height: 900px;
+      transform-origin: 50% 50%;
+      will-change: transform;
+    }
+
+    [class~="02-recoil-station"] {
+      position: absolute;
+      top: 0;
+      height: 900px;
+    }
+
+    [class~="02-recoil-micro"] {
+      font-family: "DM Sans Variable";
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-display"] {
+      margin: 0;
+      font-family: "Barlow Condensed";
+      font-size: 78px;
+      font-weight: 600;
+      line-height: 0.9;
+      letter-spacing: -0.018em;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-data"] {
+      font-family: "JetBrains Mono Variable";
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-rule"] {
+      height: 1px;
+      background: rgba(17, 17, 15, 0.22);
+    }
+
+    [class~="02-recoil-field"] {
+      left: 0;
+      width: 1980px;
+    }
+
+    [class~="02-recoil-field-kicker"] {
+      position: absolute;
+      left: 88px;
+      top: 58px;
+    }
+
+    [class~="02-recoil-field-title"] {
+      position: absolute;
+      left: 84px;
+      top: 105px;
+      width: 760px;
+    }
+
+    [class~="02-recoil-field-rule"] {
+      position: absolute;
+      left: 88px;
+      top: 206px;
+      width: 1720px;
+    }
+
+    [class~="02-recoil-field-svg"] {
+      position: absolute;
+      left: 80px;
+      top: 225px;
+      width: 1760px;
+      height: 560px;
+      overflow: visible;
+    }
+
+    [class~="02-recoil-field-svg"] text {
+      font-family: "JetBrains Mono Variable";
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      fill: #11110f;
+    }
+
+    [class~="02-recoil-lane-rule"] {
+      stroke: rgba(17, 17, 15, 0.14);
+      stroke-width: 1;
+    }
+
+    [class~="02-recoil-trend-path"] {
+      fill: none;
+      stroke: #2d55f5;
+      stroke-width: 4;
+      stroke-linecap: square;
+      stroke-linejoin: round;
+    }
+
+    [class~="02-recoil-field-tag"] {
+      position: absolute;
+      left: 1416px;
+      top: 116px;
+      padding: 16px 22px 14px;
+      background: #f3ad00;
+      font-family: "DM Sans Variable";
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-shock"] {
+      left: 2110px;
+      width: 1500px;
+    }
+
+    [class~="02-recoil-shock-kicker"] {
+      position: absolute;
+      left: 120px;
+      top: 70px;
+    }
+
+    [class~="02-recoil-shock-title"] {
+      position: absolute;
+      left: 116px;
+      top: 116px;
+      width: 850px;
+    }
+
+    [class~="02-recoil-shock-svg"] {
+      position: absolute;
+      left: 92px;
+      top: 244px;
+      width: 1260px;
+      height: 470px;
+      overflow: visible;
+    }
+
+    [class~="02-recoil-shock-trend"] {
+      fill: none;
+      stroke: #2d55f5;
+      stroke-width: 4;
+      stroke-linecap: square;
+      stroke-linejoin: round;
+    }
+
+    [class~="02-recoil-shock-drop"] {
+      fill: none;
+      stroke: #ff655f;
+      stroke-width: 12;
+      stroke-linecap: square;
+      stroke-linejoin: round;
+    }
+
+    [class~="02-recoil-shock-guide"] {
+      stroke: rgba(17, 17, 15, 0.2);
+      stroke-width: 1;
+      stroke-dasharray: 7 10;
+    }
+
+    [class~="02-recoil-shock-label"] {
+      position: absolute;
+      left: 880px;
+      top: 255px;
+      width: 390px;
+      font-family: "Barlow Condensed";
+      font-size: 58px;
+      font-weight: 600;
+      line-height: 0.9;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-shock-label"] span {
+      display: block;
+      margin-top: 20px;
+      font-family: "DM Sans Variable";
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ff655f;
+    }
+
+    [class~="02-recoil-range"] {
+      left: 3650px;
+      width: 1230px;
+    }
+
+    [class~="02-recoil-range-kicker"] {
+      position: absolute;
+      left: 90px;
+      top: 70px;
+    }
+
+    [class~="02-recoil-range-title"] {
+      position: absolute;
+      left: 86px;
+      top: 116px;
+      width: 760px;
+    }
+
+    [class~="02-recoil-range-chart"] {
+      position: absolute;
+      left: 72px;
+      top: 240px;
+      width: 650px;
+      height: 500px;
+    }
+
+    [class~="02-recoil-band"] {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 25%;
+      background: rgba(243, 173, 0, 0.45);
+      transform-origin: 0% 50%;
+    }
+
+    [class~="02-recoil-range-top"],
+    [class~="02-recoil-range-bottom"] {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(17, 17, 15, 0.3);
+    }
+
+    [class~="02-recoil-range-top"] {
+      top: 0;
+    }
+
+    [class~="02-recoil-range-bottom"] {
+      bottom: 0;
+    }
+
+    [class~="02-recoil-range-stick"] {
+      position: absolute;
+      left: 54%;
+      top: 42px;
+      width: 1px;
+      height: 405px;
+      background: #11110f;
+    }
+
+    [class~="02-recoil-range-body"] {
+      position: absolute;
+      left: calc(54% - 22px);
+      top: 315px;
+      width: 44px;
+      height: 78px;
+      background: #ff655f;
+    }
+
+    [class~="02-recoil-close-marker"] {
+      position: absolute;
+      left: calc(54% - 15px);
+      top: 382px;
+      width: 30px;
+      height: 30px;
+      background: #f3ad00;
+      border-radius: 50%;
+    }
+
+    [class~="02-recoil-band-label"] {
+      position: absolute;
+      left: 26px;
+      bottom: 30px;
+      font-family: "DM Sans Variable";
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-stretch"] {
+      position: absolute;
+      left: 790px;
+      top: 270px;
+      width: 350px;
+    }
+
+    [class~="02-recoil-stretch-big"] {
+      margin-top: 18px;
+      font-family: "Barlow Condensed";
+      font-size: 104px;
+      font-weight: 700;
+      line-height: 0.82;
+      letter-spacing: -0.025em;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-stretch-rule"] {
+      width: 330px;
+      margin: 32px 0 24px;
+    }
+
+    [class~="02-recoil-stretch-read"] {
+      font-family: "DM Sans Variable";
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.25;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-open"] {
+      left: 4970px;
+      width: 1230px;
+    }
+
+    [class~="02-recoil-open-kicker"] {
+      position: absolute;
+      left: 90px;
+      top: 72px;
+    }
+
+    [class~="02-recoil-open-title"] {
+      position: absolute;
+      left: 84px;
+      top: 122px;
+      width: 760px;
+    }
+
+    [class~="02-recoil-open-axis"] {
+      position: absolute;
+      left: 90px;
+      top: 330px;
+      width: 1010px;
+      height: 1px;
+      background: #11110f;
+    }
+
+    [class~="02-recoil-open-tick"] {
+      position: absolute;
+      left: 520px;
+      top: 285px;
+      width: 1px;
+      height: 90px;
+      background: #11110f;
+    }
+
+    [class~="02-recoil-open-word"] {
+      position: absolute;
+      left: 436px;
+      top: 382px;
+      font-family: "Barlow Condensed";
+      font-size: 122px;
+      font-weight: 700;
+      line-height: 0.82;
+      letter-spacing: -0.03em;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-buy"] {
+      position: absolute;
+      left: 420px;
+      top: 528px;
+      width: 320px;
+      height: 116px;
+      display: grid;
+      place-items: center;
+      background: #f3ad00;
+      transform-origin: 50% 0%;
+      font-family: "Barlow Condensed";
+      font-size: 82px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-buy"]::before,
+    [class~="02-recoil-buy"]::after {
+      content: "";
+      position: absolute;
+      top: -24px;
+      width: 1px;
+      height: 24px;
+      background: #11110f;
+    }
+
+    [class~="02-recoil-buy"]::before {
+      left: 0;
+    }
+
+    [class~="02-recoil-buy"]::after {
+      right: 0;
+    }
+
+    [class~="02-recoil-rule-strip"] {
+      position: absolute;
+      left: 90px;
+      top: 720px;
+      width: 1010px;
+      padding-top: 22px;
+      border-top: 1px solid #11110f;
+      display: flex;
+      justify-content: space-between;
+      font-family: "JetBrains Mono Variable";
+      font-size: 17px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #11110f;
+    }
+
+    [class~="02-recoil-page"] {
+      position: absolute;
+      left: 5970px;
+      top: 842px;
+      font-family: "JetBrains Mono Variable";
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(17, 17, 15, 0.75);
+    }
+  </style>
+
+  <div data-hf-id="hf-wrhp" id="root" data-composition-id="02-recoil" data-width="1920" data-height="1080" data-duration="18.04">
+    <div data-hf-id="hf-mblk" class="clip 02-recoil-bg" data-start="0" data-duration="14" data-track-index="0">
+      <div data-hf-id="hf-jzcm" class="02-recoil-sun-bloom"></div>
+      <div data-hf-id="hf-ui0l" class="02-recoil-ember-bloom"></div>
+    </div>
+
+    <div data-hf-id="hf-19oq" class="clip 02-recoil-visual" data-start="0" data-duration="14" data-track-index="1">
+      <div data-hf-id="hf-bb9e" class="02-recoil-world">
+        <section data-hf-id="hf-t8d8" class="02-recoil-station 02-recoil-field">
+          <div data-hf-id="hf-5m0r" class="02-recoil-micro 02-recoil-field-kicker">GuavaMango / universe scan</div>
+          <h2 data-hf-id="hf-i5x8" class="02-recoil-display 02-recoil-field-title">Established uptrend</h2>
+          <div data-hf-id="hf-62tt" class="02-recoil-rule 02-recoil-field-rule"></div>
+          <div data-hf-id="hf-ygsp" class="02-recoil-field-tag">11 liquid ETFs</div>
+          <svg data-hf-id="hf-c5gh" class="02-recoil-field-svg" viewBox="0 0 1760 560" xmlns="http://www.w3.org/2000/svg" aria-label="Eleven rising ETF trend lanes">
+            <g data-hf-id="hf-vera">
+              <line data-hf-id="hf-vhsk" class="02-recoil-lane-rule" x1="220" y1="38" x2="1690" y2="38" />
+              <line data-hf-id="hf-cjrc" class="02-recoil-lane-rule" x1="220" y1="86" x2="1690" y2="86" />
+              <line data-hf-id="hf-nhvg" class="02-recoil-lane-rule" x1="220" y1="134" x2="1690" y2="134" />
+              <line data-hf-id="hf-5uzm" class="02-recoil-lane-rule" x1="220" y1="182" x2="1690" y2="182" />
+              <line data-hf-id="hf-azju" class="02-recoil-lane-rule" x1="220" y1="230" x2="1690" y2="230" />
+              <line data-hf-id="hf-3yia" class="02-recoil-lane-rule" x1="220" y1="278" x2="1690" y2="278" />
+              <line data-hf-id="hf-fm2m" class="02-recoil-lane-rule" x1="220" y1="326" x2="1690" y2="326" />
+              <line data-hf-id="hf-pp8o" class="02-recoil-lane-rule" x1="220" y1="374" x2="1690" y2="374" />
+              <line data-hf-id="hf-o9c4" class="02-recoil-lane-rule" x1="220" y1="422" x2="1690" y2="422" />
+              <line data-hf-id="hf-egpm" class="02-recoil-lane-rule" x1="220" y1="470" x2="1690" y2="470" />
+              <line data-hf-id="hf-pj6w" class="02-recoil-lane-rule" x1="220" y1="518" x2="1690" y2="518" />
+            </g>
+            <g data-hf-id="hf-pwpm">
+              <text data-hf-id="hf-lqei" x="0" y="45">QQQ</text><text data-hf-id="hf-r0kn" x="0" y="93">IWM</text><text data-hf-id="hf-nvct" x="0" y="141">XLK</text>
+              <text data-hf-id="hf-q9nu" x="0" y="189">XLF</text><text data-hf-id="hf-4jaf" x="0" y="237">XLE</text><text data-hf-id="hf-pnff" x="0" y="285">XLV</text>
+              <text data-hf-id="hf-ai24" x="0" y="333">XLY</text><text data-hf-id="hf-jydd" x="0" y="381">XLI</text><text data-hf-id="hf-2wzd" x="0" y="429">XLP</text>
+              <text data-hf-id="hf-hjje" x="0" y="477">TLT</text><text data-hf-id="hf-4yej" x="0" y="525">GLD</text>
+            </g>
+            <g data-hf-id="hf-qb0n">
+              <path data-hf-id="hf-7nh6" class="02-recoil-trend-path" d="M220 51 L430 47 L650 42 L880 35 L1110 29 L1350 19 L1690 10" />
+              <path data-hf-id="hf-0kph" class="02-recoil-trend-path" d="M220 101 L450 94 L670 91 L900 82 L1130 77 L1390 64 L1690 57" />
+              <path data-hf-id="hf-0ha0" class="02-recoil-trend-path" d="M220 150 L430 145 L680 137 L910 129 L1150 123 L1400 112 L1690 104" />
+              <path data-hf-id="hf-qdqz" class="02-recoil-trend-path" d="M220 198 L450 194 L670 187 L920 177 L1160 171 L1420 160 L1690 151" />
+              <path data-hf-id="hf-4n94" class="02-recoil-trend-path" d="M220 246 L440 243 L690 233 L900 228 L1160 218 L1400 210 L1690 199" />
+              <path data-hf-id="hf-i9j1" class="02-recoil-trend-path" d="M220 294 L470 289 L700 282 L930 273 L1190 267 L1430 256 L1690 247" />
+              <path data-hf-id="hf-076d" class="02-recoil-trend-path" d="M220 342 L440 336 L680 329 L920 322 L1180 313 L1420 304 L1690 295" />
+              <path data-hf-id="hf-q92r" class="02-recoil-trend-path" d="M220 390 L460 384 L700 376 L940 367 L1170 362 L1430 350 L1690 342" />
+              <path data-hf-id="hf-zaz8" class="02-recoil-trend-path" d="M220 438 L460 433 L690 425 L930 417 L1170 409 L1410 400 L1690 390" />
+              <path data-hf-id="hf-rgv8" class="02-recoil-trend-path" d="M220 486 L450 481 L690 474 L920 466 L1160 456 L1420 449 L1690 438" />
+              <path data-hf-id="hf-evh2" class="02-recoil-trend-path" d="M220 534 L450 529 L690 522 L930 514 L1170 506 L1420 496 L1690 486" />
+            </g>
+          </svg>
+        </section>
+
+        <section data-hf-id="hf-6k5y" class="02-recoil-station 02-recoil-shock">
+          <div data-hf-id="hf-g7y7" class="02-recoil-micro 02-recoil-shock-kicker">Signal condition / 01</div>
+          <h2 data-hf-id="hf-fwno" class="02-recoil-display 02-recoil-shock-title">One lane breaks form</h2>
+          <svg data-hf-id="hf-i6aw" class="02-recoil-shock-svg" viewBox="0 0 1260 470" xmlns="http://www.w3.org/2000/svg" aria-label="Rising trend followed by a two-day shock">
+            <line data-hf-id="hf-87zk" class="02-recoil-shock-guide" x1="30" y1="372" x2="1185" y2="372" />
+            <line data-hf-id="hf-nssk" class="02-recoil-shock-guide" x1="30" y1="92" x2="1185" y2="92" />
+            <path data-hf-id="hf-sar7" class="02-recoil-shock-trend" d="M30 355 C180 330 260 300 390 260 C520 220 640 176 760 132 C820 110 860 94 900 86" />
+            <path data-hf-id="hf-f499" class="02-recoil-shock-drop" d="M900 86 L1030 236 L1185 396" />
+            <g data-hf-id="hf-si2b" class="02-recoil-shock-dots">
+              <circle data-hf-id="hf-oo76" cx="900" cy="86" r="9" fill="#2d55f5" />
+              <circle data-hf-id="hf-mu46" cx="1030" cy="236" r="11" fill="#ff655f" />
+              <circle data-hf-id="hf-d05u" cx="1185" cy="396" r="15" fill="#ff655f" />
+            </g>
+            <text data-hf-id="hf-29nr" x="860" y="448" class="02-recoil-data" font-size="18" fill="#11110f">D−2</text>
+            <text data-hf-id="hf-nr5r" x="1000" y="448" class="02-recoil-data" font-size="18" fill="#11110f">D−1</text>
+            <text data-hf-id="hf-yq2h" x="1144" y="448" class="02-recoil-data" font-size="18" fill="#11110f">CLOSE</text>
+          </svg>
+          <div data-hf-id="hf-tqzc" class="02-recoil-shock-label">Two-day<br data-hf-id="hf-x5px">liquidity shock<span data-hf-id="hf-8vjd">countertrend displacement</span></div>
+        </section>
+
+        <section data-hf-id="hf-wifz" class="02-recoil-station 02-recoil-range">
+          <div data-hf-id="hf-pzqf" class="02-recoil-micro 02-recoil-range-kicker">Signal condition / 02</div>
+          <h2 data-hf-id="hf-me3i" class="02-recoil-display 02-recoil-range-title">Close location</h2>
+          <div data-hf-id="hf-ixl2" class="02-recoil-range-chart">
+            <div data-hf-id="hf-obab" class="02-recoil-band"></div>
+            <div data-hf-id="hf-wdub" class="02-recoil-range-top"></div>
+            <div data-hf-id="hf-1afz" class="02-recoil-range-bottom"></div>
+            <div data-hf-id="hf-ir22" class="02-recoil-range-stick"></div>
+            <div data-hf-id="hf-osfa" class="02-recoil-range-body"></div>
+            <div data-hf-id="hf-fu89" class="02-recoil-close-marker"></div>
+            <div data-hf-id="hf-fz5a" class="02-recoil-band-label">Bottom quartile</div>
+          </div>
+          <div data-hf-id="hf-0xvh" class="02-recoil-stretch">
+            <div data-hf-id="hf-lt9e" class="02-recoil-micro">Normalized stretch</div>
+            <div data-hf-id="hf-c3rq" class="02-recoil-stretch-big">Deepest</div>
+            <div data-hf-id="hf-41ro" class="02-recoil-rule 02-recoil-stretch-rule"></div>
+            <div data-hf-id="hf-l38n" class="02-recoil-stretch-read">Strongest qualified recoil across the complete universe.</div>
+          </div>
+        </section>
+
+        <section data-hf-id="hf-1tlk" class="02-recoil-station 02-recoil-open">
+          <div data-hf-id="hf-mr2y" class="02-recoil-micro 02-recoil-open-kicker">Execution point</div>
+          <h2 data-hf-id="hf-i5r5" class="02-recoil-display 02-recoil-open-title">Next session</h2>
+          <div data-hf-id="hf-fe84" class="02-recoil-open-axis"></div>
+          <div data-hf-id="hf-4vwc" class="02-recoil-open-tick"></div>
+          <div data-hf-id="hf-a7ob" class="02-recoil-open-word">Open</div>
+          <div data-hf-id="hf-gani" class="02-recoil-buy">Buy</div>
+          <div data-hf-id="hf-h5yh" class="02-recoil-rule-strip">
+            <span data-hf-id="hf-jaar">Uptrend</span><span data-hf-id="hf-qz41">2D shock</span><span data-hf-id="hf-3hsd">Low close</span><span data-hf-id="hf-8cdg">Next open</span>
+          </div>
+        </section>
+
+        <div data-hf-id="hf-lr9d" class="02-recoil-page">02</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script>
+    (() => {
+      const root = document.querySelector('[data-composition-id="02-recoil"]');
+      if (!root || !window.gsap) return;
+
+      const world = root.querySelector('[class~="02-recoil-world"]');
+      const cam = { x: 0, y: 0, scale: 1 };
+      const applyCamera = () => {
+        world.style.transform = "translate(" + cam.x + "px, " + cam.y + "px) scale(" + cam.scale + ")";
+      };
+      applyCamera();
+
+      const drawPaths = Array.from(root.querySelectorAll('[class~="02-recoil-trend-path"], [class~="02-recoil-shock-trend"], [class~="02-recoil-shock-drop"]'));
+      drawPaths.forEach((path) => {
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = String(length);
+        path.style.strokeDashoffset = String(length);
+      });
+
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-field-title"]'),
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" },
+        0.05
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-field-kicker"]'),
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" },
+        0.12
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-field-rule"]'),
+        { opacity: 0, scaleX: 0, transformOrigin: "0% 50%" },
+        { opacity: 1, scaleX: 1, duration: 0.6, ease: "power2.out" },
+        0.2
+      );
+      root.querySelectorAll('[class~="02-recoil-trend-path"]').forEach((path, index) => {
+        tl.to(path, { strokeDashoffset: 0, duration: 1.6, ease: "power2.out" }, 0.28 + index * 0.08);
+      });
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-field-tag"]'),
+        { opacity: 0, scale: 0, y: 16, transformOrigin: "50% 100%" },
+        { opacity: 1, scale: 1, y: 0, duration: 0.55, ease: "power3.out" },
+        1.25
+      );
+      tl.to(
+        cam,
+        { x: -190, duration: 2.55, ease: "power2.inOut", onUpdate: applyCamera },
+        0.45
+      );
+
+      tl.to(
+        cam,
+        { x: -1950, y: 0, scale: 1, duration: 1.35, ease: "power3.inOut", onUpdate: applyCamera },
+        3.0
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-shock-kicker"]'),
+        { opacity: 0, x: 80 },
+        { opacity: 1, x: 0, duration: 0.5, ease: "power4.out" },
+        4.08
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-shock-title"]'),
+        { opacity: 0.35, x: 230 },
+        { opacity: 1, x: 0, duration: 0.5, ease: "power4.out" },
+        4.18
+      );
+      tl.to(
+        root.querySelector('[class~="02-recoil-shock-trend"]'),
+        { strokeDashoffset: 0, duration: 0.85, ease: "power2.out" },
+        4.35
+      );
+      tl.to(
+        root.querySelector('[class~="02-recoil-shock-drop"]'),
+        { strokeDashoffset: 0, duration: 0.82, ease: "power2.out" },
+        5.05
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-shock-dots"]'),
+        { opacity: 0, scale: 0.8, transformOrigin: "center center" },
+        { opacity: 1, scale: 1, duration: 0.45, ease: "power3.out" },
+        5.5
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-shock-label"]'),
+        { opacity: 0, x: 42 },
+        { opacity: 1, x: 0, duration: 0.62, ease: "power3.out" },
+        5.62
+      );
+
+      tl.to(
+        cam,
+        { x: -3300, y: 0, scale: 1, duration: 1.35, ease: "power3.inOut", onUpdate: applyCamera },
+        7.02
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-range-title"]'),
+        { opacity: 0.35, x: 230 },
+        { opacity: 1, x: 0, duration: 0.5, ease: "power4.out" },
+        8.0
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-range-kicker"]'),
+        { opacity: 0, x: 80 },
+        { opacity: 1, x: 0, duration: 0.45, ease: "power4.out" },
+        8.08
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-band"]'),
+        { opacity: 0, scaleX: 0 },
+        { opacity: 1, scaleX: 1, duration: 0.65, ease: "power2.out" },
+        8.38
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-range-stick"]'),
+        { opacity: 0, scaleY: 0, transformOrigin: "50% 100%" },
+        { opacity: 1, scaleY: 1, duration: 0.62, ease: "power2.out" },
+        8.66
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-range-body"]'),
+        { opacity: 0, scaleY: 0, transformOrigin: "50% 100%" },
+        { opacity: 1, scaleY: 1, duration: 0.5, ease: "power3.out" },
+        8.95
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-close-marker"]'),
+        { opacity: 0, scale: 0 },
+        { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out" },
+        9.18
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-band-label"]'),
+        { opacity: 0, y: 18 },
+        { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" },
+        9.35
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-stretch"]'),
+        { opacity: 0.35, x: 230 },
+        { opacity: 1, x: 0, duration: 0.68, ease: "power4.out" },
+        9.62
+      );
+
+      tl.to(
+        cam,
+        { x: -4300, y: 0, scale: 1, duration: 1.35, ease: "power3.inOut", onUpdate: applyCamera },
+        10.55
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-open-kicker"]'),
+        { opacity: 0, x: 80 },
+        { opacity: 1, x: 0, duration: 0.45, ease: "power4.out" },
+        11.52
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-open-title"]'),
+        { opacity: 0.35, x: 230 },
+        { opacity: 1, x: 0, duration: 0.52, ease: "power4.out" },
+        11.62
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-open-axis"]'),
+        { opacity: 0, scaleX: 0, transformOrigin: "0% 50%" },
+        { opacity: 1, scaleX: 1, duration: 0.55, ease: "power2.out" },
+        11.78
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-open-tick"]'),
+        { opacity: 0, scaleY: 0, transformOrigin: "50% 100%" },
+        { opacity: 1, scaleY: 1, duration: 0.42, ease: "power2.out" },
+        12.05
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-open-word"]'),
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, duration: 0.48, ease: "power3.out" },
+        12.12
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-buy"]'),
+        { opacity: 0, scale: 0, y: 18 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.58, ease: "power3.out" },
+        12.46
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-rule-strip"]'),
+        { opacity: 0, y: 18 },
+        { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+        12.8
+      );
+      tl.fromTo(
+        root.querySelector('[class~="02-recoil-page"]'),
+        { opacity: 0 },
+        { opacity: 1, duration: 0.35, ease: "power1.out" },
+        13.15
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["02-recoil"] = tl;
+    })();
+  </script>
+</template>

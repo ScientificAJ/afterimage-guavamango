@@ -1,0 +1,20 @@
+{
+  "bgm": {
+    "path": "assets/algorithmic-flow.m4a",
+    "volume": 0.105
+  },
+  "bgm_pending": false,
+  "voices": [
+    { "frame": 1, "path": "assets/voice/01.wav", "duration_s": 10.024 },
+    { "frame": 2, "path": "assets/voice/02.wav", "duration_s": 17.64 },
+    { "frame": 3, "path": "assets/voice/03.wav", "duration_s": 14.424 },
+    { "frame": 4, "path": "assets/voice/04.wav", "duration_s": 20.848 },
+    { "frame": 5, "path": "assets/voice/05.wav", "duration_s": 13.408 },
+    { "frame": 6, "path": "assets/voice/06.wav", "duration_s": 16.504 },
+    { "frame": 7, "path": "assets/voice/07.wav", "duration_s": 14.184 },
+    { "frame": 8, "path": "assets/voice/08.wav", "duration_s": 13.392 },
+    { "frame": 9, "path": "assets/voice/09.wav", "duration_s": 13.216 },
+    { "frame": 10, "path": "assets/voice/10.wav", "duration_s": 10.34 }
+  ],
+  "sfx": []
+}

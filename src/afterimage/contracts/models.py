@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import date, datetime
 from decimal import Decimal
 from typing import Any, Literal
 from uuid import UUID, uuid4
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 from .enums import DecisionStatus, EvidenceLevel, SessionState
 
@@ -104,8 +104,10 @@ class EvidenceManifest(StrictModel):
 
 class RevealedOutcome(StrictModel):
     twin_id: str
+    session_date: date
     target_first: bool | None
     return_r: Decimal
+    placebo_return_r: Decimal
     censored: bool = False
     path: tuple[Decimal, ...] = ()
 
@@ -118,6 +120,7 @@ class EvidenceMetrics(StrictModel):
     expected_value_r: Decimal
     maximum_drawdown_r: Decimal
     positive_loo_fraction: Decimal
+    placebo_expected_value_r: Decimal
     placebo_edge_r: Decimal
     coverage: Decimal
     confidence_method: str
@@ -148,6 +151,9 @@ class ContractPolicy(StrictModel):
     min_open_interest: int
     max_relative_spread: Decimal
     max_quote_age_seconds: int
+    min_delta: Decimal = Decimal("0.15")
+    max_delta: Decimal = Decimal("0.40")
+    max_leg_timestamp_skew_seconds: Decimal = Decimal(1)
 
 
 class ExitPlan(StrictModel):
@@ -167,6 +173,12 @@ class PayoffPassport(StrictModel):
     operational_stop_loss: Decimal
     operational_ratio: Decimal
     modeled_costs: Decimal
+    asset_class: Literal["option", "equity"] = "option"
+    symbol: str | None = None
+    side: Literal["buy", "sell"] | None = None
+    entry_price: Decimal | None = None
+    stop_price: Decimal | None = None
+    target_price: Decimal | None = None
 
 
 class AccountSnapshot(StrictModel):
@@ -174,6 +186,7 @@ class AccountSnapshot(StrictModel):
     paper: bool
     status: str
     equity: Decimal
+    last_equity: Decimal
     cash: Decimal
     options_buying_power: Decimal
     options_approved_level: int
@@ -208,12 +221,74 @@ class ExecutionIntent(StrictModel):
     strategy_manifest_hash: str
     evidence_commit_hash: str
     risk_decision_id: UUID
-    legs: tuple[OptionLeg, ...]
+    legs: tuple[OptionLeg, ...] = ()
     quantity: int = Field(gt=0)
     limit_price: Decimal
-    order_class: Literal["mleg"] = "mleg"
-    order_type: Literal["limit"] = "limit"
+    asset_class: Literal["option", "equity"] = "option"
+    symbol: str | None = None
+    side: Literal["buy", "sell"] | None = None
+    take_profit_price: Decimal | None = None
+    stop_price: Decimal | None = None
+    order_class: Literal["mleg", "bracket", "simple"] = "mleg"
+    order_type: Literal["limit", "market"] = "limit"
     time_in_force: Literal["day"] = "day"
+    reduce_only: bool = False
+
+    @model_validator(mode="after")
+    def complete_instrument_contract(self) -> ExecutionIntent:
+        if self.asset_class == "option":
+            if (
+                self.order_class != "mleg"
+                or self.order_type != "limit"
+                or self.reduce_only
+                or not self.legs
+            ):
+                raise ValueError("option intent requires MLEG option legs")
+            if any(
+                value is not None
+                for value in (self.symbol, self.side, self.take_profit_price, self.stop_price)
+            ):
+                raise ValueError("option intent cannot contain equity bracket fields")
+            return self
+        if not self.symbol or self.side is None:
+            raise ValueError("equity intent requires symbol and side")
+        if self.reduce_only:
+            if (
+                self.order_class != "simple"
+                or self.order_type != "market"
+                or self.legs
+                or self.take_profit_price is not None
+                or self.stop_price is not None
+                or self.limit_price != 0
+            ):
+                raise ValueError("equity close requires a legless reduce-only market order")
+            return self
+        if self.order_class != "bracket" or self.order_type != "limit" or self.legs:
+            raise ValueError("equity entry requires a legless limit bracket order")
+        if self.take_profit_price is None or self.stop_price is None:
+            raise ValueError("equity intent requires take-profit and stop prices")
+        if min(self.limit_price, self.take_profit_price, self.stop_price) <= 0:
+            raise ValueError("equity bracket prices must be positive")
+        if self.side == "buy" and not self.stop_price < self.limit_price < self.take_profit_price:
+            raise ValueError("long equity bracket prices are inconsistent")
+        if self.side == "sell" and not self.take_profit_price < self.limit_price < self.stop_price:
+            raise ValueError("short equity bracket prices are inconsistent")
+        return self
+
+    def quote_material(self) -> Any:
+        if self.asset_class == "option":
+            return [leg.model_dump(mode="json") for leg in self.legs]
+        return {
+            "asset_class": self.asset_class,
+            "symbol": self.symbol,
+            "side": self.side,
+            "order_class": self.order_class,
+            "order_type": self.order_type,
+            "reduce_only": self.reduce_only,
+            "limit_price": str(self.limit_price),
+            "take_profit_price": str(self.take_profit_price),
+            "stop_price": str(self.stop_price),
+        }
 
 
 class ExecutionWarrant(StrictModel):

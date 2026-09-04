@@ -1,0 +1,91 @@
+{
+  "account_capabilities": {
+    "level_3_eligible": true,
+    "options_approved_level": 3,
+    "options_trading_level": 3,
+    "paper": true,
+    "status": "ACTIVE",
+    "trading_blocked": false
+  },
+  "artifact_hash": "93c8176030975b5601cd68dc8336c1a4eabfd9add9ca4b9234d872becb425dc7",
+  "cli_arguments": [
+    "order",
+    "submit",
+    "--qty",
+    "1",
+    "--type",
+    "limit",
+    "--limit-price",
+    "-0.40",
+    "--time-in-force",
+    "day",
+    "--order-class",
+    "mleg",
+    "--client-order-id",
+    "aft-vrp-20260904-dry-run",
+    "--legs",
+    "[{\"symbol\":\"SPY260909P00764000\",\"ratio_qty\":\"1\",\"side\":\"sell\",\"position_intent\":\"sell_to_open\"},{\"symbol\":\"SPY260909P00759000\",\"ratio_qty\":\"1\",\"side\":\"buy\",\"position_intent\":\"buy_to_open\"}]",
+    "--dry-run"
+  ],
+  "cli_response": {
+    "advanced_instructions": {},
+    "client_order_id": "aft-vrp-20260904-dry-run",
+    "legs": [
+      {
+        "position_intent": "sell_to_open",
+        "ratio_qty": "1",
+        "side": "sell",
+        "symbol": "SPY260909P00764000"
+      },
+      {
+        "position_intent": "buy_to_open",
+        "ratio_qty": "1",
+        "side": "buy",
+        "symbol": "SPY260909P00759000"
+      }
+    ],
+    "limit_price": "-0.40",
+    "order_class": "mleg",
+    "qty": "1",
+    "time_in_force": "day",
+    "type": "limit"
+  },
+  "created_at": "2026-09-04T16:09:19.222581+05:30",
+  "live_quote_inputs": {
+    "long_ask": "0.43",
+    "long_quote_at": "2026-09-03T19:59:59.221840534Z",
+    "long_symbol": "SPY260909P00759000",
+    "net_credit": "0.40",
+    "short_bid": "0.83",
+    "short_quote_at": "2026-09-03T19:59:59.221268237Z",
+    "short_symbol": "SPY260909P00764000"
+  },
+  "official_reference": "https://docs.alpaca.markets/us/reference/postorder",
+  "paper_endpoint": "https://paper-api.alpaca.markets",
+  "request_payload": {
+    "client_order_id": "aft-vrp-20260904-dry-run",
+    "legs": [
+      {
+        "position_intent": "sell_to_open",
+        "ratio_qty": "1",
+        "side": "sell",
+        "symbol": "SPY260909P00764000"
+      },
+      {
+        "position_intent": "buy_to_open",
+        "ratio_qty": "1",
+        "side": "buy",
+        "symbol": "SPY260909P00759000"
+      }
+    ],
+    "limit_price": "-0.40",
+    "order_class": "mleg",
+    "qty": "1",
+    "time_in_force": "day",
+    "type": "limit"
+  },
+  "schema_version": "afterimage-volatility-premium-alpaca-dry-run-v1",
+  "submitted": false,
+  "transport": "official Alpaca CLI 0.0.14",
+  "validation_scope": "client-side CLI request serialization only; no POST was sent"
+}

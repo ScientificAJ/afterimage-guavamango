@@ -2,8 +2,9 @@ from __future__ import annotations
 
 import hashlib
 from collections.abc import Iterable
-from datetime import date
+from datetime import date, datetime
 from decimal import Decimal
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict
 
@@ -15,9 +16,13 @@ class HistoricalRow(BaseModel):
     private_row_id: str
     session_date: date
     cluster_id: str
+    signal_at: datetime | None = None
+    direction: Literal["bullish", "bearish", "long_volatility"] | None = None
+    signal_price: Decimal | None = None
     features: dict[str, float]
     target_first: bool | None
     return_r: Decimal
+    placebo_return_r: Decimal
     censored: bool = False
     path: tuple[Decimal, ...] = ()
 
@@ -53,8 +58,10 @@ class OutcomeVault:
             revealed.append(
                 RevealedOutcome(
                     twin_id=twin_id,
+                    session_date=row.session_date,
                     target_first=row.target_first,
                     return_r=row.return_r,
+                    placebo_return_r=row.placebo_return_r,
                     censored=row.censored,
                     path=row.path,
                 )

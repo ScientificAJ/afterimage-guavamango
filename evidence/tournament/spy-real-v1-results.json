@@ -1,0 +1,139 @@
+{
+  "mode": "real-chronological-holdout",
+  "tournament": {
+    "champion": null,
+    "champion_manifest_hash": null,
+    "dataset_hash": "2439c1579d9f3fc4f0286d6eed5e1acf2787799a32658423a8a28c828b986534",
+    "entries": [
+      {
+        "failed_gates": [
+          "INSUFFICIENT_RAW_SAMPLE",
+          "INSUFFICIENT_EFFECTIVE_SAMPLE",
+          "EXPECTED_VALUE",
+          "PROBABILITY_LOWER_BOUND",
+          "LEAVE_ONE_CLUSTER_OUT"
+        ],
+        "identity": {
+          "strategy_id": "momentum_continuation_v1",
+          "strategy_version": "1.0.0"
+        },
+        "manifest_hash": "b3d0eb36796b19a879cd4c08f82b52f25139c7ad51471e3fe7b26432afb9846e",
+        "metrics": {
+          "confidence_method": "one-sided Wilson 0.95",
+          "coverage": "1",
+          "expected_value_r": "-1",
+          "lower_confidence_bound": "-2.219449923225280578930655786E-17",
+          "maximum_drawdown_r": "1",
+          "n": 1,
+          "n_eff": "1",
+          "placebo_edge_r": "-1.597513572552924925310803431",
+          "placebo_expected_value_r": "0.5975135725529249253108034309",
+          "positive_loo_fraction": "0",
+          "target_first_probability": "0"
+        },
+        "score": "-0.0250000000000000055486248081",
+        "status": "INSUFFICIENT_EVIDENCE"
+      },
+      {
+        "failed_gates": [
+          "INSUFFICIENT_RAW_SAMPLE",
+          "INSUFFICIENT_EFFECTIVE_SAMPLE",
+          "PROBABILITY_LOWER_BOUND",
+          "LEAVE_ONE_CLUSTER_OUT"
+        ],
+        "identity": {
+          "strategy_id": "opening_range_failure_v1",
+          "strategy_version": "1.0.0"
+        },
+        "manifest_hash": "f604b62db9ebe010ba2bc8d71b91ced2574706122771bee0b74f5699c65daf41",
+        "metrics": {
+          "confidence_method": "one-sided Wilson 0.95",
+          "coverage": "1",
+          "expected_value_r": "0.1124170038218097367820103495",
+          "lower_confidence_bound": "0.1046525655704892527304884520",
+          "maximum_drawdown_r": "5.650995954138283158615875806",
+          "n": 12,
+          "n_eff": "12.00000000000000000000000001",
+          "placebo_edge_r": "-0.2023903862900561178636395324",
+          "placebo_expected_value_r": "0.3148073901118658546456498819",
+          "positive_loo_fraction": "0.7142857142857142857142857143",
+          "target_first_probability": "0.25"
+        },
+        "score": "0.3257562008285652981089711798",
+        "status": "INSUFFICIENT_EVIDENCE"
+      },
+      {
+        "failed_gates": [
+          "INSUFFICIENT_RAW_SAMPLE",
+          "INSUFFICIENT_EFFECTIVE_SAMPLE",
+          "EXPECTED_VALUE",
+          "PROBABILITY_LOWER_BOUND",
+          "LEAVE_ONE_CLUSTER_OUT"
+        ],
+        "identity": {
+          "strategy_id": "volatility_dislocation_v1",
+          "strategy_version": "1.0.0"
+        },
+        "manifest_hash": "83dcdb23e07d6094b7e7a37ad292f4c4167a22a64d46cee93515761b8fb76695",
+        "metrics": {
+          "confidence_method": "one-sided Wilson 0.95",
+          "coverage": "0",
+          "expected_value_r": "0",
+          "lower_confidence_bound": "0",
+          "maximum_drawdown_r": "0",
+          "n": 0,
+          "n_eff": "0",
+          "placebo_edge_r": "0",
+          "placebo_expected_value_r": "0",
+          "positive_loo_fraction": "0",
+          "target_first_probability": "0"
+        },
+        "score": "0.20",
+        "status": "INSUFFICIENT_EVIDENCE"
+      }
+    ],
+    "evaluation_label": "real Alpaca chronological holdout; underlying-path R proxy; not broker P&L",
+    "holdout_disclosure": "This chronological partition is hash-bound and strategy-derived. It is not described as developer-blind after its first reveal.",
+    "holdout_source_hash": "0bae9a2ec6d7dc4100f6dca42b1db17d4fe7c38779508736cdd9633070c5d605",
+    "result_provenance": {
+      "83dcdb23e07d6094b7e7a37ad292f4c4167a22a64d46cee93515761b8fb76695": {
+        "cost_model": {
+          "applies_to": "underlying-path proxy only",
+          "fee_per_contract": "0",
+          "slippage_per_leg": "0"
+        },
+        "observations": 0,
+        "outcome_series_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "source_record_hash": "0bae9a2ec6d7dc4100f6dca42b1db17d4fe7c38779508736cdd9633070c5d605",
+        "strategy_id": "volatility_dislocation_v1",
+        "strategy_implementation": "volatility_dislocation_v1@1.0.0"
+      },
+      "b3d0eb36796b19a879cd4c08f82b52f25139c7ad51471e3fe7b26432afb9846e": {
+        "cost_model": {
+          "applies_to": "underlying-path proxy only",
+          "fee_per_contract": "0",
+          "slippage_per_leg": "0"
+        },
+        "observations": 1,
+        "outcome_series_hash": "3bd2841e9a04426b0658d84220cca8e1ca095b959ff506265c82a8c659bf5738",
+        "source_record_hash": "0bae9a2ec6d7dc4100f6dca42b1db17d4fe7c38779508736cdd9633070c5d605",
+        "strategy_id": "momentum_continuation_v1",
+        "strategy_implementation": "momentum_continuation_v1@1.0.0"
+      },
+      "f604b62db9ebe010ba2bc8d71b91ced2574706122771bee0b74f5699c65daf41": {
+        "cost_model": {
+          "applies_to": "underlying-path proxy only",
+          "fee_per_contract": "0",
+          "slippage_per_leg": "0"
+        },
+        "observations": 12,
+        "outcome_series_hash": "ab9b435b6ad0252b08ec0488571a6784690515e8e6bfdd40be44a6d83fed0fac",
+        "source_record_hash": "0bae9a2ec6d7dc4100f6dca42b1db17d4fe7c38779508736cdd9633070c5d605",
+        "strategy_id": "opening_range_failure_v1",
+        "strategy_implementation": "opening_range_failure_v1@1.0.0"
+      }
+    },
+    "revealed_at": "2026-09-04T09:10:38.716217Z",
+    "tournament_hash": "f6819cdd65b4ebc85af3379de9422fca0349da0fd8e48ff40177b7304af2052c"
+  }
+}

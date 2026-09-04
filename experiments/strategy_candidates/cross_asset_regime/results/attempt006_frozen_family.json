@@ -1,0 +1,76 @@
+{
+  "schema_version": "afterimage-qqq-regime-frozen-family-v1",
+  "frozen_at": "2026-09-04T17:18:00+05:30",
+  "hypothesis_sources": [
+    "Attempt005 2025 QQQ/IWM symbol split",
+    "Attempt005 2025 lagged-SPY-regime x direction split"
+  ],
+  "evidence_seen_through": "2026-09-03 plus the fresh 2025 backward validation",
+  "fresh_outcome_validation": {
+    "start": "2024-01-02",
+    "end": "2024-12-31",
+    "outcomes_previously_evaluated": false,
+    "provenance_caveat": "2024-11-15 through 2024-12-31 bars existed only as warm-up inputs; no 2024 trade outcome or metric was computed"
+  },
+  "focal_variant": "qqq_regime_b5_m10_c4_s15",
+  "rules": {
+    "universe": [
+      "QQQ",
+      "IWM",
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLY"
+    ],
+    "instrument": "QQQ shares only",
+    "signal_at": "09:45 America/New_York",
+    "lagged_spy_regime": "prior completed SPY close versus prior 20-session SMA",
+    "excluded_cell": "risk_on_bullish only",
+    "qqq_first_bar_confirmation": true,
+    "maximum_notional": "10000",
+    "stop_fraction": "0.0015",
+    "after_cost_target_to_stop_floor": "3",
+    "hold_bars": 6,
+    "max_positions": 1,
+    "slippage_fraction": "0.0001",
+    "fee_per_share_per_side": "0.005",
+    "same_bar_precedence": "stop first",
+    "variants": [
+      {
+        "name": "qqq_regime_b5_m10_c4_s15",
+        "role": "focal",
+        "breadth_required": 5,
+        "minimum_mean_gap": "0.0010",
+        "sector_confirmations": 4
+      },
+      {
+        "name": "qqq_regime_b4_m10_c4_s15",
+        "role": "neighbor",
+        "breadth_required": 4,
+        "minimum_mean_gap": "0.0010",
+        "sector_confirmations": 4
+      },
+      {
+        "name": "qqq_regime_b5_m15_c4_s15",
+        "role": "neighbor",
+        "breadth_required": 5,
+        "minimum_mean_gap": "0.0015",
+        "sector_confirmations": 4
+      },
+      {
+        "name": "qqq_regime_b5_m10_c3_s15",
+        "role": "neighbor",
+        "breadth_required": 5,
+        "minimum_mean_gap": "0.0010",
+        "sector_confirmations": 3
+      }
+    ]
+  },
+  "family_hash": "45227af6bc0598473d4e37a4faa20bd67350727a85bbbfc67fbbbbc8ed65c437",
+  "family_hash_scope": "canonical JSON of all fields above except family_hash, family_hash_scope, and source_hashes",
+  "source_hashes": {
+    "qqq_regime_candidate.py": "ae60dc9837263192bd1b12f7a0399372dbd6e1c6ff815095e97ad573aa5c05e5",
+    "ATTEMPT_006_SPEC.md": "729e035c251b3befe9318779f39da168957027985e4aa6434a90cfeff28205c0"
+  }
+}

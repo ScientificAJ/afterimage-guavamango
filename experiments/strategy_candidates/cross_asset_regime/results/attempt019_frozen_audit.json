@@ -1,0 +1,41 @@
+{
+  "schema_version": "afterimage-attempt019-frozen-audit-v1",
+  "frozen_at": "2026-09-04T17:32:16+05:30",
+  "purpose": "remaining-history exhaustion and temporal diagnostic; not candidate selection",
+  "source_rule": {
+    "attempt_id": "frozen_lowvol_consensus_v17",
+    "selected_variant": "lv_v12_a125_h05",
+    "rule_hash": "472fcf2bdfb48791faa8e50e15190fc5060c0df886b9e76cadf0a80098d5dbdc",
+    "changes_from_frozen_rule": "none"
+  },
+  "requested_history": {
+    "start": "2000-01-01",
+    "end_exclusive": "2021-01-01",
+    "outcome_end": "2020-12-31",
+    "symbols": ["SPY", "QQQ", "IWM", "XLK", "XLF", "XLE", "XLV", "XLY"],
+    "feed": "iex",
+    "timeframe": "1Day",
+    "adjustment": "raw",
+    "warmup_sessions": 51,
+    "outcomes_previously_evaluated": false
+  },
+  "evaluation": {
+    "base_slippage_fraction": "0.0001",
+    "base_fee_per_share_per_side": "0.005",
+    "stress_cost_multiplier": "1.5",
+    "additional_slippage_stress_each_side_bps": 2,
+    "execution_delay_stress_sessions": 1,
+    "same_bar_precedence": "stop first",
+    "maximum_positions": 1,
+    "evaluations": 1
+  },
+  "admission_policy": "recalibrated high-but-attainable gate plus temporal consistency; prior failed fresh evidence may not be discarded",
+  "audit_hash": "246c9af097f90ccf48077c19f6555befcd6cf58f6ba3eda12523425bff72a6de",
+  "audit_hash_scope": "canonical JSON of all fields above except audit_hash, audit_hash_scope, and source_hashes",
+  "source_hashes": {
+    "ATTEMPT_019_SPEC.md": "377f3406f86792ea7462698df258054902762613e8aafca3298a55318c2f4ce2",
+    "results/attempt017_frozen_rule.json": "4ecea715fbb1801efc20be7ff773b07db4c11b558207d43550083d2b3cb48c07",
+    "lowvol_rotation_candidate.py": "86de1f47876808a5830613a4506df4dc8f87d30fc48c6a7c7776ca28683a8d84",
+    "multiday_rotation_candidate.py": "607d51a4a2ba64f400c3c85e0ec19971cd2e222490ca2214087d49cd3b262086"
+  }
+}

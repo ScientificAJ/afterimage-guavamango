@@ -1,0 +1,61 @@
+{
+  "atomic_pair_not_supported": true,
+  "cli_arguments": [
+    [
+      "order",
+      "submit",
+      "--symbol",
+      "QQQ",
+      "--qty",
+      "45",
+      "--side",
+      "buy",
+      "--type",
+      "limit",
+      "--limit-price",
+      "435.75",
+      "--time-in-force",
+      "day",
+      "--quiet",
+      "--dry-run"
+    ],
+    [
+      "order",
+      "submit",
+      "--symbol",
+      "IWM",
+      "--qty",
+      "101",
+      "--side",
+      "sell",
+      "--type",
+      "limit",
+      "--limit-price",
+      "197.18",
+      "--time-in-force",
+      "day",
+      "--quiet",
+      "--dry-run"
+    ]
+  ],
+  "payloads": [
+    {
+      "limit_price": "435.75",
+      "qty": "45",
+      "side": "buy",
+      "symbol": "QQQ",
+      "time_in_force": "day",
+      "type": "limit"
+    },
+    {
+      "limit_price": "197.18",
+      "qty": "101",
+      "side": "sell",
+      "symbol": "IWM",
+      "time_in_force": "day",
+      "type": "limit"
+    }
+  ],
+  "required_execution": "parent-approved serialized entry plus combined-PnL monitor",
+  "submission_allowed": false
+}

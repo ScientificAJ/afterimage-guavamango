@@ -30,6 +30,7 @@ class VolatilityDislocationStrategy(BaseStrategy):
         if numeric_feature(f, "liquidity_score") < 0.70:
             return None
         return CandidateEvent(
+            candidate_id=self.candidate_id(snapshot),
             identity=self.identity,
             snapshot_id=snapshot.snapshot_id,
             symbol=snapshot.records[0].symbol if snapshot.records else "SPY",

@@ -1,0 +1,435 @@
+<template>
+  <style>
+    @font-face { font-family: "DM Sans Variable"; src: url("assets/fonts/dm-sans-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/jetbrains-mono-variable.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      container-type: size;
+      color: #11110f;
+    }
+
+    [class~="08-flight-deck-bg"],
+    [class~="08-flight-deck-visual"] {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    [class~="08-flight-deck-bg"] {
+      background: #ffffff;
+    }
+
+    [class~="08-flight-deck-sun"] {
+      position: absolute;
+      left: 2%;
+      top: -20%;
+      width: 72%;
+      height: 94%;
+      background: radial-gradient(circle at 42% 44%, rgba(243, 173, 0, 0.82) 0%, rgba(255, 214, 108, 0.5) 27%, rgba(255, 241, 194, 0.24) 50%, rgba(255, 255, 255, 0) 74%);
+    }
+
+    [class~="08-flight-deck-ember"] {
+      position: absolute;
+      right: -12%;
+      top: 5%;
+      width: 48%;
+      height: 64%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 101, 95, 0.17) 0%, rgba(255, 101, 95, 0.07) 38%, rgba(255, 255, 255, 0) 74%);
+    }
+
+    [class~="08-flight-deck-visual"] {
+      height: 900px;
+      perspective: 1800px;
+    }
+
+    [class~="08-flight-deck-camera"] {
+      position: absolute;
+      inset: 0;
+      transform-origin: 50% 50%;
+      will-change: transform;
+    }
+
+    [class~="08-flight-deck-rail"] {
+      position: absolute;
+      left: 44px;
+      top: 86px;
+      z-index: 8;
+      font-family: "DM Sans Variable";
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #11110f;
+      writing-mode: vertical-rl;
+    }
+
+    [class~="08-flight-deck-surface"] {
+      position: absolute;
+      left: 78px;
+      top: 58px;
+      width: 1764px;
+      height: 780px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid rgba(17, 17, 15, 0.28);
+      transform-style: preserve-3d;
+      will-change: transform, opacity;
+    }
+
+    [class~="08-flight-deck-layer"] {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #ffffff;
+      will-change: transform, opacity;
+    }
+
+    [class~="08-flight-deck-layer"] img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: auto;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    [class~="08-flight-deck-overview"] {
+      display: grid;
+      place-items: center;
+    }
+
+    [class~="08-flight-deck-overview"] img {
+      position: static;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #ffffff;
+    }
+
+    [class~="08-flight-deck-marker"] {
+      position: absolute;
+      z-index: 4;
+      min-width: 190px;
+      font-family: "DM Sans Variable";
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #11110f;
+      will-change: transform, opacity;
+    }
+
+    [class~="08-flight-deck-marker"]::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin-top: 8px;
+      background: #f3ad00;
+      transform-origin: 0% 50%;
+    }
+
+    [class~="08-flight-deck-account"] {
+      left: 40px;
+      top: 66px;
+      width: 340px;
+    }
+
+    [class~="08-flight-deck-market"] {
+      right: 34px;
+      top: 50px;
+      width: 280px;
+      text-align: right;
+    }
+
+    [class~="08-flight-deck-equity"] {
+      left: 38px;
+      top: 250px;
+      width: 310px;
+    }
+
+    [class~="08-flight-deck-positions"] {
+      left: 42px;
+      top: 590px;
+      width: 280px;
+    }
+
+    [class~="08-flight-deck-history"] {
+      left: 42px;
+      top: 715px;
+      width: 280px;
+    }
+
+    [class~="08-flight-deck-reasoning"] {
+      right: 330px;
+      top: 150px;
+      width: 300px;
+      text-align: right;
+    }
+
+    [class~="08-flight-deck-risk"] {
+      left: 700px;
+      top: 570px;
+      width: 260px;
+    }
+
+    [class~="08-flight-deck-options"] {
+      right: 260px;
+      top: 570px;
+      width: 250px;
+      text-align: right;
+    }
+
+    [class~="08-flight-deck-lifecycle"] {
+      left: 52px;
+      top: 654px;
+      width: 300px;
+    }
+
+    [class~="08-flight-deck-validation"] {
+      right: 48px;
+      top: 674px;
+      width: 420px;
+      padding: 17px 20px 15px;
+      background: #f3ad00;
+      text-align: center;
+      font-family: "DM Sans Variable";
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #11110f;
+      will-change: transform, opacity;
+    }
+
+    [class~="08-flight-deck-index"] {
+      position: absolute;
+      right: 54px;
+      top: 848px;
+      z-index: 8;
+      font-family: "JetBrains Mono Variable";
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(17, 17, 15, 0.75);
+    }
+  </style>
+
+  <div data-hf-id="hf-kj9d" id="root" data-composition-id="08-flight-deck" data-width="1920" data-height="1080" data-duration="13.892">
+    <div data-hf-id="hf-bb40" class="clip 08-flight-deck-bg" data-start="0" data-duration="12" data-track-index="0">
+      <div data-hf-id="hf-u8va" class="08-flight-deck-sun"></div>
+      <div data-hf-id="hf-b2cl" class="08-flight-deck-ember"></div>
+    </div>
+
+    <div data-hf-id="hf-uijq" class="clip 08-flight-deck-visual" data-start="0" data-duration="12" data-track-index="1">
+      <div data-hf-id="hf-z049" class="08-flight-deck-camera">
+        <div data-hf-id="hf-pbc9" class="08-flight-deck-rail">Live Flight Deck</div>
+
+        <div data-hf-id="hf-1ksl" class="08-flight-deck-surface">
+          <div data-hf-id="hf-ab5p" class="08-flight-deck-layer 08-flight-deck-top" data-layout-allow-overflow="">
+            <img data-hf-id="hf-rcud" src="assets/scroll-000.png" alt="Flight Deck top account, equity, decisions, positions, and trading state">
+            <div data-hf-id="hf-0yqd" class="08-flight-deck-marker 08-flight-deck-account">Alpaca paper / $100,000</div>
+            <div data-hf-id="hf-bklr" class="08-flight-deck-marker 08-flight-deck-market">Market state</div>
+            <div data-hf-id="hf-za38" class="08-flight-deck-marker 08-flight-deck-equity">Equity</div>
+            <div data-hf-id="hf-h7oe" class="08-flight-deck-marker 08-flight-deck-positions">Positions</div>
+            <div data-hf-id="hf-9oxo" class="08-flight-deck-marker 08-flight-deck-history">Trade history</div>
+          </div>
+
+          <div data-hf-id="hf-atiz" class="08-flight-deck-layer 08-flight-deck-lower" data-layout-allow-overflow="">
+            <img data-hf-id="hf-kv32" src="assets/scroll-100.png" alt="Flight Deck AI reasoning, risk passport, options, and lower operational sections">
+            <div data-hf-id="hf-xdi0" class="08-flight-deck-marker 08-flight-deck-reasoning">AI reasoning</div>
+            <div data-hf-id="hf-4ru0" class="08-flight-deck-marker 08-flight-deck-risk">Risk gates</div>
+            <div data-hf-id="hf-cy4t" class="08-flight-deck-marker 08-flight-deck-options">Options Lab</div>
+          </div>
+
+          <div data-hf-id="hf-k69f" class="08-flight-deck-layer 08-flight-deck-overview" data-layout-allow-overflow="">
+            <img data-hf-id="hf-wj6y" src="assets/full-page.png" alt="Complete AFTERIMAGE Flight Deck operator surface">
+            <div data-hf-id="hf-9g9e" class="08-flight-deck-marker 08-flight-deck-lifecycle">Order lifecycle</div>
+            <div data-hf-id="hf-2fqz" class="08-flight-deck-validation">Forward paper validation</div>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-7nzc" class="08-flight-deck-index">08</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script>
+    (() => {
+      const root = document.querySelector('[data-composition-id="08-flight-deck"]');
+      if (!root || !window.gsap) return;
+
+      const camera = root.querySelector('[class~="08-flight-deck-camera"]');
+      const surface = root.querySelector('[class~="08-flight-deck-surface"]');
+      const topLayer = root.querySelector('[class~="08-flight-deck-top"]');
+      const lowerLayer = root.querySelector('[class~="08-flight-deck-lower"]');
+      const overviewLayer = root.querySelector('[class~="08-flight-deck-overview"]');
+
+      const phase = { scale: 0.965, x: 0, y: 2 };
+      const drift = { p: 0 };
+      const applyCamera = () => {
+        const dx = Math.sin(drift.p) * 3.5;
+        const dy = Math.sin(drift.p * 1.31) * 2;
+        camera.style.transform = "translate(" + (phase.x + dx) + "px, " + (phase.y + dy) + "px) scale(" + phase.scale + ")";
+      };
+      applyCamera();
+
+      const tl = gsap.timeline({ paused: true });
+
+      tl.to(
+        drift,
+        {
+          p: Math.PI * 3,
+          duration: 12,
+          ease: "none",
+          onUpdate: applyCamera
+        },
+        0
+      );
+
+      tl.fromTo(
+        surface,
+        { opacity: 0, y: 54, scale: 0.985 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.62, ease: "power3.out" },
+        0.04
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-rail"]'),
+        { opacity: 0, y: 22 },
+        { opacity: 1, y: 0, duration: 0.48, ease: "power3.out" },
+        0.12
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-account"]'),
+        { opacity: 0, y: 18 },
+        { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+        0.38
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-market"]'),
+        { opacity: 0, y: 18 },
+        { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+        1.15
+      );
+      tl.to(
+        phase,
+        { scale: 1.015, y: -8, duration: 1.35, ease: "power2.out", onUpdate: applyCamera },
+        1.45
+      );
+
+      tl.to(
+        topLayer,
+        { y: -182, duration: 2.85, ease: "power3.out" },
+        3.0
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-equity"]'),
+        { opacity: 0, x: -34 },
+        { opacity: 1, x: 0, duration: 0.48, ease: "power3.out" },
+        3.15
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-positions"]'),
+        { opacity: 0, x: -34 },
+        { opacity: 1, x: 0, duration: 0.48, ease: "power3.out" },
+        4.18
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-history"]'),
+        { opacity: 0, x: -34 },
+        { opacity: 1, x: 0, duration: 0.48, ease: "power3.out" },
+        5.16
+      );
+      tl.to(
+        phase,
+        { scale: 1.035, y: -18, duration: 1.35, ease: "power2.out", onUpdate: applyCamera },
+        4.55
+      );
+
+      tl.fromTo(
+        lowerLayer,
+        { opacity: 0, y: 96 },
+        { opacity: 1, y: 0, duration: 0.34, ease: "power4.out" },
+        6.18
+      );
+      tl.to(
+        topLayer,
+        { opacity: 0, y: -278, duration: 0.34, ease: "power4.in" },
+        6.0
+      );
+      tl.to(
+        lowerLayer,
+        { y: -92, duration: 2.45, ease: "power3.out" },
+        6.58
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-reasoning"]'),
+        { opacity: 0, x: 34 },
+        { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" },
+        6.62
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-risk"]'),
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.48, ease: "power3.out" },
+        7.58
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-options"]'),
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.48, ease: "power3.out" },
+        8.3
+      );
+      tl.to(
+        phase,
+        { scale: 1.025, y: -11, duration: 1.25, ease: "power2.out", onUpdate: applyCamera },
+        7.4
+      );
+
+      tl.to(
+        lowerLayer,
+        { opacity: 0, y: -180, duration: 0.36, ease: "power4.in" },
+        9.03
+      );
+      tl.fromTo(
+        overviewLayer,
+        { opacity: 0, scale: 1.06, y: 42 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.62, ease: "expo.out" },
+        9.2
+      );
+      tl.to(
+        phase,
+        { scale: 0.94, x: 0, y: 0, duration: 1.35, ease: "power3.inOut", onUpdate: applyCamera },
+        9.18
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-lifecycle"]'),
+        { opacity: 0, x: -32 },
+        { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" },
+        9.92
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-validation"]'),
+        { opacity: 0, scale: 0, y: 18, transformOrigin: "50% 100%" },
+        { opacity: 1, scale: 1, y: 0, duration: 0.58, ease: "power3.out" },
+        10.55
+      );
+      tl.fromTo(
+        root.querySelector('[class~="08-flight-deck-index"]'),
+        { opacity: 0 },
+        { opacity: 1, duration: 0.35, ease: "power1.out" },
+        11.18
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["08-flight-deck"] = tl;
+    })();
+  </script>
+</template>

@@ -11,7 +11,7 @@ from .models import Base
 
 
 class Database:
-    def __init__(self, url: str = "sqlite:///./afterimage.db") -> None:
+    def __init__(self, url: str = "sqlite:///./.afterimage/afterimage.db") -> None:
         self.url = url
         connect_args = {"check_same_thread": False} if url.startswith("sqlite") else {}
         self.engine: Engine = create_engine(url, connect_args=connect_args, future=True)
@@ -31,6 +31,16 @@ class Database:
         if self.url.startswith("sqlite:///./"):
             Path(self.url.removeprefix("sqlite:///./")).parent.mkdir(parents=True, exist_ok=True)
         Base.metadata.create_all(self.engine)
+        self._secure_sqlite_files()
+
+    def _secure_sqlite_files(self) -> None:
+        if not self.url.startswith("sqlite:///"):
+            return
+        raw_path = self.url.removeprefix("sqlite:///")
+        path = Path(raw_path)
+        for candidate in (path, Path(f"{path}-wal"), Path(f"{path}-shm")):
+            if candidate.exists() and not candidate.is_symlink():
+                candidate.chmod(0o600)
 
     @contextmanager
     def session(self) -> Iterator[Session]:
@@ -43,3 +53,4 @@ class Database:
             raise
         finally:
             session.close()
+            self._secure_sqlite_files()
